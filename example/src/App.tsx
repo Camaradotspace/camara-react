@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <Buttons />
-      <Avatar />
+      <Avatar src='https://avatars0.githubusercontent.com/u/19210093?s=48&v=4' />
       {/* <ExampleComponent text='Create React Library Example 😄' /> */}
     </div>
   );
