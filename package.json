@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "0.1.0",
+  "version": "0.2.1-alpha",
   "description": "a design system that helps you build your ideas quickly and with less code",
   "author": "Camaradotspace",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic --project-token"
   },
   "peerDependencies": {
     "@types/styled-components": "^5.1.2",
