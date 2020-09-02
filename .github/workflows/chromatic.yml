@@ -1,8 +1,9 @@
 name: Chromatic
 
-on: [push]:
-  tags:
-    - '*'
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   chromatic:
