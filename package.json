@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "0.2.9-alpha",
+  "version": "0.0.0-development",
   "description": "a design system that helps you build your ideas quickly and with less code",
   "author": "Camaradotspace",
   "license": "MIT",
@@ -19,6 +19,10 @@
     "@semantic-release/npm",
     "@semantic-release/git"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "pkgRoot": "dist"
+  },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -32,7 +36,8 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "@types/styled-components": "^5.1.2",
@@ -41,6 +46,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@storybook/addon-actions": "^6.0.20",
     "@storybook/addon-docs": "^6.0.20",
     "@storybook/addon-essentials": "^6.0.20",
