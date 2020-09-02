@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { primary } from '../../utils/colors';
 
-interface AvatarProps {
+export interface AvatarProps {
   loading?: boolean;
   src: string;
   size?: string;

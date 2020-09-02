@@ -11,6 +11,14 @@
   "engines": {
     "node": ">=10"
   },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -74,6 +82,7 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-scripts": "^3.4.1",
+    "semantic-release": "^17.1.1",
     "styled-components": "^5.1.1",
     "typescript": "^3.9.5"
   },
