@@ -24,7 +24,8 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "release": "auto shipit"
   },
   "peerDependencies": {
     "@types/styled-components": "^5.1.2",

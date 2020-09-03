@@ -1,6 +1,6 @@
 # v0.1.2 (Thu Sep 03 2020)
 
-
+Testing automating the setups and bullet-proofing it.
 
 ---
 
