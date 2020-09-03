@@ -4,7 +4,7 @@
   "description": "a design system that helps you build your ideas quickly and with less code",
   "author": "Camaradotspace",
   "license": "MIT",
-  "repository": "Camaradotspace/camara",
+  "repository": "Camaradotspace/camara-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -19,10 +19,6 @@
     "@semantic-release/npm",
     "@semantic-release/git"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "pkgRoot": "dist"
-  },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
