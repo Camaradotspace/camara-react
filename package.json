@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a design system that helps you build your ideas quickly and with less code",
   "author": "Camaradotspace",
   "license": "MIT",
@@ -11,14 +11,6 @@
   "engines": {
     "node": ">=10"
   },
-  "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/npm",
-    "@semantic-release/git"
-  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -32,8 +24,7 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic",
-    "semantic-release": "semantic-release"
+    "chromatic": "npx chromatic"
   },
   "peerDependencies": {
     "@types/styled-components": "^5.1.2",
@@ -42,8 +33,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
     "@storybook/addon-actions": "^6.0.20",
     "@storybook/addon-docs": "^6.0.20",
     "@storybook/addon-essentials": "^6.0.20",
@@ -86,7 +75,6 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "semantic-release": "^17.1.1",
     "styled-components": "^5.1.1",
     "typescript": "^3.9.5"
   },
