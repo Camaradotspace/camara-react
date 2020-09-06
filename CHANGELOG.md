@@ -1,3 +1,22 @@
+# v0.1.4 (Sun Sep 06 2020)
+
+#### 🐛 Bug Fix
+
+- Merge conflict resolved [#1](https://github.com/Camaradotspace/camara-react/pull/1) ([@Preshonyee](https://github.com/Preshonyee))
+
+#### ⚠️ Pushed to `master`
+
+- fix(config): reinstall packages ([@Preshonyee](https://github.com/Preshonyee))
+- fix(config): fix auto release script ([@Preshonyee](https://github.com/Preshonyee))
+- fix(config): update lock file ([@Preshonyee](https://github.com/Preshonyee))
+- Merge branch 'alpha' ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.3 (Sat Sep 05 2020)
 
 #### ⚠️ Pushed to `master`
