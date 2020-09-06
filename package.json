@@ -7,7 +7,7 @@
   "repository": "Camaradotspace/camara-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "engines": {
     "node": ">=10"
   },
@@ -21,11 +21,7 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic",
-    "release": "auto shipit"
+    "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
     "@types/styled-components": "^5.1.2",
@@ -34,12 +30,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
-    "@storybook/addon-actions": "^6.0.20",
-    "@storybook/addon-docs": "^6.0.20",
-    "@storybook/addon-essentials": "^6.0.20",
-    "@storybook/addon-links": "^6.0.20",
-    "@storybook/addon-storysource": "^6.0.20",
-    "@storybook/react": "^6.0.20",
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.3.0",
     "@testing-library/user-event": "^12.0.2",
@@ -81,7 +71,5 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "polished": "^3.6.6"
-  }
+  "dependencies": {}
 }
