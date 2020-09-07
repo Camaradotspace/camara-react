@@ -24,12 +24,12 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "@types/styled-components": "^5.1.2",
-    "react": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "@stitches/react": "^0.0.2",
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@stitches/react": "^0.0.2",
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.3.0",
     "@testing-library/user-event": "^12.0.2",
@@ -37,7 +37,6 @@
     "@types/node": "^14.0.13",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
     "auto": "^9.52.0",
@@ -65,7 +64,7 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-scripts": "^3.4.3",
-    "styled-components": "^5.1.1",
+    "stitches-reset": "^1.0.0",
     "typescript": "^3.9.5"
   },
   "files": [
