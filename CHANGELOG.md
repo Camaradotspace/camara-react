@@ -1,3 +1,19 @@
+# v0.1.5 (Mon Sep 07 2020)
+
+#### 🐛 Bug Fix
+
+- resolve merge confict [#2](https://github.com/Camaradotspace/camara-react/pull/2) ([@Preshonyee](https://github.com/Preshonyee))
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'alpha' ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.4 (Sun Sep 06 2020)
 
 #### 🐛 Bug Fix
