@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar, Buttons } from 'camara';
+import { Avatar, Buttons, Typography } from 'camara';
 import 'camara/dist/index.css';
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <Buttons />
       <Avatar />
-      {/* <ExampleComponent text='Create React Library Example 😄' /> */}
+      <Typography variant='display'>CupertinoScoop</Typography>
     </div>
   );
 };
