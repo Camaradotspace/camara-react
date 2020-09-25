@@ -1,3 +1,28 @@
+# v0.1.7 (Fri Sep 25 2020)
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'master' of https://github.com/Camaradotspace/camara-react into master ([@Preshonyee](https://github.com/Preshonyee))
+- chore: upgrade packages ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
+# v0.1.6 (Fri Sep 25 2020)
+
+#### ⚠️ Pushed to `master`
+
+- chore: update packages ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.5 (Mon Sep 07 2020)
 
 #### 🐛 Bug Fix
