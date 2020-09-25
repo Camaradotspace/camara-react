@@ -1,3 +1,19 @@
+# v0.1.8 (Fri Sep 25 2020)
+
+#### 🐛 Bug Fix
+
+- resolve merge conflicts [#3](https://github.com/Camaradotspace/camara-react/pull/3) ([@Preshonyee](https://github.com/Preshonyee))
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'components-typography/preshonyee' into master ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.7 (Fri Sep 25 2020)
 
 #### ⚠️ Pushed to `master`
