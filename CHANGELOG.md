@@ -1,3 +1,15 @@
+# v0.1.10 (Sun Sep 27 2020)
+
+#### ⚠️ Pushed to `master`
+
+- create pull request template ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.9 (Sun Sep 27 2020)
 
 #### ⚠️ Pushed to `master`
