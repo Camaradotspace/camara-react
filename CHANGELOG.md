@@ -1,3 +1,15 @@
+# v0.1.11 (Tue Sep 29 2020)
+
+#### 🐛 Bug Fix
+
+- feat(components): update typography APIs [#4](https://github.com/Camaradotspace/camara-react/pull/4) ([@Preshonyee](https://github.com/Preshonyee))
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 # v0.1.10 (Sun Sep 27 2020)
 
 #### ⚠️ Pushed to `master`
