@@ -13,14 +13,17 @@ npm install --save camara
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'camara'
+import Button from 'camara'
 import 'camara/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+const App = () => {
+    return (
+      <div>
+        <Button>Camara</Button>
+      </div>
+    )
   }
 }
 ```

@@ -1,0 +1,37 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs/blocks';
+import { Layout } from './layout';
+import { Button } from '../button';
+import { Card } from '../card';
+
+<Meta title='Components/Layout' component={Layout} />
+
+export const argTypes = {
+  color: { control: 'color' },
+};
+
+# Layout
+
+Layouts are used to indicate whatever
+
+## Usage
+
+Layout should be Layout
+
+<Canvas withToolbar>
+  <Story name='Layout' args={{}} argTypes={argTypes}>
+    {(args) => (
+      <Layout {...args}>
+        <Card />
+        <Button>Hello World</Button>
+      </Layout>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story={PRIMARY_STORY} />

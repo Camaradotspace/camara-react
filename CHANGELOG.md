@@ -1,3 +1,46 @@
+# Changelog
+
+`Camara` strictly follows [semantic versioning](https://semver.org/)
+
+## v0.2.0 (Sun Nov 8, 2020)
+
+- new:
+
+  - switched from `stitches.js` to `styled-components` for styling library
+  - `button` component
+  - `badge` component
+  - `divider` component
+  - `card` component
+  - `link` component
+  - `avatar` component
+  - `input` component
+  - `textarea` component
+  - `layout` component
+  - `tag` component
+  - `text` component
+  - add component generator utility
+
+- improved:
+  - improved support for `eslint`, `prettier` and `typescript`
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
+## v0.1.0 (Tue Oct 27, 2020)
+
+- new:
+  - (chore): library setup
+  - add support for airbnb `eslint` and `prettier` style guide
+  - add support for `storybookjs`
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+  ]
+
 # v0.1.11 (Tue Sep 29 2020)
 
 #### 🐛 Bug Fix

@@ -1,0 +1,30 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs/blocks';
+import { Avatar } from './avatar';
+
+<Meta title='Components/Avatar' component={Avatar} />
+
+export const argTypes = {
+  backgroundColor: { control: 'color' },
+};
+
+# Avatar
+
+Avatars are used to indicate whatever
+
+## Usage
+
+Avatar should be Avatars
+
+<Canvas withToolbar>
+  <Story name='Avatar' args={{}} argTypes={argTypes}>
+    {(args) => <Avatar {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story={PRIMARY_STORY} />

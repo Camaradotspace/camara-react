@@ -1,0 +1,30 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs/blocks';
+import { Badge } from './badge';
+
+<Meta title='Components/Badge' component={Badge} />
+
+export const argTypes = {
+  backgroundColor: { control: 'color' },
+};
+
+# Badge
+
+Badges are used to indicate whatever
+
+## Usage
+
+Badge should be badges
+
+<Canvas withToolbar>
+  <Story name='Badge' args={{}} argTypes={argTypes}>
+    {(args) => <Badge {...args}>M</Badge>}
+  </Story>
+</Canvas>
+
+<ArgsTable story={PRIMARY_STORY} />
