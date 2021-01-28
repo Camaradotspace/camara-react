@@ -2,6 +2,27 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.01 (Thur Jan 28, 2021)
+
+- new:
+
+  - Camara moves into `beta` and follows more strict semantic versioning
+  - New layout related components `flex`, `spacer` and `box` added
+  - added typescript type definitions for styled-components
+  - `text` component has a new variant 'strong'
+  - `title` component has a new prop 'thin'
+
+- improved:
+  - improved CSS global reset, resetting is much broader now and targets more elements
+  - `avatar` component has better defaults
+  - height, padding and line-height of `button` component is removed
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v0.2.0 (Sun Nov 8, 2020)
 
 - new:

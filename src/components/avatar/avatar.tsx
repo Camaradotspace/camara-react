@@ -2,22 +2,25 @@
 import styled from 'styled-components';
 import * as React from 'react';
 
-export interface AvatarProps {
+interface StyleProps {
   /**
    * How large should the avatar be?
    */
   size?: number;
-  /**
-   * Link to image source
-   */
-  imageUrl?: string;
   /**
    * Fallback color incase image fails to load
    */
   backgroundColor: string;
 }
 
-const StyledAvatar = styled.img<AvatarProps>`
+export interface AvatarProps {
+  /**
+   * Link to image source
+   */
+  imageUrl: string;
+}
+
+const StyledAvatar = styled.img<StyleProps>`
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   object-fit: cover;
@@ -25,14 +28,11 @@ const StyledAvatar = styled.img<AvatarProps>`
   background-color: ${(props) => props.backgroundColor};
 `;
 
-StyledAvatar.defaultProps = {
-  size: 48,
-  backgroundColor: 'red',
-  imageUrl:
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQRt2rEUKW9t2e_-cryB2frSlxYkXk4L6Om7w&usqp=CAU',
-};
-
-export const Avatar = ({ size, imageUrl, backgroundColor }: AvatarProps) => {
+export const Avatar: React.FC<AvatarProps & StyleProps> = ({
+  size,
+  imageUrl,
+  backgroundColor,
+}) => {
   return (
     <StyledAvatar
       size={size}
@@ -40,4 +40,10 @@ export const Avatar = ({ size, imageUrl, backgroundColor }: AvatarProps) => {
       backgroundColor={backgroundColor}
     />
   );
+};
+
+Avatar.defaultProps = {
+  size: 48,
+  backgroundColor: 'pink',
+  imageUrl: 'https://picsum.photos/200?a',
 };

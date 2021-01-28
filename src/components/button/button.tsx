@@ -50,18 +50,18 @@ export interface ButtonProps {
  */
 
 export const Button = styled.button<ButtonProps>`
-  height: ${(props) => props.size || 30}px;
+  /* height: ${(props) => props.size || 30}px; */
   background-color: ${(props) => props.backgroundColor || $white};
   color: ${(props) => props.color || $black200};
   display: inline-block;
   border: 1px solid ${(props) => props.backgroundColor || $border};
   border-radius: 2px;
-  padding: ${$2};
+  /* padding: ${$2}; */
   font-weight: 500;
   margin: ${$1};
   cursor: pointer;
   outline: none;
-  line-height: 1.2;
+  /* line-height: 1.2; */
   &:hover {
     background-color: ${(props) => props.backgroundColor || $buttonHover};
   }

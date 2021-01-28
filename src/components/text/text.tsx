@@ -5,7 +5,7 @@ export interface TextProps {
   /**
    * Text variant
    */
-  variant?: 'heading' | 'sub-heading' | 'body' | 'caption' | 'overline';
+  variant?: 'strong' | 'sub-heading' | 'body' | 'caption' | 'overline';
   /**
    * Text color
    */
@@ -17,19 +17,19 @@ export interface TextProps {
   level?: number;
 }
 
-export const HeadingText = styled.h3<TextProps>`
-  font-size: 1.5rem;
-`;
-export const SubHeadingText = styled.p<TextProps>`
+export interface StrongProps {}
+
+const StrongText = styled.strong``;
+const SubHeadingText = styled.p<TextProps>`
   font-size: 1.25rem;
 `;
-export const BodyText = styled.p<TextProps>`
+const BodyText = styled.p<TextProps>`
   font-size: 1rem;
 `;
-export const CaptionText = styled.p<TextProps>`
+const CaptionText = styled.p<TextProps>`
   font-size: 0.75rem;
 `;
-export const OverlineText = styled.p<TextProps>`
+const OverlineText = styled.p<TextProps>`
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 1.5px;
@@ -37,8 +37,8 @@ export const OverlineText = styled.p<TextProps>`
 
 export const Text = ({ variant, children }: TextProps) => {
   switch (variant) {
-    case 'heading':
-      return <HeadingText>{children}</HeadingText>;
+    case 'strong':
+      return <StrongText>{children}</StrongText>;
     case 'sub-heading':
       return <SubHeadingText>{children}</SubHeadingText>;
     case 'body':

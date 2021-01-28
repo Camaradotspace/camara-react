@@ -14,10 +14,12 @@ export interface TitleProps {
    */
   children: React.ReactNode;
   level?: number;
+  thin?: boolean;
 }
 
 export const Title = styled.h1<TitleProps>`
   font-size: ${$h1};
+  font-weight: ${(props) => (props.thin === true ? 200 : 'bold')};
   ${(props) =>
     props.level === 2 &&
     css`
