@@ -2,7 +2,7 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
-## v1.0.0-beta.01 (Thur Jan 28, 2021)
+## v1.0.0-beta.1 (Thur Jan 28, 2021)
 
 - new:
 
