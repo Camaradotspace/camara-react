@@ -6,7 +6,7 @@ export const tokens = {
     $primaryButtonPressed: `#0088FF`,
     $primary: '#0099FF', // primary brand color
     $secondary: '#e65f5c', // secondary brand color
-    $black100: '#000000', // Primary text color
+    $black100: '#262626', // Primary text color
     $black200: '#444444', // Secondary text color
     $black300: 'e0e0e0', // tertiary text color
     $white: '#fff',

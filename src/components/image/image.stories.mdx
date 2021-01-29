@@ -1,0 +1,30 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  PRIMARY_STORY,
+} from '@storybook/addon-docs/blocks';
+import { Image } from './image';
+
+<Meta title='Components/Image' component={Image} />
+
+export const argTypes = {
+  color: { control: 'color' },
+};
+
+# image
+
+images are used to indicate whatever
+
+## Usage
+
+image should be image
+
+<Canvas withToolbar>
+  <Story name='Image' args={{}} argTypes={argTypes}>
+    {(args) => <Image {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story={PRIMARY_STORY} />

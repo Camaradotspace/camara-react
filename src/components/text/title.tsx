@@ -19,6 +19,7 @@ export interface TitleProps {
 
 export const Title = styled.h1<TitleProps>`
   font-size: ${$h1};
+  color: ${(props) => props.color};
   font-weight: ${(props) => (props.thin === true ? 200 : 'bold')};
   ${(props) =>
     props.level === 2 &&

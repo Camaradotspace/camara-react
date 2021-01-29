@@ -1,5 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { tokens } from '../../../utils/tokens';
+
+const { $2 } = tokens.space;
 
 export interface TextProps {
   /**
@@ -25,6 +28,7 @@ const SubHeadingText = styled.p<TextProps>`
 `;
 const BodyText = styled.p<TextProps>`
   font-size: 1rem;
+  margin: ${$2} 0;
 `;
 const CaptionText = styled.p<TextProps>`
   font-size: 0.75rem;

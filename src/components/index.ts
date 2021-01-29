@@ -4,6 +4,7 @@ export * from './button';
 export * from './card';
 export * from './divider';
 export * from './input';
+export * from './image';
 export * from './layout';
 export * from './link';
 export * from './tag';

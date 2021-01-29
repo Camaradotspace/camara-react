@@ -2,6 +2,28 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.2 (Fri Jan 29, 2021)
+
+- 🆕 `image` component. This works differently from the `avatar` component
+- 💄 Update `$black100` color token to lighter shade of black
+- Avatar
+  - 🆕 Add prop `stories` for `avatar` component. This gives the Instagram-like avatar look and feel
+  - ⚡ `imageUrl` default props now switches to Unsplash and replaces Picsum.photos
+- Flex
+  - 🆕 Add prop `justify` for setting flex alignment properties
+  - 🆕 Add prop `wrap` for setting wrap property on flex items
+  - 🆕 Add prop `width` to set width property on flex container
+- Text
+  - 💄 default margins have been updated for `BodyText` component
+- Title
+  - 🆕 Add prop `color` to set color property dynamically
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.1 (Thur Jan 28, 2021)
 
 - new:
