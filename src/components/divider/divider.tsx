@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
-export interface DividerProps {
+interface DividerProps {
   /**
    * What styled should the line be of?
    */
   type: 'dashed' | 'dotted' | 'normal';
 }
 
-export const Divider = styled.hr<DividerProps>`
+const Divider = styled.hr<DividerProps>`
   border: 1px solid #dadce0;
   ${(props) =>
     props.type === 'dashed' &&
@@ -25,3 +25,5 @@ export const Divider = styled.hr<DividerProps>`
       border: 1px solid #dadce0;
     `};
 `;
+
+export default Divider;

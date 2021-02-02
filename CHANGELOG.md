@@ -2,6 +2,20 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.3 (Tue Feb 02, 2021)
+
+- 🆕 changed the way components are bundled and exported
+- ❌ removed `colors` as package dependency
+- ❌ removed `polished` as package dependency
+- ❌ removed support for bundling `css-modules`
+- 🚀 updated rollup configs
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.2 (Fri Jan 29, 2021)
 
 - 🆕 `image` component. This works differently from the `avatar` component

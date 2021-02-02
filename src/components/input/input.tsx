@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as React from 'react';
 
-export interface InputProps {
+interface InputProps {
   /**
    * Label text
    */
@@ -60,14 +60,14 @@ export interface InputProps {
   required?: boolean;
 }
 
-export const sizes = {
+const sizes = {
   large: 16,
   medium: 12,
   small: 8,
   tiny: 8,
 };
 
-export const StyledInput: any = styled.input<InputProps>`
+const StyledInput: any = styled.input<InputProps>`
   border: 1px solid ${(props) => props.borderColor || '#dadce0'};
   border-radius: 4px;
   width: 200px;
@@ -95,14 +95,14 @@ export const StyledInput: any = styled.input<InputProps>`
     `}
 `;
 
-export const StyledLabel = styled.label<InputProps>`
+const StyledLabel = styled.label<InputProps>`
   display: block;
   margin: 4px 0;
   font-weight: 500;
   color: #333;
 `;
 
-export const Input = ({
+const Input = ({
   id,
   name,
   htmlFor,
@@ -136,3 +136,5 @@ Input.defaultProps = {
 };
 
 Input.displayName = 'Input';
+
+export default Input;

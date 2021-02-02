@@ -1,19 +1,24 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "a design system that helps you build your ideas quickly",
   "author": "Camaradotspace",
   "license": "MIT",
   "repository": "Camaradotspace/camara-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
+  "esmodule": "dist/index.modern.js",
+  "exports": {
+    ".": "./dist/index.modern.js"
+  },
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-css-modules --no-compress --format modern,cjs",
+    "start": "microbundle-crl --no-css-modules watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -34,7 +39,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
-    "@types/styled-components": "^5.1.4",
     "@storybook/addon-actions": "^6.0.27",
     "@storybook/addon-essentials": "^6.0.27",
     "@storybook/addon-links": "^6.0.27",
@@ -46,6 +50,7 @@
     "@types/node": "^14.11.2",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "auto": "^10.13.2",
@@ -79,8 +84,5 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "colors": "^1.4.0",
-    "polished": "^4.0.3"
-  }
+  "dependencies": {}
 }

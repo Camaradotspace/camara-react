@@ -65,7 +65,7 @@ const StyledSpacer = styled.div<StyleProps>`
   margin: ${(props) => props.my}px ${(props) => props.mx}px;
 `;
 
-export const Spacer: React.FC<StyleProps> = ({
+const Spacer: React.FC<StyleProps> = ({
   children,
   pt,
   pb,
@@ -101,3 +101,5 @@ export const Spacer: React.FC<StyleProps> = ({
 };
 
 Spacer.defaultProps = {};
+
+export default Spacer;

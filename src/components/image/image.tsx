@@ -9,13 +9,13 @@ interface ImageProps {
   imageURL?: string;
 }
 
-export const StyledImage = styled.img<StyleProps>`
+const StyledImage = styled.img<StyleProps>`
   width: ${(props) => props.width}%;
   display: block;
   object-fit: cover;
 `;
 
-export const Image: React.FC<StyleProps & ImageProps> = ({
+const Image: React.FC<StyleProps & ImageProps> = ({
   width = 100,
   imageURL,
 }) => {
@@ -25,3 +25,5 @@ export const Image: React.FC<StyleProps & ImageProps> = ({
 Image.defaultProps = {};
 
 Image.displayName = 'ImageComponent';
+
+export default Image;

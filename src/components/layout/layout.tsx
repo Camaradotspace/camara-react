@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export interface LayoutProps {}
+interface LayoutProps {}
 
-export const Layout = styled.div<LayoutProps>`
+const Layout = styled.div<LayoutProps>`
   background-color: #f2f2f2;
   width: 100%;
   padding: 1rem;
@@ -11,3 +11,5 @@ export const Layout = styled.div<LayoutProps>`
 Layout.defaultProps = {};
 
 Layout.displayName = 'Layout';
+
+export default Layout;

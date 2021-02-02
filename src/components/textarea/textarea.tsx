@@ -1,8 +1,7 @@
-/* eslint-disable no-use-before-define */
 import * as React from 'react';
 import styled from 'styled-components';
 
-export interface TextAreaProps {
+interface TextAreaProps {
   /**
    * How many rows should the text area have?
    */
@@ -41,7 +40,7 @@ export interface TextAreaProps {
   form_id?: string;
 }
 
-export const StyledTextArea = styled.textarea<TextAreaProps>`
+const StyledTextArea = styled.textarea<TextAreaProps>`
   padding: 0.5rem;
   border: 1px solid #dadce0;
   border-radius: 4px;
@@ -49,7 +48,7 @@ export const StyledTextArea = styled.textarea<TextAreaProps>`
   display: block;
 `;
 
-export const TextArea = ({
+const TextArea = ({
   rows = 4,
   value,
   placeholder = 'This is a text area',
@@ -83,3 +82,5 @@ TextArea.defaultProps = {
 };
 
 TextArea.displayName = 'TextArea';
+
+export default TextArea;

@@ -20,12 +20,7 @@ const StyledFlex = styled.div<FlexProps>`
   width: ${(props) => props.width}%;
 `;
 
-export const Flex: React.FC<FlexProps> = ({
-  children,
-  width,
-  justify,
-  wrap,
-}) => {
+const Flex: React.FC<FlexProps> = ({ children, width, justify, wrap }) => {
   return (
     <StyledFlex width={width} justify={justify} wrap={wrap}>
       {children}
@@ -36,3 +31,5 @@ export const Flex: React.FC<FlexProps> = ({
 Flex.defaultProps = {};
 
 Flex.displayName = 'Flex';
+
+export default Flex;

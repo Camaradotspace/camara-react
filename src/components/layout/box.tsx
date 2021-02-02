@@ -22,12 +22,7 @@ const StyledBox = styled.div<StyleProps>`
     `}
 `;
 
-export const Box: React.FC<StyleProps> = ({
-  children,
-  width,
-  center,
-  debug,
-}) => {
+const Box: React.FC<StyleProps> = ({ children, width, center, debug }) => {
   return (
     <StyledBox width={width} center={center} debug={debug}>
       {children}
@@ -38,3 +33,5 @@ export const Box: React.FC<StyleProps> = ({
 Box.defaultProps = {};
 
 Box.displayName = 'Box';
+
+export default Box;

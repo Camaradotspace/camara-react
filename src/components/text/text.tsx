@@ -4,7 +4,7 @@ import { tokens } from '../../../utils/tokens';
 
 const { $2 } = tokens.space;
 
-export interface TextProps {
+interface TextProps {
   /**
    * Text variant
    */
@@ -19,8 +19,6 @@ export interface TextProps {
   children: React.ReactNode;
   level?: number;
 }
-
-export interface StrongProps {}
 
 const StrongText = styled.strong``;
 const SubHeadingText = styled.p<TextProps>`
@@ -39,7 +37,7 @@ const OverlineText = styled.p<TextProps>`
   letter-spacing: 1.5px;
 `;
 
-export const Text = ({ variant, children }: TextProps) => {
+const Text = ({ variant, children }: TextProps) => {
   switch (variant) {
     case 'strong':
       return <StrongText>{children}</StrongText>;
@@ -59,3 +57,5 @@ export const Text = ({ variant, children }: TextProps) => {
 Text.defaultProps = {};
 
 Text.displayName = 'TextComponent';
+
+export default Text;

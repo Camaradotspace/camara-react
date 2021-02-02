@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export interface TagProps {
+interface TagProps {
   /**
    * Color?
    */
@@ -11,7 +11,7 @@ export interface TagProps {
   size?: 'small' | 'medium' | 'large';
 }
 
-export const Tag = styled.div<TagProps>`
+const Tag = styled.div<TagProps>`
   border: 1.5px solid ${(props) => props.color};
   border-radius: 4px;
   padding: 0.35rem 0.5rem;
@@ -48,3 +48,5 @@ Tag.defaultProps = {
 };
 
 Tag.displayName = 'Tag';
+
+export default Tag;

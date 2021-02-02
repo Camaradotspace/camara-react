@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import styled, { css } from 'styled-components';
 import * as React from 'react';
 
@@ -15,7 +14,7 @@ interface StyleProps {
   stories?: boolean;
 }
 
-export interface AvatarProps {
+interface AvatarProps {
   /**
    * Link to image source
    */
@@ -37,7 +36,7 @@ const StyledAvatar = styled.img<StyleProps>`
     `}
 `;
 
-export const Avatar: React.FC<AvatarProps & StyleProps> = ({
+const Avatar: React.FC<AvatarProps & StyleProps> = ({
   size,
   imageUrl,
   backgroundColor,
@@ -59,3 +58,5 @@ Avatar.defaultProps = {
   imageUrl: 'https://source.unsplash.com/200x200/?portrait',
   stories: false,
 };
+
+export default Avatar;
