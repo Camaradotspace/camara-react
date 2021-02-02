@@ -1,14 +1,14 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 
-interface StyleProps {
+export interface BoxProps {
   width?: number;
   center?: boolean;
   debug?: boolean;
   children: React.ReactNode;
 }
 
-const StyledBox = styled.div<StyleProps>`
+const StyledBox = styled.div<BoxProps>`
   width: ${(props) => props.width}%;
   ${(props) =>
     props.center === true &&
@@ -22,7 +22,7 @@ const StyledBox = styled.div<StyleProps>`
     `}
 `;
 
-const Box: React.FC<StyleProps> = ({ children, width, center, debug }) => {
+export const Box: React.FC<BoxProps> = ({ children, width, center, debug }) => {
   return (
     <StyledBox width={width} center={center} debug={debug}>
       {children}
@@ -33,5 +33,3 @@ const Box: React.FC<StyleProps> = ({ children, width, center, debug }) => {
 Box.defaultProps = {};
 
 Box.displayName = 'Box';
-
-export default Box;

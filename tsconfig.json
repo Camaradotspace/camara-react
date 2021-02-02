@@ -26,5 +26,14 @@
     "noEmit": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "example"]
+  "exclude": [
+    "**/dist",
+    "node_modules",
+    "**/node_modules",
+    "stories",
+    "playground",
+    "**/*.spec.ts",
+    "**/__tests__",
+    "**/*.test.ts"
+  ]
 }

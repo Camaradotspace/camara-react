@@ -36,4 +36,10 @@ export const tokens = {
   other: {
     $boxShadow: `1px 1px 3px #dedede`,
   },
+  sizes: {
+    large: 40,
+    medium: 28,
+    small: 20,
+    tiny: 16,
+  },
 };

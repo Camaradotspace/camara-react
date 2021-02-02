@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface StyleProps {
+export interface SpacerProps {
   /**
    * Padding top
    */
@@ -52,7 +52,7 @@ interface StyleProps {
   my?: number;
 }
 
-const StyledSpacer = styled.div<StyleProps>`
+const StyledSpacer = styled.div<SpacerProps>`
   padding-top: ${(props) => props.pt}px;
   padding-bottom: ${(props) => props.pb}px;
   padding-left: ${(props) => props.pl}px;
@@ -65,7 +65,7 @@ const StyledSpacer = styled.div<StyleProps>`
   margin: ${(props) => props.my}px ${(props) => props.mx}px;
 `;
 
-const Spacer: React.FC<StyleProps> = ({
+export const Spacer: React.FC<SpacerProps> = ({
   children,
   pt,
   pb,
@@ -101,5 +101,3 @@ const Spacer: React.FC<StyleProps> = ({
 };
 
 Spacer.defaultProps = {};
-
-export default Spacer;

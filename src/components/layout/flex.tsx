@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface FlexProps {
+export interface FlexProps {
   justify?:
     | 'space-between'
     | 'space-around'
@@ -20,7 +20,12 @@ const StyledFlex = styled.div<FlexProps>`
   width: ${(props) => props.width}%;
 `;
 
-const Flex: React.FC<FlexProps> = ({ children, width, justify, wrap }) => {
+export const Flex: React.FC<FlexProps> = ({
+  children,
+  width,
+  justify,
+  wrap,
+}) => {
   return (
     <StyledFlex width={width} justify={justify} wrap={wrap}>
       {children}
@@ -31,5 +36,3 @@ const Flex: React.FC<FlexProps> = ({ children, width, justify, wrap }) => {
 Flex.defaultProps = {};
 
 Flex.displayName = 'Flex';
-
-export default Flex;

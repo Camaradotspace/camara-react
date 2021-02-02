@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface CardProps {
+export interface CardProps {
   /**
    * Padding top
    */
@@ -39,7 +39,7 @@ interface CardProps {
   width?: number;
 }
 
-const Card = styled.div<CardProps>`
+export const Card = styled.div<CardProps>`
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
   background-color: #fff;
@@ -62,5 +62,3 @@ Card.defaultProps = {
   width: 600,
   elevate: false,
 };
-
-export default Card;

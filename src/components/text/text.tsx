@@ -4,7 +4,7 @@ import { tokens } from '../../../utils/tokens';
 
 const { $2 } = tokens.space;
 
-interface TextProps {
+export interface TextProps {
   /**
    * Text variant
    */
@@ -37,7 +37,7 @@ const OverlineText = styled.p<TextProps>`
   letter-spacing: 1.5px;
 `;
 
-const Text = ({ variant, children }: TextProps) => {
+export const Text = ({ variant, children }: TextProps) => {
   switch (variant) {
     case 'strong':
       return <StrongText>{children}</StrongText>;
@@ -57,5 +57,3 @@ const Text = ({ variant, children }: TextProps) => {
 Text.defaultProps = {};
 
 Text.displayName = 'TextComponent';
-
-export default Text;

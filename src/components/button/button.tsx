@@ -14,7 +14,7 @@ const {
 const { $boxShadow } = tokens.other;
 const { $1, $2 } = tokens.space;
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -49,7 +49,7 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 
-const Button = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   /* height: ${(props) => props.size || 30}px; */
   background-color: ${(props) => props.backgroundColor || $white};
   color: ${(props) => props.color || $black200};
@@ -114,5 +114,3 @@ const Button = styled.button<ButtonProps>`
       border-radius: 2rem;
     `}
 `;
-
-export default Button;

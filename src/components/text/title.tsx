@@ -4,7 +4,7 @@ import { tokens } from '../../../utils/tokens';
 
 const { $h1, $h2, $h3, $h4, $h5, $h6 } = tokens.fontSizes;
 
-interface TitleProps {
+export interface TitleProps {
   /**
    * Text color
    */
@@ -17,7 +17,7 @@ interface TitleProps {
   thin?: boolean;
 }
 
-const Title = styled.h1<TitleProps>`
+export const Title = styled.h1<TitleProps>`
   font-size: ${$h1};
   color: ${(props) => props.color};
   font-weight: ${(props) => (props.thin === true ? 200 : 'bold')};
@@ -51,5 +51,3 @@ const Title = styled.h1<TitleProps>`
 Title.defaultProps = {};
 
 Title.displayName = 'TitleComponent';
-
-export default Title;

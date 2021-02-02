@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface TextAreaProps {
+export interface TextAreaProps {
   /**
    * How many rows should the text area have?
    */
@@ -48,7 +48,7 @@ const StyledTextArea = styled.textarea<TextAreaProps>`
   display: block;
 `;
 
-const TextArea = ({
+export const TextArea = ({
   rows = 4,
   value,
   placeholder = 'This is a text area',
@@ -82,5 +82,3 @@ TextArea.defaultProps = {
 };
 
 TextArea.displayName = 'TextArea';
-
-export default TextArea;

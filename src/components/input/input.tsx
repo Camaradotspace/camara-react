@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as React from 'react';
 
-interface InputProps {
+export interface InputProps {
   /**
    * Label text
    */
@@ -102,7 +102,7 @@ const StyledLabel = styled.label<InputProps>`
   color: #333;
 `;
 
-const Input = ({
+export const Input = ({
   id,
   name,
   htmlFor,
@@ -136,5 +136,3 @@ Input.defaultProps = {
 };
 
 Input.displayName = 'Input';
-
-export default Input;

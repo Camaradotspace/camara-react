@@ -1,12 +1,20 @@
-# v1.0.0 (Tue Feb 02 2021)
-
-
-
----
-
 # Changelog
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
+
+## v1.0.0-beta.4 (Tue Feb 02, 2021)
+
+- BREAKING:
+  - ❗ `avatar` size prop now takes in predefined values as against number input
+- ✨ refactored project dependencies and configs
+- 🚀 fix continuous integration with `auto`
+- 🐛 `Camara` no longer bundles the `stories` and `playground` folder on build
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
 
 ## v1.0.0-beta.3 (Tue Feb 02, 2021)
 

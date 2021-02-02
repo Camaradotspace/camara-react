@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface LinkProps {
+export interface LinkProps {
   /**
    * Color of the link
    */
@@ -11,7 +11,7 @@ interface LinkProps {
   asButton?: boolean;
 }
 
-const Link = styled.a<LinkProps>`
+export const Link = styled.a<LinkProps>`
   text-decoration: none;
   color: ${(props) => props.color};
   cursor: pointer;
@@ -43,5 +43,3 @@ Link.defaultProps = {
   color: '#4285F4',
   asButton: false,
 };
-
-export default Link;

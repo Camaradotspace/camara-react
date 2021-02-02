@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface BadgeProps {
+export interface BadgeProps {
   /**
    * Size of the badge
    */
@@ -11,7 +11,7 @@ interface BadgeProps {
   backgroundColor: string;
 }
 
-const Badge = styled.div<BadgeProps>`
+export const Badge = styled.div<BadgeProps>`
   width: 32px;
   height: 32px;
   border-radius: 100%;
@@ -40,5 +40,3 @@ const Badge = styled.div<BadgeProps>`
       height: 24px;
     `};
 `;
-
-export default Badge;

@@ -1,17 +1,2 @@
 import './index.css';
-export { default as Avatar } from './components/avatar/avatar';
-export { default as Badge } from './components/badge/badge';
-export { default as Button } from './components/button/button';
-export { default as Card } from './components/card/card';
-export { default as Divider } from './components/divider/divider';
-export { default as Image } from './components/image/image';
-export { default as Input } from './components/input/input';
-export { default as Layout } from './components/layout/layout';
-export { default as Box } from './components/layout/box';
-export { default as Flex } from './components/layout/flex';
-export { default as Spacer } from './components/layout/spacer';
-export { default as Link } from './components/link/link';
-export { default as Tag } from './components/tag/tag';
-export { default as Text } from './components/text/text';
-export { default as Title } from './components/text/title';
-export { default as TextArea } from './components/textarea/textarea';
+export * from './components';

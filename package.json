@@ -1,8 +1,11 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "a design system that helps you build your ideas quickly",
-  "author": "Camaradotspace",
+  "author": {
+    "name": "Presh Onyee",
+    "email": "preshonyee@gmail.com"
+  },
   "license": "MIT",
   "repository": "Camaradotspace/camara-react",
   "main": "dist/index.js",
@@ -29,16 +32,17 @@
     "deploy": "gh-pages -d example/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "build-docs": "build-storybook --docs",
     "generate": "node utils/create-component",
-    "release": "auto shipit"
+    "release": "yarn build && auto shipit --base-branch=master"
   },
   "peerDependencies": {
-    "@types/styled-components": "^5.1.4",
-    "react": "^16.13.1",
-    "styled-components": "^5.2.1"
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/eslint-plugin": "^7.12.1",
     "@storybook/addon-actions": "^6.0.27",
     "@storybook/addon-essentials": "^6.0.27",
     "@storybook/addon-links": "^6.0.27",
@@ -54,7 +58,6 @@
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "auto": "^10.13.2",
-    "babel-eslint": "^10.1.0",
     "babel-loader": "8.1.0",
     "cross-env": "^7.0.2",
     "eslint": "7.18.0",
@@ -84,5 +87,9 @@
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@types/styled-components": "^5.1.4",
+    "polished": "^4.1.0",
+    "styled-components": "^5.2.1"
+  }
 }
