@@ -1,3 +1,9 @@
+# v1.0.0 (Tue Feb 02 2021)
+
+
+
+---
+
 # Changelog
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
