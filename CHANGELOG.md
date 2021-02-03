@@ -2,6 +2,21 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.6 (Wed Feb 03, 2021)
+
+Rebuild from the ground-up. This changes everything!!!
+
+- The previous bundler cli `microbundle` had a lot of issues with generating typescript definitions and wasn't flexible for me to modify its behavior.  
+  After loads of inconsistencies and mess I had to rewrite the core library to make use of rollup directly.
+  This has made bundling the library much more solid and consistent than before. A lot has changed, I had to touch every single file but somehow keep the same APIs for each components.
+  This lays a much more solid foundation for future version of Camara
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.5 (Tue Feb 02, 2021)
 
 - 🔼 minor version bump
