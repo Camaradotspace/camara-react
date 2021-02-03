@@ -2,6 +2,16 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.8 (Thur Feb 04, 2021)
+
+- minor package update
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.7 (Wed Feb 03, 2021)
 
 - minor package update
