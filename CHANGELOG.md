@@ -1,12 +1,18 @@
-# v1.0.0 (Tue Feb 02 2021)
-
-
-
----
-
 # Changelog
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
+
+## v1.0.0-beta.5 (Tue Feb 02, 2021)
+
+- 🔼 minor version bump
+- ❌ remove GitHub actions workflow file
+- ❓ still debugging declaration file issue
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
 
 ## v1.0.0-beta.4 (Tue Feb 02, 2021)
 

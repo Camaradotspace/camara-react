@@ -10,22 +10,25 @@
 npm install --save camara
 ```
 
+```bash
+yarn add camara
+```
+
 ## Usage
 
 ```tsx
-import React from 'react'
-
-import Button from 'camara'
-import 'camara/dist/index.css'
+import React from 'react';
+import { Button } from 'camara';
 
 const App = () => {
-    return (
-      <div>
-        <Button>Camara</Button>
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      <Button>Camara</Button>
+    </div>
+  );
+};
+
+export default App;
 ```
 
 ## License
