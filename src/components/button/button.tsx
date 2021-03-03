@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { tokens } from '../tokens';
+import { tokens } from '../../constants';
 
 const {
   $primary,

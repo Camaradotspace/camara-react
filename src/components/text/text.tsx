@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { tokens } from '../tokens';
+import { tokens } from '../../constants';
 
 const { $2 } = tokens.space;
 

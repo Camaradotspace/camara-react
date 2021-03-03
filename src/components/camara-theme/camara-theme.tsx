@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, darkTheme, defaultTheme } from '../utils';
+import { GlobalStyle, darkTheme, defaultTheme } from '../../constants';
 
 export const CamaraTheme = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);

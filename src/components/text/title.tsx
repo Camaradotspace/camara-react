@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { tokens } from '../tokens';
+import { tokens } from '../../constants';
 
 const { $h1, $h2, $h3, $h4, $h5, $h6 } = tokens.fontSizes;
 
