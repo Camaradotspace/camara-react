@@ -2,6 +2,28 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.9 (Sat Mar 27, 2021)
+
+A change has been made to how the project gets updated. Going forward every new `beta` version is going to focus solely on a single component and try to improve on the component across its Storybook stories, docs, test, and real-world usage. This way we can move incrementally while knowing that we are thinking about each component in a comprehensive manner.
+
+- `Button` component:
+  - ❌ remove `primary` prop option for setting the type of button.
+  - 🆕 `variant` prop is now used for setting the type of button from `primary`, `secondary` or `ghost`.
+  - ✨ `size` prop now updated with `large`, `small` and `medium` options.
+  - 🆕 `block` prop sets the option to fit button width to the full width of the parent
+  - 🆕 `loading` prop add a loading spinner indicator to be used when users have to wait for the result of their action after pressing a button.
+  - 🆕 `disabled` prop adds a visual indicator that a button is not interactive and restricts it from being pressed.
+  - 🆕 `danger` prop adds a visual indicator that the button action is destructive and irreversible in some case
+  - ❌ remove `orientation` prop.
+  - ✨ rename `rounded` prop to `pill` to accurately describe the button shape
+  - ✨ hover, active and focused state has been improved.
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.8 (Thur Feb 04, 2021)
 
 - minor package update

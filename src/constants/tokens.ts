@@ -1,12 +1,10 @@
 export const tokens = {
   colors: {
-    $buttonHover: `rgba(0, 0, 0, 0.05)`,
-    $buttonPressed: `rgba(0, 0, 0, 0.09)`,
     $primaryButtonHover: `#0077FF`,
     $primaryButtonPressed: `#0088FF`,
     $buttonDanger: `#e22121`,
-    $buttonDangerHover: `#e2212160`,
-    $buttonDangerPressed: `#e2212180`,
+    $buttonDangerHover: `#bd1212`,
+    $buttonDangerPressed: `#ad0303`,
     $primary: '#0099FF', // primary brand color
     $secondary: '#e65f5c', // secondary brand color
     $black100: '#262626', // Primary text color

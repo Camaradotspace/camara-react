@@ -1,68 +1,152 @@
 import React from 'react';
-import { Button } from '.';
+import { Story, Meta } from '@storybook/react/types-6-0';
+import { Box, Flex } from '../layout';
+
+import { Button, ButtonProps } from '.';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
+  component: Button,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+    color: { control: 'color' },
+    children: { control: 'text' },
+  },
+} as Meta;
+
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+
+// Base default button
+export const Base = Template.bind({});
+Base.args = {
+  children: 'Say Hello',
+  onClick: () => alert('Hello Camara'),
 };
 
-// variants
-export const Primary = () => <Button variant='primary'>Primary</Button>;
-
-export const Secondary = () => <Button variant='secondary'> Secondary</Button>;
-
-export const Ghost = () => <Button variant='ghost'>Ghost</Button>;
+// Variants
+export const Variants = (args: ButtonProps) => (
+  <Flex>
+    <Button {...args} variant='primary'>
+      Primary
+    </Button>
+    <Button {...args} variant='secondary'>
+      Secondary
+    </Button>
+    <Button {...args} variant='ghost'>
+      Ghost
+    </Button>
+  </Flex>
+);
 
 // sizes
-
-export const Large = () => (
-  <Button variant='primary' size='large'>
-    Large
-  </Button>
+export const Sizes = (args: ButtonProps) => (
+  <Flex>
+    <div>
+      <Button {...args} size='large'>
+        Large
+      </Button>
+    </div>
+    <div>
+      <Button {...args} size='medium'>
+        Medium
+      </Button>
+    </div>
+    <div>
+      <Button {...args} size='small'>
+        Small
+      </Button>
+    </div>
+  </Flex>
 );
 
-export const Medium = () => (
-  <Button variant='primary' size='medium'>
-    Medium
-  </Button>
+// disabled buttons
+export const Disabled = (args: ButtonProps) => (
+  <Flex>
+    <div>
+      <Button {...args} disabled variant='primary'>
+        Primary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} disabled variant='secondary'>
+        Secondary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} disabled variant='ghost'>
+        Ghost
+      </Button>
+    </div>
+  </Flex>
 );
 
-export const Small = () => (
-  <Button variant='primary' size='small'>
-    Small
-  </Button>
-);
-
-// disabled button
-export const Disabled = () => (
-  <Button variant='primary' disabled>
-    Disabled
-  </Button>
-);
-
-// danger button
-export const Danger = () => (
-  <Button variant='primary' danger>
-    Danger
-  </Button>
+// danger buttons
+export const Danger = (args: ButtonProps) => (
+  <Flex>
+    <div>
+      <Button {...args} danger variant='primary'>
+        Primary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} danger variant='secondary'>
+        Secondary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} danger variant='ghost'>
+        Ghost
+      </Button>
+    </div>
+  </Flex>
 );
 
 // pill-shaped button
-export const Pill = () => (
-  <Button variant='primary' pill>
-    Camara
-  </Button>
+export const Pill = (args: ButtonProps) => (
+  <Flex>
+    <div>
+      <Button {...args} pill variant='primary'>
+        Primary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} pill variant='secondary'>
+        Secondary
+      </Button>
+    </div>
+    <div>
+      <Button {...args} pill variant='ghost'>
+        Ghost
+      </Button>
+    </div>
+  </Flex>
+);
+
+// full width button
+export const Block = (args: ButtonProps) => (
+  <Box width={30}>
+    <Button {...args} block variant='primary'>
+      Primary
+    </Button>
+    <Button {...args} block variant='secondary'>
+      Secondary
+    </Button>
+    <Button {...args} block variant='ghost'>
+      Ghost
+    </Button>
+  </Box>
 );
 
 // With background color
-export const BackgroundColor = () => (
-  <Button variant='primary' pill backgroundColor='green'>
+export const BackgroundColor = (args: ButtonProps) => (
+  <Button {...args} pill backgroundColor='green'>
     Camara
   </Button>
 );
 
 // With color
-export const Color = () => (
-  <Button variant='primary' pill backgroundColor='#ffc108' color='#000000'>
+export const Color = (args: ButtonProps) => (
+  <Button {...args} pill backgroundColor='#ffc108' color='#000000'>
     Camara
   </Button>
 );

@@ -1,22 +1,20 @@
-import React, { EventHandler } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { tokens } from '../../constants';
 
 const {
   $primary,
   $white,
-  $buttonHover,
-  $buttonPressed,
   $primaryButtonHover,
   $primaryButtonPressed,
   $buttonDanger,
   $buttonDangerHover,
   $buttonDangerPressed,
+  $statusUnknown,
 } = tokens.colors;
-const { $boxShadow } = tokens.other;
-const { $1, $2 } = tokens.space;
+const { $1 } = tokens.space;
 
-export interface ButtonProps {
+interface StyleProps {
   /**
    * What variant of button is to be used
    */
@@ -55,13 +53,12 @@ export interface ButtonProps {
   /**
    * What color to use
    */
-
   color?: string;
+
   /**
    * Optional click handler
    */
-
-  onClick?: (event) => void;
+  onClick?: (event: any) => void;
 
   /**
    * Set shaped of button to pill-shape
@@ -69,165 +66,204 @@ export interface ButtonProps {
   pill?: boolean;
 }
 
-/**
- * Primary UI component for user interaction
- */
+interface BaseProps {
+  /**
+   * Can be used to set the button label
+   */
+  children: React.ReactNode;
+}
 
-const StyledButton = styled.button<ButtonProps>`
-  // default button styles
-  background-color: ${(props) => props.backgroundColor || $primary};
-  color: ${(props) => props.color || $white};
+export type ButtonProps = BaseProps & StyleProps;
+
+// default button styles
+const baseStyles = css<StyleProps>`
   display: inline-block;
   border-radius: 0.25rem;
   font-weight: 500;
-  padding: 0.75rem 0.5rem;
+  padding: 0.4rem 1rem;
   margin: ${$1};
   cursor: pointer;
   outline: none;
   border: none;
-  &:hover {
-    background-color: ${(props) => props.backgroundColor || $buttonHover};
-  }
-  &:focus {
-    background-color: ${(props) => props.backgroundColor || $buttonPressed};
-  }
-  &:active {
-    background-color: ${(props) => props.backgroundColor || $buttonPressed};
-  }
+`;
 
-  // primary button style
-  ${(props) =>
-    props.variant === 'primary' &&
-    css`
-      background-color: ${props.backgroundColor || $primary};
-      color: ${props.color || $white};
-      border: 1px solid ${props.backgroundColor || $primary};
-      &:hover {
-        background-color: ${props.backgroundColor || $primaryButtonHover};
-        border: 1px solid ${props.backgroundColor || $primaryButtonHover};
-        color: ${props.color || $white};
-      }
-      &:focus {
-        background-color: ${props.backgroundColor || $primaryButtonPressed};
-        border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
-        color: ${props.color || $white};
-        box-shadow: ${$boxShadow};
-      }
-      &:active {
-        background-color: ${props.backgroundColor || $primaryButtonPressed};
-        border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
-        color: ${props.color || $white};
-        box-shadow: ${$boxShadow};
-      }
-    `}
+// primary button style
+const primaryStyles = (props: StyleProps) =>
+  props.variant === 'primary' &&
+  css`
+    color: ${props.color || $white};
+    border: 1px solid ${props.backgroundColor || $primary};
+    background-color: ${props.backgroundColor || $primary};
+    &:hover {
+      background-color: ${props.backgroundColor || $primaryButtonHover};
+      border: 1px solid ${props.backgroundColor || $primaryButtonHover};
+    }
+    &:focus {
+      outline: 1px solid ${props.backgroundColor || $primary};
+      outline-offset: 2px;
+    }
+    &:active {
+      background-color: ${props.backgroundColor || $primaryButtonPressed};
+      border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
+    }
+    &:disabled {
+      background-color: ${$statusUnknown};
+      border: 1px solid ${$statusUnknown};
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+  `;
 
-  // secondary button style
-  ${(props) =>
-    props.variant === 'secondary' &&
-    css`
-      background-color: ${props.backgroundColor || $white};
-      color: ${props.color || $primary};
-      border: 1px solid ${props.backgroundColor || $primary};
-      &:hover {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonHover};
-        border: 1px solid ${props.backgroundColor || $primaryButtonHover};
-      }
-      &:focus {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonPressed};
-        border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
-        box-shadow: ${$boxShadow};
-      }
-      &:active {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonPressed};
-        border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
-        box-shadow: ${$boxShadow};
-      }
-    `}
+// secondary button style
+const secondaryStyles = (props: StyleProps) =>
+  props.variant === 'secondary' &&
+  css`
+    background-color: transparent;
+    color: ${props.color || $primary};
+    border: 1px solid ${props.backgroundColor || $primary};
+    &:hover {
+      color: ${props.color || $primaryButtonHover};
+      border: 1px solid ${props.backgroundColor || $primaryButtonHover};
+    }
+    &:active {
+      border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
+    }
+    &:disabled {
+      color: ${$statusUnknown};
+      border: 1px solid ${$statusUnknown};
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+  `;
 
-  // ghost button style
-  ${(props) =>
-    props.variant === 'ghost' &&
-    css`
-      background-color: ${props.backgroundColor || $white};
-      color: ${props.color || $primary};
-      &:hover {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonHover};
-      }
-      &:focus {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonPressed};
-      }
-      &:active {
-        background-color: ${props.backgroundColor || $white};
-        color: ${props.color || $primaryButtonPressed};
-      }
-    `}
+// ghost button style
+const ghostStyles = (props: StyleProps) =>
+  props.variant === 'ghost' &&
+  css`
+    background-color: transparent;
+    color: ${props.color || $primary};
+    &:hover {
+      color: ${props.color || $primaryButtonHover};
+    }
+    &:focus {
+      color: ${props.color || $primaryButtonPressed};
+    }
+    &:active {
+      color: ${props.color || $primaryButtonPressed};
+    }
+    &:disabled {
+      color: ${$statusUnknown};
+      cursor: not-allowed;
+      opacity: 0.8;
+    }
+  `;
 
-// large button style
-  ${(props) =>
-    props.size === 'large' &&
-    css`
-      padding: 1rem 1rem;
-    `}
+// button size style
+const sizeStyles = ({ size }: StyleProps) => {
+  const sizes = {
+    large: {
+      padding: `0.55rem 1rem`,
+    },
+    medium: {
+      padding: `0.4rem 1rem`,
+    },
+    small: {
+      'font-size': `0.75rem`,
+      padding: `0.25rem 1rem`,
+    },
+  };
 
-    // medium button style
-  ${(props) =>
-    props.size === 'medium' &&
-    css`
-      padding: 0.75rem 0.5rem;
-    `}
+  return css({ ...sizes[size] });
+};
 
-    // small button style
-  ${(props) =>
-    props.size === 'small' &&
-    css`
-      padding: 0.5rem 0.25rem;
-    `}
-
-    // block button style
-    ${(props) =>
-    props.block &&
-    css`
-      width: 100%;
-      display: block;
-    `}
-
-    // danger button style
-    ${(props) =>
-    props.danger &&
-    css`
-      background-color: ${$buttonDanger};
+// danger button style
+const primaryDangerStyles = (props: StyleProps) =>
+  props.danger &&
+  props.variant === 'primary' &&
+  css`
+    background-color: ${$buttonDanger};
+    color: ${$white};
+    border: 1px solid ${$buttonDanger};
+    &:hover {
+      background-color: ${$buttonDangerHover};
       color: ${$white};
-      border: 1px solid ${$buttonDanger};
-      &:hover {
-        background-color: ${$buttonDangerHover};
-        color: ${$white};
-        border: 1px solid ${$buttonDangerHover};
-      }
-      &:focus {
-        background-color: ${$buttonDangerPressed};
-        color: ${$white};
-        border: 1px solid ${$buttonDangerPressed};
-        box-shadow: ${$boxShadow};
-      }
-      &:active {
-        background-color: ${$buttonDangerPressed};
-        color: ${$white};
-        border: 1px solid ${$buttonDangerPressed};
-        box-shadow: ${$boxShadow};
-      }
-    `}
+      border: 1px solid ${$buttonDangerHover};
+    }
+    &:focus {
+      background-color: ${$buttonDangerPressed};
+      color: ${$white};
+      border: 1px solid ${$buttonDangerPressed};
+    }
+    &:active {
+      background-color: ${$buttonDangerPressed};
+      color: ${$white};
+      border: 1px solid ${$buttonDangerPressed};
+    }
+  `;
+
+// secondary button danger style
+const secondaryDangerStyles = (props: StyleProps) =>
+  props.danger &&
+  props.variant === 'secondary' &&
+  css`
+    background-color: transparent;
+    color: ${$buttonDanger};
+    border: 1px solid ${$buttonDanger};
+    &:hover {
+      color: ${$buttonDangerHover};
+      border: 1px solid ${$buttonDangerHover};
+    }
+    &:active {
+      color: ${$buttonDangerPressed};
+      border: 1px solid ${$buttonDangerPressed};
+    }
+  `;
+
+// ghost button danger style
+const ghostDangerStyles = (props: StyleProps) =>
+  props.danger &&
+  props.variant === 'ghost' &&
+  css`
+    background-color: transparent;
+    color: ${$buttonDanger};
+    &:hover {
+      color: ${$buttonDangerHover};
+    }
+    &:focus {
+      color: ${props.color || $primaryButtonPressed};
+    }
+    &:active {
+      color: ${props.color || $primaryButtonPressed};
+    }
+  `;
 
 // pill-shaped button style
-  ${(props) =>
-    props.pill &&
-    css`
-      border-radius: 2rem;
-    `}
+const pillStyles = (props: StyleProps) =>
+  props.pill &&
+  css`
+    border-radius: 2rem;
+  `;
+
+// full-width button style
+const blockStyles = (props: StyleProps) =>
+  props.block &&
+  css`
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+  `;
+
+const StyledButton = styled.button`
+  ${baseStyles}
+  ${primaryStyles}
+  ${secondaryStyles}
+  ${ghostStyles}
+  ${primaryDangerStyles}
+  ${secondaryDangerStyles}
+  ${ghostDangerStyles}
+  ${pillStyles}
+  ${sizeStyles}
+  ${blockStyles}
 `;
 
 export const Button: React.FC<ButtonProps> = ({
@@ -260,3 +296,17 @@ export const Button: React.FC<ButtonProps> = ({
     </StyledButton>
   );
 };
+
+Button.defaultProps = {
+  variant: 'primary',
+  size: 'medium',
+  disabled: false,
+  block: false,
+  loading: false,
+  onClick: () => null,
+  pill: false,
+  danger: false,
+  children: 'Button',
+};
+
+Button.displayName = 'Button';
