@@ -1,0 +1,58 @@
+---
+title: Button
+section: Components
+slug: /docs/components/button/
+---
+
+import { Button } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Button }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Button },
+  }}
+/>
+
+# Button
+
+## Examples
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(<Button>A simple button</Button>);
+```
+
+### Primary
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(<Button primary={true}>A simple button</Button>);
+```
+
+### Background Color
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <Button primary={true} backgroundColor='pink' color='red'>
+    A simple button
+  </Button>
+);
+```
+
+### Rounded
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <Button primary={true} backgroundColor='pink' rounded={true} color='red'>
+    A simple button
+  </Button>
+);
+```
