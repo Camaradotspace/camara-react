@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, HTMLProps } from 'react';
 import styled, { css } from 'styled-components';
 import { tokens } from '../../constants';
 
@@ -14,7 +14,7 @@ const {
 } = tokens.colors;
 const { $1 } = tokens.space;
 
-interface StyleProps {
+interface StyleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * What variant of button is to be used
    */
@@ -278,6 +278,7 @@ export const Button: React.FC<ButtonProps> = ({
   color,
   onClick,
   children,
+  ...rest
 }) => {
   return (
     <StyledButton
@@ -291,6 +292,7 @@ export const Button: React.FC<ButtonProps> = ({
       danger={danger}
       backgroundColor={backgroundColor}
       color={color}
+      {...rest}
     >
       {children}
     </StyledButton>
