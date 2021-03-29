@@ -11,6 +11,8 @@ export const tokens = {
     $black200: '#444444', // Secondary text color
     $black300: 'e0e0e0', // tertiary text color
     $white: '#fff',
+    $backgroundWhite: '#f2f2f2', // background color
+    $iconColor: 'rgba(51, 51, 51, 0.9)',
     $border: '#dadce0', // border color for anything
     $placeholder: '#708090', // placeholder color
     $statusSuccess: `#28a745`,
@@ -38,9 +40,9 @@ export const tokens = {
     $boxShadow: `1px 1px 3px #dedede`,
   },
   sizes: {
-    large: 40,
-    medium: 28,
-    small: 20,
-    tiny: 16,
+    large: 80,
+    medium: 64,
+    small: 40,
+    tiny: 24,
   },
 };

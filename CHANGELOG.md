@@ -2,6 +2,25 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.10 (Mon Mar 29, 2021)
+
+- `Avatar` component:
+  - 🆕 `imageAlt` prop allows for adding alternative text to describe the avatar image.
+  - 🆕 `username` prop sets a the initials when an initial is to be used.
+  - 🆕 `color` prop sets the color of the initials
+  - 🆕 `icon` prop sets a custom icon for the avatar.
+  - 🆕 `shape` prop determines the shape of the avatar.
+  - 🆕 `fit` prop sets the `object-fit` property of the avatar.
+  - 🆕 `initialsSize` prop sets the font size of the initials text.
+  - ✨ `size` prop now accepts numbers.
+  - ✨ `backgroundColor` prop now works for `initials` and `icon` avatar too
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.9 (Sat Mar 27, 2021)
 
 A change has been made to how the project gets updated. Going forward every new `beta` version is going to focus solely on a single component and try to improve on the component across its Storybook stories, docs, test, and real-world usage. This way we can move incrementally while knowing that we are thinking about each component in a comprehensive manner.
