@@ -27,6 +27,9 @@ export const tokens = {
     $h4: '1.25rem', // 20px
     $h5: '1rem', // 16px
     $h6: '0.75rem', // 12px
+    $14: '0.875rem', // 14px
+    $12: '0.75rem', // 12px
+    $10: '0.625rem', // 10px
   },
   space: {
     $1: `0.25rem`, // 4px

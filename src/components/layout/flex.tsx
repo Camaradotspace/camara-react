@@ -18,6 +18,7 @@ const StyledFlex = styled.div<FlexProps>`
   justify-content: ${(props) => props.justify};
   flex-wrap: ${(props) => props.wrap === true && 'wrap'};
   width: ${(props) => props.width}%;
+  align-items: flex-start;
 `;
 
 export const Flex: React.FC<FlexProps> = ({

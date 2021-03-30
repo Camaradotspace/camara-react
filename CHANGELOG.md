@@ -2,6 +2,21 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.11 (Tue Mar 29, 2021)
+
+- `Badge` component:
+  - 🆕 `color` prop sets the color of the badge text
+  - 🆕 `text` prop sets the text of the badge
+  - 🆕 `shape` prop sets the shape of the badge
+  - 🆕 `position` prop sets the position of the badge relative to the parent element
+  - ✨ `default` option of `size` prop has been replaced with `medium`.
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.10 (Mon Mar 29, 2021)
 
 - `Avatar` component:
