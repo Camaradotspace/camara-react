@@ -2,7 +2,23 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
-## v1.0.0-beta.11 (Tue Mar 29, 2021)
+## v1.0.0-beta.12 (Wed Mar 31, 2021)
+
+- `Image` component:
+
+  - ❗ Breaking: `imageURL` prop is now renamed to `imageUrl`, both still work the same way. It's simply a name change.
+  - ❗ Breaking: `width` prop is removed and deprecated. Setting the image width can be set with default image HTML width attribute.
+  - 🆕 `imageAlt` prop sets the description of the image
+  - 🆕 `loading` prop controls if the image should be deferred when its off the screen
+  - 🆕 `fit` prop sets the image object-fit property
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
+## v1.0.0-beta.11 (Tue Mar 30, 2021)
 
 - `Badge` component:
   - 🆕 `color` prop sets the color of the badge text

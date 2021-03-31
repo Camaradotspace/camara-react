@@ -1,10 +1,13 @@
 import React from 'react';
-import { Image } from '.';
+import { Image, ImageProps } from '.';
+import { Story, Meta } from '@storybook/react/types-6-0';
 
 export default {
-  title: 'Image',
-};
+  title: 'Components/Image',
+  component: Image,
+} as Meta;
 
-export const Primary = () => (
-  <Image imageURL='https://source.unsplash.com/200x200/?beanie' width={100} />
-);
+const Template: Story<ImageProps> = (args) => <Image {...args} />;
+
+// Base default button
+export const Base = Template.bind({});
