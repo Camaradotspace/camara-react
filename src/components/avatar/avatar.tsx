@@ -2,7 +2,14 @@ import styled, { css } from 'styled-components';
 import React, { FunctionComponent, ImgHTMLAttributes } from 'react';
 import { tokens } from '../../constants';
 
-export const { colors, space, sizes, fontSizes } = tokens;
+const { colors, space, fontSizes } = tokens;
+
+const sizes = {
+  large: 80,
+  medium: 64,
+  small: 40,
+  tiny: 24,
+};
 
 export interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   /* How large should the avatar be? */

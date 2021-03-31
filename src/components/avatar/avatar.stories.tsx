@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, AvatarProps } from '.';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react';
 import { User } from 'react-feather';
 import { Box, Flex } from '../layout';
 
