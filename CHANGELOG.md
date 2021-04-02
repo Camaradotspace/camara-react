@@ -2,6 +2,19 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.17 (Fri Apr 2, 2021)
+
+- `Tag` component:
+
+  - ✨ fix reduce scale of `size` prop
+  - 🆕 `children` prop to set content of tag
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.16 (Fri Apr 2, 2021)
 
 - `Text` component:
