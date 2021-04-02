@@ -2,6 +2,19 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.14 (Fri Apr 2, 2021)
+
+- `Title` component:
+
+  - ❗ Breaking: `Title` component is no longer exported from `Text`, it's now a standalone component. Import it from `Title`.
+  - 🆕 `align` prop sets the text-align property of the title component
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.13 (Fri Apr 2, 2021)
 
 - `Card` component:

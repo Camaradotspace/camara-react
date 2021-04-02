@@ -15,5 +15,5 @@ export * from './link';
 export * from './tag';
 export * from './TestComponent/TestComponent';
 export * from './text';
-export * from './text';
+export * from './title';
 export * from './textarea';
