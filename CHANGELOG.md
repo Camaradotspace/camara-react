@@ -2,6 +2,20 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.15 (Fri Apr 2, 2021)
+
+- `Image` component:
+
+  - ❗ Breaking: `imageUrl` and `imageAlt` props are now required by default. Prior imports of the `Image` component that didn't define this props would break.
+
+- Update `Card` component stories
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.14 (Fri Apr 2, 2021)
 
 - `Title` component:

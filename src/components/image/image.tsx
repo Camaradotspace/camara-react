@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 interface StyleProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   /* Image source */
-  imageUrl?: string;
+  imageUrl: string;
 
   /* Image description */
-  imageAlt?: string;
+  imageAlt: string;
 
   /* Control if loading the image should be deferred when its off the screen */
   loading?: 'eager' | 'lazy';
@@ -42,8 +42,9 @@ export const Image: React.FC<ImageProps> = ({
 };
 
 Image.defaultProps = {
-  imageUrl: 'https://source.unsplash.com/1600x900/?beanie',
-  imageAlt: 'Image of person wearing a beanie',
+  imageUrl: 'https://source.unsplash.com/8TQUF6UbpAk/1600x900',
+  imageAlt:
+    'woman in black and white crew neck long sleeve shirt wearing purple knit cap',
   fit: 'cover',
   loading: 'lazy',
 };
