@@ -1,151 +1,127 @@
-import React, { InputHTMLAttributes, useState } from 'react';
-import styled from 'styled-components';
+import React, { InputHTMLAttributes } from 'react';
+import styled, { css } from 'styled-components';
 
-import { validateInput } from '../../constants/validator';
+import { tokens } from '../../constants/tokens';
 
-type InputType =
-  | 'button'
-  | 'checkbox'
-  | 'color'
-  | 'date'
-  | 'datetime-local'
-  | 'email'
-  | 'file'
-  | 'hidden'
-  | 'image'
-  | 'month'
-  | 'number'
-  | 'password'
-  | 'radio'
-  | 'range'
-  | 'reset'
-  | 'search'
-  | 'submit'
-  | 'tel'
-  | 'text'
-  | 'time'
-  | 'url'
-  | 'week';
+const { $primary } = tokens.colors;
 
-interface IInputField extends InputHTMLAttributes<HTMLInputElement> {
-  /**
-   * HTML `id` attribute
-   */
-  id?: string;
-  /**
-   * HTML `value` attribute
-   */
-  value?: any;
-  /**
-   * Label text
-   */
+type InputType = 'email' | 'number' | 'password' | 'text';
+export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
+  /* Label text */
   label?: string;
-  /**
-   * HTML `name` attribute
-   */
+
+  /* HTML `name` attribute */
   name?: string;
-  /**
-   * HTML `for` attribute
-   */
-  htmlFor?: string;
-  /**
-   * Placeholder Text
-   */
+
+  /* Placeholder Text */
   placeholder?: string;
-  /**
-   * Validate against values entered in input fields
-   */
-  validators?: any;
-  /**
-   * What input type is it?
-   */
+
+  /* What input type is it? */
   type?: InputType;
-  /**
-   * Is input required?
-   */
+
+  /* Is input required? */
   required?: boolean;
-  /**
-   * Should form be disabled?
-   */
+
+  /* Should input be disabled? */
   disabled?: boolean;
-  /**
-   * Input field change event handler
-   */
-  onChange:
-    | ((
-        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-        name: string
-      ) => void)
-    | any;
+
+  /* Input helper text */
+  helperText?: string;
+
+  /* Should input be inline? */
+  inline?: boolean;
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<InputFieldProps>`
+  margin: 4px;
+
+  .requiredText {
+    color: 'red';
+  }
+
+  .helperText {
+    display: block;
+    color: #999;
+    margin: 0 8px;
+  }
+
   label {
     display: block;
+    margin: 8px 0;
+    color: #444444;
+    font-size: 14px;
   }
   input {
-    display: block;
+    display: inline-block;
+    padding: 0.65rem 0.5rem;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    min-width: 250px;
+
+    &::placeholder {
+      color: #999999;
+    }
+
+    &:active,
+    &:focus {
+      border: 2px solid ${$primary};
+    }
+
+    ${(props) =>
+      props.disabled &&
+      css`
+        border: 1px solid #dadce0;
+      `}
+
+    ${(props) =>
+      props.inline &&
+      css`
+        display: inline;
+      `}
   }
 `;
 
-export const InputField: React.FC<IInputField> = ({
-  value,
+export const InputField: React.FC<InputFieldProps> = ({
   label,
   name,
-  htmlFor,
   placeholder,
-  validators,
   type,
-  id,
   required,
   disabled,
-  onChange,
+  helperText,
   ...rest
 }) => {
-  const [error, setError] = useState({ error: false, message: '' });
-
-  const handleChange = (event: any) => {
-    const { value, name } = event.target;
-    setError(validateInput(validators, value));
-    onChange(value, name);
+  const renderRequiredLabel = (): JSX.Element => {
+    return <span className='requiredText'>*</span>;
   };
 
-  const renderRequiredLabel = (): JSX.Element => {
-    return <span>*</span>;
+  const renderHelperText = (): JSX.Element => {
+    return <small className='helperText'>{helperText}</small>;
   };
 
   return (
     <Wrapper>
       {label && (
-        <label htmlFor={htmlFor || name}>
-          {label} {required ? renderRequiredLabel() : null}
+        <label htmlFor={name}>
+          {required ? renderRequiredLabel() : null} {label}
         </label>
       )}
       <input
-        id={label.toLowerCase() || id}
         type={type}
-        value={value}
         name={name}
         placeholder={placeholder}
-        onChange={handleChange}
         disabled={disabled}
         {...rest}
       />
-      {error && <span>{error.message}</span>}
+      {helperText ? renderHelperText() : null}
     </Wrapper>
   );
 };
 
 InputField.defaultProps = {
-  value: '',
-  label: '',
-  name: '',
-  htmlFor: '',
-  placeholder: '',
-  validators: [],
-  type: 'text',
-  id: '',
-  required: true,
+  required: false,
   disabled: false,
 };
 

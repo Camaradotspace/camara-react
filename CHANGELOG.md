@@ -2,6 +2,23 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.18 (Fri Apr 2, 2021)
+
+- `Input` component:
+  - ❗ Breaking: remove `validator` support, this should not be taken care of by the library.
+  - ❗ Breaking: trim input type. `type` prop now only accepts 4 values - 'email', 'number', 'password', 'text'.
+  - ❗ Breaking: remove `id`, `value`, `htmlFor`, `validators`, and `onChange` props. All this should be taken care of with default HTML input attributes.
+  - 🆕 `helperText` prop allows for adding additional context to input fields.
+  - 🆕 `inline` prop sets how the input should be displayed
+  - ✨ position of the `required` indicator has been moved to prefix the input fields.
+  - ✨ clean up component default props
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.17 (Fri Apr 2, 2021)
 
 - `Tag` component:
