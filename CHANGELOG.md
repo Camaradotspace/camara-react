@@ -2,6 +2,25 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.16 (Fri Apr 2, 2021)
+
+- `Text` component:
+
+  - 🆕 `weight` prop sets the font-weight
+  - 🆕 `italic` prop sets the font style to italic
+  - 🆕 `inline` prop sets the text on the same line in relation to its parent
+  - 🆕 `align` prop sets the alignment of the text
+  - 🆕 `underline` prop sets the text format to underline
+  - 🆕 `size` prop sets the size of the text
+  - 🆕 `strike` prop sets the text format to strike-through
+  - 🆕 `style` prop sets the CSS properties for the text component
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.15 (Fri Apr 2, 2021)
 
 - `Image` component:
