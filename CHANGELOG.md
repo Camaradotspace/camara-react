@@ -2,6 +2,19 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.19 (Fri Apr 2, 2021)
+
+- `Anchor` component:
+  - ❗ Breaking: `color` prop has been removed and deprecated.
+  - 🆕 `href` prop sets the link destination URL.
+  - 🆕 `asNew` prop sets the option to open link in new tab
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.18 (Fri Apr 2, 2021)
 
 - `Input` component:

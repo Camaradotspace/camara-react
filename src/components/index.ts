@@ -1,3 +1,4 @@
+export * from './anchor';
 export * from './avatar';
 export * from './badge';
 export * from './button';
@@ -11,9 +12,8 @@ export * from './layout';
 export * from './layout';
 export * from './layout';
 export * from './layout';
-export * from './link';
 export * from './tag';
 export * from './TestComponent/TestComponent';
 export * from './text';
-export * from './title';
 export * from './textarea';
+export * from './title';
