@@ -2,6 +2,21 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.13 (Fri Apr 2, 2021)
+
+- `Card` component:
+
+  - ❗ Breaking: all padding related props are now removed and deprecated.
+  - ❗ Breaking: `width` and `height` props are now of the string type. This helps to make setting their values very flexible.
+  - 🆕 `bordered` prop sets border on the card component
+  - 🆕 `children` prop controls the card contents
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.12 (Wed Mar 31, 2021)
 
 - `Image` component:
