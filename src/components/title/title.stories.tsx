@@ -1,7 +1,7 @@
 import React from 'react';
 import { Title, TitleProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Box } from '../layout';
+import { Box } from '../box';
 
 export default {
   title: 'Components/Title',

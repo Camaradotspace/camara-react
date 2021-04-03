@@ -2,7 +2,8 @@ import React from 'react';
 import { Avatar, AvatarProps } from '.';
 import { Story, Meta } from '@storybook/react';
 import { User } from 'react-feather';
-import { Box, Flex } from '../layout';
+import { Flex } from '../layout';
+import { Box } from '../box';
 
 export default {
   title: 'Components/Avatar',

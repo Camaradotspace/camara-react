@@ -2,6 +2,40 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.22 (Sat Apr 3, 2021)
+
+- `Box` component:
+  - 🆕 `height` prop sets the height of the box.
+  - 🆕 `color` prop sets the background color of the box
+  - 🆕 `overflow` prop sets the overflow property of the box
+  - 🆕 `border` prop sets border property of the box.
+  - 🆕 `position` prop sets the position property of the box.
+  - 🆕 `minWidth` prop sets the minimum width of the box.
+  - 🆕 `minHeight` prop sets the minimum height of the box.
+  - 🆕 `maxWidth` prop sets the maximum width of the box.
+  - 🆕 `maxHeight` prop sets the maximum height of the box.
+  - 🆕 `role` prop sets the ARIA role of the box.
+  - 🆕 `pt` prop sets the `padding-top` property of the box.
+  - 🆕 `pb` prop sets the `padding-bottom` property of the box.
+  - 🆕 `pl` prop sets the `padding-left` property of the box.
+  - 🆕 `pr` prop sets the `padding-right` property of the box.
+  - 🆕 `px` prop sets the `horizontal padding` property of the box.
+  - 🆕 `py` prop sets the `vertical padding` property of the box.
+  - 🆕 `pd` prop sets the `all axis padding` property of the box.
+  - 🆕 `mt` prop sets the `margin-top` property of the box.
+  - 🆕 `mb` prop sets the `margin-bottom` property of the box.
+  - 🆕 `ml` prop sets the `margin-left` property of the box.
+  - 🆕 `mr` prop sets the `margin-right` property of the box.
+  - 🆕 `mx` prop sets the `horizontal margin` property of the box.
+  - 🆕 `my` prop sets the `vertical margin` property of the box.
+  - 🆕 `mg` prop sets the `all axis margin` property of the box.
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.21 (Sat Apr 3, 2021)
 
 - `TextArea` component:

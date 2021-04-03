@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextArea, TextAreaProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Box, Flex } from '../layout';
+import { Flex } from '../layout';
 
 export default {
   title: 'Components/TextArea',

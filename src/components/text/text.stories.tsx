@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, TextProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Box, Flex } from '../layout';
+import { Flex } from '../layout';
+import { Box } from '../box';
 
 export default {
   title: 'Components/Text',

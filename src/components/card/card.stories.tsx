@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card, CardProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Box, Flex, Spacer } from '../layout';
+import { Flex, Spacer } from '../layout';
 import { Text } from '../text';
 import { Button } from '../button';
+import { Box } from '../box';
 import { Image } from '../image';
 
 export default {
