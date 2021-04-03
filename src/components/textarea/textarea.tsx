@@ -1,84 +1,142 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from 'react';
+import styled, { css } from 'styled-components';
+import { tokens } from '../../constants/tokens';
+
+const { $primary } = tokens.colors;
 
 export interface TextAreaProps {
-  /**
-   * How many rows should the text area have?
-   */
+  /* Label text */
+  label?: string;
+
+  /* HTML `name` attribute */
+  name?: string;
+
+  /* How many rows should the text area have? */
   rows?: number;
-  /**
-   * TextArea children
-   */
-  value?: string;
-  /**
-   * TextArea placeholder
-   */
-  placeholder: string;
-  /**
-   * How many cols should the text area have?
-   */
-  cols?: number;
-  /**
-   * Is textarea required?
-   */
+
+  /* TextArea placeholder */
+  placeholder?: string;
+
+  /* Is textarea required? */
   required?: boolean;
-  /**
-   * Is textarea disabled?
-   */
+
+  /* Is textarea disabled? */
   disabled?: boolean;
-  /**
-   * TextArea maximum length
-   */
+
+  /* TextArea maximum length */
   maxlength?: number;
-  /**
-   * How should text area wrap?
-   */
+
+  /* How should text area wrap? */
   wrap?: 'hard' | 'soft';
-  /**
-   * form ID for text area
-   */
-  form_id?: string;
+
+  /* Input helper text */
+  helperText?: string;
+
+  /* Should textarea be resizable */
+  resizable?: boolean;
 }
 
-const StyledTextArea = styled.textarea<TextAreaProps>`
-  padding: 0.5rem;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  font-family: sans-serif;
-  display: block;
+const Wrapper = styled.div<TextAreaProps>`
+  margin: 4px;
+
+  .requiredText {
+    color: red;
+  }
+
+  .helperText {
+    display: block;
+    color: #999;
+    margin: 0 8px;
+  }
+
+  label {
+    display: block;
+    margin: 8px 0;
+    color: #444444;
+    font-size: 14px;
+  }
 `;
 
-export const TextArea = ({
-  rows = 4,
-  value,
-  placeholder = 'This is a text area',
+const StyledTextArea = styled.textarea<Partial<TextAreaProps>>`
+  display: inline-block;
+  padding: 0.65rem 0.5rem;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  min-width: 250px;
+
+  &::placeholder {
+    color: #999999;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid ${$primary};
+  }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      border: 1px solid #dadce0;
+    `}
+
+  ${(props) =>
+    props.resizable === false &&
+    css`
+      resize: none;
+    `}
+`;
+
+export const TextArea: FunctionComponent<TextAreaProps> = ({
+  label,
+  helperText,
+  rows,
+  name,
+  placeholder,
   disabled,
   required,
   wrap,
-  form_id,
   maxlength,
-  cols,
-}: TextAreaProps) => {
+  resizable,
+  ...rest
+}) => {
+  const renderRequiredLabel = (): JSX.Element => {
+    return <span className='requiredText'>*</span>;
+  };
+
+  const renderHelperText = (): JSX.Element => {
+    return <small className='helperText'>{helperText}</small>;
+  };
   return (
-    <React.Fragment>
+    <Wrapper>
+      {label && (
+        <label htmlFor={name}>
+          {required ? renderRequiredLabel() : null} {label}
+        </label>
+      )}
       <StyledTextArea
         data-testid='textarea-component'
-        value={value}
         rows={rows}
         placeholder={placeholder}
         disabled={disabled}
         required={required}
         wrap={wrap}
-        form={form_id}
         maxLength={maxlength}
-        cols={cols}
+        resizable={resizable}
+        {...rest}
       />
-    </React.Fragment>
+      {helperText ? renderHelperText() : null}
+    </Wrapper>
   );
 };
 
 TextArea.defaultProps = {
-  Placeholder: 'This is a text area',
+  rows: 1,
+  required: false,
+  disabled: false,
+  resizable: false,
+  wrap: 'hard',
 };
 
 TextArea.displayName = 'TextArea';

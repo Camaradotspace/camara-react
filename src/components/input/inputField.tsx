@@ -36,7 +36,7 @@ const Wrapper = styled.div<InputFieldProps>`
   margin: 4px;
 
   .requiredText {
-    color: 'red';
+    color: red;
   }
 
   .helperText {

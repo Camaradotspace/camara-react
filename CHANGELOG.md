@@ -2,6 +2,23 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.20 (Sat Apr 3, 2021)
+
+- `TextArea` component:
+  - ❗ Breaking: `value` prop has been removed and deprecated.
+  - ❗ Breaking: `cols` prop has been removed and deprecated.
+  - ❗ Breaking: `form_id` prop has been removed and deprecated.
+  - 🆕 `label` prop sets the textarea label.
+  - 🆕 `name` prop sets name of the textarea
+  - 🆕 `helperText` prop allows for adding additional context to textarea fields.
+  - 🆕 `resizable` prop sets if the textarea is drag
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.19 (Fri Apr 2, 2021)
 
 - `Anchor` component:
