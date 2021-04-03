@@ -2,6 +2,21 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.23 (Sat Apr 3, 2021)
+
+- `Spacer` component:
+  - ❗ Breaking: all previous props have been removed.
+  - 🆕 `bottom` prop sets the spacer at the bottom
+  - 🆕 `top` prop sets the spacer at the top
+  - 🆕 `both` prop sets the spacer at the vertical axis
+  - 🆕 `children` prop sets the content of the spacer
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.22 (Sat Apr 3, 2021)
 
 - `Box` component:

@@ -11,7 +11,7 @@ export * from './image';
 export * from './input';
 export * from './layout';
 export * from './layout';
-export * from './layout';
+export * from './spacer';
 export * from './tag';
 export * from './TestComponent/TestComponent';
 export * from './text';
