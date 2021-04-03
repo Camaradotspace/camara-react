@@ -1,8 +1,23 @@
 import React from 'react';
-import { Divider } from '.';
+import { Divider, DividerProps } from '.';
+import { Story, Meta } from '@storybook/react';
+import { Box } from '../layout';
 
 export default {
-  title: 'Divider',
-};
+  title: 'Components/Divider',
+  component: Divider,
+} as Meta;
 
-export const Primary = () => <Divider type='normal' />;
+const Template: Story<DividerProps> = (args) => <Divider {...args} />;
+
+// Base default divider
+export const Base = Template.bind({});
+
+// types
+export const Types = (args: DividerProps) => (
+  <Box>
+    <Divider {...args} type='dashed' />
+    <Divider {...args} type='dotted' />
+    <Divider {...args} type='normal' />
+  </Box>
+);

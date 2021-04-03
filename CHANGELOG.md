@@ -2,6 +2,17 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.21 (Sat Apr 3, 2021)
+
+- `TextArea` component:
+  - ✨ `type` prop is no longer required
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.20 (Sat Apr 3, 2021)
 
 - `TextArea` component:
