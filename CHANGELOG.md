@@ -2,6 +2,18 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.25 (Mon Apr 5, 2021)
+
+- ❗ Breaking: `Layout` component has been removed
+- ❗ Breaking: `Form` component has been removed
+- ❗ Breaking: `TestComponent` component has been removed
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.24 (Mon Apr 5, 2021)
 
 - `Flex` component:
