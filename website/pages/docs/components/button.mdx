@@ -17,7 +17,32 @@ import { LiveConfig } from 'smooth-doc/components';
 
 # Button
 
-## Examples
+Buttons are user interface elements that initiates actions. This is their primary function and it is this function that makes them very different from links particularly on the web.
+
+<br></br>
+
+## Props
+
+Button properties
+
+| Property        | Description                                                                | Type                          | Default   | Version |
+| --------------- | -------------------------------------------------------------------------- | ----------------------------- | --------- | ------- |
+| backgroundColor | Sets the background color of the button                                    | `string`                      | -         |         |
+| block           | Allow button take full width of the parent element                         | `boolean`                     | false     |         |
+| color           | Sets the color of the button                                               | `string`                      | -         |         |
+| danger          | Use if call-to-action is irreversible or destructive                       | `boolean`                     | false     |         |
+| disabled        | Set disabled state so buttons look inactive and cannot be interacted with. | `boolean`                     | false     |         |
+| loading         | Set the loading status of the button                                       | `boolean`                     | false     |         |
+| onClick         | Callback fired when a button is clicked.                                   | `(event) => void`             | -         |         |
+| pill            | Set shape of button to pill-shaped.                                        | `boolean`                     | false     |         |
+| size            | How large should the button be?                                            | `large` `medium` `small`      | `medium`  |         |
+| variant         | What variant of the button is to be used?                                  | `primary` `secondary` `ghost` | `primary` |         |
+
+<br></br>
+
+## Usage
+
+### Basic Button
 
 ```jsx live noInline
 import { Button } from 'camara';
@@ -30,7 +55,7 @@ render(<Button>A simple button</Button>);
 ```jsx live noInline
 import { Button } from 'camara';
 
-render(<Button primary={true}>A simple button</Button>);
+render(<Button primary>A simple button</Button>);
 ```
 
 ### Background Color
@@ -39,7 +64,7 @@ render(<Button primary={true}>A simple button</Button>);
 import { Button } from 'camara';
 
 render(
-  <Button primary={true} backgroundColor='pink' color='red'>
+  <Button primary backgroundColor='purple'>
     A simple button
   </Button>
 );
@@ -51,16 +76,12 @@ render(
 import { Button } from 'camara';
 
 render(
-  <Button primary={true} backgroundColor='pink' rounded={true} color='red'>
+  <Button primary pill>
     A simple button
   </Button>
 );
 ```
 
-## API
+```
 
-Button properties
-
-| Property | Description                          | Type      | Default | Version |
-| -------- | ------------------------------------ | --------- | ------- | ------- |
-| loading  | Set the loading status of the button | `boolean` | false   |         |
+```
