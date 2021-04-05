@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar, AvatarProps } from '.';
 import { Story, Meta } from '@storybook/react';
 import { User } from 'react-feather';
-import { Flex } from '../layout';
+import { Flex } from '../flex';
 import { Box } from '../box';
 
 export default {

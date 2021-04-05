@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Flex, Spacer } from '../layout';
+import { Flex } from '../flex';
 import { Text } from '../text';
 import { Button } from '../button';
 import { Box } from '../box';
@@ -49,20 +49,17 @@ export const Bordered = (args: CardProps) => (
         </Button>
       </Card>
     </Box>
-
-    <Spacer ml={40}>
-      <Box>
-        <Card {...args} bordered={false}>
-          <Image
-            imageUrl='https://source.unsplash.com/8TQUF6UbpAk/1600x900'
-            imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
-          />
-          <Text>John Doe</Text>
-          <Button block pill size='large'>
-            Follow
-          </Button>
-        </Card>
-      </Box>
-    </Spacer>
+    <Box ml={40}>
+      <Card {...args} bordered={false}>
+        <Image
+          imageUrl='https://source.unsplash.com/8TQUF6UbpAk/1600x900'
+          imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+        />
+        <Text>John Doe</Text>
+        <Button block pill size='large'>
+          Follow
+        </Button>
+      </Card>
+    </Box>
   </Flex>
 );

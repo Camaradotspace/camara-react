@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { Box, Flex } from '../layout';
+import { Box } from '../box';
+import { Flex } from '../flex';
 
 import { Button, ButtonProps } from '.';
 

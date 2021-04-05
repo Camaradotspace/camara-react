@@ -1,8 +1,8 @@
 import React from 'react';
 import { Tag, TagProps } from '.';
 import { Story, Meta } from '@storybook/react';
-import { Flex } from '../layout';
 import { Box } from '../box';
+import { Flex } from '../flex';
 
 export default {
   title: 'Components/Tag',
