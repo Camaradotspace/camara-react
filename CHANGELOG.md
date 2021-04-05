@@ -2,6 +2,21 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.24 (Mon Apr 5, 2021)
+
+- `Flex` component:
+  - 🆕 `direction` props sets the flex direction
+  - 🆕 `alignContent` prop aligns the flex items across the cross axis
+  - 🆕 `alignItems` prop sets the flex container align-items property
+  - 🆕 `alignSelf` prop sets align-self property on the flex children
+  - 🆕 `flex` prop sets the flex property on the flex children
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.23 (Sat Apr 3, 2021)
 
 - `Spacer` component:
