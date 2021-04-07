@@ -1,0 +1,267 @@
+---
+title: Text
+section: Components
+slug: /docs/components/text/
+---
+
+import { Box, Text } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Text }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, Text },
+  }}
+/>
+
+# Text
+
+Text description.
+
+<br></br>
+
+## Props
+
+Text properties
+
+| Property  | Description                    | Type                                               | Default  | Version |
+| --------- | ------------------------------ | -------------------------------------------------- | -------- | ------- |
+| align     | Set text alignment             | `left` `right` `center` `justify`                  | `left`   |         |
+| color     | Text color                     | `string`                                           | -        |         |
+| inline    | Should text be inline?         | `boolean`                                          | false    |         |
+| italic    | Should text be in italics?     | `boolean`                                          | false    |         |
+| size      | Set size of text               | `small` `medium` `large`                           | `large`  |         |
+| strike    | Should text be strike-through? | `boolean`                                          | false    |         |
+| style     | Set style of text              | `CSSProperties`                                    | -        |         |
+| underline | Should text be underlined?     | `boolean`                                          | false    |         |
+| variant   | What type of text is it?       | `body` `caption` `sub-heading` `overline` `strong` | `body`   |         |
+| weight    | Set font-weight of text        | `bold` `normal`                                    | `normal` |         |
+
+<br></br>
+
+## Usage
+
+### Basic Text
+
+```jsx live noInline
+import { Text } from 'camara';
+
+render(
+  <>
+    <Text>This is a text component</Text>
+  </>
+);
+```
+
+### Variant
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text variant='body'>I am a body text</Text>
+      <Text variant='sub-heading'>I am a sub heading</Text>
+      <Text variant='caption'>I am a caption</Text>
+      <Text variant='overline'>I am an overline</Text>
+      <Text variant='strong'>I am a strong text</Text>
+    </Box>
+
+    <Box>
+      <Text variant='body'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text variant='sub-heading'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text variant='caption'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text variant='overline'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text variant='strong'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Weight
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text weight='bold'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text weight='bold'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+
+    <Box mt={24}>
+      <Text weight='normal'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text weight='normal'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Italic
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text italic>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text italic>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Inline
+
+```jsx live noInline
+import { Text } from 'camara';
+
+render(
+  <>
+    <Text inline weight='bold'>
+      My dream job is to work as a Software Engineer at Microsoft
+    </Text>
+    <Text inline>
+      私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+    </Text>
+  </>
+);
+```
+
+### Align
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text align='left'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text align='center'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text align='justify'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text align='right'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+    </Box>
+
+    <Box mt={32}>
+      <Text align='left'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text align='center'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text align='justify'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text align='right'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Underline
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text underline>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text underline>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Size
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text size='large'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text size='medium'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text size='small'>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+    </Box>
+
+    <Box mt={24}>
+      <Text size='large'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text size='medium'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+      <Text size='small'>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
+
+### Strike
+
+```jsx live noInline
+import { Box, Text } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Text strike>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Text>
+      <Text strike>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Text>
+    </Box>
+  </>
+);
+```
