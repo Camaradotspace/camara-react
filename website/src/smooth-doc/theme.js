@@ -102,7 +102,7 @@ export const theme = {
     'control-border-hover': th.color('gray-500'),
     'control-border-active': th.color('primary-400'),
 
-    'editor-background': th.color('gray-900'),
+    'editor-background': th.color('black'),
     'editor-on': th.color('gray-100'),
     'editor-border': th.color('layout-border'),
 
