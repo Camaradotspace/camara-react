@@ -42,46 +42,162 @@ Button properties
 
 ## Usage
 
-### Basic Button
-
-```jsx live noInline
-import { Button } from 'camara';
-
-render(<Button>A simple button</Button>);
-```
-
-### Primary
-
-```jsx live noInline
-import { Button } from 'camara';
-
-render(<Button primary>A simple button</Button>);
-```
-
-### Background Color
+### Variant
 
 ```jsx live noInline
 import { Button } from 'camara';
 
 render(
-  <Button primary backgroundColor='purple'>
-    A simple button
-  </Button>
+  <>
+    <Button variant='primary'>Primary</Button>
+    <Button variant='secondary'>Secondary</Button>
+    <Button variant='ghost'>Ghost</Button>
+  </>
 );
 ```
 
-### Rounded
+### Size
 
 ```jsx live noInline
 import { Button } from 'camara';
 
 render(
-  <Button primary pill>
-    A simple button
-  </Button>
+  <>
+    <Button size='large'>Large</Button>
+    <Button size='medium'>Medium</Button>
+    <Button size='small'>Small</Button>
+  </>
 );
 ```
 
+### Disabled
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button disabled variant='primary'>
+      Primary
+    </Button>
+
+    <Button disabled variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button disabled variant='ghost'>
+      Ghost
+    </Button>
+  </>
+);
 ```
 
+### Danger
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button danger variant='primary'>
+      Primary
+    </Button>
+
+    <Button danger variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button danger variant='ghost'>
+      Ghost
+    </Button>
+  </>
+);
+```
+
+### Pill
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button pill variant='primary'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost'>
+      Ghost
+    </Button>
+  </>
+);
+```
+
+### Block
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button block variant='primary'>
+      Primary
+    </Button>
+
+    <Button block variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button block variant='ghost'>
+      Ghost
+    </Button>
+  </>
+);
+```
+
+### Background color
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button pill variant='primary' backgroundColor='green'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary' backgroundColor='green'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost' backgroundColor='green'>
+      Ghost
+    </Button>
+  </>
+);
+```
+
+### Color
+
+```jsx live noInline
+import { Button } from 'camara';
+
+render(
+  <>
+    <Button pill variant='primary' backgroundColor='#fff' color='purple'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary' backgroundColor='purple' color='#fff'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost' color='purple'>
+      Ghost
+    </Button>
+  </>
+);
 ```
