@@ -1,0 +1,77 @@
+---
+title: Avatar
+section: Components
+slug: /docs/components/avatar/
+---
+
+import { Avatar, Box, Flex } from 'camara';
+import { User } from 'react-feather';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Avatar }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Avatar, Box, Flex },
+    'react-feather': { User },
+  }}
+/>
+
+# Avatar
+
+Avatars are UI elements that stand as a graphical representation of a person through a profile picture or image, an icon, or a string with initials.
+
+<br></br>
+
+## Props
+
+Avatar properties
+
+| Property        | Description                               | Type                                         | Default  | Version |
+| --------------- | ----------------------------------------- | -------------------------------------------- | -------- | ------- |
+| backgroundColor | Fallback color incase image fails to load | `string`                                     | -        |         |
+| color           | Sets the color of the initials            | `string`                                     | -        |         |
+| fit             | Object-fit property of the image          | `fill` `contain` `cover` `none` `scale-down` | `cover`  |         |
+| icon            | Custom icon type                          | `ReactNode`                                  | null     |         |
+| imageUrl        | Link to image source                      | `string`                                     | -        |         |
+| imageAlt        | Description of the image                  | `string`                                     | -        |         |
+| initialsSize    | Set font size of initials                 | `number`                                     | 16       |         |
+| shape           | Shape of the avatar                       | `circle` `square`                            | `circle` |         |
+| size            | How large should the avatar be?           | `large` `medium` `small` `tiny` `number`     | `small`  |         |
+| stories         | Make avatar look like stories             | `boolean`                                    | false    |         |
+| username        | Username for setting avatar initials      | `string`                                     | -        |         |
+
+<br></br>
+
+## Usage
+
+### Size
+
+```jsx live noInline
+import { Avatar } from 'camara';
+
+render(
+  <>
+    <Avatar
+      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
+      imageAlt='portrait of a Shiba Inu'
+      size='large'
+    />
+    <Avatar
+      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
+      imageAlt='portrait of a Shiba Inu'
+      size='medium'
+    />
+    <Avatar
+      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
+      imageAlt='portrait of a Shiba Inu'
+      size='small'
+    />
+    <Avatar
+      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
+      imageAlt='portrait of a Shiba Inu'
+      size='tiny'
+    />
+  </>
+);
+```
