@@ -1,0 +1,197 @@
+---
+title: Title
+section: Components
+slug: /docs/components/title/
+---
+
+import { Box, Title } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Title }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, Title },
+  }}
+/>
+
+# Title
+
+Title description.
+
+<br></br>
+
+## Props
+
+Title properties
+
+| Property | Description                                             | Type                              | Default | Version |
+| -------- | ------------------------------------------------------- | --------------------------------- | ------- | ------- |
+| align    | Set Title alignment                                     | `left` `right` `center` `justify` | `left`  |         |
+| color    | Title color                                             | `string`                          | -       |         |
+| level    | What heading level should title be? h1, h2, h3, h4, etc | `number`                          | 1       |         |
+| thin     | Control thickness of the title                          | `boolean`                         | false   |         |
+
+<br></br>
+
+## Usage
+
+### Level
+
+```jsx live noInline
+import { Box, Title } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Title level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+    </Box>
+
+    <Box mt={64}>
+      <Title level={1}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title level={2}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title level={3}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title level={4}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title level={5}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title level={6}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+    </Box>
+  </>
+);
+```
+
+### Thin
+
+```jsx live noInline
+import { Box, Title } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Title thin level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title thin level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title thin level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title thin level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title thin level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title thin level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+    </Box>
+
+    <Box mt={64}>
+      <Title thin level={1}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title thin level={2}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title thin level={3}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title thin level={4}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title thin level={5}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+      <Title thin level={6}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Title>
+    </Box>
+  </>
+);
+```
+
+### Align
+
+```jsx live noInline
+import { Box, Title } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Title align='left' level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title align='center' level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title align='justify' level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title align='right' level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+    </Box>
+  </>
+);
+```
+
+### Color
+
+```jsx live noInline
+import { Box, Title } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Title color='tomato' level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title color='green' level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title color='blue' level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title color='purple' level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title color='orange' level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+      <Title color='black' level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Title>
+    </Box>
+  </>
+);
+```
