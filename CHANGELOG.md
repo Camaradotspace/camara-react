@@ -2,6 +2,20 @@
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
+## v1.0.0-beta.26 (Wed Apr 7, 2021)
+
+- `Flex` component:
+  - ❗ Breaking: `alignSelf` prop has been removed
+  - ❗ Breaking: `flex` prop has been removed
+- `Image` component:
+  - ❗ Breaking: The image width is no longer explicitly defined. This property can be set by using the `width` prop
+
+### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ## v1.0.0-beta.25 (Mon Apr 5, 2021)
 
 - ❗ Breaking: `Layout` component has been removed

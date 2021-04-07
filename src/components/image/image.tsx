@@ -18,7 +18,6 @@ interface StyleProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 export type ImageProps = StyleProps;
 
 const StyledImage = styled.img<Partial<ImageProps>>`
-  width: 100%;
   display: block;
   object-fit: ${(props) => props.fit};
 `;

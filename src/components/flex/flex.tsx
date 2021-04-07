@@ -35,18 +35,6 @@ export interface FlexProps {
 
   /* flex container align-items property */
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
-
-  /* flex container align-self property */
-  alignSelf?:
-    | 'auto'
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'baseline'
-    | 'stretch';
-
-  /* flex container flex property */
-  flex?: 'grow' | 'shrink' | 'none';
 }
 
 const StyledFlex = styled.div<FlexProps>`
@@ -59,11 +47,6 @@ const StyledFlex = styled.div<FlexProps>`
   align-content: ${(props) => props.alignContent};
 `;
 
-const StyledFlexItem = styled.div<FlexProps>`
-  align-self: ${(props) => props.alignSelf};
-  flex: ${(props) => props.flex};
-`;
-
 export const Flex: React.FC<FlexProps> = ({
   children,
   width,
@@ -72,8 +55,6 @@ export const Flex: React.FC<FlexProps> = ({
   direction,
   alignContent,
   alignItems,
-  alignSelf,
-  flex,
 }) => {
   return (
     <StyledFlex
@@ -84,9 +65,7 @@ export const Flex: React.FC<FlexProps> = ({
       alignItems={alignItems}
       alignContent={alignContent}
     >
-      <StyledFlexItem flex={flex} alignSelf={alignSelf}>
-        {children}
-      </StyledFlexItem>
+      {children}
     </StyledFlex>
   );
 };
@@ -94,9 +73,7 @@ export const Flex: React.FC<FlexProps> = ({
 Flex.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'flex-start',
-  alignSelf: 'stretch',
   direction: 'row',
-  flex: 'shrink',
   justify: 'center',
   wrap: false,
 };
