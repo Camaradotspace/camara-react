@@ -1,0 +1,76 @@
+---
+title: Image
+section: Components
+slug: /docs/components/image/
+---
+
+import { Box, Flex, Image } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Image }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, Image },
+  }}
+/>
+
+# Image
+
+Image description.
+
+<br></br>
+
+## Props
+
+Image properties
+
+| Property | Description                                                             | Type                                         | Default | Version |
+| -------- | ----------------------------------------------------------------------- | -------------------------------------------- | ------- | ------- |
+| imageUrl | Link to image source                                                    | `string`                                     | -       |         |
+| imageAlt | Description of the image                                                | `string`                                     | -       |         |
+| loading  | Control if loading the image should be deferred when its off the screen | `eager` `lazy`                               | -       |         |
+| fit      | Object-fit property of the image                                        | `fill` `contain` `cover` `none` `scale-down` | `cover` |         |
+
+<br></br>
+
+## Usage
+
+### Basic Image
+
+```jsx live noInline
+import { Image } from 'camara';
+
+render(
+  <>
+    <Image
+      imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
+      imageAlt='woman in orange knit cap and blue jacket'
+    />
+  </>
+);
+```
+
+### Loading
+
+```jsx live noInline
+import { Box, Flex, Image } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <Image
+        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/300x200'
+        imageAlt='woman in orange knit cap and blue jacket'
+        loading='eager'
+      />
+
+      <Image
+        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/300x200'
+        imageAlt='woman in orange knit cap and blue jacket'
+        loading='lazy'
+      />
+    </Flex>
+  </>
+);
+```
