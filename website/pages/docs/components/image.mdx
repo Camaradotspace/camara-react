@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/image/
 ---
 
-import { Box, Flex, Image } from 'camara';
+import { Flex, Image } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Image }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Image },
+    camara: { Flex, Image },
   }}
 />
 
@@ -54,19 +54,21 @@ render(
 ### Loading
 
 ```jsx live noInline
-import { Box, Flex, Image } from 'camara';
+import { Flex, Image } from 'camara';
 
 render(
   <>
-    <Flex>
+    <Flex justify='space-between'>
       <Image
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/300x200'
+        width='49%'
+        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/400x300'
         imageAlt='woman in orange knit cap and blue jacket'
         loading='eager'
       />
 
       <Image
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/300x200'
+        width='49%'
+        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/400x300'
         imageAlt='woman in orange knit cap and blue jacket'
         loading='lazy'
       />
