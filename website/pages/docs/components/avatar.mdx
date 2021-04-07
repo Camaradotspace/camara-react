@@ -12,7 +12,7 @@ import { LiveConfig } from 'smooth-doc/components';
 
 <LiveConfig
   modules={{
-    camara: { Avatar, Box, Flex },
+    camara: { Avatar, Box },
     'react-feather': { User },
   }}
 />
@@ -45,6 +45,8 @@ Avatar properties
 
 ## Usage
 
+Unless where using an icon always provide the `imageUrl` and `imageAlt` props
+
 ### Size
 
 ```jsx live noInline
@@ -53,24 +55,154 @@ import { Avatar } from 'camara';
 render(
   <>
     <Avatar
-      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
-      imageAlt='portrait of a Shiba Inu'
+      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageAlt='short-coated white and tan dog photo'
       size='large'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
-      imageAlt='portrait of a Shiba Inu'
+      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageAlt='short-coated white and tan dog photo'
       size='medium'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
-      imageAlt='portrait of a Shiba Inu'
+      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageAlt='short-coated white and tan dog photo'
       size='small'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/200x200/?shiba-inu'
-      imageAlt='portrait of a Shiba Inu'
+      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageAlt='short-coated white and tan dog photo'
       size='tiny'
+    />
+  </>
+);
+```
+
+### Shape
+
+```jsx live noInline
+import { Avatar, Box } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='circle'
+        size='large'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='circle'
+        size='medium'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='circle'
+        size='small'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='circle'
+        size='tiny'
+      />
+    </Box>
+    <Box>
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='square'
+        size='large'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='square'
+        size='medium'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='square'
+        size='small'
+      />
+      <Avatar
+        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageAlt='short-coated white and tan dog photo'
+        shape='square'
+        size='tiny'
+      />
+    </Box>
+  </>
+);
+```
+
+### Icon
+
+```jsx live noInline
+import { Avatar } from 'camara';
+import { User } from 'react-feather';
+
+render(
+  <>
+    <Avatar size='large' icon={<User color='#777' size={64} />} />
+    <Avatar size='medium' icon={<User color='#777' size={48} />} />
+    <Avatar size='small' icon={<User color='#777' size={32} />} />
+    <Avatar size='tiny' icon={<User color='#777' size={24} />} />
+  </>
+);
+```
+
+### Initial
+
+```jsx live noInline
+import { Avatar } from 'camara';
+
+render(
+  <>
+    <Avatar size={120} initialsSize={80} username='Sam' />
+    <Avatar size='large' username='Sam' />
+    <Avatar size='medium' username='Sam' />
+    <Avatar size='small' username='Sam' />
+    <Avatar size='tiny' username='Sam' />
+  </>
+);
+```
+
+### Stories
+
+```jsx live noInline
+import { Avatar } from 'camara';
+
+render(
+  <>
+    <Avatar
+      stories
+      size='large'
+      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+    />
+    <Avatar
+      stories
+      size='medium'
+      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+    />
+    <Avatar
+      stories
+      size='small'
+      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+    />
+    <Avatar
+      stories
+      size='tiny'
+      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
     />
   </>
 );
