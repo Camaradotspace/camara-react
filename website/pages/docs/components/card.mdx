@@ -1,0 +1,98 @@
+---
+title: Card
+section: Components
+slug: /docs/components/card/
+---
+
+import { Box, Button, Card, Image, Text, Spacer } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Card }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Button, Card, Image, Text, Spacer },
+  }}
+/>
+
+# Card
+
+Card description.
+
+<br></br>
+
+## Props
+
+Card properties
+
+| Property | Description                                            | Type      | Default | Version |
+| -------- | ------------------------------------------------------ | --------- | ------- | ------- |
+| bordered | Should card have border around it or be entirely flat? | `boolean` | false   |         |
+| elevate  | Should the card elevate on the z-index?                | `boolean` | false   |         |
+| height   | Height of the card                                     | `string`  | -       |         |
+| width    | Width of the card                                      | `string`  | -       |         |
+
+<br></br>
+
+## Usage
+
+### Elevate
+
+```jsx live noInline
+import { Button, Card, Image, Text } from 'camara';
+
+render(
+  <>
+    <Card elevate>
+      <Image
+        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/400x300'
+        imageAlt='woman in orange knit cap and blue jacket'
+      />
+      <Text>John Doe</Text>
+      <Button block pill size='large'>
+        Follow
+      </Button>
+    </Card>
+  </>
+);
+```
+
+### Bordered
+
+```jsx live noInline
+import { Box, Button, Card, Image, Text, Spacer } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Box>
+        <Card>
+          <Image
+            imageUrl='https://source.unsplash.com/V_WBdOLOgJU/400x300'
+            imageAlt='woman in orange knit cap and blue jacket'
+          />
+          <Text>John Doe</Text>
+          <Button block pill size='large'>
+            Follow
+          </Button>
+        </Card>
+      </Box>
+
+      <Spacer top>
+        <Box>
+          <Card bordered={false}>
+            <Image
+              imageUrl='https://source.unsplash.com/V_WBdOLOgJU/400x300'
+              imageAlt='woman in orange knit cap and blue jacket'
+            />
+            <Text>John Doe</Text>
+            <Button block pill size='large'>
+              Follow
+            </Button>
+          </Card>
+        </Box>
+      </Spacer>
+    </Box>
+  </>
+);
+```
