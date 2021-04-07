@@ -1,0 +1,62 @@
+---
+title: Divider
+section: Components
+slug: /docs/components/divider/
+---
+
+import { Box, Divider } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Divider }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Divider },
+  }}
+/>
+
+# Divider
+
+Divider description.
+
+<br></br>
+
+## Props
+
+Divider properties
+
+| Property | Description                       | Type                       | Default  | Version |
+| -------- | --------------------------------- | -------------------------- | -------- | ------- |
+| type     | What style should the line be of? | `dashed` `dotted` `normal` | `normal` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { Divider } from 'camara';
+
+render(
+  <>
+    <Divider />
+  </>
+);
+```
+
+### Types
+
+```jsx live noInline
+import { Box, Divider } from 'camara';
+
+render(
+  <>
+    <Box>
+      <Divider type='dashed' />
+      <Divider type='dotted' />
+      <Divider type='normal' />
+    </Box>
+  </>
+);
+```
