@@ -1,0 +1,248 @@
+---
+title: Box
+section: Components
+slug: /docs/components/box/
+---
+
+import { Box, Flex, Image } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Box }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, Image },
+  }}
+/>
+
+# Box
+
+Box description.
+
+<br></br>
+
+## Props
+
+Box properties
+
+| Property  | Description                                            | Type                                                                      | Default | Version |
+| --------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | ------- | ------- |
+| border    | Set box border                                         | `boolean`                                                                 | false   |         |
+| center    | Should the children of the box be centered?            | `boolean`                                                                 | false   |         |
+| color     | Set box background color                               | `string`                                                                  |         |         |
+| debug     | Highlight box on the screen, useful for debug purposes | `boolean`                                                                 | false   |         |
+| width     | What width should the box be?                          | `number`                                                                  |         |         |
+| height    | Set the box height                                     | `number`                                                                  |         |         |
+| minWidth  | Set the box minimum width                              | `number`                                                                  |         |         |
+| minHeight | Set the box minimum height                             | `number`                                                                  |         |         |
+| maxWidth  | Set the box maximum width                              | `number`                                                                  |         |         |
+| maxHeight | Set the box maximum height                             | `number`                                                                  |         |         |
+| pt        | Set box top padding                                    | `number`                                                                  |         |         |
+| pb        | Set box bottom padding                                 | `number`                                                                  |         |         |
+| pl        | Set box left padding                                   | `number`                                                                  |         |         |
+| pr        | Set box right padding                                  | `number`                                                                  |         |         |
+| px        | Set box padding on the horizontal axis                 | `number`                                                                  |         |         |
+| py        | Set box padding on the vertical axis                   | `number`                                                                  |         |         |
+| pd        | Set box padding on the both axis                       | `number`                                                                  |         |         |
+| mt        | Set box top margin                                     | `number`                                                                  |         |         |
+| mb        | Set box bottom margin                                  | `number`                                                                  |         |         |
+| ml        | Set box left margin                                    | `number`                                                                  |         |         |
+| mr        | Set box right margin                                   | `number`                                                                  |         |         |
+| mx        | Set box margin on the horizontal axis                  | `number`                                                                  |         |         |
+| my        | Set box margin on the vertical axis                    | `number`                                                                  |         |         |
+| mg        | Set box margin on the both axis                        | `number`                                                                  |         |         |
+| overflow  | Set the box overflow                                   | `visible` `hidden` `scroll` `scrollX` `scrollY` `auto`                    | auto    |         |
+| position  | Set box position                                       | `static` `absolute` `relative` `fixed`                                    | -       |         |
+| role      | Set the box ARIA role                                  | `article` `aside` `details` `div` `figcaption` `figure` `footer` and more | auto    |         |
+
+<br></br>
+
+## Usage
+
+### Basic Box
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box height={100} width={200} color='#82CAFF' />
+        <Box height={100} width={300} color='#1589FF' />
+        <Box height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+### Border
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box border height={100} width={200} color='#82CAFF' />
+        <Box height={100} width={300} color='#1589FF' />
+        <Box border height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+### Center
+
+```jsx live noInline
+import { Box, Flex, Image } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box border height={100} width={200} color='#82CAFF' />
+        <Box height={100} width={300} color='#1589FF'>
+          <Box center my={10} width={100} height={80}>
+            <Image
+              width='100%'
+              imageUrl='https://source.unsplash.com/V_WBdOLOgJU/200x100'
+              imageAlt='woman in orange knit cap and blue jacket'
+            />
+          </Box>
+        </Box>
+        <Box border height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+### Debug
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box border height={100} width={200} color='#82CAFF' />
+        <Box debug height={100} width={300} color='#1589FF' />
+        <Box height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+### Padding
+
+#### Top, Bottom, Left and Right Padding
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box border height={100} width={200} color='#82CAFF' />
+        <Box
+          pt={16}
+          pb={16}
+          pl={16}
+          pr={16}
+          height={100}
+          width={300}
+          color='#1589FF'
+        />
+        <Box height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+#### Horizontal and Vertical Padding
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box border height={100} width={200} color='#82CAFF' />
+        <Box px={16} py={40} height={100} width={300} color='#1589FF' />
+        <Box height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+### Margin
+
+#### Top, Bottom, Left and Right Margin
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box py={16} border height={100} width={200} color='#82CAFF' />
+        <Box
+          mt={16}
+          mb={16}
+          ml={16}
+          mr={16}
+          height={100}
+          width={300}
+          color='#1589FF'
+        />
+        <Box py={16} height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
+
+#### Horizontal and Vertical Margin
+
+```jsx live noInline
+import { Box, Flex } from 'camara';
+
+render(
+  <>
+    <Box width={700}>
+      <Box border height={100} color='#82CAFF' />
+      <Flex justify='space-between'>
+        <Box py={16} border height={100} width={200} color='#82CAFF' />
+        <Box mx={32} my={16} height={100} width={300} color='#1589FF' />
+        <Box py={16} height={100} width={200} color='#82CAFF' />
+      </Flex>
+      <Box border height={100} color='#82CAFF' />
+    </Box>
+  </>
+);
+```
