@@ -285,7 +285,7 @@ order: 5
 
 ### v1.0.0-beta.9 (Sat Mar 27, 2021)
 
-A change has been made to how the project gets updated. Going forward every new `beta` version is going to focus solely on a single component and try to improve on the component across its Storybook stories, docs, test, and real-world usage. This way we can move incrementally while knowing that we are thinking about each component in a comprehensive manner.
+A change has been made to how the project gets updated. Going forward every new `beta` version is going to focus solely on a single component and try to improve on the component across its Storybook stories, docs, test, and real-world usage. This way I can move incrementally while knowing that I are thinking about each component in a comprehensive manner.
 
 - `Button` component:
   - ❌ remove `primary` prop option for setting the type of button.

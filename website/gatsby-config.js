@@ -14,5 +14,13 @@ module.exports = {
         githubRepositoryURL: 'https://github.com/camaradotspace/camara-react',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'fonts',
+        path: `${__dirname}/fonts/`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
   ],
 };
