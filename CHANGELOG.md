@@ -1,8 +1,17 @@
+---
+title: Changelog
+section: Getting Started
+slug: /docs/changelog/
+order: 5
+---
+
 # Changelog
 
 `Camara` strictly follows [semantic versioning](https://semver.org/)
 
-## v1.0.0-beta.26 (Wed Apr 7, 2021)
+## Latest
+
+### v1.0.0-beta.26 (Wed Apr 7, 2021)
 
 - `Flex` component:
   - ❗ Breaking: `alignSelf` prop has been removed
@@ -10,25 +19,25 @@
 - `Image` component:
   - ❗ Breaking: The image width is no longer explicitly defined. This property can be set by using the `width` prop
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.25 (Mon Apr 5, 2021)
+### v1.0.0-beta.25 (Mon Apr 5, 2021)
 
 - ❗ Breaking: `Layout` component has been removed
 - ❗ Breaking: `Form` component has been removed
 - ❗ Breaking: `TestComponent` component has been removed
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.24 (Mon Apr 5, 2021)
+### v1.0.0-beta.24 (Mon Apr 5, 2021)
 
 - `Flex` component:
   - 🆕 `direction` props sets the flex direction
@@ -37,13 +46,13 @@
   - 🆕 `alignSelf` prop sets align-self property on the flex children
   - 🆕 `flex` prop sets the flex property on the flex children
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.23 (Sat Apr 3, 2021)
+### v1.0.0-beta.23 (Sat Apr 3, 2021)
 
 - `Spacer` component:
   - ❗ Breaking: all previous props have been removed.
@@ -52,13 +61,13 @@
   - 🆕 `both` prop sets the spacer at the vertical axis
   - 🆕 `children` prop sets the content of the spacer
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.22 (Sat Apr 3, 2021)
+### v1.0.0-beta.22 (Sat Apr 3, 2021)
 
 - `Box` component:
   - 🆕 `height` prop sets the height of the box.
@@ -86,24 +95,24 @@
   - 🆕 `my` prop sets the `vertical margin` property of the box.
   - 🆕 `mg` prop sets the `all axis margin` property of the box.
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.21 (Sat Apr 3, 2021)
+### v1.0.0-beta.21 (Sat Apr 3, 2021)
 
 - `TextArea` component:
   - ✨ `type` prop is no longer required
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.20 (Sat Apr 3, 2021)
+### v1.0.0-beta.20 (Sat Apr 3, 2021)
 
 - `TextArea` component:
   - ❗ Breaking: `value` prop has been removed and deprecated.
@@ -114,26 +123,26 @@
   - 🆕 `helperText` prop allows for adding additional context to textarea fields.
   - 🆕 `resizable` prop sets if the textarea is drag
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.19 (Fri Apr 2, 2021)
+### v1.0.0-beta.19 (Fri Apr 2, 2021)
 
 - `Anchor` component:
   - ❗ Breaking: `color` prop has been removed and deprecated.
   - 🆕 `href` prop sets the link destination URL.
   - 🆕 `asNew` prop sets the option to open link in new tab
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.18 (Fri Apr 2, 2021)
+### v1.0.0-beta.18 (Fri Apr 2, 2021)
 
 - `Input` component:
   - ❗ Breaking: remove `validator` support, this should not be taken care of by the library.
@@ -144,26 +153,26 @@
   - ✨ position of the `required` indicator has been moved to prefix the input fields.
   - ✨ clean up component default props
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.17 (Fri Apr 2, 2021)
+### v1.0.0-beta.17 (Fri Apr 2, 2021)
 
 - `Tag` component:
 
   - ✨ fix reduce scale of `size` prop
   - 🆕 `children` prop to set content of tag
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.16 (Fri Apr 2, 2021)
+### v1.0.0-beta.16 (Fri Apr 2, 2021)
 
 - `Text` component:
 
@@ -176,13 +185,13 @@
   - 🆕 `strike` prop sets the text format to strike-through
   - 🆕 `style` prop sets the CSS properties for the text component
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.15 (Fri Apr 2, 2021)
+### v1.0.0-beta.15 (Fri Apr 2, 2021)
 
 - `Image` component:
 
@@ -190,26 +199,26 @@
 
 - Update `Card` component stories
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.14 (Fri Apr 2, 2021)
+### v1.0.0-beta.14 (Fri Apr 2, 2021)
 
 - `Title` component:
 
   - ❗ Breaking: `Title` component is no longer exported from `Text`, it's now a standalone component. Import it from `Title`.
   - 🆕 `align` prop sets the text-align property of the title component
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.13 (Fri Apr 2, 2021)
+### v1.0.0-beta.13 (Fri Apr 2, 2021)
 
 - `Card` component:
 
@@ -218,13 +227,13 @@
   - 🆕 `bordered` prop sets border on the card component
   - 🆕 `children` prop controls the card contents
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.12 (Wed Mar 31, 2021)
+### v1.0.0-beta.12 (Wed Mar 31, 2021)
 
 - `Image` component:
 
@@ -234,13 +243,13 @@
   - 🆕 `loading` prop controls if the image should be deferred when its off the screen
   - 🆕 `fit` prop sets the image object-fit property
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.11 (Tue Mar 30, 2021)
+### v1.0.0-beta.11 (Tue Mar 30, 2021)
 
 - `Badge` component:
   - 🆕 `color` prop sets the color of the badge text
@@ -249,13 +258,13 @@
   - 🆕 `position` prop sets the position of the badge relative to the parent element
   - ✨ `default` option of `size` prop has been replaced with `medium`.
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.10 (Mon Mar 29, 2021)
+### v1.0.0-beta.10 (Mon Mar 29, 2021)
 
 - `Avatar` component:
   - 🆕 `imageAlt` prop allows for adding alternative text to describe the avatar image.
@@ -268,13 +277,13 @@
   - ✨ `size` prop now accepts numbers.
   - ✨ `backgroundColor` prop now works for `initials` and `icon` avatar too
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.9 (Sat Mar 27, 2021)
+### v1.0.0-beta.9 (Sat Mar 27, 2021)
 
 A change has been made to how the project gets updated. Going forward every new `beta` version is going to focus solely on a single component and try to improve on the component across its Storybook stories, docs, test, and real-world usage. This way we can move incrementally while knowing that we are thinking about each component in a comprehensive manner.
 
@@ -290,33 +299,33 @@ A change has been made to how the project gets updated. Going forward every new 
   - ✨ rename `rounded` prop to `pill` to accurately describe the button shape
   - ✨ hover, active and focused state has been improved.
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.8 (Thur Feb 04, 2021)
+### v1.0.0-beta.8 (Thur Feb 04, 2021)
 
 - minor package update
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.7 (Wed Feb 03, 2021)
+### v1.0.0-beta.7 (Wed Feb 03, 2021)
 
 - minor package update
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.6 (Wed Feb 03, 2021)
+### v1.0.0-beta.6 (Wed Feb 03, 2021)
 
 Rebuild from the ground-up. This changes everything!!!
 
@@ -325,25 +334,25 @@ Rebuild from the ground-up. This changes everything!!!
   This has made bundling the library much more solid and consistent than before. A lot has changed, I had to touch every single file but somehow keep the same APIs for each components.
   This lays a much more solid foundation for future version of Camara
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.5 (Tue Feb 02, 2021)
+### v1.0.0-beta.5 (Tue Feb 02, 2021)
 
 - 🔼 minor version bump
 - ❌ remove GitHub actions workflow file
 - ❓ still debugging declaration file issue
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.4 (Tue Feb 02, 2021)
+### v1.0.0-beta.4 (Tue Feb 02, 2021)
 
 - BREAKING:
   - ❗ `avatar` size prop now takes in predefined values as against number input
@@ -351,13 +360,13 @@ Rebuild from the ground-up. This changes everything!!!
 - 🚀 fix continuous integration with `auto`
 - 🐛 `Camara` no longer bundles the `stories` and `playground` folder on build
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.3 (Tue Feb 02, 2021)
+### v1.0.0-beta.3 (Tue Feb 02, 2021)
 
 - 🆕 changed the way components are bundled and exported
 - ❌ removed `colors` as package dependency
@@ -365,13 +374,13 @@ Rebuild from the ground-up. This changes everything!!!
 - ❌ removed support for bundling `css-modules`
 - 🚀 updated rollup configs
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.2 (Fri Jan 29, 2021)
+### v1.0.0-beta.2 (Fri Jan 29, 2021)
 
 - 🆕 `image` component. This works differently from the `avatar` component
 - 💄 Update `$black100` color token to lighter shade of black
@@ -387,13 +396,13 @@ Rebuild from the ground-up. This changes everything!!!
 - Title
   - 🆕 Add prop `color` to set color property dynamically
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v1.0.0-beta.1 (Thur Jan 28, 2021)
+### v1.0.0-beta.1 (Thur Jan 28, 2021)
 
 - new:
 
@@ -408,13 +417,13 @@ Rebuild from the ground-up. This changes everything!!!
   - `avatar` component has better defaults
   - height, padding and line-height of `button` component is removed
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v0.2.0 (Sun Nov 8, 2020)
+### v0.2.0 (Sun Nov 8, 2020)
 
 - new:
 
@@ -435,27 +444,29 @@ Rebuild from the ground-up. This changes everything!!!
 - improved:
   - improved support for `eslint`, `prettier` and `typescript`
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
 
 ---
 
-## v0.1.0 (Tue Oct 27, 2020)
+### v0.1.0 (Tue Oct 27, 2020)
 
 - new:
+
   - (chore): library setup
   - add support for airbnb `eslint` and `prettier` style guide
   - add support for `storybookjs`
 
-### Authors: 1
+#### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
-  ]
 
-# v0.1.11 (Tue Sep 29 2020)
+---
 
-#### 🐛 Bug Fix
+### v0.1.11 (Tue Sep 29 2020)
+
+🐛 Bug Fix
 
 - feat(components): update typography APIs [#4](https://github.com/Camaradotspace/camara-react/pull/4) ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -465,9 +476,9 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.10 (Sun Sep 27 2020)
+### v0.1.10 (Sun Sep 27 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
 - create pull request template ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -477,9 +488,9 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.9 (Sun Sep 27 2020)
+### v0.1.9 (Sun Sep 27 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
 - Update issue templates ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -489,13 +500,12 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.8 (Fri Sep 25 2020)
+### v0.1.8 (Fri Sep 25 2020)
 
-#### 🐛 Bug Fix
+🐛 Bug Fix
 
 - resolve merge conflicts [#3](https://github.com/Camaradotspace/camara-react/pull/3) ([@Preshonyee](https://github.com/Preshonyee))
-
-#### ⚠️ Pushed to `master`
+  ⚠️ Pushed to `master`
 
 - Merge branch 'components-typography/preshonyee' into master ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -505,11 +515,11 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.7 (Fri Sep 25 2020)
+### v0.1.7 (Fri Sep 25 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
-- Merge branch 'master' of https://github.com/Camaradotspace/camara-react into master ([@Preshonyee](https://github.com/Preshonyee))
+- Merge branch 'master' of [](https://github.com/Camaradotspace/camara-react) into master ([@Preshonyee](https://github.com/Preshonyee))
 - chore: upgrade packages ([@Preshonyee](https://github.com/Preshonyee))
 
 #### Authors: 1
@@ -518,9 +528,9 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.6 (Fri Sep 25 2020)
+### v0.1.6 (Fri Sep 25 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
 - chore: update packages ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -530,13 +540,12 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.5 (Mon Sep 07 2020)
+### v0.1.5 (Mon Sep 07 2020)
 
-#### 🐛 Bug Fix
+🐛 Bug Fix
 
 - resolve merge confict [#2](https://github.com/Camaradotspace/camara-react/pull/2) ([@Preshonyee](https://github.com/Preshonyee))
-
-#### ⚠️ Pushed to `master`
+  ⚠️ Pushed to `master`
 
 - Merge branch 'alpha' ([@Preshonyee](https://github.com/Preshonyee))
 
@@ -546,13 +555,12 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.4 (Sun Sep 06 2020)
+### v0.1.4 (Sun Sep 06 2020)
 
-#### 🐛 Bug Fix
+🐛 Bug Fix
 
 - Merge conflict resolved [#1](https://github.com/Camaradotspace/camara-react/pull/1) ([@Preshonyee](https://github.com/Preshonyee))
-
-#### ⚠️ Pushed to `master`
+  ⚠️ Pushed to `master`
 
 - fix(config): reinstall packages ([@Preshonyee](https://github.com/Preshonyee))
 - fix(config): fix auto release script ([@Preshonyee](https://github.com/Preshonyee))
@@ -565,15 +573,15 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.3 (Sat Sep 05 2020)
+### v0.1.3 (Sat Sep 05 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
-- Merge branch 'master' of https://github.com/Camaradotspace/camara-react ([@Preshonyee](https://github.com/Preshonyee))
+- Merge branch 'master' of [](https://github.com/Camaradotspace/camara-react) ([@Preshonyee](https://github.com/Preshonyee))
 - Revert "feat(components): add image rendering and loading state to avatar" ([@Preshonyee](https://github.com/Preshonyee))
 - fix(config): fix bundle watch issues ([@Preshonyee](https://github.com/Preshonyee))
 - fix(config): reinstall packages ([@Preshonyee](https://github.com/Preshonyee))
-- fix(config): reinistall packages ([@Preshonyee](https://github.com/Preshonyee))
+- fix(config): reinstall packages ([@Preshonyee](https://github.com/Preshonyee))
 
 #### Authors: 1
 
@@ -581,11 +589,12 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.2 (Thu Sep 03 2020)
+### v0.1.2 (Thu Sep 03 2020)
 
-#### ⚠️ Pushed to `master`
+⚠️ Pushed to `master`
 
-- tesing ci/cd for storybook ([@Preshonyee](https://github.com/Preshonyee))
+- testing ci/cd for storybook ([@Preshonyee](https://github.com/Preshonyee))
+- testing automating the setups and bullet-proofing it.
 
 #### Authors: 1
 
@@ -593,16 +602,12 @@ Rebuild from the ground-up. This changes everything!!!
 
 ---
 
-# v0.1.2 (Thu Sep 03 2020)
-
-Testing automating the setups and bullet-proofing it.
-
----
-
-# v0.1.1 (Thu Sep 03 2020)
+### v0.1.1 (Thu Sep 03 2020)
 
 - Created first version of the design system with `Avatar` and `Button` components
 
 #### Authors: 1
 
 - ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
