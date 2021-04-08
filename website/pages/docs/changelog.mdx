@@ -2,7 +2,6 @@
 title: Changelog
 section: Getting Started
 slug: /docs/changelog/
-order: 5
 ---
 
 # Changelog

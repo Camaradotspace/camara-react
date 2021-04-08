@@ -77,7 +77,7 @@ export const theme = {
     ...defaultTheme.colors,
 
     // Primary = indigo
-    ...aliasColor('primary', 'indigo'),
+    ...aliasColor('primary', 'green'),
 
     primary: th.color('primary-500'),
     'primary-a500': (p) => transparentize(0.5, th.color('primary-500')(p)),
