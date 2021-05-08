@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled, { css } from 'styled-components';
 import { tokens } from '../../constants';
 
@@ -93,7 +92,7 @@ const StyledText = styled.p<TextProps>`
     css`
       font-size: 0.75rem;
     `}
-    
+
   ${(props) =>
     props.variant === 'overline' &&
     css`
@@ -113,7 +112,7 @@ const StyledText = styled.p<TextProps>`
     css`
       font-size: 14px;
     `}
-    
+
   ${(props) =>
     props.size === 'small' &&
     css`

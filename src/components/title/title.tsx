@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled, { css } from 'styled-components';
 import { tokens } from '../../constants';
 

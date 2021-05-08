@@ -1,6 +1,6 @@
 import React from 'react';
-import { Badge, BadgeProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Badge, BadgeProps } from '.';
 import { Flex } from '../flex';
 import { Box } from '../box';
 

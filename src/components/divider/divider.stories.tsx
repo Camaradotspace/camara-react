@@ -1,6 +1,6 @@
 import React from 'react';
-import { Divider, DividerProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Divider, DividerProps } from '.';
 import { Box } from '../box';
 
 export default {

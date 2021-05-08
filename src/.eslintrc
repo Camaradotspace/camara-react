@@ -1,5 +1,78 @@
 {
+  "extends": [
+    "airbnb",
+    "airbnb-base",
+    "eslint:recommended",
+    "prettier",
+    "standard",
+    "standard-react",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
   "env": {
-    "jest": true
+    "jest": true,
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "import"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/ignore": {},
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "space-before-function-paren": 1,
+    "react/prop-types": 0,
+    "react/jsx-handler-names": 0,
+    "react/jsx-fragments": 0,
+    "react/no-unused-prop-types": 0,
+    "import/export": 0,
+    "import/ignore": 0,
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0,
+    "no-use-before-define": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "strict": 2,
+    "no-var": 2,
+    "prefer-template": 2,
+    "prefer-arrow-callback": 1,
+    "prefer-rest-params": 2,
+    "prefer-spread": 2,
+    "object-shorthand": 1,
+    "no-duplicate-imports": 2,
+    "no-confusing-arrow": 2,
+    "comma-dangle": 0,
+    "no-console": 1
   }
 }

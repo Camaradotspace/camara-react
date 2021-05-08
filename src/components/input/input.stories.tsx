@@ -1,6 +1,6 @@
 import React from 'react';
-import { InputField, InputFieldProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { InputField, InputFieldProps } from '.';
 import { Box } from '../box';
 import { Flex } from '../flex';
 

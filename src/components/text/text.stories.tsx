@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, TextProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Text, TextProps } from '.';
 import { Flex } from '../flex';
 import { Box } from '../box';
 

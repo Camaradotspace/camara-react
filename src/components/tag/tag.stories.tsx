@@ -1,6 +1,6 @@
 import React from 'react';
-import { Tag, TagProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Tag, TagProps } from '.';
 import { Box } from '../box';
 import { Flex } from '../flex';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, CardProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Card, CardProps } from '.';
 import { Flex } from '../flex';
 import { Text } from '../text';
 import { Button } from '../button';

@@ -14,7 +14,7 @@ export interface CardProps {
   /* Should card have border around it or be entirely flat? */
   bordered?: boolean;
 
-  /* Content of the card*/
+  /* Content of the card */
   children: React.ReactNode;
 }
 

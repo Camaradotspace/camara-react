@@ -1,7 +1,7 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 import { Flex, FlexProps } from '.';
 import { Image } from '../image';
-import { Story, Meta } from '@storybook/react';
 
 export default {
   title: 'Components/Flex',

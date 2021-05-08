@@ -1,6 +1,6 @@
 import React from 'react';
-import { Anchor, AnchorProps } from '.';
 import { Story, Meta } from '@storybook/react';
+import { Anchor, AnchorProps } from '.';
 
 export default {
   title: 'Components/Anchor',

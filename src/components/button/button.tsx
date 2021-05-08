@@ -1,4 +1,8 @@
-import React, { ButtonHTMLAttributes, HTMLProps } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  FunctionComponent,
+  ReactNode,
+} from 'react';
 import styled, { css } from 'styled-components';
 import { tokens } from '../../constants';
 
@@ -58,7 +62,7 @@ interface StyleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Optional click handler
    */
-  onClick?: (event: any) => void;
+  onClick?: () => void;
 
   /**
    * Set shaped of button to pill-shape
@@ -70,7 +74,7 @@ interface BaseProps {
   /**
    * Can be used to set the button label
    */
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export type ButtonProps = BaseProps & StyleProps;
@@ -266,7 +270,7 @@ const StyledButton = styled.button`
   ${blockStyles}
 `;
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FunctionComponent<ButtonProps> = ({
   variant,
   size,
   block,
@@ -279,25 +283,23 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   ...rest
-}) => {
-  return (
-    <StyledButton
-      variant={variant}
-      size={size}
-      disabled={disabled}
-      block={block}
-      loading={loading}
-      onClick={onClick}
-      pill={pill}
-      danger={danger}
-      backgroundColor={backgroundColor}
-      color={color}
-      {...rest}
-    >
-      {children}
-    </StyledButton>
-  );
-};
+}) => (
+  <StyledButton
+    variant={variant}
+    size={size}
+    disabled={disabled}
+    block={block}
+    loading={loading}
+    onClick={onClick}
+    pill={pill}
+    danger={danger}
+    backgroundColor={backgroundColor}
+    color={color}
+    {...rest}
+  >
+    {children}
+  </StyledButton>
+);
 
 Button.defaultProps = {
   variant: 'primary',

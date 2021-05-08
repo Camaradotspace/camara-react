@@ -1,6 +1,6 @@
 import React from 'react';
-import { Spacer, SpacerProps } from '.';
 import { Meta } from '@storybook/react';
+import { Spacer, SpacerProps } from '.';
 import { Button } from '../button';
 import { Box } from '../box';
 
