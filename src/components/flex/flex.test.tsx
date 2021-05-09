@@ -8,7 +8,7 @@ describe('Flex', () => {
   });
   test('it renders the Flex component', () => {
     render(
-      <Flex>
+      <Flex wrap>
         <p>I am inside of a Flex</p>
         <p>I am inside of a Flex</p>
         <p>I am inside of a Flex</p>
