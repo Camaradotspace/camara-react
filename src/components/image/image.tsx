@@ -1,28 +1,8 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { StyledImageComponent } from './image.styles';
+import { ImageStyleProps } from './image.types';
 
-interface StyleProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  /* Image source */
-  imageUrl: string;
-
-  /* Image description */
-  imageAlt: string;
-
-  /* Control if loading the image should be deferred when its off the screen */
-  loading?: 'eager' | 'lazy';
-
-  /* Set the object-fit property of the image */
-  fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
-}
-
-export type ImageProps = StyleProps;
-
-const StyledImage = styled.img<Partial<ImageProps>>`
-  display: block;
-  object-fit: ${(props) => props.fit};
-`;
-
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC<ImageStyleProps> = ({
   imageUrl,
   imageAlt,
   loading,
@@ -30,7 +10,7 @@ export const Image: React.FC<ImageProps> = ({
   ...rest
 }) => {
   return (
-    <StyledImage
+    <StyledImageComponent
       src={imageUrl}
       alt={imageAlt}
       loading={loading}
