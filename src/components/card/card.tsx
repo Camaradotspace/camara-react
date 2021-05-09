@@ -1,41 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import styled, { css } from 'styled-components';
-
-export interface CardProps {
-  /* Should the card elevate on the z-index? */
-  elevate?: boolean;
-
-  /* Height of the card */
-  height?: string;
-
-  /* Width of the card */
-  width?: string;
-
-  /* Should card have border around it or be entirely flat? */
-  bordered?: boolean;
-
-  /* Content of the card */
-  children: React.ReactNode;
-}
-
-const StyledCard = styled.div<CardProps>`
-  height: ${(props) => props.height};
-  width: ${(props) => props.width};
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  line-height: 1.5;
-  ${(props) =>
-    props.elevate &&
-    css`
-      box-shadow: 2px 4px 8px #dadce0;
-    `}
-  ${(props) =>
-    props.bordered &&
-    css`
-      border: 1px solid #dadce0;
-    `}
-`;
+import { StyledCard } from './card.styles';
+import { CardProps } from './card.types';
 
 export const Card: FunctionComponent<CardProps> = ({
   children,
