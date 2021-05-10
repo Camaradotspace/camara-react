@@ -5,20 +5,6 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 
 const Wrapper = styled.div`
-  @font-face {
-    font-family: 'Hack';
-    font-weight: 400;
-    src: url('../fonts/Hack-Regular.ttf');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Hack';
-    font-weight: 700;
-    src: url('../fonts/Hack-Bold.ttf');
-    font-display: swap;
-  }
-
   .body {
     padding: 2rem 1rem;
     font-family: 'Hack', monospace;
@@ -139,21 +125,42 @@ const HomePage = () => {
       <div className='body'>
         <div>
           <Helmet>
-            <link
-              rel='preload'
-              href='../fonts/Hack-Regular.ttf'
-              as='font'
-              crossOrigin=''
+            {/* Primary Meta Tags */}
+            <title>Camara Design System</title>
+            <meta name='title' content='Camara Design System' />
+            <meta
+              name='description'
+              content='UI foundations for building accessible, beautiful, and responsive web and mobile interfaces - with support for React and React Native.'
             />
-            <link
-              rel='preload'
-              href='../fonts/Hack-Bold.ttf'
-              as='font'
-              crossOrigin=''
+
+            {/* Open Graph / Facebook */}
+            <meta property='og:type' content='website' />
+            <meta property='og:url' content='https://camara.space/' />
+            <meta property='og:title' content='Camara Design System' />
+            <meta
+              property='og:description'
+              content='UI foundations for building accessible, beautiful, and responsive web and mobile interfaces - with support for React and React Native.'
+            />
+            <meta
+              property='og:image'
+              content='https://res.cloudinary.com/beaniegram/image/upload/v1620642927/Personal%20Site/camara-design-system.png'
+            />
+
+            {/* Twitter */}
+            <meta property='twitter:card' content='summary_large_image' />
+            <meta property='twitter:url' content='https://camara.space/' />
+            <meta property='twitter:title' content='Camara Design System' />
+            <meta
+              property='twitter:description'
+              content='UI foundations for building accessible, beautiful, and responsive web and mobile interfaces - with support for React and React Native.'
+            />
+            <meta
+              property='twitter:image'
+              content='https://res.cloudinary.com/beaniegram/image/upload/v1620642927/Personal%20Site/camara-design-system.png'
             />
           </Helmet>
           {/* Logo */}
-          <img src='../images/logo-nav-dark.svg' alt='' />
+          <img src='../images/logo-nav-dark.svg' alt='camara-logo-dark' />
 
           {/* Statement */}
           <div className='statement'>
