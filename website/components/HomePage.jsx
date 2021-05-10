@@ -166,7 +166,7 @@ const HomePage = () => {
             ></script>
           </Helmet>
           {/* Logo */}
-          <img src='../images/logo-nav-dark.svg' alt='camara-logo-dark' />
+          {/* <img src='../images/logo-nav-dark.svg' alt='camara-logo-dark' /> */}
 
           {/* Statement */}
           <div className='statement'>
