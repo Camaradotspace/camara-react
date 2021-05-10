@@ -158,6 +158,12 @@ const HomePage = () => {
               property='twitter:image'
               content='https://res.cloudinary.com/beaniegram/image/upload/v1620642927/Personal%20Site/camara-design-system.png'
             />
+            <script
+              async
+              defer
+              data-domain='camara.space'
+              src='https://plausible.io/js/plausible.js'
+            ></script>
           </Helmet>
           {/* Logo */}
           <img src='../images/logo-nav-dark.svg' alt='camara-logo-dark' />
