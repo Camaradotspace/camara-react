@@ -6,7 +6,7 @@ import { css, th, defaultTheme, aliasColor } from '@xstyled/styled-components';
 
 import NightOwlTheme from 'prism-react-renderer/themes/nightOwl';
 
-const theme = {
+export const theme = {
   initialColorModeName: 'light',
   ...defaultTheme,
   ...baseTheme,
@@ -153,5 +153,3 @@ const theme = {
     },
   },
 };
-
-export default theme;

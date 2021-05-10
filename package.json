@@ -34,6 +34,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
+    "docs": "cd website && yarn develop",
     "generate": "node ./util/create-component",
     "prepublishOnly": "npm run build",
     "gh-release": "npm run build && auto release"
