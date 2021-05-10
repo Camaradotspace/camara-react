@@ -35,10 +35,9 @@ export default App;
 
 ## What's next
 
-- [ ] Improve accessibility support
-- [ ] Improve TypeScript support
-- [ ] Write proper test for all components
-- [ ] Improve docs for all components
+- [x] Add support for mobile with React Native
+- [x] Improve TypeScript support
+- [x] Improve docs for all components
 - [ ] and more
 
 ## License
