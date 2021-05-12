@@ -207,6 +207,15 @@ const HomePage = () => {
               Learn more
             </Button>
           </Link>
+          <a
+            href='https://github.com/Camaradotspace'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Button pill backgroundColor='#708090' color='#fff'>
+              View on GitHub
+            </Button>
+          </a>
         </div>
       </div>
     </Wrapper>
