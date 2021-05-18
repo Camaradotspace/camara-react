@@ -5,8 +5,9 @@ import { Button } from '../button';
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import themes from '../../theme/schema.json';
 
-export const CamaraTheme = ({ children }) => {
+export const CamaraTheme = (children) => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
+
   return (
     <ThemeProvider
       theme={useDarkTheme ? themes.data.light : themes.data.seaWave}
@@ -14,7 +15,7 @@ export const CamaraTheme = ({ children }) => {
       <Button onClick={() => setUseDarkTheme(true)}>Dark Theme</Button>
       <Button onClick={() => setUseDarkTheme(false)}>Default Theme</Button>
       <GlobalStyles />
-      {children}
+      {children()}
     </ThemeProvider>
   );
 };

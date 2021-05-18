@@ -5,7 +5,6 @@ import { Flex } from '../flex';
 
 import { Button } from '.';
 import { ButtonProps } from './button.types';
-import { CamaraTheme } from '../camara-theme';
 
 export default {
   title: 'Components/Button',
@@ -17,11 +16,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => (
-  <CamaraTheme>
-    <Button {...args} />
-  </CamaraTheme>
-);
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 // Base default button
 export const Base = Template.bind({});

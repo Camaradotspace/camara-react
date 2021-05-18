@@ -104,6 +104,7 @@
     "polished": "^4.1.2",
     "react-feather": "^2.0.9",
     "styled-components": "^5.2.3",
+    "styled-system": "^5.1.5",
     "webfontloader": "^1.6.28"
   },
   "config": {
