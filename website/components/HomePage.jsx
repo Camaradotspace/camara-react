@@ -204,7 +204,7 @@ const HomePage = () => {
           {/* Call to Actions */}
           <Link to='/docs/'>
             <Button pill backgroundColor='#75dd66' color='#000000'>
-              Learn more
+              Learn More (Docs)
             </Button>
           </Link>
           <a
@@ -213,7 +213,7 @@ const HomePage = () => {
             rel='noopener noreferrer'
           >
             <Button pill backgroundColor='#708090' color='#fff'>
-              View on GitHub
+              GitHub
             </Button>
           </a>
         </div>
