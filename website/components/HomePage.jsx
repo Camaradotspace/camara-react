@@ -12,6 +12,8 @@ const Wrapper = styled.div`
 
   .statement {
     font-size: 1.75rem;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
     line-height: 1.5;
     margin-top: 4rem;
     font-weight: bold;
@@ -24,6 +26,8 @@ const Wrapper = styled.div`
   .bio {
     color: #708090;
     font-size: 0.875rem;
+    font-family: 'DM Mono', monospace;
+    font-weight: 300;
     line-height: 2;
     margin-top: 3rem;
   }
@@ -40,14 +44,11 @@ const Wrapper = styled.div`
     margin: 3rem 0;
   }
 
-  .cta a {
-    font-family: 'JakartaText';
-    margin-right: 2rem;
+  .cta a button {
     font-size: 0.875rem;
-  }
-
-  .cta a:first-child {
-    font-weight: bold;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    margin-right: 0.5rem;
   }
 
   /* Responsive Web Design */
@@ -110,12 +111,6 @@ const Wrapper = styled.div`
       font-size: 1.25rem;
       margin-top: 4rem;
     }
-
-    .cta a {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      margin-right: 2rem;
-    }
   }
 `;
 
@@ -127,6 +122,11 @@ const HomePage = () => {
           <Helmet>
             {/* Primary Meta Tags */}
             <title>Camara Design System</title>
+            <link rel='preconnect' href='https://fonts.gstatic.com' />
+            <link
+              href='https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&display=swap'
+              rel='stylesheet'
+            />
             <meta name='title' content='Camara Design System' />
             <meta
               name='description'
@@ -202,20 +202,22 @@ const HomePage = () => {
           </div>
 
           {/* Call to Actions */}
-          <Link to='/docs/'>
-            <Button pill backgroundColor='#75dd66' color='#000000'>
-              Learn More (Docs)
-            </Button>
-          </Link>
-          <a
-            href='https://github.com/Camaradotspace'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Button pill backgroundColor='#708090' color='#fff'>
-              GitHub
-            </Button>
-          </a>
+          <div className='cta'>
+            <Link to='/docs/'>
+              <Button pill backgroundColor='#75dd66' color='#000000'>
+                Learn More (Docs)
+              </Button>
+            </Link>
+            <a
+              href='https://github.com/Camaradotspace'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button pill backgroundColor='#708090' color='#fff'>
+                GitHub
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </Wrapper>

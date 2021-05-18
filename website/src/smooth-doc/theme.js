@@ -31,8 +31,8 @@ export const theme = {
   `,
   'prism-theme': NightOwlTheme,
   fonts: {
-    base:
-      '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+    ...baseTheme.fonts,
+    base: 'Inter, sans-serif',
   },
   lineHeights: {
     base: 1.4,

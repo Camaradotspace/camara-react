@@ -21,6 +21,15 @@ module.exports = {
         path: `${__dirname}/fonts/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          `Inter\:300,500,700`, // you can also specify font weights and styles
+        ],
+        display: 'swap',
+      },
+    },
     `gatsby-plugin-react-helmet`,
   ],
 };
