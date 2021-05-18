@@ -10,6 +10,19 @@ slug: /docs/changelog/
 
 ## Latest
 
+### v1.0.0-beta.27 (Tue May 18, 2021)
+
+- 🆕: Initial prototype for themeing and dark mode support
+- ✨: Improve tests for all components
+- ✨: Improve Type and TypeScript support for all components
+- 📚: Improve documentation, add analytics and SEO support
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.26 (Wed Apr 7, 2021)
 
 - `Flex` component:
@@ -328,7 +341,7 @@ A change has been made to how the project gets updated. Going forward every new 
 
 Rebuild from the ground-up. This changes everything!!!
 
-- The previous bundler cli `microbundle` had a lot of issues with generating typescript definitions and wasn't flexible for me to modify its behavior.  
+- The previous bundler cli `microbundle` had a lot of issues with generating typescript definitions and wasn't flexible for me to modify its behavior.
   After loads of inconsistencies and mess I had to rewrite the core library to make use of rollup directly.
   This has made bundling the library much more solid and consistent than before. A lot has changed, I had to touch every single file but somehow keep the same APIs for each components.
   This lays a much more solid foundation for future version of Camara
