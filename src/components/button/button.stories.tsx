@@ -3,7 +3,9 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Box } from '../box';
 import { Flex } from '../flex';
 
-import { Button, ButtonProps } from '.';
+import { Button } from '.';
+import { ButtonProps } from './button.types';
+import { CamaraTheme } from '../camara-theme';
 
 export default {
   title: 'Components/Button',
@@ -15,7 +17,11 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => (
+  <CamaraTheme>
+    <Button {...args} />
+  </CamaraTheme>
+);
 
 // Base default button
 export const Base = Template.bind({});

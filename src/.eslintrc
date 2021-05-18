@@ -73,6 +73,8 @@
     "no-duplicate-imports": 2,
     "no-confusing-arrow": 2,
     "comma-dangle": 0,
-    "no-console": 1
+    "no-console": 1,
+    "consistent-return": 0,
+    "react-hooks/exhaustive-deps": 0
   }
 }

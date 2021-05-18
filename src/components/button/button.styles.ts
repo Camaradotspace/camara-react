@@ -30,9 +30,9 @@ const baseStyles = css<ButtonStyleProps>`
 const primaryStyles = (props: ButtonStyleProps) =>
   props.variant === 'primary' &&
   css`
-    color: ${props.color || $white};
+    color: ${({ theme }) => theme.colors.button.text};
     border: 1px solid ${props.backgroundColor || $primary};
-    background-color: ${props.backgroundColor || $primary};
+    background-color: ${({ theme }) => theme.colors.button.background};
     &:hover {
       background-color: ${props.backgroundColor || $primaryButtonHover};
       border: 1px solid ${props.backgroundColor || $primaryButtonHover};
