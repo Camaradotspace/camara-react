@@ -1,7 +1,7 @@
 import { addDecorator } from '@storybook/react';
-import { CamaraTheme } from '../src/components/camara-theme';
+import { StoryBookTheme } from '../src/components/camara-theme';
 
-addDecorator(CamaraTheme);
+addDecorator(StoryBookTheme);
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

@@ -236,13 +236,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       danger={danger}
       size={size}
       block={block}
-      {...props}
       mx={mx}
       my={my}
       mb={mb}
       mt={mt}
       ml={ml}
       mr={mr}
+      {...props}
     >
       {children}
     </StyledButton>
