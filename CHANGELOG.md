@@ -4,6 +4,16 @@
 
 ## Latest
 
+### v1.0.0-beta.30 (Fri May 21, 2021)
+
+- 🐛: Minor bug fixes
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.29 (Fri May 21, 2021)
 
 - 🐛: Minor bug fixes

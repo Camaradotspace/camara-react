@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { StyledComponentProps } from 'styled-components';
 import css from '@styled-system/css';
 import {
@@ -212,35 +212,41 @@ export type ButtonProps = StyledComponentProps<
   never
 >;
 
-export const Button: React.FC<ButtonProps> = ({
-  disabled,
-  children,
-  block,
-  danger,
-  size,
-  mb,
-  mt,
-  mx,
-  my,
-  ml,
-  mr,
-  ...props
-}) => (
-  <StyledButton
-    disabled={disabled}
-    danger={danger}
-    size={size}
-    block={block}
-    {...props}
-    mx={mx}
-    my={my}
-    mb={mb}
-    mt={mt}
-    ml={ml}
-    mr={mr}
-  >
-    {children}
-  </StyledButton>
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      disabled,
+      children,
+      block,
+      danger,
+      size,
+      mb,
+      mt,
+      mx,
+      my,
+      ml,
+      mr,
+      ...props
+    },
+    ref
+  ) => (
+    <StyledButton
+      ref={ref}
+      disabled={disabled}
+      danger={danger}
+      size={size}
+      block={block}
+      {...props}
+      mx={mx}
+      my={my}
+      mb={mb}
+      mt={mt}
+      ml={ml}
+      mr={mr}
+    >
+      {children}
+    </StyledButton>
+  )
 );
 
 Button.defaultProps = {
