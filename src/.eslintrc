@@ -75,7 +75,6 @@
     "comma-dangle": 0,
     "no-console": 1,
     "consistent-return": 0,
-    "react-hooks/exhaustive-deps": 0,
-    "import/no-extraneous-dependencies": 0
+    "react-hooks/exhaustive-deps": 0
   }
 }

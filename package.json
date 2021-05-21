@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.28",
+  "version": "1.0.0-beta.29",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -45,7 +45,8 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "styled-components": "^5.2.3",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "@styled-system/css": "^5.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
