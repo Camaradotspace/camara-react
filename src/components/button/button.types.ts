@@ -33,16 +33,6 @@ export interface ButtonStyleProps
   danger?: boolean;
 
   /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-
-  /**
-   * What color to use
-   */
-  color?: string;
-
-  /**
    * Optional click handler
    */
   onClick?: () => void;

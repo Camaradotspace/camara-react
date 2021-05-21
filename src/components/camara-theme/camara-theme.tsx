@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Button } from '../button';
-// import { GlobalStyle, darkTheme, defaultTheme } from '../../constants';
 import { GlobalStyles } from '../../theme/GlobalStyles';
-import themes from '../../theme/schema.json';
+import { lightTheme, darkTheme } from '../../theme/theme';
 
 export const CamaraTheme = (children) => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
 
   return (
-    <ThemeProvider
-      theme={useDarkTheme ? themes.data.light : themes.data.seaWave}
-    >
-      <Button onClick={() => setUseDarkTheme(true)}>Dark Theme</Button>
-      <Button onClick={() => setUseDarkTheme(false)}>Default Theme</Button>
+    <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
+      <Button onClick={() => setUseDarkTheme(!useDarkTheme)}>
+        Switch Theme
+      </Button>
       <GlobalStyles />
       {children()}
     </ThemeProvider>

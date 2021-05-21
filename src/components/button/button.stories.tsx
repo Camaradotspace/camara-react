@@ -3,14 +3,13 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Box } from '../box';
 import { Flex } from '../flex';
 
-import { Button } from '.';
-import { ButtonProps } from './button.types';
+import { Button, ButtonProps } from '.';
 
 export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    bg: { control: 'color' },
     color: { control: 'color' },
     children: { control: 'text' },
   },
@@ -127,13 +126,13 @@ export const Pill = (args: ButtonProps) => (
 // full width button
 export const Block = (args: ButtonProps) => (
   <Box width={30}>
-    <Button {...args} block variant='primary'>
+    <Button {...args} variant='primary'>
       Primary
     </Button>
-    <Button {...args} block variant='secondary'>
+    <Button {...args} variant='secondary'>
       Secondary
     </Button>
-    <Button {...args} block variant='ghost'>
+    <Button {...args} variant='ghost'>
       Ghost
     </Button>
   </Box>
@@ -141,14 +140,14 @@ export const Block = (args: ButtonProps) => (
 
 // With background color
 export const BackgroundColor = (args: ButtonProps) => (
-  <Button {...args} pill backgroundColor='green'>
+  <Button {...args} pill bg='green'>
     Camara
   </Button>
 );
 
 // With color
 export const Color = (args: ButtonProps) => (
-  <Button {...args} pill backgroundColor='#ffc108' color='#000000'>
+  <Button {...args} pill bg='#ffc108' color='#000000'>
     Camara
   </Button>
 );

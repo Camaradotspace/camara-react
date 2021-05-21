@@ -1,17 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
+import { color, ColorProps } from 'styled-system';
 import { tokens } from '../../constants';
 import { ButtonStyleProps } from './button.types';
 
-const {
-  $primary,
-  $white,
-  $primaryButtonHover,
-  $primaryButtonPressed,
-  $buttonDanger,
-  $buttonDangerHover,
-  $buttonDangerPressed,
-  $statusUnknown,
-} = tokens.colors;
 const { $1 } = tokens.space;
 
 // default button styles
@@ -27,49 +18,56 @@ const baseStyles = css<ButtonStyleProps>`
 `;
 
 // primary button style
-const primaryStyles = (props: ButtonStyleProps) =>
+const primaryStyles: any = (
+  props: ButtonStyleProps & ColorProps & any,
+  theme: DefaultTheme
+) =>
   props.variant === 'primary' &&
   css`
-    color: ${({ theme }) => theme.colors.button.text};
-    border: 1px solid ${props.backgroundColor || $primary};
-    background-color: ${({ theme }) => theme.colors.button.background};
+    color: ${theme.colors.button.text || props.color};
+    /* border: 1px solid
+      ${theme.colors.button.background || props.bg}; */
+    background-color: ${theme.colors.button.background || props.bg};
     &:hover {
-      background-color: ${props.backgroundColor || $primaryButtonHover};
-      border: 1px solid ${props.backgroundColor || $primaryButtonHover};
+      background-color: ${theme.colors.button.hover || props.bg};
+      border: 1px solid ${theme.colors.button.hover || props.bg};
     }
     &:focus {
-      outline: 1px solid ${props.backgroundColor || $primary};
+      outline: 1px solid ${theme.colors.button.focus || props.bg};
       outline-offset: 2px;
     }
     &:active {
-      background-color: ${props.backgroundColor || $primaryButtonPressed};
-      border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
+      background-color: ${theme.colors.button.pressed || props.bg};
+      border: 1px solid ${theme.colors.button.pressed || props.bg};
     }
     &:disabled {
-      background-color: ${$statusUnknown};
-      border: 1px solid ${$statusUnknown};
+      background-color: ${theme.colors.button.pressed};
+      border: 1px solid ${theme.colors.button.pressed};
       cursor: not-allowed;
       opacity: 0.8;
     }
   `;
 
 // secondary button style
-const secondaryStyles = (props: ButtonStyleProps) =>
+const secondaryStyles: any = (
+  props: ButtonStyleProps & ColorProps & any,
+  theme: DefaultTheme
+) =>
   props.variant === 'secondary' &&
   css`
     background-color: transparent;
-    color: ${props.color || $primary};
-    border: 1px solid ${props.backgroundColor || $primary};
+    color: ${theme.colors.button.background || props.color};
+    border: 1px solid ${theme.colors.button.background || props.bg};
     &:hover {
-      color: ${props.color || $primaryButtonHover};
-      border: 1px solid ${props.backgroundColor || $primaryButtonHover};
+      color: ${theme.colors.button.hover || props.color};
+      border: 1px solid ${theme.colors.button.hover || props.bg};
     }
     &:active {
-      border: 1px solid ${props.backgroundColor || $primaryButtonPressed};
+      border: 1px solid ${theme.colors.button.pressed || props.bg};
     }
     &:disabled {
-      color: ${$statusUnknown};
-      border: 1px solid ${$statusUnknown};
+      color: ${theme.colors.button.pressed};
+      border: 1px solid ${theme.colors.button.pressed};
       cursor: not-allowed;
       opacity: 0.8;
     }
@@ -80,18 +78,18 @@ const ghostStyles = (props: ButtonStyleProps) =>
   props.variant === 'ghost' &&
   css`
     background-color: transparent;
-    color: ${props.color || $primary};
+    color: ${({ theme }) => theme.colors.button.background || props.color};
     &:hover {
-      color: ${props.color || $primaryButtonHover};
+      color: ${({ theme }) => theme.colors.button.hover || props.color};
     }
     &:focus {
-      color: ${props.color || $primaryButtonPressed};
+      color: ${({ theme }) => theme.colors.button.focus || props.color};
     }
     &:active {
-      color: ${props.color || $primaryButtonPressed};
+      color: ${({ theme }) => theme.colors.button.pressed || props.color};
     }
     &:disabled {
-      color: ${$statusUnknown};
+      color: ${({ theme }) => theme.colors.button.pressed};
       cursor: not-allowed;
       opacity: 0.8;
     }
@@ -120,23 +118,22 @@ const primaryDangerStyles = (props: ButtonStyleProps) =>
   props.danger &&
   props.variant === 'primary' &&
   css`
-    background-color: ${$buttonDanger};
-    color: ${$white};
-    border: 1px solid ${$buttonDanger};
+    background-color: ${({ theme }) => theme.colors.button.danger};
+    color: ${({ theme }) => theme.colors.button.text};
+    border: 1px solid ${({ theme }) => theme.colors.button.danger};
     &:hover {
-      background-color: ${$buttonDangerHover};
-      color: ${$white};
-      border: 1px solid ${$buttonDangerHover};
+      background-color: ${({ theme }) => theme.colors.button.dangerHover};
+      color: ${({ theme }) => theme.colors.button.text};
+      border: 1px solid ${({ theme }) => theme.colors.button.dangerHover};
     }
     &:focus {
-      background-color: ${$buttonDangerPressed};
-      color: ${$white};
-      border: 1px solid ${$buttonDangerPressed};
+      outline: 1px solid ${({ theme }) => theme.colors.button.dangerFocus};
+      outline-offset: 2px;
     }
     &:active {
-      background-color: ${$buttonDangerPressed};
-      color: ${$white};
-      border: 1px solid ${$buttonDangerPressed};
+      background-color: ${({ theme }) => theme.colors.button.dangerPressed};
+      color: ${({ theme }) => theme.colors.button.text};
+      border: 1px solid ${({ theme }) => theme.colors.button.dangerPressed};
     }
   `;
 
@@ -146,15 +143,15 @@ const secondaryDangerStyles = (props: ButtonStyleProps) =>
   props.variant === 'secondary' &&
   css`
     background-color: transparent;
-    color: ${$buttonDanger};
-    border: 1px solid ${$buttonDanger};
+    color: ${({ theme }) => theme.colors.button.danger};
+    border: 1px solid ${({ theme }) => theme.colors.button.danger};
     &:hover {
-      color: ${$buttonDangerHover};
-      border: 1px solid ${$buttonDangerHover};
+      color: ${({ theme }) => theme.colors.button.dangerHover};
+      border: 1px solid ${({ theme }) => theme.colors.button.dangerHover};
     }
     &:active {
-      color: ${$buttonDangerPressed};
-      border: 1px solid ${$buttonDangerPressed};
+      color: ${({ theme }) => theme.colors.button.dangerPressed};
+      border: 1px solid ${({ theme }) => theme.colors.button.dangerPressed};
     }
   `;
 
@@ -164,15 +161,15 @@ const ghostDangerStyles = (props: ButtonStyleProps) =>
   props.variant === 'ghost' &&
   css`
     background-color: transparent;
-    color: ${$buttonDanger};
+    color: ${({ theme }) => theme.colors.button.danger};
     &:hover {
-      color: ${$buttonDangerHover};
+      color: ${({ theme }) => theme.colors.button.dangerHover};
     }
     &:focus {
-      color: ${props.color || $primaryButtonPressed};
+      color: ${({ theme }) => theme.colors.button.dangerFocus};
     }
     &:active {
-      color: ${props.color || $primaryButtonPressed};
+      color: ${({ theme }) => theme.colors.button.dangerPressed};
     }
   `;
 
@@ -189,7 +186,6 @@ const blockStyles = (props: ButtonStyleProps) =>
   css`
     margin: 0.5rem 0;
     display: block;
-    width: 100%;
   `;
 
 export const StyledButton = styled.button`
@@ -203,4 +199,5 @@ export const StyledButton = styled.button`
   ${pillStyles}
   ${sizeStyles}
   ${blockStyles}
+  ${color}
 `;

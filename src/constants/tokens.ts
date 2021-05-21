@@ -2,7 +2,7 @@ export const tokens = {
   colors: {
     $primaryButtonHover: `#0077FF`,
     $primaryButtonPressed: `#0088FF`,
-    $buttonDanger: `#e22121`,
+    $buttonDanger: `#FF4D4D`,
     $buttonDangerHover: `#bd1212`,
     $buttonDangerPressed: `#ad0303`,
     $primary: '#0099FF', // primary brand color
