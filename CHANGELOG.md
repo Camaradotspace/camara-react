@@ -4,6 +4,20 @@
 
 ## Latest
 
+### v1.0.0-beta.34 (Sat May 22, 2021)
+
+- `CamaraTheme` component:
+  - 🆕: `Theme` prop has been added, this is now the required way to switch the theme.
+  - ✨: Theme toggle button and state hook has been removed, switching the theme now requires passing the appropriate value to the `theme` prop.
+- `Card` component:
+  - ✨: Card component now has full support for Camara `system` props
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.33 (Sat May 22, 2021)
 
 - 🆕: Add support for dark mode to Card component
