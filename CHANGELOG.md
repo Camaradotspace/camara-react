@@ -4,6 +4,18 @@
 
 ## Latest
 
+### v1.0.0-beta.33 (Sat May 22, 2021)
+
+- 🆕: Add support for dark mode to Card component
+- ✨: Refactor Card component
+- ✨: Improve color theme
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.32 (Fri May 21, 2021)
 
 - 🐛: Minor bug fixes
