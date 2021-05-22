@@ -18,7 +18,7 @@ import {
   SpaceProps,
 } from 'styled-system';
 
-export type StyledButtonProps = ColorProps &
+type StyledButtonProps = ColorProps &
   SpaceProps &
   LayoutProps &
   FlexboxProps &
@@ -212,7 +212,10 @@ export type ButtonProps = StyledComponentProps<
   never
 >;
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button: React.FunctionComponent<ButtonProps> = forwardRef<
+  HTMLButtonElement,
+  ButtonProps
+>(
   (
     {
       disabled,

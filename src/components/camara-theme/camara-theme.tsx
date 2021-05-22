@@ -1,21 +1,21 @@
-import React, { FunctionComponent } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from 'react';
+import { ThemeProvider as CamaraThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import { lightTheme, darkTheme } from '../../theme/theme';
 
-interface ICamaraTheme {
+export interface ICamaraTheme {
   children: React.ReactNode;
   theme?: 'light' | 'dark';
 }
 
-export const CamaraTheme: FunctionComponent<ICamaraTheme> = ({
+export const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
   children,
   theme,
 }) => {
   return (
-    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+    <CamaraThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
       {children}
-    </ThemeProvider>
+    </CamaraThemeProvider>
   );
 };
