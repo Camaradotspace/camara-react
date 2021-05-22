@@ -79,7 +79,8 @@ const lightTheme: DefaultTheme = {
     },
     bg: {
       primary: '#FFFFFF',
-      secondary: '#F1F1F1',
+      secondary: '#F5F5F5',
+      shadow: '#DADCE0',
     },
     text: {
       primary: '#000000',
@@ -131,7 +132,7 @@ const darkTheme: DefaultTheme = {
       primary: '#FFFFFF',
       secondary: '#F5F5F5',
       tertiary: '#555555',
-      border: '#DADCE0',
+      border: '#444444',
       disabled: '#242424',
       error: '#E22121',
       warning: '#FF9A04',
@@ -141,6 +142,7 @@ const darkTheme: DefaultTheme = {
     bg: {
       primary: '#111111',
       secondary: '#262626',
+      shadow: '#333333',
     },
     text: {
       primary: '#FFFFFF',

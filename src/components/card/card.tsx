@@ -1,6 +1,54 @@
 import React, { FunctionComponent } from 'react';
-import { StyledCard } from './card.styles';
-import { CardProps } from './card.types';
+import styled, { css } from 'styled-components';
+import {
+  border,
+  BorderProps,
+  compose,
+  flexbox,
+  FlexboxProps,
+  layout,
+  LayoutProps,
+  margin,
+  MarginProps,
+} from 'styled-system';
+
+type StyledCardProps = MarginProps &
+  LayoutProps &
+  FlexboxProps &
+  BorderProps & {
+    /* Should the card elevate on the z-index? */
+    elevate?: boolean;
+    /* Height of the card */
+    height?: string;
+    /* Width of the card */
+    width?: string;
+    /* Should card have border around it or be entirely flat? */
+    bordered?: boolean;
+    /* Content of the card */
+    children: React.ReactNode;
+  };
+
+export type CardProps = StyledCardProps;
+
+export const StyledCard = styled.div<CardProps>`
+  ${compose(margin, layout, flexbox, border)}
+  height: ${(props) => props.height};
+  width: ${(props) => props.width};
+  background-color: ${({ theme }) => theme.colors.bg.secondary};
+  padding: 1rem;
+  border-radius: 8px;
+  line-height: 1.5;
+  ${(props) =>
+    props.elevate &&
+    css`
+      box-shadow: 2px 4px 8px ${({ theme }) => theme.colors.bg.shadow};
+    `}
+  ${(props) =>
+    props.bordered &&
+    css`
+      border: 1.5px solid ${({ theme }) => theme.colors.ui.border};
+    `}
+`;
 
 export const Card: FunctionComponent<CardProps> = ({
   children,
@@ -25,7 +73,6 @@ Card.defaultProps = {
   width: '400px',
   height: 'auto',
   elevate: false,
-  bordered: true,
 };
 
 Card.displayName = 'Card';

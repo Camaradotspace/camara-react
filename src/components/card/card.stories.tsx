@@ -26,6 +26,7 @@ export const Elevated = (args: CardProps) => (
     <Image
       imageUrl='https://source.unsplash.com/8TQUF6UbpAk/1600x900'
       imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+      width='100%'
     />
     <Text>John Doe</Text>
     <Button block pill size='large'>
@@ -38,10 +39,11 @@ export const Elevated = (args: CardProps) => (
 export const Bordered = (args: CardProps) => (
   <Flex>
     <Box>
-      <Card {...args}>
+      <Card {...args} bordered>
         <Image
           imageUrl='https://source.unsplash.com/8TQUF6UbpAk/1600x900'
           imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+          width='100%'
         />
         <Text>John Doe</Text>
         <Button block pill size='large'>
@@ -54,6 +56,7 @@ export const Bordered = (args: CardProps) => (
         <Image
           imageUrl='https://source.unsplash.com/8TQUF6UbpAk/1600x900'
           imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
+          width='100%'
         />
         <Text>John Doe</Text>
         <Button block pill size='large'>
