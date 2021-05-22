@@ -1,21 +1,19 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button } from '../button';
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import { lightTheme, darkTheme } from '../../theme/theme';
 
 interface ICamaraTheme {
   children: React.ReactNode;
+  theme?: 'light' | 'dark';
 }
 
-export const CamaraTheme: FunctionComponent<ICamaraTheme> = ({ children }) => {
-  const [useDarkTheme, setUseDarkTheme] = useState(false);
-
+export const CamaraTheme: FunctionComponent<ICamaraTheme> = ({
+  children,
+  theme,
+}) => {
   return (
-    <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
-      <Button onClick={() => setUseDarkTheme(!useDarkTheme)}>
-        Switch Theme
-      </Button>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
       {children}
     </ThemeProvider>

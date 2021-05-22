@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import styled, { css } from 'styled-components';
+import React, { forwardRef } from 'react';
+import styled, { css, StyledComponentProps } from 'styled-components';
 import {
   border,
   BorderProps,
@@ -18,17 +18,18 @@ type StyledCardProps = MarginProps &
   BorderProps & {
     /* Should the card elevate on the z-index? */
     elevate?: boolean;
-    /* Height of the card */
-    height?: string;
-    /* Width of the card */
-    width?: string;
     /* Should card have border around it or be entirely flat? */
     bordered?: boolean;
     /* Content of the card */
     children: React.ReactNode;
   };
 
-export type CardProps = StyledCardProps;
+export type CardProps = StyledComponentProps<
+  'div',
+  any,
+  StyledCardProps,
+  never
+>;
 
 export const StyledCard = styled.div<CardProps>`
   ${compose(margin, layout, flexbox, border)}
@@ -36,7 +37,6 @@ export const StyledCard = styled.div<CardProps>`
   width: ${(props) => props.width};
   background-color: ${({ theme }) => theme.colors.bg.secondary};
   padding: 1rem;
-  border-radius: 8px;
   line-height: 1.5;
   ${(props) =>
     props.elevate &&
@@ -50,24 +50,15 @@ export const StyledCard = styled.div<CardProps>`
     `}
 `;
 
-export const Card: FunctionComponent<CardProps> = ({
-  children,
-  elevate,
-  height,
-  width,
-  bordered,
-}) => {
-  return (
-    <StyledCard
-      elevate={elevate}
-      height={height}
-      width={width}
-      bordered={bordered}
-    >
-      {children}
-    </StyledCard>
-  );
-};
+export const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ children, elevate, bordered, ...props }, ref) => {
+    return (
+      <StyledCard ref={ref} elevate={elevate} bordered={bordered} {...props}>
+        {children}
+      </StyledCard>
+    );
+  }
+);
 
 Card.defaultProps = {
   width: '400px',
