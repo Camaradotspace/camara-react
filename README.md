@@ -1,30 +1,46 @@
 # camara
 
-> Made with create-react-library
+[![NPM](https://img.shields.io/npm/v/camara.svg)](https://www.npmjs.com/package/camara) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/6419e49e-e3d9-40fd-ba00-032ab4d09e80/deploy-status)](https://app.netlify.com/sites/camaradotspace/deploys)
+[!semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 
-[![NPM](https://img.shields.io/npm/v/camara.svg)](https://www.npmjs.com/package/camara) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Camara is an open-source design system consisting of a reusable component library, it provides user interface foundations for building accessible, beautiful and responsive web interfaces. It is built with React, TypeScript, Styled-components, Storybook and Chromatic.
+
+Camara is a 🚧 work-in-progress and is still in beta.
 
 ## Install
 
 ```bash
 npm install --save camara
+
+# or
+
+yarn add camara
 ```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
+import { Button } from 'camara'
 
-import MyComponent from 'camara'
-import 'camara/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <>
+      <Button>Camara</Button>
+    </>
+  )
 }
+
+export default App
 ```
+
+## What's next
+
+- [x] Add support for mobile with React Native
+- [x] Improve A11Y support for all components
+- [x] Improve docs for all components
+- [ ] and more
 
 ## License
 
-MIT © [Preshonyee](https://github.com/Preshonyee)
+MIT © [Camaradotspace](https://github.com/Camaradotspace)

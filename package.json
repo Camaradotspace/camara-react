@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.40",
+  "version": "0.0.0-development",
   "description": "A design system that helps you build your ideas quickly",
   "author": {
     "name": "Presh Onyee",
@@ -36,13 +36,51 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "npm": "yarn run build && npm publish"
+    "npm": "yarn run build && npm publish",
+    "semantic-release": "semantic-release",
+    "dry-run": "semantic-release --dry-run --no-ci --branches 'main'"
   },
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/github",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true,
+        "tarballDir": "dist"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "dist/",
+          "docs",
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
+  "repositoryUrl": "https://github.com/Camaradotspace/camara-react",
   "peerDependencies": {
     "react": "^16.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@styled-system/css": "^5.1.5",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -78,6 +116,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
+    "semantic-release": "^17.4.3",
     "styled-components": "^5.0.1",
     "styled-system": "^5.1.5",
     "typescript": "^4.2.4"
