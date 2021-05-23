@@ -12,23 +12,24 @@ import {
   MarginProps,
 } from 'styled-system';
 
-type StyledCardProps = MarginProps & LayoutProps & FlexboxProps & BorderProps;
+type StyledCardProps = MarginProps &
+  LayoutProps &
+  FlexboxProps &
+  BorderProps & {
+    /* Should the card elevate on the z-index? */
+    elevate?: boolean;
+    /* Should card have border around it or be entirely flat? */
+    bordered?: boolean;
+    /* Content of the card */
+    children: React.ReactNode;
+  };
 
-type CardComponentProps = StyledComponentProps<
+export type CardProps = StyledComponentProps<
   'div',
   any,
   StyledCardProps,
   never
 >;
-
-export interface CardProps extends CardComponentProps {
-  /* Should the card elevate on the z-index? */
-  elevate?: boolean;
-  /* Should card have border around it or be entirely flat? */
-  bordered?: boolean;
-  /* Content of the card */
-  children: React.ReactNode;
-}
 
 export const StyledCard = styled.div<CardProps>`
   ${compose(margin, layout, flexbox, border)}
