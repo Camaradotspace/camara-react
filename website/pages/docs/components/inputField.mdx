@@ -1,0 +1,150 @@
+---
+title: 'Input Field'
+section: Components
+slug: /docs/components/inputField/
+---
+
+import { Box, Flex, InputField } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ InputField }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, InputField },
+  }}
+/>
+
+# InputField
+
+InputField description.
+
+<br></br>
+
+## Props
+
+InputField properties
+
+| Property    | Description             | Type                               | Default | Version |
+| ----------- | ----------------------- | ---------------------------------- | ------- | ------- |
+| helperText  | Input helper text       | `string`                           | -       |         |
+| inline      | Should input be inline? | `boolean`                          | false   |         |
+| label       | Input label text        | `string`                           | -       |         |
+| name        | Input name              | `string`                           | -       |         |
+| placeholder | Input placeholder text  | `string`                           | -       |         |
+| required    | Is input required?      | `boolean`                          | false   |         |
+| type        | What input type is it?  | `number` `text` `email` `password` | `text`  |         |
+
+<br></br>
+
+## Usage
+
+### Basic Input
+
+```jsx live noInline
+import { InputField } from 'camara';
+
+render(
+  <>
+    <InputField placeholder='Type something here' />
+  </>
+);
+```
+
+### Block
+
+```jsx live noInline
+import { Box, InputField } from 'camara';
+
+render(
+  <>
+    <Box>
+      <InputField label='First Name' />
+      <InputField label='Last Name' />
+    </Box>
+  </>
+);
+```
+
+### Inline
+
+```jsx live noInline
+import { Flex, InputField } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <InputField inline label='First Name' />
+      <InputField inline label='Last Name' />
+    </Flex>
+  </>
+);
+```
+
+### Helper Text
+
+```jsx live noInline
+import { Flex, InputField } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <InputField
+        label='Email Address'
+        type='email'
+        helperText='example@gmail.com'
+      />
+      <InputField
+        label='Password'
+        type='password'
+        helperText='must contain special characters'
+      />
+    </Flex>
+  </>
+);
+```
+
+### Required
+
+```jsx live noInline
+import { Flex, InputField } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <InputField required label='First Name' />
+      <InputField required label='Last Name' />
+    </Flex>
+  </>
+);
+```
+
+### Hidden Label
+
+```jsx live noInline
+import { Flex, InputField } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <InputField required placeholder='First Name' />
+      <InputField required placeholder='Last Name' />
+    </Flex>
+  </>
+);
+```
+
+### Disabled
+
+```jsx live noInline
+import { Flex, InputField } from 'camara';
+
+render(
+  <>
+    <Flex>
+      <InputField disabled required placeholder='First Name' />
+      <InputField disabled required placeholder='Last Name' />
+    </Flex>
+  </>
+);
+```

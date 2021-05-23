@@ -1,0 +1,76 @@
+---
+title: Anchor
+section: Components
+slug: /docs/components/anchor/
+---
+
+import { Anchor } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Anchor }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Anchor },
+  }}
+/>
+
+# Anchor
+
+Anchor description.
+
+<br></br>
+
+## Props
+
+Anchor properties
+
+| Property | Description           | Type      | Default | Version |
+| -------- | --------------------- | --------- | ------- | ------- |
+| href     | Link URL              | `string`  | -       |         |
+| asButton | Use anchor as button? | `boolean` | false   |         |
+| asNew    | Open link in new tab? | `boolean` | false   |         |
+
+<br></br>
+
+## Usage
+
+### Basic Anchor
+
+```jsx live noInline
+import { Anchor } from 'camara';
+
+render(
+  <>
+    <Anchor href='https://unsplash.com/photos/V_WBdOLOgJU'>See photo</Anchor>
+  </>
+);
+```
+
+### As Button
+
+```jsx live noInline
+import { Anchor } from 'camara';
+
+render(
+  <>
+    <Anchor asButton href='https://unsplash.com/photos/V_WBdOLOgJU'>
+      See photo
+    </Anchor>
+  </>
+);
+```
+
+### Open In New
+
+```jsx live noInline
+import { Anchor } from 'camara';
+
+render(
+  <>
+    <Anchor asNew href='https://unsplash.com/photos/V_WBdOLOgJU'>
+      See photo
+    </Anchor>
+  </>
+);
+```
