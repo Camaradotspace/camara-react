@@ -1,0 +1,105 @@
+{
+  "name": "camara",
+  "version": "1.0.0-beta.40",
+  "description": "A design system that helps you build your ideas quickly",
+  "author": {
+    "name": "Presh Onyee",
+    "email": "preshonyee@gmail.com"
+  },
+  "license": "MIT",
+  "repository": "Camaradotspace/camara-react",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "React",
+    "Component",
+    "Library",
+    "Typescript",
+    "Storybook"
+  ],
+  "bugs": {
+    "url": "https://github.com/Camaradotspace/camara-react/issues"
+  },
+  "homepage": "https://github.com/Camaradotspace/camara-react#readme",
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build",
+    "npm": "yarn run build && npm publish"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@styled-system/css": "^5.1.5",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.0",
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "@types/styled-components": "^5.0.1",
+    "@types/styled-system": "^5.1.11",
+    "@types/styled-system__css": "^5.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "auto": "^10.29.0",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "gh-pages": "^3.1.0",
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "polished": "^4.1.2",
+    "prettier": "^2.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.5",
+    "typescript": "^4.2.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react-is": "^17.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "conventional-commits",
+      "first-time-contributor",
+      "twitter"
+    ]
+  }
+}
