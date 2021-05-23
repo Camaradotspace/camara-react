@@ -20,24 +20,39 @@ yarn add camara
 ## Usage
 
 ```tsx
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from 'camara'
+=======
+import React from 'react';
+import { Button } from 'camara';
+>>>>>>> 3266aa14f4756d392d8415292a7d731e0135f421
 
 const App = () => {
   return (
     <>
       <Button>Camara</Button>
     </>
+<<<<<<< HEAD
   )
 }
 
 export default App
+=======
+  );
+};
+
+export default App;
+>>>>>>> 3266aa14f4756d392d8415292a7d731e0135f421
 ```
 
 ## What's next
 
 - [x] Add support for mobile with React Native
-- [x] Improve A11Y support for all components
+      <<<<<<< HEAD
+- [x] # Improve A11Y support for all components
+- [x] Improve TypeScript support
+  > > > > > > > 3266aa14f4756d392d8415292a7d731e0135f421
 - [x] Improve docs for all components
 - [ ] and more
 
