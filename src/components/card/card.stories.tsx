@@ -1,12 +1,12 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import Card from '.';
+import { Card } from '.';
 import { Flex } from '../flex';
 import { Text } from '../text';
-import Button from '../button';
+import { Button } from '../button';
 import { Box } from '../box';
 import { Image } from '../image';
-import { CardProps } from './card.types';
+import CardProps from './card.types';
 
 export default {
   title: 'Components/Card',

@@ -18,9 +18,6 @@ type StyledCardProps = MarginProps &
     children: React.ReactNode;
   };
 
-export type CardProps = StyledComponentProps<
-  'div',
-  any,
-  StyledCardProps,
-  never
->;
+type CardProps = StyledComponentProps<'div', any, StyledCardProps, never>;
+
+export default CardProps;

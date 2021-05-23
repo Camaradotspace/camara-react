@@ -8,7 +8,7 @@ export interface ICamaraTheme {
   theme?: 'light' | 'dark';
 }
 
-const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
+export const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
   children,
   theme,
 }) => {
@@ -19,5 +19,3 @@ const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
     </CamaraThemeProvider>
   );
 };
-
-export default CamaraTheme;

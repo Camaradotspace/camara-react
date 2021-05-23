@@ -1,1 +1,1 @@
-export { default } from './camara-theme';
+export * from './camara-theme';

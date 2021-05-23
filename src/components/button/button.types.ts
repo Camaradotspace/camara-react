@@ -22,9 +22,11 @@ type StyledButtonProps = ColorProps &
     size?: 'small' | 'medium' | 'large';
   };
 
-export type ButtonProps = StyledComponentProps<
+type ButtonProps = StyledComponentProps<
   'button',
   any,
   StyledButtonProps,
   never
 >;
+
+export default ButtonProps;

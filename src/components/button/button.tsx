@@ -11,7 +11,7 @@ import {
   space,
   variant,
 } from 'styled-system';
-import { ButtonProps } from './button.types';
+import ButtonProps from './button.types';
 
 const baseButtonStyles = {
   position: 'relative',
@@ -186,7 +186,7 @@ const StyledButton = styled.button<ButtonProps>`
     })};
 `;
 
-const Button: React.FunctionComponent<ButtonProps> = forwardRef<
+export const Button: React.FunctionComponent<ButtonProps> = forwardRef<
   HTMLButtonElement,
   ButtonProps
 >(
@@ -225,8 +225,6 @@ const Button: React.FunctionComponent<ButtonProps> = forwardRef<
     </StyledButton>
   )
 );
-
-export default Button;
 
 Button.defaultProps = {
   variant: 'primary',

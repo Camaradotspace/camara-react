@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { border, compose, flexbox, layout, margin } from 'styled-system';
-import { CardProps } from './card.types';
+import CardProps from './card.types';
 
 export const StyledCard = styled.div<CardProps>`
   ${compose(margin, layout, flexbox, border)}
@@ -22,7 +22,7 @@ export const StyledCard = styled.div<CardProps>`
     `}
 `;
 
-const Card: React.FunctionComponent<CardProps> = forwardRef<
+export const Card: React.FunctionComponent<CardProps> = forwardRef<
   HTMLDivElement,
   CardProps
 >(({ children, elevate, bordered, ...props }, ref) => {
@@ -32,7 +32,5 @@ const Card: React.FunctionComponent<CardProps> = forwardRef<
     </StyledCard>
   );
 });
-
-export default Card;
 
 Card.displayName = 'Card';
