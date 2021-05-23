@@ -1,10 +1,10 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
-import { border, compose, flexbox, layout, margin } from 'styled-system';
+import { border, compose, flexbox, layout, space } from 'styled-system';
 import CardProps from './card.types';
 
 export const StyledCard = styled.div<CardProps>`
-  ${compose(margin, layout, flexbox, border)}
+  ${compose(space, layout, flexbox, border)}
   height: ${(props) => props.height};
   width: ${(props) => props.width};
   background-color: ${({ theme }) => theme.colors.bg.secondary};
@@ -22,15 +22,17 @@ export const StyledCard = styled.div<CardProps>`
     `}
 `;
 
-export const Card: React.FunctionComponent<CardProps> = forwardRef<
-  HTMLDivElement,
-  CardProps
->(({ children, elevate, bordered, ...props }, ref) => {
+export const Card: React.FunctionComponent<CardProps> = ({
+  children,
+  elevate,
+  bordered,
+  ...props
+}) => {
   return (
-    <StyledCard ref={ref} elevate={elevate} bordered={bordered} {...props}>
+    <StyledCard elevate={elevate} bordered={bordered} {...props}>
       {children}
     </StyledCard>
   );
-});
+};
 
 Card.displayName = 'Card';

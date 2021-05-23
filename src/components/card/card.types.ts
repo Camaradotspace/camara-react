@@ -1,12 +1,12 @@
 import { StyledComponentProps } from 'styled-components';
 import {
-  MarginProps,
+  SpaceProps,
   LayoutProps,
   FlexboxProps,
   BorderProps,
 } from 'styled-system';
 
-type StyledCardProps = MarginProps &
+type StyledCardProps = SpaceProps &
   LayoutProps &
   FlexboxProps &
   BorderProps & {

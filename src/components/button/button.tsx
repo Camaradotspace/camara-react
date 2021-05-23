@@ -186,10 +186,7 @@ const StyledButton = styled.button<ButtonProps>`
     })};
 `;
 
-export const Button: React.FunctionComponent<ButtonProps> = forwardRef<
-  HTMLButtonElement,
-  ButtonProps
->(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       disabled,
