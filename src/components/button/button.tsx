@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled, { StyledComponentProps } from 'styled-components';
+import styled from 'styled-components';
 import css from '@styled-system/css';
 import {
   border,
@@ -10,27 +10,8 @@ import {
   position,
   space,
   variant,
-  BorderProps,
-  ColorProps,
-  FlexboxProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
 } from 'styled-system';
-
-type StyledButtonProps = ColorProps &
-  SpaceProps &
-  LayoutProps &
-  FlexboxProps &
-  BorderProps &
-  PositionProps & {
-    disabled?: boolean;
-    danger?: boolean;
-    pill?: boolean;
-    block?: boolean;
-    variant?: 'primary' | 'secondary' | 'ghost';
-    size?: 'small' | 'medium' | 'large';
-  };
+import { ButtonProps } from './button.types';
 
 const baseButtonStyles = {
   position: 'relative',
@@ -205,14 +186,7 @@ const StyledButton = styled.button<ButtonProps>`
     })};
 `;
 
-export type ButtonProps = StyledComponentProps<
-  'button',
-  any,
-  StyledButtonProps,
-  never
->;
-
-export const Button: React.FunctionComponent<ButtonProps> = forwardRef<
+const Button: React.FunctionComponent<ButtonProps> = forwardRef<
   HTMLButtonElement,
   ButtonProps
 >(
@@ -251,6 +225,8 @@ export const Button: React.FunctionComponent<ButtonProps> = forwardRef<
     </StyledButton>
   )
 );
+
+export default Button;
 
 Button.defaultProps = {
   variant: 'primary',

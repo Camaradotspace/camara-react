@@ -1,2 +1,1 @@
-export * from './camara-theme';
-export * from './StorybookTheme';
+export { default } from './camara-theme';

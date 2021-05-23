@@ -1,6 +1,5 @@
-import './index.css';
-import { GlobalStyle } from './constants';
-import { CamaraTheme } from './components/camara-theme';
+import CamaraTheme from './components/camara-theme';
+import Button from './components/button';
+import Card from './components/card';
 
-export * from './components';
-export { GlobalStyle, CamaraTheme };
+export { CamaraTheme, Button, Card };

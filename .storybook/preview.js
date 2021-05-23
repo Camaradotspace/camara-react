@@ -1,5 +1,5 @@
 import { addDecorator } from '@storybook/react';
-import { StoryBookTheme } from '../src/components/camara-theme';
+import StoryBookTheme from '../src/components/storybook-theme';
 
 addDecorator(StoryBookTheme);
 

@@ -1,35 +1,7 @@
 import React, { forwardRef } from 'react';
-import styled, { css, StyledComponentProps } from 'styled-components';
-import {
-  border,
-  BorderProps,
-  compose,
-  flexbox,
-  FlexboxProps,
-  layout,
-  LayoutProps,
-  margin,
-  MarginProps,
-} from 'styled-system';
-
-type StyledCardProps = MarginProps &
-  LayoutProps &
-  FlexboxProps &
-  BorderProps & {
-    /* Should the card elevate on the z-index? */
-    elevate?: boolean;
-    /* Should card have border around it or be entirely flat? */
-    bordered?: boolean;
-    /* Content of the card */
-    children: React.ReactNode;
-  };
-
-export type CardProps = StyledComponentProps<
-  'div',
-  any,
-  StyledCardProps,
-  never
->;
+import styled, { css } from 'styled-components';
+import { border, compose, flexbox, layout, margin } from 'styled-system';
+import { CardProps } from './card.types';
 
 export const StyledCard = styled.div<CardProps>`
   ${compose(margin, layout, flexbox, border)}
@@ -50,7 +22,7 @@ export const StyledCard = styled.div<CardProps>`
     `}
 `;
 
-export const Card: React.FunctionComponent<CardProps> = forwardRef<
+const Card: React.FunctionComponent<CardProps> = forwardRef<
   HTMLDivElement,
   CardProps
 >(({ children, elevate, bordered, ...props }, ref) => {
@@ -60,5 +32,7 @@ export const Card: React.FunctionComponent<CardProps> = forwardRef<
     </StyledCard>
   );
 });
+
+export default Card;
 
 Card.displayName = 'Card';
