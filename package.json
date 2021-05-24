@@ -41,10 +41,10 @@
     "dry-run": "semantic-release --dry-run --no-ci --branches 'main'"
   },
   "branches": [
-    "main",
     {
-      "name": "beta",
-      "prerelease": true
+      "name": "main",
+      "channel": "1.x",
+      "prerelease": "true"
     },
     "core",
     "tokens/preshonyee"
@@ -81,10 +81,10 @@
   ],
   "release": {
     "branches": [
-      "main",
       {
-        "name": "beta",
-        "prerelease": true
+        "name": "main",
+        "channel": "1.x",
+        "prerelease": "true"
       }
     ]
   },
