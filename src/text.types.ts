@@ -8,7 +8,7 @@ import {
 
 type StyledTextProps = {
   variant: 'hint' | 'label' | 'body' | 'caption' | 'overline'
-  size: 'small' | 'medium' | 'large'
+  size?: 'small' | 'medium' | 'large'
   children: React.ReactNode
   /* Should text be inline */
   inline?: boolean
