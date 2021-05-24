@@ -80,7 +80,10 @@
   ],
   "release": {
     "branches": [
-      "main"
+      {
+        "name": "main",
+        "prerelease": true
+      }
     ]
   },
   "repositoryUrl": "https://github.com/Camaradotspace/camara-react",
