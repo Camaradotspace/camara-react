@@ -22,8 +22,8 @@ const baseButtonStyles = {
   borderRadius: 0,
   borderWidth: 1,
   borderStyle: 'solid',
-  px: 1,
-  py: 0,
+  px: 3,
+  py: 1,
   m: 1,
   appearance: 'none',
   cursor: 'pointer'
@@ -226,8 +226,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 export default Button
 
 Button.defaultProps = {
-  variant: 'primary',
-  size: 'medium'
+  variant: 'primary'
 }
 
 Button.displayName = 'Button'

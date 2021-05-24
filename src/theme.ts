@@ -37,7 +37,8 @@ export const lineHeights = {
 
 export const letterSpacings = {
   default: 'normal',
-  tracked: '0.04em'
+  tracked: '0.04em',
+  overline: '1.5px'
 }
 
 export const radii = ['0.25rem', '0.5rem', '1rem', '1.5rem']
