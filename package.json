@@ -41,8 +41,9 @@
     "dry-run": "semantic-release --dry-run --no-ci --branches 'main'"
   },
   "branches": [
+    "main",
     {
-      "name": "main",
+      "name": "beta",
       "prerelease": true
     },
     "core",
@@ -80,8 +81,9 @@
   ],
   "release": {
     "branches": [
+      "main",
       {
-        "name": "main",
+        "name": "beta",
         "prerelease": true
       }
     ]
