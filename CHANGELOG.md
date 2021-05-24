@@ -4,6 +4,29 @@
 
 ## Latest
 
+### v1.0.0-beta.42 (Mon May 24, 2021)
+
+`Badge` component:
+
+    - 🆕: `backgroundColor`, `color` and `position` props are now handled by `system` props.
+    - ✨: `text` prop now supports `string` type.
+
+`Box` component:
+
+    - 🆕: `height`, `width`, `color`, `border`, `position`, `minWidth`, `minHeight`, `maxWidth`, `maxHeight`, all padding and margin props are now handled by the `system` props.
+    - 🆕: `role` prop allows setting the ARIA role for the `Box` component
+    - ❗ BREAKING: `overflow` prop has been removed.
+
+`Text` component:
+
+    - ✨: `variant` prop is no longer required
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.41 (Mon May 24, 2021)
 
 `Avatar` component:
