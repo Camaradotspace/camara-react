@@ -4,6 +4,24 @@
 
 ## Latest
 
+### v1.0.0-beta.41 (Mon May 24, 2021)
+
+`Avatar` component:
+
+    - 🆕: Avatar now has support for layout and position `system` props.
+
+`Text` component:
+
+    - ❗ BREAKING: `italic`, `weight` and `align` props are removed. To set these properties make use of the typography system props
+    - ❗ BREAKING: `strong` and `sub-heading` are no longer options of the variant props.
+    - 🆕: `hint` and `label` options are now added to variant props.
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.40 (Sun May 23, 2021)
 
 - 🐛: Minor bug fixes
