@@ -4,6 +4,17 @@
 
 ## Latest
 
+### v1.0.0-beta.43 (Tue May 25, 2021)
+
+- ✨: All existing components now support the `system` props.
+- ❗ BREAKING: `Title` prop is now renamed to `Heading`. All prior usage would result in an error.
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.42 (Mon May 24, 2021)
 
 `Badge` component:
