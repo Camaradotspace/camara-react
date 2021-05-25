@@ -9,7 +9,7 @@ type AnchorProps = ColorProps &
     href: string
 
     /* Use Anchor as a Button? */
-    asBtn?: boolean
+    // asBtn?: boolean
 
     /* Open link in new tab? */
     external?: boolean

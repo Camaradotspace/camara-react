@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import React, { FunctionComponent } from 'react'
 import AnchorProps from './anchor.types'
-import Button from './button'
 import { color, compose, space } from 'styled-system'
 
 const StyledAnchor = styled.a<AnchorProps>`
@@ -26,39 +25,22 @@ const StyledAnchor = styled.a<AnchorProps>`
 const Anchor: FunctionComponent<AnchorProps> = ({
   href,
   children,
-  asBtn,
   external
 }) => {
   if (external) {
     return (
-      <StyledAnchor
-        asBtn={asBtn}
-        href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
+      <StyledAnchor href={href} target='_blank' rel='noopener noreferrer'>
         {children}
-      </StyledAnchor>
-    )
-  } else if (asBtn) {
-    return (
-      <StyledAnchor asBtn={asBtn} href={href}>
-        <Button>{children}</Button>
       </StyledAnchor>
     )
   } else {
-    return (
-      <StyledAnchor asBtn={asBtn} href={href}>
-        {children}
-      </StyledAnchor>
-    )
+    return <StyledAnchor href={href}>{children}</StyledAnchor>
   }
 }
 
 export default Anchor
 
 Anchor.defaultProps = {
-  asBtn: false,
   external: false
 }
 
