@@ -11,16 +11,17 @@ export const fonts = {
 }
 
 export const fontSizes = [
-  '0.625rem',
-  '0.75rem',
-  '1rem',
-  '1.125rem',
-  '1.25rem',
-  '1.5rem',
-  '1.75rem',
-  '2rem',
-  '2.5rem',
-  '3rem'
+  '0.625rem', // 10px
+  '0.875', // 14px
+  '0.75rem', // 12px
+  '1rem', // 16px
+  '1.125rem', // 18px
+  '1.25rem', // 20px
+  '1.5rem', // 24px
+  '1.75rem', // 28px
+  '2rem', // 32px
+  '2.5rem', // 40px
+  '3rem' // 48px
 ]
 
 export const fontWeights = {

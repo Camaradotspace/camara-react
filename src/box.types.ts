@@ -1,13 +1,13 @@
 import {
   BorderProps,
-  FlexProps,
+  FlexboxProps,
   LayoutProps,
   PositionProps,
   SpaceProps
 } from 'styled-system'
 
 type StyledBoxProps = LayoutProps &
-  FlexProps &
+  FlexboxProps &
   BorderProps &
   SpaceProps &
   PositionProps & {

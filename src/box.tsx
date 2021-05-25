@@ -1,10 +1,17 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components'
-import { border, compose, flex, layout, position, space } from 'styled-system'
+import {
+  border,
+  compose,
+  flexbox,
+  layout,
+  position,
+  space
+} from 'styled-system'
 import BoxProps from './box.types'
 
 export const StyledBox = styled.div<BoxProps>`
-  ${compose(border, flex, layout, position, space)}
+  ${compose(border, flexbox, layout, position, space)}
   box-sizing: border-box;
   min-width: 0;
   display: block;
