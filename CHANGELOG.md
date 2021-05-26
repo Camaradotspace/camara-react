@@ -4,6 +4,16 @@
 
 ## Latest
 
+### v1.0.0-beta.44 (Wed May 26, 2021)
+
+- ✨: Minor bug fixes
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.43 (Tue May 25, 2021)
 
 - ✨: All existing components now support the `system` props.

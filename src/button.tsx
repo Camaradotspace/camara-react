@@ -98,7 +98,7 @@ const buttonVariants = variant({
   }
 })
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButton = styled.button<Partial<ButtonProps>>`
   ${buttonVariants}
   ${compose(color, space, layout, flexbox, border, position)}
   ${(props) =>

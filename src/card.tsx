@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { border, compose, flexbox, layout, space } from 'styled-system'
 import CardProps from './card.types'
@@ -14,15 +14,16 @@ const StyledCard = styled.div<CardProps>`
   border: ${({ theme }) => theme.colors.ui.border};
 `
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ children, elevate, bordered, ...props }, ref) => {
-    return (
-      <StyledCard ref={ref} elevate={elevate} bordered={bordered} {...props}>
-        {children}
-      </StyledCard>
-    )
-  }
-)
+const Card: React.FC<CardProps> = (
+  { children, elevate, bordered, ...props },
+  ref
+) => {
+  return (
+    <StyledCard ref={ref} elevate={elevate} bordered={bordered} {...props}>
+      {children}
+    </StyledCard>
+  )
+}
 
 export default Card
 
