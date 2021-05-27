@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.44",
+  "version": "1.0.0-beta.46",
   "description": "A design system that helps you build your ideas quickly",
   "author": {
     "name": "Presh Onyee",
@@ -89,7 +89,7 @@
   },
   "repositoryUrl": "https://github.com/Camaradotspace/camara-react",
   "peerDependencies": {
-    "react": "^16.0.0",
+    "react": ">=16.8.0",
     "react-feather": "^2.0.9"
   },
   "devDependencies": {

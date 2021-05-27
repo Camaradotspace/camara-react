@@ -4,6 +4,26 @@
 
 ## Latest
 
+### v1.0.0-beta.46 (Thur May 27, 2021)
+
+- ✨: Minor bug fixes
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
+### v1.0.0-beta.46 (Wed May 26, 2021)
+
+- ✨: Minor bug fixes
+
+#### Authors: 1
+
+- ᑭᖇᗴᔕᕼ ᗝᑎƳᗴᗴ ([@Preshonyee](https://github.com/Preshonyee))
+
+---
+
 ### v1.0.0-beta.44 (Wed May 26, 2021)
 
 - ✨: Minor bug fixes
