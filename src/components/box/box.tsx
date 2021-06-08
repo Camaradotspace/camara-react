@@ -1,31 +1,13 @@
-import * as React from 'react';
-import styled, { css } from 'styled-components';
-import {
-  border,
-  compose,
-  flexbox,
-  layout,
-  position,
-  space,
-  BorderProps,
-  FlexboxProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
-} from 'styled-system';
+import React, { HTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-export interface BoxProps
-  extends LayoutProps,
-    FlexboxProps,
-    BorderProps,
-    SpaceProps,
-    PositionProps {
+export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   /* Should children of the box be centered? */
-  center?: boolean;
+  center?: boolean
   /* Highlight the box on the screen, useful for debug purposes */
-  debug?: boolean;
+  debug?: boolean
   /* Content of the box */
-  children: React.ReactNode;
+  children: React.ReactNode
   /* Set box ARIA role */
   role?:
     | 'article'
@@ -39,37 +21,41 @@ export interface BoxProps
     | 'main'
     | 'nav'
     | 'section'
-    | 'summary';
+    | 'summary'
 }
 
-export const StyledBox = styled.div<BoxProps>`
-  ${compose(border, flexbox, layout, position, space)}
-  box-sizing: border-box;
-  min-width: 0;
-  display: block;
-  ${props =>
-    props.center &&
-    css`
-      margin: 0 auto;
-    `}
-  ${props =>
-    props.debug &&
-    css`
-      border: 2px solid red;
-    `}
-`;
+const StyledBox: any = styled('div', {
+  boxSizing: 'border-box',
+  minWidth: 0,
+  display: 'block',
+  variants: {
+    center: {
+      true: {
+        margin: '0 auto'
+      }
+    },
+    debug: {
+      true: {
+        border: '1px solid red'
+      }
+    }
+  }
+})
 
-export const Box: React.FC<BoxProps> = ({ children, center, debug, role }) => {
+export const Box: React.FC<BoxProps> = ({
+  children,
+  center,
+  debug,
+  role,
+  ...rest
+}) => {
   return (
-    <StyledBox role={role} center={center} debug={debug}>
+    <StyledBox role={role} center={center} debug={debug} {...rest}>
       {children}
     </StyledBox>
-  );
-};
+  )
+}
 
-Box.defaultProps = {
-  center: false,
-  debug: false,
-};
+Box.defaultProps = {}
 
-Box.displayName = 'Box';
+Box.displayName = 'Box'

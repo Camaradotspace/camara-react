@@ -1,25 +1,24 @@
-import * as React from 'react';
-import { render, screen } from '@testing-library/react';
-import { TextArea } from '.';
-import { TextAreaProps } from './textarea.types';
+import * as React from 'react'
+import { render, screen } from '@testing-library/react'
+import { TextArea, TextAreaProps } from '.'
 
 describe('TextArea', () => {
   it('is truthy', () => {
-    expect(TextArea).toBeTruthy();
-  });
-});
+    expect(TextArea).toBeTruthy()
+  })
+})
 
 test('it renders the TextArea component', () => {
-  render(<TextArea />);
-  screen.debug();
-});
+  render(<TextArea />)
+  screen.debug()
+})
 
-let props: TextAreaProps;
+let props: TextAreaProps
 
 test('textarea renders with default placeholder text', () => {
   const { queryByPlaceholderText } = render(
     <TextArea {...props} placeholder='This is a text area' />
-  );
+  )
 
-  expect(queryByPlaceholderText('This is a text area')).toBeTruthy();
-});
+  expect(queryByPlaceholderText('This is a text area')).toBeTruthy()
+})

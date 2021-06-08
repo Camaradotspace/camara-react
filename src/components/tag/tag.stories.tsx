@@ -1,96 +1,96 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Tag, TagProps } from '..';
-import { Box } from '../box';
-import { Flex } from '../flex';
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import { Tag, TagProps } from '.'
+import { Box } from '../box'
+import { Flex } from '../flex'
 
 export default {
   title: 'Components/Tag',
   component: Tag,
   argTypes: {
-    color: { control: 'color' },
-  },
-} as Meta;
+    color: { control: 'color' }
+  }
+} as Meta
 
-const Template: Story<TagProps> = args => <Tag {...args} />;
+const Template: Story<TagProps> = (args) => <Tag {...args} />
 
 // Base default tag
-export const Base = Template.bind({});
+export const Base = Template.bind({})
 
 // example
 export const Example = (args: TagProps) => (
   <Flex>
-    <Tag {...args} color="#e61b1b">
+    <Tag {...args} color='#e61b1b'>
       red
     </Tag>
-    <Tag {...args} color="#ff8800">
+    <Tag {...args} color='#ff8800'>
       orange
     </Tag>
-    <Tag {...args} color="#9b069b">
+    <Tag {...args} color='#BB65FF'>
       purple
     </Tag>
-    <Tag {...args} color="#ff6347">
+    <Tag {...args} color='#ff6347'>
       tomato
     </Tag>
-    <Tag {...args} color="#068d6b">
+    <Tag {...args} color='#068d6b'>
       teal
     </Tag>
   </Flex>
-);
+)
 
 // sizes
 export const Size = (args: TagProps) => (
   <Box>
     <Flex>
-      <Tag {...args} size="large" color="#e61b1b">
+      <Tag {...args} size='large' color='#e61b1b'>
         red
       </Tag>
-      <Tag {...args} size="large" color="#ff9900">
+      <Tag {...args} size='large' color='#ff9900'>
         orange
       </Tag>
-      <Tag {...args} size="large" color="#9b069b">
+      <Tag {...args} size='large' color='#BB65FF'>
         purple
       </Tag>
-      <Tag {...args} size="large" color="#ff6347">
+      <Tag {...args} size='large' color='#ff6347'>
         tomato
       </Tag>
-      <Tag {...args} size="large" color="#068d6b">
+      <Tag {...args} size='large' color='#068d6b'>
         teal
       </Tag>
     </Flex>
     <Flex>
-      <Tag {...args} size="medium" color="#e61b1b">
+      <Tag {...args} size='medium' color='#e61b1b'>
         red
       </Tag>
-      <Tag {...args} size="medium" color="#ff9900">
+      <Tag {...args} size='medium' color='#ff9900'>
         orange
       </Tag>
-      <Tag {...args} size="medium" color="#9b069b">
+      <Tag {...args} size='medium' color='#BB65FF'>
         purple
       </Tag>
-      <Tag {...args} size="medium" color="#ff6347">
+      <Tag {...args} size='medium' color='#ff6347'>
         tomato
       </Tag>
-      <Tag {...args} size="medium" color="#068d6b">
+      <Tag {...args} size='medium' color='#068d6b'>
         teal
       </Tag>
     </Flex>
     <Flex>
-      <Tag {...args} size="small" color="#e61b1b">
+      <Tag {...args} size='small' color='#e61b1b'>
         red
       </Tag>
-      <Tag {...args} size="small" color="#ff9900">
+      <Tag {...args} size='small' color='#ff9900'>
         orange
       </Tag>
-      <Tag {...args} size="small" color="#9b069b">
+      <Tag {...args} size='small' color='#BB65FF'>
         purple
       </Tag>
-      <Tag {...args} size="small" color="#ff6347">
+      <Tag {...args} size='small' color='#ff6347'>
         tomato
       </Tag>
-      <Tag {...args} size="small" color="#068d6b">
+      <Tag {...args} size='small' color='#068d6b'>
         teal
       </Tag>
     </Flex>
   </Box>
-);
+)

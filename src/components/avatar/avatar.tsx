@@ -1,176 +1,132 @@
-import React, { FunctionComponent } from 'react';
-import styled, { css } from 'styled-components';
-import {
-  PositionProps,
-  SpaceProps,
-  compose,
-  position,
-  space,
-} from 'styled-system';
+import React from 'react'
+import { styled } from '../../stitches.config'
 
 const sizes = {
   large: 80,
   medium: 64,
   small: 40,
-  tiny: 24,
-};
-
-export interface AvatarProps extends PositionProps, SpaceProps {
-  /* How large should the avatar be? */
-  size?: keyof typeof sizes | number;
-
-  /* Fallback color incase image fails to load */
-  bg?: string;
-
-  /* sets the color of the initials */
-  color?: string;
-
-  /* Should avatar look like Instagram stories? */
-  stories?: boolean;
-
-  /* Link to image source */
-  imageUrl: string;
-
-  /* Alternative text describing the image */
-  imageAlt: string;
-
-  /* Username for setting avatar initials */
-  username?: string;
-
-  /* Set font size of initials */
-  initialsSize?: number;
-
-  /* Custom icon type */
-  icon?: React.ReactNode;
-
-  /* Shape of the avatar */
-  shape?: 'circle' | 'square';
-
-  /* Set the object-fit property of the avatar */
-  fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+  tiny: 24
 }
 
-const StyledAvatar = styled('div').withConfig<Partial<AvatarProps>>({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !['shape', 'size'].includes(prop) && defaultValidatorFn(prop),
-})`
-  ${compose(position, space)}
-  background-color: ${props => props.bg || 'transparent'};
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-  text-transform: uppercase;
+export interface AvatarProps {
+  /* How large should the avatar be? */
+  size?: keyof typeof sizes
 
-  height: ${props => props.size}px;
-  width: ${props => props.size}px;
-  line-height: ${props => props.size}px;
+  /* Fallback color incase image fails to load */
+  bg?: string
 
-  ${props =>
-    props.shape === 'square' &&
-    css`
-      border-radius: 0;
-    `}
+  /* sets the color of the initials */
+  color?: string
 
-  ${props =>
-    props.size === 'tiny' &&
-    css`
-      height: ${sizes.tiny}px;
-      width: ${sizes.tiny}px;
-      line-height: ${sizes.tiny}px;
+  /* Should avatar look like Instagram stories? */
+  stories?: boolean
 
-      .initials {
-        font-size: ${({ theme }) => theme.fontSizes[4]};
+  /* Link to image source */
+  imageSrc?: string
+
+  /* Alternative text describing the image */
+  imageAlt?: string
+
+  /* Username for setting avatar initials */
+  username?: string
+
+  /* Set font size of initials */
+  initialsSize?: number
+
+  /* Custom icon type */
+  icon?: React.ReactNode
+
+  /* Shape of the avatar */
+  shape?: 'circle' | 'square'
+
+  /* Set the object-fit property of the avatar */
+  fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
+}
+
+const StyledAvatar: any = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  alignContent: 'center',
+  alignSelf: 'center',
+  verticalAlign: 'middle',
+  overflow: 'hidden',
+  textTransform: 'uppercase',
+  height: '40px',
+  width: '40px',
+  '& img': {
+    width: '100%',
+    height: 'auto',
+    display: 'block'
+  },
+  // avatar variants
+  variants: {
+    // size props
+    size: {
+      tiny: {
+        height: `${sizes.tiny}px`,
+        width: `${sizes.tiny}px`,
+        '& p.initials': {
+          fontSize: `${sizes.tiny}px`
+        }
+      },
+      small: {
+        height: `${sizes.small}px`,
+        width: `${sizes.small}px`,
+        '& p.initials': {
+          fontSize: `${sizes.small}px`
+        }
+      },
+      medium: {
+        height: `${sizes.medium}px`,
+        width: `${sizes.medium}px`,
+        '& p.initials': {
+          fontSize: `${sizes.medium}px`
+        }
+      },
+      large: {
+        height: `${sizes.large}px`,
+        width: `${sizes.large}px`,
+        '& p.initials': {
+          fontSize: `${sizes.large}px`
+        }
       }
-    `}
-
-  ${props =>
-    props.size === 'small' &&
-    css`
-      height: ${sizes.small}px;
-      width: ${sizes.small}px;
-      line-height: ${sizes.small}px;
-
-      .initials {
-        font-size: ${({ theme }) => theme.fontSizes[5]};
+    },
+    shape: {
+      square: {
+        borderRadius: '0'
+      },
+      circle: {
+        borderRadius: '$round'
       }
-    `}
-
-  ${props =>
-    props.size === 'medium' &&
-    css`
-      height: ${sizes.medium}px;
-      width: ${sizes.medium}px;
-      line-height: ${sizes.medium}px;
-
-      .initials {
-        font-size: ${({ theme }) => theme.fontSizes[6]};
+    },
+    stories: {
+      true: {
+        border: '5px solid $bg_primary',
+        boxShadow: '0 0 0 2px orange'
       }
-    `}
-
-  ${props =>
-    props.size === 'large' &&
-    css`
-      height: ${sizes.large}px;
-      width: ${sizes.large}px;
-      line-height: ${sizes.large}px;
-
-      .initials {
-        font-size: ${({ theme }) => theme.fontSizes[7]};
-      }
-    `}
-  ${props =>
-    props.stories === true &&
-    css`
-      border: 5px solid #fff;
-      /* offset-x | offset-y | blur-radius | spread-radius | color */
-      box-shadow: 0 0 0 2px orange;
-    `}
-
-    ${props =>
-      !props.imageUrl &&
-      css`
-        background-color: ${({ theme }) =>
-          theme.colors.ui.secondary || props.bg};
-      `}
-
-    ${props =>
-      props.icon &&
-      css`
-        text-align: center;
-        vertical-align: middle;
-        padding: 8px;
-      `}
-
-    img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: ${props => props.fit};
+    }
   }
-`;
+})
 
-// Avatar with initials
-const StyledInitials = styled.div<Partial<AvatarProps>>`
-  ${props =>
-    props.bg &&
-    css`
-      background-color: ${({ theme }) => theme.colors.bg.secondary || props.bg};
-    `}
-  ${props =>
-    props.color &&
-    css`
-      color: ${({ theme }) => theme.colors.text.primary || props.color};
-    `}
-  text-align: center;
-  font-size: ${props => props.initialsSize}px;
-  font-weight: 500;
-`;
+const StyledInitials = styled('p', {
+  textAlign: 'center',
+  fontWeight: '500'
+})
 
-export const Avatar: FunctionComponent<AvatarProps> = ({
+const StyledIcon = styled('div', {
+  textAlign: 'center',
+  verticalAlign: 'middle',
+  p: '$2'
+})
+
+// const StyledImage = styled('img', {})
+
+export const Avatar: React.FC<AvatarProps> = ({
   size,
   initialsSize,
-  imageUrl,
+  imageSrc,
   imageAlt,
   fit,
   icon,
@@ -178,51 +134,50 @@ export const Avatar: FunctionComponent<AvatarProps> = ({
   bg,
   color,
   stories,
-  username,
-  ...rest
+  username
 }) => {
-  let avatarChildren = <p>Loading</p>;
+  let avatarChildren = <p>Loading</p>
 
   if (icon) {
-    avatarChildren = <div>{icon}</div>;
-  } else if (imageUrl) {
-    avatarChildren = <img src={imageUrl} alt={imageAlt} />;
+    avatarChildren = <StyledIcon>{icon}</StyledIcon>
+  } else if (imageSrc) {
+    avatarChildren = <img src={imageSrc} alt={imageAlt} />
   } else {
     avatarChildren = (
       <StyledInitials
-        bg={bg}
-        color={color}
-        initialsSize={initialsSize}
-        aria-hidden="true"
-        className="initials"
+        aria-hidden='true'
+        className='initials'
+        css={{
+          color: '$text_primary' || color,
+          fontSize: `${initialsSize}px`,
+          lineHeight: `${initialsSize}px`
+        }}
       >
         {username && username !== undefined ? username.substring(0, 1) : null}
       </StyledInitials>
-    );
+    )
   }
 
   return (
     <StyledAvatar
-      stories={stories}
-      size={size}
-      fit={fit}
-      shape={shape}
       icon={icon}
-      bg={bg}
-      {...rest}
+      size={size}
+      shape={shape}
+      stories={stories}
+      css={{ backgroundColor: '$bg_secondary' || bg, objectFit: fit }}
     >
       {avatarChildren}
     </StyledAvatar>
-  );
-};
+  )
+}
 
 Avatar.defaultProps = {
-  size: 40,
+  size: 'small',
   fit: 'cover',
   stories: false,
   shape: 'circle',
   icon: null,
-  initialsSize: 16,
-};
+  initialsSize: 16
+}
 
-Avatar.displayName = 'Avatar';
+Avatar.displayName = 'Avatar'

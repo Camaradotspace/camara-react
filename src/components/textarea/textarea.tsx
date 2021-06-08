@@ -1,91 +1,72 @@
-import React, { FunctionComponent } from 'react';
-import styled, { css } from 'styled-components';
-import {
-  border,
-  compose,
-  layout,
-  space,
-  BorderProps,
-  LayoutProps,
-  SpaceProps,
-} from 'styled-system';
+import React, { TextareaHTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-export interface TextAreaProps extends SpaceProps, BorderProps, LayoutProps {
+export interface TextAreaProps
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   /* Label text */
-  label?: string;
+  label?: string
   /* HTML `name` attribute */
-  name?: string;
+  name?: string
   /* How many rows should the text area have? */
-  rows?: number;
+  rows?: number
   /* TextArea placeholder */
-  placeholder?: string;
+  placeholder?: string
   /* Is textarea required? */
-  required?: boolean;
+  required?: boolean
   /* Is textarea disabled? */
-  disabled?: boolean;
+  disabled?: boolean
   /* TextArea maximum length */
-  maxlength?: number;
+  maxlength?: number
   /* How should text area wrap? */
-  wrap?: 'hard' | 'soft';
+  wrap?: 'hard' | 'soft'
   /* Input helper text */
-  helperText?: string;
+  helperText?: string
   /* Should textarea be resizable */
-  resizable?: boolean;
+  resizable?: boolean
 }
 
-const TextAreaWrapper = styled.div<TextAreaProps>`
-  ${compose(space, border, layout)}
-  .requiredText {
-    color: red;
+const TextAreaWrapper = styled('div', {
+  '& .requiredText': {
+    color: 'red'
+  },
+  '& .helperText': {
+    display: 'block',
+    color: '#999',
+    margin: '0 8px'
+  },
+  label: {
+    display: 'block',
+    margin: '8px 0',
+    color: '$text_secondary',
+    fontSize: '$3'
+  },
+  '& textarea': {
+    display: 'inline-block',
+    backgroundColor: '$bg_secondary',
+    color: '$text_secondary',
+    padding: '0.65rem 0.5rem',
+    border: '1px solid $ui_border',
+    borderRadius: '$2',
+    outlineColor: '$brand_primary',
+    fontSize: '$3',
+    minWidth: '250px'
+  },
+  '& textarea::placeholder': {
+    color: '$text_placeholder',
+    fontFamily: 'sans-serif',
+    fontSize: '$3'
+  },
+  '& textarea:active': {
+    outline: 'none',
+    border: '2px solid $brand_primary'
+  },
+  '& textarea:focus': {
+    outline: 'none',
+    border: '2px solid $brand_primary'
   }
+})
 
-  .helperText {
-    display: block;
-    color: #999;
-    margin: 0 8px;
-  }
-
-  label {
-    display: block;
-    margin: 8px 0;
-    color: #444444;
-    font-size: 14px;
-  }
-`;
-
-const StyledTextArea = styled.textarea<Partial<TextAreaProps>>`
-  display: inline-block;
-  padding: 0.65rem 0.5rem;
-  border: 1px solid ${({ theme }) => theme.colors.ui.border};
-  border-radius: 4px;
-  outline: none;
-  font-size: 14px;
-  min-width: 250px;
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.text.placeholder};
-  }
-
-  &:active,
-  &:focus {
-    outline-color: ${({ theme }) => theme.colors.brand.primary};
-    border: 2px solid ${({ theme }) => theme.colors.brand.primary};
-  }
-
-  ${props =>
-    props.disabled &&
-    css`
-      border: 1px solid ${({ theme }) => theme.colors.ui.disabled};
-    `}
-
-  ${props =>
-    props.resizable === false &&
-    css`
-      resize: none;
-    `}
-`;
-
-export const TextArea: FunctionComponent<TextAreaProps> = ({
+export const TextArea: React.FC<TextAreaProps> = ({
   label,
   helperText,
   rows,
@@ -99,12 +80,12 @@ export const TextArea: FunctionComponent<TextAreaProps> = ({
   ...rest
 }) => {
   const renderRequiredLabel = (): JSX.Element => {
-    return <span className="requiredText">*</span>;
-  };
+    return <span className='requiredText'>*</span>
+  }
 
   const renderHelperText = (): JSX.Element => {
-    return <small className="helperText">{helperText}</small>;
-  };
+    return <small className='helperText'>{helperText}</small>
+  }
   return (
     <TextAreaWrapper>
       {label && (
@@ -112,28 +93,25 @@ export const TextArea: FunctionComponent<TextAreaProps> = ({
           {required ? renderRequiredLabel() : null} {label}
         </label>
       )}
-      <StyledTextArea
-        data-testid="textarea-component"
+      <textarea
+        data-testid='textarea-component'
         rows={rows}
         placeholder={placeholder}
         disabled={disabled}
         required={required}
         wrap={wrap}
         maxLength={maxlength}
-        resizable={resizable}
         {...rest}
+        css={{ resize: resizable ? 'both' : 'none' }}
       />
       {helperText ? renderHelperText() : null}
     </TextAreaWrapper>
-  );
-};
+  )
+}
 
 TextArea.defaultProps = {
   rows: 4,
-  required: false,
-  disabled: false,
-  resizable: false,
-  wrap: 'hard',
-};
+  wrap: 'hard'
+}
 
-TextArea.displayName = 'TextArea';
+TextArea.displayName = 'TextArea'

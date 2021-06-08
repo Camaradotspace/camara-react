@@ -4,16 +4,16 @@ section: Components
 slug: /docs/components/avatar/
 ---
 
-import { Avatar, Box, Flex } from 'camara';
-import { User } from 'react-feather';
-import { LiveConfig } from 'smooth-doc/components';
+import { Avatar, Box, Flex, CamaraTheme } from 'camara'
+import { User } from 'react-feather'
+import { LiveConfig } from 'smooth-doc/components'
 
 <!-- Define `camara` module as `{ Avatar }` -->
 
 <LiveConfig
   modules={{
-    camara: { Avatar, Box },
-    'react-feather': { User },
+    camara: { Avatar, Box, CamaraTheme },
+    'react-feather': { User }
   }}
 />
 
@@ -33,7 +33,7 @@ Avatar properties
 | color           | Sets the color of the initials            | `string`                                     | -        |         |
 | fit             | Object-fit property of the image          | `fill` `contain` `cover` `none` `scale-down` | `cover`  |         |
 | icon            | Custom icon type                          | `ReactNode`                                  | null     |         |
-| imageUrl        | Link to image source                      | `string`                                     | -        |         |
+| imageSrc        | Link to image source                      | `string`                                     | -        |         |
 | imageAlt        | Description of the image                  | `string`                                     | -        |         |
 | initialsSize    | Set font size of initials                 | `number`                                     | 16       |         |
 | shape           | Shape of the avatar                       | `circle` `square`                            | `circle` |         |
@@ -45,67 +45,67 @@ Avatar properties
 
 ## Usage
 
-Unless where using an icon always provide the `imageUrl` and `imageAlt` props
+Unless where using an icon always provide the `imageSrc` and `imageAlt` props
 
 ### Size
 
 ```jsx live noInline
-import { Avatar } from 'camara';
+import { Avatar, CamaraTheme } from 'camara'
 
 render(
-  <>
+  <CamaraTheme theme='dark'>
     <Avatar
-      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
       imageAlt='short-coated white and tan dog photo'
       size='large'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
       imageAlt='short-coated white and tan dog photo'
       size='medium'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
       imageAlt='short-coated white and tan dog photo'
       size='small'
     />
     <Avatar
-      imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+      imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
       imageAlt='short-coated white and tan dog photo'
       size='tiny'
     />
-  </>
-);
+  </CamaraTheme>
+)
 ```
 
 ### Shape
 
 ```jsx live noInline
-import { Avatar, Box } from 'camara';
+import { Avatar, Box } from 'camara'
 
 render(
   <>
     <Box>
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='circle'
         size='large'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='circle'
         size='medium'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='circle'
         size='small'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='circle'
         size='tiny'
@@ -113,39 +113,39 @@ render(
     </Box>
     <Box>
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='square'
         size='large'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='square'
         size='medium'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='square'
         size='small'
       />
       <Avatar
-        imageUrl='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
+        imageSrc='https://source.unsplash.com/Qi1BfZO8h2s/400x400'
         imageAlt='short-coated white and tan dog photo'
         shape='square'
         size='tiny'
       />
     </Box>
   </>
-);
+)
 ```
 
 ### Icon
 
 ```jsx live noInline
-import { Avatar } from 'camara';
-import { User } from 'react-feather';
+import { Avatar } from 'camara'
+import { User } from 'react-feather'
 
 render(
   <>
@@ -154,13 +154,13 @@ render(
     <Avatar size='small' icon={<User color='#777' size={32} />} />
     <Avatar size='tiny' icon={<User color='#777' size={24} />} />
   </>
-);
+)
 ```
 
 ### Initial
 
 ```jsx live noInline
-import { Avatar } from 'camara';
+import { Avatar } from 'camara'
 
 render(
   <>
@@ -170,40 +170,40 @@ render(
     <Avatar size='small' username='Sam' />
     <Avatar size='tiny' username='Sam' />
   </>
-);
+)
 ```
 
 ### Stories
 
 ```jsx live noInline
-import { Avatar } from 'camara';
+import { Avatar } from 'camara'
 
 render(
   <>
     <Avatar
       stories
       size='large'
-      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageSrc='https://source.unsplash.com/8TQUF6UbpAk/400x400'
       imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
     />
     <Avatar
       stories
       size='medium'
-      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageSrc='https://source.unsplash.com/8TQUF6UbpAk/400x400'
       imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
     />
     <Avatar
       stories
       size='small'
-      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageSrc='https://source.unsplash.com/8TQUF6UbpAk/400x400'
       imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
     />
     <Avatar
       stories
       size='tiny'
-      imageUrl='https://source.unsplash.com/8TQUF6UbpAk/400x400'
+      imageSrc='https://source.unsplash.com/8TQUF6UbpAk/400x400'
       imageAlt='woman in black and white crew neck long sleeve shirt wearing purple knit cap'
     />
   </>
-);
+)
 ```

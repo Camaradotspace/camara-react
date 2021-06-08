@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Button } from '../../dist/components/button';
-import { GlobalStyles } from './globalStyles';
-import { lightTheme, darkTheme } from '../theme';
+import React, { useState } from 'react'
+import { Button } from '../components'
+import { DARK_THEME, styled } from '../stitches.config'
+import { globalStyles } from './globalStyles'
+
+const ThemeWrapper = styled('div', {
+  backgroundColor: '$bg_primary',
+  height: '100vh'
+})
 
 const StoryBookTheme = (children: any) => {
-  const [useDarkTheme, setUseDarkTheme] = useState(false);
-
+  const [useDarkTheme, setUseDarkTheme] = useState(false)
+  globalStyles()
   return (
-    <ThemeProvider theme={useDarkTheme ? darkTheme : lightTheme}>
+    <ThemeWrapper
+      className={`${
+        useDarkTheme ? DARK_THEME : ''
+      } sb-show-main sb-main-padded`}
+    >
       <Button onClick={() => setUseDarkTheme(!useDarkTheme)}>
         Switch Theme
       </Button>
-      <GlobalStyles />
       {children()}
-    </ThemeProvider>
-  );
-};
+    </ThemeWrapper>
+  )
+}
 
-export default StoryBookTheme;
+export default StoryBookTheme

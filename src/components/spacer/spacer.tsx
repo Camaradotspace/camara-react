@@ -1,15 +1,12 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { compose, space, SpaceProps } from 'styled-system';
+import * as React from 'react'
+import { styled } from '../../stitches.config'
 
-export interface SpacerProps extends SpaceProps {}
+export interface SpacerProps {}
 
-const StyledSpacer = styled.div<SpacerProps>`
-  ${compose(space)}
-`;
+const StyledSpacer = styled('div', {})
 
 export const Spacer: React.FC<SpacerProps> = ({ children }) => {
-  return <StyledSpacer>{children}</StyledSpacer>;
-};
+  return <StyledSpacer>{children}</StyledSpacer>
+}
 
-Spacer.displayName = 'Spacer';
+Spacer.displayName = 'Spacer'

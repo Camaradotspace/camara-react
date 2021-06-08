@@ -1,23 +1,52 @@
-import React from 'react';
-import { ThemeProvider as CamaraThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../globalStyles';
-import { lightTheme, darkTheme } from '../../theme';
+import React from 'react'
+import { Moon, Sun } from 'react-feather'
+import { DARK_THEME, styled } from '../../stitches.config'
+import { globalStyles } from '../globalStyles'
 
 interface ICamaraTheme {
-  children: React.ReactNode;
-  theme?: 'light' | 'dark';
+  children: React.ReactNode
+  theme?: 'light' | 'dark'
 }
 
-const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
-  children,
-  theme,
-}) => {
-  return (
-    <CamaraThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-      <GlobalStyles />
-      {children}
-    </CamaraThemeProvider>
-  );
-};
+const Wrapper = styled('div', {})
 
-export default CamaraTheme;
+const Toggle = styled('button', {
+  float: 'right',
+  border: 'none',
+  borderRadius: '1rem',
+  padding: '8px',
+  backgroundColor: '$bgHighlight',
+  cursor: 'pointer',
+  '&:hover': {
+    backgroundColor: '$bgHighlightHover'
+  },
+  '&:active, &:focus': {
+    backgroundColor: '$bgHighlightHover'
+  }
+})
+
+export const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
+  children
+}) => {
+  const [useDarkTheme, setUseDarkTheme] = React.useState(false)
+
+  globalStyles()
+  return (
+    <Wrapper
+      className={useDarkTheme ? DARK_THEME : 'light'}
+      css={{
+        backgroundColor: useDarkTheme ? '#18181b' : '#fff',
+        padding: '16px 24px'
+      }}
+    >
+      <Toggle onClick={() => setUseDarkTheme(!useDarkTheme)}>
+        {useDarkTheme ? (
+          <Sun color={useDarkTheme ? '#bbb' : '#333'} />
+        ) : (
+          <Moon color={useDarkTheme ? '#bbb' : '#333'} />
+        )}
+      </Toggle>
+      <div>{children}</div>
+    </Wrapper>
+  )
+}

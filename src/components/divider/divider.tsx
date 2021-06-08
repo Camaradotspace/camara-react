@@ -1,44 +1,29 @@
-import React, { FunctionComponent } from 'react';
-import styled, { css } from 'styled-components';
-import { compose, margin, MarginProps } from 'styled-system';
+import React, { HTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-export interface DividerProps extends MarginProps {
+export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
   /* What styled should the line be of? */
-  type?: 'dashed' | 'dotted' | 'normal';
+  type?: 'dashed' | 'dotted' | 'normal'
 }
 
-const StyledDivider = styled.hr<DividerProps>`
-  ${compose(margin)}
-  display: block;
-  min-width: 600px;
-  border: 1px solid ${({ theme }) => theme.colors.ui.border};
+const StyledDivider: any = styled('hr', {
+  display: 'block',
+  border: '1px solid $ui_border',
+  variants: {
+    type: {
+      dashed: { borderStyle: 'dashed' },
+      dotted: { borderStyle: 'dotted' },
+      normal: { borderStyle: 'solid' }
+    }
+  }
+})
 
-  ${props =>
-    props.type === 'dashed' &&
-    css`
-      border: 1px dashed ${({ theme }) => theme.colors.ui.border};
-    `};
-  ${props =>
-    props.type === 'dotted' &&
-    css`
-      border: 1px dotted ${({ theme }) => theme.colors.ui.border};
-    `};
-  ${props =>
-    props.type === 'normal' &&
-    css`
-      border: 1px solid ${({ theme }) => theme.colors.ui.border};
-    `};
-`;
-
-export const Divider: FunctionComponent<DividerProps> = ({
-  type,
-  ...props
-}) => {
-  return <StyledDivider type={type} {...props} />;
-};
+export const Divider: React.FC<DividerProps> = ({ type, ...props }) => {
+  return <StyledDivider type={type} {...props} />
+}
 
 Divider.defaultProps = {
-  type: 'normal',
-};
+  type: 'normal'
+}
 
-Divider.displayName = 'Divider';
+Divider.displayName = 'Divider'

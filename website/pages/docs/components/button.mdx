@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/button/
 ---
 
-import { Button } from 'camara';
-import { LiveConfig } from 'smooth-doc/components';
+import { Button, CamaraTheme } from 'camara'
+import { LiveConfig } from 'smooth-doc/components'
 
 <!-- Define `camara` module as `{ Button }` -->
 
 <LiveConfig
   modules={{
-    camara: { Button },
+    camara: { Button, CamaraTheme }
   }}
 />
 
@@ -45,21 +45,21 @@ Button properties
 ### Variant
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button, CamaraTheme } from 'camara'
 
 render(
-  <>
+  <CamaraTheme>
     <Button variant='primary'>Primary</Button>
     <Button variant='secondary'>Secondary</Button>
     <Button variant='ghost'>Ghost</Button>
-  </>
-);
+  </CamaraTheme>
+)
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -67,13 +67,13 @@ render(
     <Button size='medium'>Medium</Button>
     <Button size='small'>Small</Button>
   </>
-);
+)
 ```
 
 ### Disabled
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -89,13 +89,13 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```
 
 ### Danger
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -111,13 +111,13 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```
 
 ### Pill
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -133,13 +133,13 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```
 
 ### Block
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -155,13 +155,13 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```
 
 ### Background color
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -177,13 +177,13 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```
 
 ### Color
 
 ```jsx live noInline
-import { Button } from 'camara';
+import { Button } from 'camara'
 
 render(
   <>
@@ -199,5 +199,5 @@ render(
       Ghost
     </Button>
   </>
-);
+)
 ```

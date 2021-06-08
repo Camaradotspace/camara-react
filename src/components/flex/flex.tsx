@@ -1,35 +1,25 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import {
-  border,
-  compose,
-  flexbox,
-  layout,
-  position,
-  space,
-  BorderProps,
-  FlexboxProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
-} from 'styled-system';
+import React, { HTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-export interface FlexProps
-  extends FlexboxProps,
-    LayoutProps,
-    SpaceProps,
-    BorderProps,
-    PositionProps {
-  children: React.ReactNode;
+export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode
+  justifyContent?:
+    | 'space-between'
+    | 'center'
+    | 'space-around'
+    | 'space-evenly'
+    | 'flex-start'
+    | 'flex-end'
 }
 
-const StyledFlex = styled.div<FlexProps>`
-  ${compose(border, flexbox, layout, position, space)}
-  display: flex;
-`;
+const StyledFlex = styled('div', {
+  display: 'flex'
+})
 
-export const Flex: React.FC<FlexProps> = ({ children, ...props }) => {
-  return <StyledFlex {...props}>{children}</StyledFlex>;
-};
+export const Flex: React.FC<FlexProps> = ({ children, justifyContent }) => {
+  return (
+    <StyledFlex css={{ justifyContent: justifyContent }}>{children}</StyledFlex>
+  )
+}
 
-Flex.displayName = 'Flex';
+Flex.displayName = 'Flex'

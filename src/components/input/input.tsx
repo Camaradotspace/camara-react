@@ -1,85 +1,73 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import {
-  border,
-  compose,
-  layout,
-  space,
-  BorderProps,
-  LayoutProps,
-  SpaceProps,
-} from 'styled-system';
+import React, { HTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-type InputType = 'email' | 'number' | 'password' | 'text';
+type InputType = 'email' | 'number' | 'password' | 'text'
 
-export interface InputProps extends SpaceProps, BorderProps, LayoutProps {
+export interface InputProps extends HTMLAttributes<HTMLDivElement> {
   /* Label text */
-  label?: string;
+  label?: string
   /* HTML `name` attribute */
-  name?: string;
+  name?: string
   /* Placeholder Text */
-  placeholder?: string;
+  placeholder?: string
   /* What input type is it? */
-  type?: InputType;
+  type?: InputType
   /* Is input required? */
-  required?: boolean;
+  required?: boolean
   /* Should input be disabled? */
-  disabled?: boolean;
+  disabled?: boolean
   /* Input helper text */
-  helperText?: string;
+  helperText?: string
   /* Should input be inline? */
-  inline?: boolean;
+  inline?: boolean
 }
 
-const InputFieldWrapper = styled.div<InputProps>`
-  ${compose(space, border, layout)}
-  .requiredText {
-    color: red;
-  }
-
-  .helperText {
-    display: block;
-    color: #999;
-    margin: 0 8px;
-  }
-
-  label {
-    display: block;
-    margin: 8px 0;
-    color: #444444;
-    font-size: 14px;
-  }
-  input {
-    display: inline-block;
-    padding: 0.65rem 0.5rem;
-    border: 1px solid ${({ theme }) => theme.colors.ui.border};
-    border-radius: 4px;
-    outline-color: ${({ theme }) => theme.colors.brand.primary};
-    font-size: 14px;
-    min-width: 250px;
-
-    &::placeholder {
-      color: ${({ theme }) => theme.colors.text.placeholder};
+const InputFieldWrapper = styled('div', {
+  '& .requiredText': {
+    color: 'red'
+  },
+  '& .helperText': {
+    display: 'block',
+    color: '#999',
+    margin: '0 8px'
+  },
+  '& label': {
+    display: 'block',
+    margin: '8px 0',
+    color: '$text_secondary',
+    fontSize: '$3'
+  },
+  '& input': {
+    display: 'inline-block',
+    backgroundColor: '$bg_secondary',
+    color: '$text_secondary',
+    padding: '0.65rem 0.5rem',
+    border: '1px solid $ui_border',
+    borderRadius: '$2',
+    outlineColor: '$brand_primary',
+    fontSize: '$3',
+    minWidth: '250px'
+  },
+  '& input::placeholder': {
+    color: '$text_placeholder',
+    fontSize: '$3'
+  },
+  '& input:active': {
+    border: '2px solid $brand_primary',
+    outline: 'none'
+  },
+  '& input:focus': {
+    border: '2px solid $brand_primary',
+    outline: 'none'
+  },
+  variants: {
+    inline: {
+      true: {
+        display: 'inline'
+      }
     }
-
-    &:active,
-    &:focus {
-      border: 2px solid ${({ theme }) => theme.colors.ui.border};
-    }
-
-    ${props =>
-      props.disabled &&
-      css`
-        border: 1px solid ${({ theme }) => theme.colors.ui.disabled};
-      `}
-
-    ${props =>
-      props.inline &&
-      css`
-        display: inline;
-      `}
   }
-`;
+})
 
 export const InputField: React.FC<InputProps> = ({
   label,
@@ -88,19 +76,18 @@ export const InputField: React.FC<InputProps> = ({
   type,
   required,
   disabled,
-  helperText,
-  ...rest
+  helperText
 }) => {
   const renderRequiredLabel = (): JSX.Element => {
-    return <span className="requiredText">*</span>;
-  };
+    return <span className='requiredText'>*</span>
+  }
 
   const renderHelperText = (): JSX.Element => {
-    return <small className="helperText">{helperText}</small>;
-  };
+    return <small className='helperText'>{helperText}</small>
+  }
 
   return (
-    <InputFieldWrapper {...rest}>
+    <InputFieldWrapper>
       {label && (
         <label htmlFor={name}>
           {required ? renderRequiredLabel() : null} {label}
@@ -114,12 +101,9 @@ export const InputField: React.FC<InputProps> = ({
       />
       {helperText ? renderHelperText() : null}
     </InputFieldWrapper>
-  );
-};
+  )
+}
 
-InputField.defaultProps = {
-  required: false,
-  disabled: false,
-};
+InputField.defaultProps = {}
 
-InputField.displayName = 'InputField';
+InputField.displayName = 'InputField'

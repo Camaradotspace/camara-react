@@ -1,50 +1,51 @@
-import React from 'react';
-import styled from 'styled-components';
-import {
-  border,
-  compose,
-  flexbox,
-  layout,
-  space,
-  SpaceProps,
-  LayoutProps,
-  FlexboxProps,
-  BorderProps,
-} from 'styled-system';
+import React from 'react'
+import { styled } from '../../stitches.config'
 
-export interface CardProps
-  extends SpaceProps,
-    LayoutProps,
-    FlexboxProps,
-    BorderProps {
+export interface CardProps {
   /* Should the card elevate on the z-index? */
-  elevate?: boolean;
+  elevate?: boolean
   /* Should card have border around it or be entirely flat? */
-  bordered?: boolean;
+  bordered?: boolean
   /* Content of the card */
-  children: React.ReactNode;
+  children: React.ReactNode
+  width?: number
+  height?: number
 }
 
-const StyledCard = styled.div<CardProps>`
-  ${compose(space, layout, flexbox, border)}
-  height: ${props => props.height};
-  width: ${props => props.width};
-  background-color: ${({ theme }) => theme.colors.bg.secondary};
-  padding: 1rem;
-  line-height: 1.5;
-  box-shadow: ${({ theme }) => theme.colors.bg.shadow};
-  border: ${({ theme }) => theme.colors.ui.border};
-`;
+const StyledCard = styled('div', {
+  bg: '$bg_secondary',
+  p: '$3',
+  lineHeight: '$copy',
+  variants: {
+    elevate: {
+      true: {
+        boxShadow: '$bg_shadow'
+      }
+    },
+    bordered: {
+      true: {
+        border: '1.5px solid $ui_border'
+      }
+    }
+  }
+})
 
-export const Card: React.FC<CardProps> = (
-  { children, elevate, bordered, ...props },
-  ref
-) => {
+export const Card: React.FC<CardProps> = ({
+  children,
+  elevate,
+  bordered,
+  width,
+  height
+}) => {
   return (
-    <StyledCard ref={ref} elevate={elevate} bordered={bordered} {...props}>
+    <StyledCard
+      elevate={elevate}
+      bordered={bordered}
+      css={{ height: height, width: width }}
+    >
       {children}
     </StyledCard>
-  );
-};
+  )
+}
 
-Card.displayName = 'Card';
+Card.displayName = 'Card'

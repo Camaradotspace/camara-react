@@ -1,110 +1,81 @@
-import css from '@styled-system/css';
-import React, { forwardRef } from 'react';
-import styled from 'styled-components';
-import {
-  color,
-  compose,
-  layout,
-  space,
-  typography,
-  variant,
-  ColorProps,
-  LayoutProps,
-  SpaceProps,
-  TypographyProps,
-} from 'styled-system';
+import React, { forwardRef, HTMLAttributes } from 'react'
+import { styled } from '../../stitches.config'
 
-export interface TextProps
-  extends TypographyProps,
-    ColorProps,
-    SpaceProps,
-    LayoutProps {
-  variant?: 'hint' | 'label' | 'body' | 'caption' | 'overline';
-  size?: 'small' | 'medium' | 'large';
-  children: React.ReactNode;
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
+  variant?: 'hint' | 'label' | 'body' | 'caption' | 'overline'
+  size?: 'small' | 'medium' | 'large'
+  children: React.ReactNode
   /* Should text be inline */
-  inline?: boolean;
+  inline?: boolean
   /* Should text be underlined */
-  underline?: boolean;
+  underline?: boolean
   /* Should text be strike-through? */
-  strike?: boolean;
+  strike?: boolean
+  fontWeight?: 'normal' | 'bold' | 'medium' | number
+  fontStyle?: 'italic' | 'normal'
+  textAlign?: 'center' | 'left' | 'right' | 'justify'
 }
 
-const baseTextStyles = {
-  fontFamily: 'body',
-  fontWeight: 'regular',
-  lineHeight: 'copy',
-  color: 'text.primary',
+const StyledText: any = styled('p', {
+  fontFamily: '$body',
+  fontWeight: '$regular',
+  lineHeight: '$copy',
+  color: '$text_primary',
   mt: 0,
   mb: 0,
-};
-
-const textVariants = variant({
   variants: {
-    body: {
-      ...baseTextStyles,
-      fontSize: 2,
-      my: 2,
-      mx: 0,
+    variant: {
+      body: {
+        fontSize: '$3',
+        my: '$2',
+        mx: 0
+      },
+      caption: {
+        fontSize: '$2'
+      },
+      hint: {
+        fontSize: 0
+      },
+      label: {
+        fontSize: '$2'
+      },
+      overline: {
+        textTransform: 'uppercase',
+        fontSize: '$2',
+        letterSpacing: '$overline'
+      }
     },
-    caption: {
-      ...baseTextStyles,
-      fontSize: 2,
+    size: {
+      large: {
+        fontSize: '$4'
+      },
+      medium: {
+        fontSize: '$3'
+      },
+      small: {
+        fontSize: '$2'
+      }
     },
-    hint: {
-      ...baseTextStyles,
-      fontSize: 0,
+    inline: {
+      true: {
+        display: 'inline'
+      }
     },
-    label: {
-      ...baseTextStyles,
-      fontSize: 1,
+    underline: {
+      true: {
+        textDecoration: 'underline'
+      }
     },
-    overline: {
-      ...baseTextStyles,
-      textTransform: 'uppercase',
-      fontSize: 2,
-      letterSpacing: 'overline',
-    },
-  },
-});
-
-const StyledText = styled.p<TextProps>`
-  ${textVariants}
-  ${compose(color, space, layout, typography)}
-  ${props =>
-    props.inline &&
-    css({
-      display: 'inline',
-    })}
-  ${props =>
-    props.underline &&
-    css({
-      textDecoration: 'underline',
-    })}
-  ${props =>
-    props.strike &&
-    css({
-      textDecoration: 'line-through',
-    })}
-  ${props =>
-    props.size === 'large' &&
-    css({
-      fontSize: 2,
-    })}
-  ${props =>
-    props.size === 'medium' &&
-    css({
-      fontSize: 1,
-    })}
-  ${props =>
-    props.size === 'small' &&
-    css({
-      fontSize: 0,
-    })}
-`;
+    strike: {
+      true: {
+        textDecoration: 'line-through'
+      }
+    }
+  }
+})
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  ({ variant, children, inline, underline, size, strike }, ref) => (
+  ({ variant, children, inline, underline, size, strike, ...rest }, ref) => (
     <StyledText
       ref={ref}
       variant={variant}
@@ -112,15 +83,16 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
       size={size}
       strike={strike}
       underline={underline}
+      {...rest}
     >
       {children}
     </StyledText>
   )
-);
+)
 
 Text.defaultProps = {
   variant: 'body',
-  size: 'medium',
-};
+  size: 'medium'
+}
 
-Text.displayName = 'Text';
+Text.displayName = 'Text'
