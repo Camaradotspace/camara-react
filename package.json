@@ -108,6 +108,7 @@
     "babel-loader": "^8.2.2",
     "camelcase": "^6.2.0",
     "chromatic": "^5.9.0",
+    "cz-conventional-changelog": "3.3.0",
     "husky": "^6.0.0",
     "jest": "^27.0.4",
     "polished": "^4.1.3",
