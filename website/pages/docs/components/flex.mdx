@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/flex/
 ---
 
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Flex }` -->
 
 <LiveConfig
   modules={{
-    camara: { Flex, Image },
+    camara: { Flex, Image, CamaraTheme },
   }}
 />
 
@@ -41,96 +41,96 @@ Flex properties
 ### Basic Flex
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
       <Image
-        width='25%'
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        width="25%"
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
-        width='25%'
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        width="25%"
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
-        width='25%'
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        width="25%"
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
-        width='25%'
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        width="25%"
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Direction - Column
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='column'>
+  <CamaraTheme>
+    <Flex direction="column">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Direction - Row
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row'>
+  <CamaraTheme>
+    <Flex direction="row">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
@@ -139,304 +139,304 @@ render(
 #### Space Between
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='space-between'>
+  <CamaraTheme>
+    <Flex direction="row" justify="space-between">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 #### Space Around
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='space-around'>
+  <CamaraTheme>
+    <Flex direction="row" justify="space-around">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 #### Space Evenly
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='space-evenly'>
+  <CamaraTheme>
+    <Flex direction="row" justify="space-evenly">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 #### Center
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='center'>
+  <CamaraTheme>
+    <Flex direction="row" justify="center">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 #### Flex Start
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='flex-start'>
+  <CamaraTheme>
+    <Flex direction="row" justify="flex-start">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 #### Flex End
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex direction='row' justify='flex-end'>
+  <CamaraTheme>
+    <Flex direction="row" justify="flex-end">
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={100}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Wrap
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Flex wrap direction='row' justify='space-between'>
+  <CamaraTheme>
+    <Flex wrap direction="row" justify="space-between">
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Align Content
 
 ```jsx live noInline
-import { Flex, Image } from 'camara';
+import { Flex, Image, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex
       wrap
-      direction='row'
-      justify='space-between'
-      alignContent='space-between'
+      direction="row"
+      justify="space-between"
+      alignContent="space-between"
     >
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
 
       <Image
         width={170}
-        imageUrl='https://source.unsplash.com/V_WBdOLOgJU/600x500'
-        imageAlt='woman in orange knit cap and blue jacket'
+        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+        imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```

@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/tag/
 ---
 
-import { Box, Flex, Tag } from 'camara';
+import { Box, Flex, Tag, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Tag }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Tag },
+    camara: { Box, Flex, Tag, CamaraTheme },
   }}
 />
 
@@ -37,98 +37,98 @@ Tag properties
 ### Basic Tag
 
 ```jsx live noInline
-import { Tag } from 'camara';
+import { Tag, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Tag>Tag</Tag>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Example
 
 ```jsx live noInline
-import { Flex, Tag } from 'camara';
+import { Flex, Tag, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <Tag color='#e61b1b'>red</Tag>
-      <Tag color='#0099FF'>blue</Tag>
-      <Tag color='#9b069b'>purple</Tag>
-      <Tag color='#ff6347'>tomato</Tag>
-      <Tag color='#068d6b'>teal</Tag>
+      <Tag color="#e61b1b">red</Tag>
+      <Tag color="#0099FF">blue</Tag>
+      <Tag color="#9b069b">purple</Tag>
+      <Tag color="#ff6347">tomato</Tag>
+      <Tag color="#068d6b">teal</Tag>
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Box, Flex, Tag } from 'camara';
+import { Box, Flex, Tag, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       {/* large */}
       <Flex>
-        <Tag size='large' color='#e61b1b'>
+        <Tag size="large" color="#e61b1b">
           red
         </Tag>
-        <Tag size='large' color='#0099FF'>
+        <Tag size="large" color="#0099FF">
           blue
         </Tag>
-        <Tag size='large' color='#9b069b'>
+        <Tag size="large" color="#9b069b">
           purple
         </Tag>
-        <Tag size='large' color='#ff6347'>
+        <Tag size="large" color="#ff6347">
           tomato
         </Tag>
-        <Tag size='large' color='#068d6b'>
+        <Tag size="large" color="#068d6b">
           teal
         </Tag>
       </Flex>
 
       {/* medium */}
       <Flex>
-        <Tag size='medium' color='#e61b1b'>
+        <Tag size="medium" color="#e61b1b">
           red
         </Tag>
-        <Tag size='medium' color='#0099FF'>
+        <Tag size="medium" color="#0099FF">
           blue
         </Tag>
-        <Tag size='medium' color='#9b069b'>
+        <Tag size="medium" color="#9b069b">
           purple
         </Tag>
-        <Tag size='medium' color='#ff6347'>
+        <Tag size="medium" color="#ff6347">
           tomato
         </Tag>
-        <Tag size='medium' color='#068d6b'>
+        <Tag size="medium" color="#068d6b">
           teal
         </Tag>
       </Flex>
 
       {/* small */}
       <Flex>
-        <Tag size='small' color='#e61b1b'>
+        <Tag size="small" color="#e61b1b">
           red
         </Tag>
-        <Tag size='small' color='#0099FF'>
+        <Tag size="small" color="#0099FF">
           blue
         </Tag>
-        <Tag size='small' color='#9b069b'>
+        <Tag size="small" color="#9b069b">
           purple
         </Tag>
-        <Tag size='small' color='#ff6347'>
+        <Tag size="small" color="#ff6347">
           tomato
         </Tag>
-        <Tag size='small' color='#068d6b'>
+        <Tag size="small" color="#068d6b">
           teal
         </Tag>
       </Flex>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```

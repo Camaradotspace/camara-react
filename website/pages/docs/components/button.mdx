@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/button/
 ---
 
-import { Button, CamaraTheme } from 'camara'
-import { LiveConfig } from 'smooth-doc/components'
+import { Button, CamaraTheme } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Button }` -->
 
 <LiveConfig
   modules={{
-    camara: { Button, CamaraTheme }
+    camara: { Button, CamaraTheme },
   }}
 />
 
@@ -45,159 +45,159 @@ Button properties
 ### Variant
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
   <CamaraTheme>
-    <Button variant='primary'>Primary</Button>
-    <Button variant='secondary'>Secondary</Button>
-    <Button variant='ghost'>Ghost</Button>
+    <Button variant="primary">Primary</Button>
+    <Button variant="secondary">Secondary</Button>
+    <Button variant="ghost">Ghost</Button>
   </CamaraTheme>
-)
+);
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button size='large'>Large</Button>
-    <Button size='medium'>Medium</Button>
-    <Button size='small'>Small</Button>
-  </>
-)
+  <CamaraTheme>
+    <Button size="large">Large</Button>
+    <Button size="medium">Medium</Button>
+    <Button size="small">Small</Button>
+  </CamaraTheme>
+);
 ```
 
 ### Disabled
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button disabled variant='primary'>
+  <CamaraTheme>
+    <Button disabled variant="primary">
       Primary
     </Button>
 
-    <Button disabled variant='secondary'>
+    <Button disabled variant="secondary">
       Secondary
     </Button>
 
-    <Button disabled variant='ghost'>
+    <Button disabled variant="ghost">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Danger
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button danger variant='primary'>
+  <CamaraTheme>
+    <Button danger variant="primary">
       Primary
     </Button>
 
-    <Button danger variant='secondary'>
+    <Button danger variant="secondary">
       Secondary
     </Button>
 
-    <Button danger variant='ghost'>
+    <Button danger variant="ghost">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Pill
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button pill variant='primary'>
+  <CamaraTheme>
+    <Button pill variant="primary">
       Primary
     </Button>
 
-    <Button pill variant='secondary'>
+    <Button pill variant="secondary">
       Secondary
     </Button>
 
-    <Button pill variant='ghost'>
+    <Button pill variant="ghost">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Block
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button block variant='primary'>
+  <CamaraTheme>
+    <Button block variant="primary">
       Primary
     </Button>
 
-    <Button block variant='secondary'>
+    <Button block variant="secondary">
       Secondary
     </Button>
 
-    <Button block variant='ghost'>
+    <Button block variant="ghost">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Background color
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button pill variant='primary' backgroundColor='green'>
+  <CamaraTheme>
+    <Button pill variant="primary" backgroundColor="green">
       Primary
     </Button>
 
-    <Button pill variant='secondary' backgroundColor='green'>
+    <Button pill variant="secondary" backgroundColor="green">
       Secondary
     </Button>
 
-    <Button pill variant='ghost' backgroundColor='green'>
+    <Button pill variant="ghost" backgroundColor="green">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Color
 
 ```jsx live noInline
-import { Button } from 'camara'
+import { Button, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Button pill variant='primary' backgroundColor='#fff' color='purple'>
+  <CamaraTheme>
+    <Button pill variant="primary" backgroundColor="#fff" color="purple">
       Primary
     </Button>
 
-    <Button pill variant='secondary' backgroundColor='purple' color='#fff'>
+    <Button pill variant="secondary" backgroundColor="purple" color="#fff">
       Secondary
     </Button>
 
-    <Button pill variant='ghost' color='purple'>
+    <Button pill variant="ghost" color="purple">
       Ghost
     </Button>
-  </>
-)
+  </CamaraTheme>
+);
 ```

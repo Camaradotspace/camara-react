@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/divider/
 ---
 
-import { Box, Divider } from 'camara';
+import { Box, Divider, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Divider }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Divider },
+    camara: { Box, Divider, CamaraTheme },
   }}
 />
 
@@ -36,27 +36,27 @@ Divider properties
 ### Base
 
 ```jsx live noInline
-import { Divider } from 'camara';
+import { Divider, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Divider />
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Types
 
 ```jsx live noInline
-import { Box, Divider } from 'camara';
+import { Box, Divider, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Divider type='dashed' />
-      <Divider type='dotted' />
-      <Divider type='normal' />
+      <Divider type="dashed" />
+      <Divider type="dotted" />
+      <Divider type="normal" />
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```

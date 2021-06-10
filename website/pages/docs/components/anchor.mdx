@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/anchor/
 ---
 
-import { Anchor } from 'camara';
+import { Anchor, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
-<!-- Define `camara` module as `{ Anchor }` -->
+<!-- Define `camara` module as `{ Anchor, CamaraTheme }` -->
 
 <LiveConfig
   modules={{
-    camara: { Anchor },
+    camara: { Anchor, CamaraTheme },
   }}
 />
 
@@ -38,39 +38,39 @@ Anchor properties
 ### Basic Anchor
 
 ```jsx live noInline
-import { Anchor } from 'camara';
+import { Anchor, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Anchor href='https://unsplash.com/photos/V_WBdOLOgJU'>See photo</Anchor>
-  </>
+  <CamaraTheme>
+    <Anchor href="https://unsplash.com/photos/V_WBdOLOgJU">See photo</Anchor>
+  </CamaraTheme>
 );
 ```
 
 ### As Button
 
 ```jsx live noInline
-import { Anchor } from 'camara';
+import { Anchor, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Anchor asButton href='https://unsplash.com/photos/V_WBdOLOgJU'>
+  <CamaraTheme>
+    <Anchor asButton href="https://unsplash.com/photos/V_WBdOLOgJU">
       See photo
     </Anchor>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Open In New
 
 ```jsx live noInline
-import { Anchor } from 'camara';
+import { Anchor, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Anchor asNew href='https://unsplash.com/photos/V_WBdOLOgJU'>
+  <CamaraTheme>
+    <Anchor asNew href="https://unsplash.com/photos/V_WBdOLOgJU">
       See photo
     </Anchor>
-  </>
+  </CamaraTheme>
 );
 ```

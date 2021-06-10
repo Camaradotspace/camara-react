@@ -8,19 +8,23 @@ interface ICamaraTheme {
   theme?: 'light' | 'dark';
 }
 
-const Wrapper = styled('div', {});
+const Wrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'row-reverse',
+  justifyContent: 'space-between',
+});
 
 const Toggle = styled('button', {
-  float: 'right',
+  display: 'block',
+  width: '30px',
+  height: '30px',
+  marginLeft: '$3',
   border: 'none',
-  borderRadius: '1rem',
-  padding: '8px',
+  borderRadius: '2rem',
+  padding: '4px',
   backgroundColor: '$bgHighlight',
   cursor: 'pointer',
   '&:hover': {
-    backgroundColor: '$bgHighlightHover',
-  },
-  '&:active, &:focus': {
     backgroundColor: '$bgHighlightHover',
   },
 });
@@ -36,14 +40,14 @@ export const CamaraTheme: React.FunctionComponent<ICamaraTheme> = ({
       className={useDarkTheme ? DARK_THEME : 'light'}
       css={{
         backgroundColor: useDarkTheme ? '#18181b' : '#fff',
-        padding: '16px 24px',
+        padding: '24px',
       }}
     >
       <Toggle onClick={() => setUseDarkTheme(!useDarkTheme)}>
         {useDarkTheme ? (
-          <Sun color={useDarkTheme ? '#bbb' : '#333'} />
+          <Sun size={20} color={useDarkTheme ? '#bbb' : '#555'} />
         ) : (
-          <Moon color={useDarkTheme ? '#bbb' : '#333'} />
+          <Moon size={20} color={useDarkTheme ? '#bbb' : '#555'} />
         )}
       </Toggle>
       <div>{children}</div>

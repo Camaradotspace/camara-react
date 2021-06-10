@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/heading/
 ---
 
-import { Box, Heading } from 'camara'
-import { LiveConfig } from 'smooth-doc/components'
+import { Box, Heading, CamaraTheme } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Heading }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Heading }
+    camara: { Box, Flex, Heading, CamaraTheme },
   }}
 />
 
@@ -39,159 +39,159 @@ Heading properties
 ### Level
 
 ```jsx live noInline
-import { Box, Heading } from 'camara'
+import { Box, Heading, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Heading level={1}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
-      <Heading level={2}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
-      <Heading level={3}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
-      <Heading level={4}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
-      <Heading level={5}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
-      <Heading level={6}>
-        My dream job is to work as a Software Engineer at Microsoft
-      </Heading>
+      <Heading level={1}>Intelligence designed to be helpful.</Heading>
+      <Heading level={2}>Intelligence designed to be helpful.</Heading>
+      <Heading level={3}>Intelligence designed to be helpful.</Heading>
+      <Heading level={4}>Intelligence designed to be helpful.</Heading>
+      <Heading level={5}>Intelligence designed to be helpful.</Heading>
+      <Heading level={6}>Intelligence designed to be helpful.</Heading>
     </Box>
 
     <Box mt={64}>
       <Heading level={1}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading level={2}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading level={3}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading level={4}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading level={5}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading level={6}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
     </Box>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Thin
 
 ```jsx live noInline
-import { Box, Heading } from 'camara'
+import { Box, Heading, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       <Heading thin level={1}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={2}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={3}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={4}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={5}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={6}>
-        My dream job is to work as a Software Engineer at Microsoft
+        Intelligence designed to be helpful.
       </Heading>
     </Box>
 
     <Box mt={64}>
       <Heading thin level={1}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading thin level={2}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading thin level={3}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading thin level={4}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading thin level={5}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
       <Heading thin level={6}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
+        interijensu.
       </Heading>
     </Box>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Align
 
 ```jsx live noInline
-import { Box, Heading } from 'camara'
+import { Box, Heading, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Heading align='left' level={1}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading align="left" level={1}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading align='center' level={2}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading align="center" level={2}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading align='justify' level={3}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading align="justify" level={3}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading align='right' level={4}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading align="right" level={4}>
+        Intelligence designed to be helpful.
       </Heading>
     </Box>
-  </>
-)
+  </CamaraTheme>
+);
 ```
 
 ### Color
 
 ```jsx live noInline
-import { Box, Heading } from 'camara'
+import { Box, Heading, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Heading color='tomato' level={1}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="tomato" level={1}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading color='green' level={2}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="green" level={2}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading color='blue' level={3}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="blue" level={3}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading color='purple' level={4}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="purple" level={4}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading color='orange' level={5}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="orange" level={5}>
+        Intelligence designed to be helpful.
       </Heading>
-      <Heading color='black' level={6}>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Heading color="black" level={6}>
+        Intelligence designed to be helpful.
       </Heading>
     </Box>
-  </>
-)
+  </CamaraTheme>
+);
 ```

@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/badge/
 ---
 
-import { Badge, Box } from 'camara';
+import { Badge, Box, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Badge }` -->
 
 <LiveConfig
   modules={{
-    camara: { Badge, Box },
+    camara: { Badge, Box, CamaraTheme },
   }}
 />
 
@@ -41,97 +41,97 @@ Badge properties
 ### Size
 
 ```jsx live noInline
-import { Badge } from 'camara';
+import { Badge, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Badge size='large' text='Preview' />
-    <Badge size='medium' text='Preview' />
-    <Badge size='small' text='Preview' />
-  </>
+  <CamaraTheme>
+    <Badge size="large" text="Preview" />
+    <Badge size="medium" text="Preview" />
+    <Badge size="small" text="Preview" />
+  </CamaraTheme>
 );
 ```
 
 ### Shape
 
 ```jsx live noInline
-import { Badge, Box } from 'camara';
+import { Badge, Box, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Badge shape='square' size='large' text='Preview' />
-      <Badge shape='square' size='medium' text='Preview' />
-      <Badge shape='square' size='small' text='Preview' />
+      <Badge shape="square" size="large" text="Preview" />
+      <Badge shape="square" size="medium" text="Preview" />
+      <Badge shape="square" size="small" text="Preview" />
     </Box>
     <Box>
-      <Badge shape='pill' size='large' text='Preview' />
-      <Badge shape='pill' size='medium' text='Preview' />
-      <Badge shape='pill' size='small' text='Preview' />
+      <Badge shape="pill" size="large" text="Preview" />
+      <Badge shape="pill" size="medium" text="Preview" />
+      <Badge shape="pill" size="small" text="Preview" />
     </Box>
     <Box>
-      <Badge shape='circle' size='large' text='M' />
-      <Badge shape='circle' size='medium' text='M' />
-      <Badge shape='circle' size='small' text='M' />
+      <Badge shape="circle" size="large" text="M" />
+      <Badge shape="circle" size="medium" text="M" />
+      <Badge shape="circle" size="small" text="M" />
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Background Color
 
 ```jsx live noInline
-import { Badge, Box } from 'camara';
+import { Badge, Box, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       <Badge
-        shape='square'
-        size='large'
-        text='Preview'
-        backgroundColor='purple'
+        shape="square"
+        size="large"
+        text="Preview"
+        backgroundColor="purple"
       />
       <Badge
-        shape='square'
-        size='medium'
-        text='Preview'
-        backgroundColor='purple'
+        shape="square"
+        size="medium"
+        text="Preview"
+        backgroundColor="purple"
       />
       <Badge
-        shape='square'
-        size='small'
-        text='Preview'
-        backgroundColor='purple'
+        shape="square"
+        size="small"
+        text="Preview"
+        backgroundColor="purple"
       />
     </Box>
 
     <Box>
       <Badge
-        shape='pill'
-        size='large'
-        text='Preview'
-        backgroundColor='purple'
+        shape="pill"
+        size="large"
+        text="Preview"
+        backgroundColor="purple"
       />
       <Badge
-        shape='pill'
-        size='medium'
-        text='Preview'
-        backgroundColor='purple'
+        shape="pill"
+        size="medium"
+        text="Preview"
+        backgroundColor="purple"
       />
       <Badge
-        shape='pill'
-        size='small'
-        text='Preview'
-        backgroundColor='purple'
+        shape="pill"
+        size="small"
+        text="Preview"
+        backgroundColor="purple"
       />
     </Box>
 
     <Box>
-      <Badge shape='circle' size='large' text='M' backgroundColor='purple' />
-      <Badge shape='circle' size='medium' text='M' backgroundColor='purple' />
-      <Badge shape='circle' size='small' text='M' backgroundColor='purple' />
+      <Badge shape="circle" size="large" text="M" backgroundColor="purple" />
+      <Badge shape="circle" size="medium" text="M" backgroundColor="purple" />
+      <Badge shape="circle" size="small" text="M" backgroundColor="purple" />
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```

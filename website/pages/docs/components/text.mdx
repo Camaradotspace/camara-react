@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/text/
 ---
 
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Text }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Text },
+    camara: { Box, Flex, Text, CamaraTheme },
   }}
 />
 
@@ -45,223 +45,339 @@ Text properties
 ### Basic Text
 
 ```jsx live noInline
-import { Text } from 'camara';
+import { Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Text>This is a text component</Text>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Variant
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Text variant='body'>I am a body text</Text>
-      <Text variant='sub-heading'>I am a sub heading</Text>
-      <Text variant='caption'>I am a caption</Text>
-      <Text variant='overline'>I am an overline</Text>
-      <Text variant='strong'>I am a strong text</Text>
+      <Text variant="body">Live Text translation</Text>
+      <Text variant="sub-heading">Live Text translation</Text>
+      <Text variant="caption">Live Text translation</Text>
+      <Text variant="overline">Live Text translation</Text>
+      <Text variant="strong">Live Text translation</Text>
     </Box>
 
     <Box>
-      <Text variant='body'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text variant="body">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
+      <Text variant="sub-heading">
+        ライブテキスト翻訳 Raibu tekisuto hon'yaku
       </Text>
-      <Text variant='sub-heading'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Text>
-      <Text variant='caption'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Text>
-      <Text variant='overline'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Text>
-      <Text variant='strong'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Text>
+      <Text variant="caption">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
+      <Text variant="overline">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
+      <Text variant="strong">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Weight
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Text weight='bold'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text weight="bold">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text weight='bold'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text weight="bold">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
 
     <Box mt={24}>
-      <Text weight='normal'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text weight="normal">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text weight='normal'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text weight="normal">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Italic
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       <Text italic>
-        My dream job is to work as a Software Engineer at Microsoft
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
       <Text italic>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Inline
 
 ```jsx live noInline
-import { Text } from 'camara';
+import { Text, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <Text inline weight='bold'>
-      My dream job is to work as a Software Engineer at Microsoft
+  <CamaraTheme>
+    <Text inline weight="bold">
+      There is so much rich information in your photos, from memorable places
+      you’ve visited to handwritten family recipes. iOS 15 uses secure on-device
+      intelligence to help you discover more in your photos, quickly find what
+      you’re looking for, and relive special moments.
     </Text>
     <Text inline>
-      私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      すべての神々、すべての天、すべての地獄はあなたの中にあります Subete no
+      kami 々, Subete no ten, subete no jigoku wa anata no naka ni arimasu
     </Text>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Align
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Text align='left'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text align="left">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text align='center'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text align="center">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text align='justify'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text align="justify">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text align='right'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text align="right">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
     </Box>
 
     <Box mt={32}>
-      <Text align='left'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text align="left">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
-      <Text align='center'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text align="center">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
-      <Text align='justify'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text align="justify">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
-      <Text align='right'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text align="right">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Underline
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       <Text underline>
-        My dream job is to work as a Software Engineer at Microsoft
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
       <Text underline>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
-      <Text size='large'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text size="large">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text size='medium'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text size="medium">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
-      <Text size='small'>
-        My dream job is to work as a Software Engineer at Microsoft
+      <Text size="small">
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
     </Box>
 
     <Box mt={24}>
-      <Text size='large'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text size="large">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
-      <Text size='medium'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text size="medium">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
-      <Text size='small'>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      <Text size="small">
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Strike
 
 ```jsx live noInline
-import { Box, Text } from 'camara';
+import { Box, Text, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Box>
       <Text strike>
-        My dream job is to work as a Software Engineer at Microsoft
+        There is so much rich information in your photos, from memorable places
+        you’ve visited to handwritten family recipes. iOS 15 uses secure
+        on-device intelligence to help you discover more in your photos, quickly
+        find what you’re looking for, and relive special moments.
       </Text>
       <Text strike>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+        訪れた思い出に残る場所から、手書きの家族のレシピまで、写真にはたくさんの情報が含まれています。
+        iOS 15 は、安全なオンデバイス
+        インテリジェンスを使用して、写真からより多くのことを発見し、探しているものをすばやく見つけて、特別な瞬間を再現するのに役立ちます。
+        Otozureta omoide ni nokoru basho kara, tegaki no kazoku no reshipi made,
+        shashin ni wa takusan no jōhō ga fukuma rete imasu. IOS 15 wa, anzen'na
+        ondebaisu interijensu o shiyō shite, shashin kara yori ōku no koto o
+        hakken shi, sagashite iru mono o subayaku mitsukete, tokubetsuna shunkan
+        o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </>
+  </CamaraTheme>
 );
 ```

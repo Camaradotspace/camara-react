@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/textarea/
 ---
 
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ TextArea }` -->
 
 <LiveConfig
   modules={{
-    camara: { Flex, TextArea },
+    camara: { Flex, TextArea, CamaraTheme },
   }}
 />
 
@@ -45,89 +45,89 @@ TextArea properties
 ### Basic TextArea
 
 ```jsx live noInline
-import { TextArea } from 'camara';
+import { TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
-    <TextArea placeholder='Type something here' />
-  </>
+  <CamaraTheme>
+    <TextArea placeholder="Type something here" />
+  </CamaraTheme>
 );
 ```
 
 ### Helper Text
 
 ```jsx live noInline
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <TextArea label='Description' helperText='example@gmail.com' />
+      <TextArea label="Description" helperText="example@gmail.com" />
       <TextArea
         label="What's on your mind?"
-        helperText='must contain special characters'
+        helperText="must contain special characters"
       />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Required
 
 ```jsx live noInline
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <TextArea required label='First Name' />
-      <TextArea required label='Last Name' />
+      <TextArea required label="First Name" />
+      <TextArea required label="Last Name" />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Hidden Label
 
 ```jsx live noInline
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <TextArea required placeholder='First Name' />
-      <TextArea required placeholder='Last Name' />
+      <TextArea required placeholder="First Name" />
+      <TextArea required placeholder="Last Name" />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Disabled
 
 ```jsx live noInline
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <TextArea disabled required placeholder='First Name' />
-      <TextArea disabled required placeholder='Last Name' />
+      <TextArea disabled required placeholder="First Name" />
+      <TextArea disabled required placeholder="Last Name" />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
 
 ### Resizable
 
 ```jsx live noInline
-import { Flex, TextArea } from 'camara';
+import { Flex, TextArea, CamaraTheme } from 'camara';
 
 render(
-  <>
+  <CamaraTheme>
     <Flex>
-      <TextArea resizable required placeholder='First Name' />
-      <TextArea resizable required placeholder='Last Name' />
+      <TextArea resizable required placeholder="First Name" />
+      <TextArea resizable required placeholder="Last Name" />
     </Flex>
-  </>
+  </CamaraTheme>
 );
 ```
