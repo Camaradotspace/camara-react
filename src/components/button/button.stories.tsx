@@ -3,7 +3,6 @@ import { Story, Meta } from '@storybook/react';
 import { Button, ButtonProps } from '.';
 import { Box } from '../box';
 import { Flex } from '../flex';
-import { CamaraTheme } from '../camaraTheme';
 
 export default {
   title: 'Components/Button',
@@ -26,7 +25,7 @@ Base.args = {
 
 // Variants
 export const Variants = (args: ButtonProps) => (
-  <CamaraTheme>
+  <span>
     <Button {...args} variant="primary">
       Primary
     </Button>
@@ -36,7 +35,7 @@ export const Variants = (args: ButtonProps) => (
     <Button {...args} variant="ghost">
       Ghost
     </Button>
-  </CamaraTheme>
+  </span>
 );
 
 // sizes
