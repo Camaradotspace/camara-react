@@ -11,6 +11,23 @@ export const theme = {
   ...defaultTheme,
   ...baseTheme,
   global: css`
+    * {
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px var(--xstyled-colors-thumb-background);
+        box-shadow: inset 0 0 6px var(--xstyled-colors-thumb-background);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px var(--xstyled-colors-thumb-background);
+        box-shadow: inset 0 0 6px var(--xstyled-colors-thumb-background);
+      }
+    }
     html,
     body {
       transition: 300ms ease-in color, 300ms ease-in background-color;
@@ -109,6 +126,8 @@ export const theme = {
     'control-border-hover': th.color('gray-500'),
     'control-border-active': th.color('primary-400'),
 
+    'thumb-background': th.color('gray-400'),
+
     'editor-background': th.color('black'),
     'editor-on': th.color('gray-100'),
     'editor-border': th.color('layout-border'),
@@ -125,6 +144,7 @@ export const theme = {
     modes: {
       dark: {
         background: th.color('gray-900'),
+        'thumb-background': th.color('gray-500'),
         'editor-background': th.color('black'),
         'background-light': th.color('gray-800'),
         'background-primary': th.color('primary-900'),
