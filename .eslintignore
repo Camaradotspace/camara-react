@@ -1,2 +1,7 @@
 src/components/icons/*.tsx
 *.js
+build/
+dist/
+node_modules/
+.snapshots/
+*.min.js
