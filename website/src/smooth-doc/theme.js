@@ -1,10 +1,10 @@
 /* eslint-disable import/no-unresolved */
 // src/smooth-doc/theme.js
-import { theme as baseTheme } from 'smooth-doc/src/theme'
-import { transparentize } from 'polished'
-import { css, th, defaultTheme, aliasColor } from '@xstyled/styled-components'
+import { theme as baseTheme } from 'smooth-doc/src/theme';
+import { transparentize } from 'polished';
+import { css, th, defaultTheme, aliasColor } from '@xstyled/styled-components';
 
-import NightOwlTheme from 'prism-react-renderer/themes/nightOwl'
+import NightOwlTheme from 'prism-react-renderer/themes/nightOwl';
 
 export const theme = {
   initialColorModeName: 'light',
@@ -28,41 +28,43 @@ export const theme = {
     .npm__react-simple-code-editor__textarea {
       background-color: #000000 !important;
     }
-    .sc-cwiweh,
-    .fhsJCP {
-      padding: 0 !important;
+    pre {
+      background-color: var(
+        --xstyled-colors-editor-background,
+        #000000
+      ) !important;
     }
   `,
   'prism-theme': NightOwlTheme,
   fonts: {
     ...baseTheme.fonts,
-    base: 'Inter, sans-serif'
+    base: 'Inter, sans-serif',
   },
   lineHeights: {
     base: 1.4,
-    control: th.lineHeight('base')
+    control: th.lineHeight('base'),
   },
   transitions: {
     base: '300ms ease all',
     fast: '150ms cubic-bezier(0.215, 0.61, 0.355, 1) all',
-    control: th.transition('base')
+    control: th.transition('base'),
   },
   radii: {
     base: 4,
     control: th.radius('base'),
     editor: th.radius('base'),
-    blockquote: th.radius('base')
+    blockquote: th.radius('base'),
   },
   borderWidths: {
     base: 1,
-    control: th.borderWidth('base')
+    control: th.borderWidth('base'),
   },
   shadows: {
     focus: (p) => `0 0 0 ${th.px(2)(p)} ${th.color('primary-a500')(p)}`,
-    'control-focus': th.shadow('focus')
+    'control-focus': th.shadow('focus'),
   },
   sizes: {
-    screen: 1440
+    screen: 1440,
   },
   space: {
     0: 0,
@@ -75,8 +77,8 @@ export const theme = {
     7: 144,
     8: 192,
     9: 240,
-    'preview-padding-y': 16,
-    'preview-padding-x': 24
+    'preview-padding-y': 0, // was 16
+    'preview-padding-x': 0, // was 24
   },
   colors: {
     ...defaultTheme.colors,
@@ -151,8 +153,8 @@ export const theme = {
         'doc-search-suggestion-highlight-on-background':
           th.color('primary-200'),
         'doc-search-suggestion-content-background': th.color('primary-900'),
-        'doc-search-suggestion-content-underline': th.color('primary-300')
-      }
-    }
-  }
-}
+        'doc-search-suggestion-content-underline': th.color('primary-300'),
+      },
+    },
+  },
+};
