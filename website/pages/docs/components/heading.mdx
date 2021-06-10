@@ -1,0 +1,197 @@
+---
+title: Heading
+section: Components
+slug: /docs/components/heading/
+---
+
+import { Box, Heading } from 'camara'
+import { LiveConfig } from 'smooth-doc/components'
+
+<!-- Define `camara` module as `{ Heading }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Flex, Heading }
+  }}
+/>
+
+# Heading
+
+Heading description.
+
+<br></br>
+
+## Props
+
+Heading properties
+
+| Property | Description                                               | Type                              | Default | Version |
+| -------- | --------------------------------------------------------- | --------------------------------- | ------- | ------- |
+| align    | Set Heading alignment                                     | `left` `right` `center` `justify` | `left`  |         |
+| color    | Heading color                                             | `string`                          | -       |         |
+| level    | What heading level should heading be? h1, h2, h3, h4, etc | `number`                          | 1       |         |
+| thin     | Control thickness of the heading                          | `boolean`                         | false   |         |
+
+<br></br>
+
+## Usage
+
+### Level
+
+```jsx live noInline
+import { Box, Heading } from 'camara'
+
+render(
+  <>
+    <Box>
+      <Heading level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+    </Box>
+
+    <Box mt={64}>
+      <Heading level={1}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading level={2}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading level={3}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading level={4}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading level={5}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading level={6}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+    </Box>
+  </>
+)
+```
+
+### Thin
+
+```jsx live noInline
+import { Box, Heading } from 'camara'
+
+render(
+  <>
+    <Box>
+      <Heading thin level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading thin level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading thin level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading thin level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading thin level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading thin level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+    </Box>
+
+    <Box mt={64}>
+      <Heading thin level={1}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading thin level={2}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading thin level={3}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading thin level={4}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading thin level={5}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+      <Heading thin level={6}>
+        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
+      </Heading>
+    </Box>
+  </>
+)
+```
+
+### Align
+
+```jsx live noInline
+import { Box, Heading } from 'camara'
+
+render(
+  <>
+    <Box>
+      <Heading align='left' level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading align='center' level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading align='justify' level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading align='right' level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+    </Box>
+  </>
+)
+```
+
+### Color
+
+```jsx live noInline
+import { Box, Heading } from 'camara'
+
+render(
+  <>
+    <Box>
+      <Heading color='tomato' level={1}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading color='green' level={2}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading color='blue' level={3}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading color='purple' level={4}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading color='orange' level={5}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+      <Heading color='black' level={6}>
+        My dream job is to work as a Software Engineer at Microsoft
+      </Heading>
+    </Box>
+  </>
+)
+```

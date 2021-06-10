@@ -1,0 +1,159 @@
+{
+  "name": "camara",
+  "version": "1.0.0-beta.75",
+  "description": "A design system that helps you build your ideas quickly",
+  "author": {
+    "name": "Presh Onyee",
+    "email": "preshonyee@gmail.com"
+  },
+  "license": "MIT",
+  "repository": "Camaradotspace/camara-react",
+  "main": "dist/index.js",
+  "module": "dist/ds.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "React",
+    "Component",
+    "Library",
+    "Typescript",
+    "Storybook"
+  ],
+  "bugs": {
+    "url": "https://github.com/Camaradotspace/camara-react/issues"
+  },
+  "homepage": "https://github.com/Camaradotspace/camara-react#readme",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tsdx lint src",
+    "prepare": "tsdx build",
+    "storybook": "start-storybook -p 6006",
+    "prebuild-storybook": "yarn icons",
+    "storybook:export": "build-storybook",
+    "chromatic": "CHROMATIC_APP_CODE=$CHROMATIC_APP_CODE chromatic --exit-zero-on-changes",
+    "docs": "cd website && yarn develop",
+    "npm": "yarn run build && npm publish",
+    "semantic-release": "semantic-release",
+    "dry-run": "semantic-release --dry-run --no-ci --branches 'main'",
+    "release": "release-it"
+  },
+  "branches": [
+    {
+      "name": "main",
+      "prerelease": true
+    },
+    "core",
+    "tokens/preshonyee"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/github",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": true,
+        "tarballDir": "dist"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "dist/",
+          "docs",
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "repositoryUrl": "https://github.com/Camaradotspace/camara-react",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.5",
+    "@stitches/react": "^0.1.9",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@svgr/cli": "^5.5.0",
+    "@testing-library/dom": "^7.31.0",
+    "@testing-library/react": "^11.2.7",
+    "@types/jest": "^26.0.23",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "babel-loader": "^8.2.2",
+    "camelcase": "^6.2.0",
+    "chromatic": "^5.9.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "polished": "^4.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-is": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "storybook-chromatic": "^3.5.1",
+    "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^4.11.1",
+    "**/@typescript-eslint/parser": "^4.11.1",
+    "**/jest": "^26.6.3",
+    "**/ts-jest": "^26.4.4",
+    "**/typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "conventional-commits",
+      "first-time-contributor",
+      "twitter"
+    ]
+  }
+}

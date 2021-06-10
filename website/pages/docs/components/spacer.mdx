@@ -1,0 +1,88 @@
+---
+title: Spacer
+section: Components
+slug: /docs/components/spacer/
+---
+
+import { Box, Button, Spacer } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Spacer }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Box, Button, Spacer },
+  }}
+/>
+
+# Spacer
+
+Spacer description.
+
+<br></br>
+
+## Props
+
+Spacer properties
+
+| Property | Description                           | Type      | Default | Version |
+| -------- | ------------------------------------- | --------- | ------- | ------- |
+| both     | Should space be at the vertical axis? | `boolean` | false   |         |
+| bottom   | Should space be at the bottom?        | `boolean` | false   |         |
+| top      | Should space be at the top?           | `boolean` | false   |         |
+
+<br></br>
+
+## Usage
+
+### Top
+
+```jsx live noInline
+import { Box, Button, Spacer } from 'camara';
+
+render(
+  <>
+    <Box width={300}>
+      <Button block>No Spacing</Button>
+      <Spacer top>
+        <Button block>Spacing Top</Button>
+      </Spacer>
+    </Box>
+  </>
+);
+```
+
+### Bottom
+
+```jsx live noInline
+import { Box, Button, Spacer } from 'camara';
+
+render(
+  <>
+    <Box width={300}>
+      <Spacer bottom>
+        <Button block>Spacing Bottom</Button>
+      </Spacer>
+      <Button block>No Spacing</Button>
+    </Box>
+  </>
+);
+```
+
+### Both
+
+```jsx live noInline
+import { Box, Button, Spacer } from 'camara';
+
+render(
+  <>
+    <Box width={300}>
+      <Button block>No Spacing</Button>
+      <Spacer both>
+        <Button block>Spacing Both</Button>
+      </Spacer>
+      <Button block>No Spacing</Button>
+    </Box>
+  </>
+);
+```

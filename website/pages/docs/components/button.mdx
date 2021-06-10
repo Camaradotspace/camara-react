@@ -1,0 +1,203 @@
+---
+title: Button
+section: Components
+slug: /docs/components/button/
+---
+
+import { Button, CamaraTheme } from 'camara'
+import { LiveConfig } from 'smooth-doc/components'
+
+<!-- Define `camara` module as `{ Button }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Button, CamaraTheme }
+  }}
+/>
+
+# Button
+
+Buttons are user interface elements that initiates actions. This is their primary function and it is this function that makes them very different from links particularly on the web.
+
+<br></br>
+
+## Props
+
+Button properties
+
+| Property        | Description                                                                | Type                          | Default   | Version |
+| --------------- | -------------------------------------------------------------------------- | ----------------------------- | --------- | ------- |
+| backgroundColor | Sets the background color of the button                                    | `string`                      | -         |         |
+| block           | Allow button take full width of the parent element                         | `boolean`                     | false     |         |
+| color           | Sets the color of the button                                               | `string`                      | -         |         |
+| danger          | Use if call-to-action is irreversible or destructive                       | `boolean`                     | false     |         |
+| disabled        | Set disabled state so buttons look inactive and cannot be interacted with. | `boolean`                     | false     |         |
+| loading         | Set the loading status of the button                                       | `boolean`                     | false     |         |
+| onClick         | Callback fired when a button is clicked.                                   | `(event) => void`             | -         |         |
+| pill            | Set shape of button to pill-shaped.                                        | `boolean`                     | false     |         |
+| size            | How large should the button be?                                            | `large` `medium` `small`      | `medium`  |         |
+| variant         | What variant of the button is to be used?                                  | `primary` `secondary` `ghost` | `primary` |         |
+
+<br></br>
+
+## Usage
+
+### Variant
+
+```jsx live noInline
+import { Button, CamaraTheme } from 'camara'
+
+render(
+  <CamaraTheme>
+    <Button variant='primary'>Primary</Button>
+    <Button variant='secondary'>Secondary</Button>
+    <Button variant='ghost'>Ghost</Button>
+  </CamaraTheme>
+)
+```
+
+### Size
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button size='large'>Large</Button>
+    <Button size='medium'>Medium</Button>
+    <Button size='small'>Small</Button>
+  </>
+)
+```
+
+### Disabled
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button disabled variant='primary'>
+      Primary
+    </Button>
+
+    <Button disabled variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button disabled variant='ghost'>
+      Ghost
+    </Button>
+  </>
+)
+```
+
+### Danger
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button danger variant='primary'>
+      Primary
+    </Button>
+
+    <Button danger variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button danger variant='ghost'>
+      Ghost
+    </Button>
+  </>
+)
+```
+
+### Pill
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button pill variant='primary'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost'>
+      Ghost
+    </Button>
+  </>
+)
+```
+
+### Block
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button block variant='primary'>
+      Primary
+    </Button>
+
+    <Button block variant='secondary'>
+      Secondary
+    </Button>
+
+    <Button block variant='ghost'>
+      Ghost
+    </Button>
+  </>
+)
+```
+
+### Background color
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button pill variant='primary' backgroundColor='green'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary' backgroundColor='green'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost' backgroundColor='green'>
+      Ghost
+    </Button>
+  </>
+)
+```
+
+### Color
+
+```jsx live noInline
+import { Button } from 'camara'
+
+render(
+  <>
+    <Button pill variant='primary' backgroundColor='#fff' color='purple'>
+      Primary
+    </Button>
+
+    <Button pill variant='secondary' backgroundColor='purple' color='#fff'>
+      Secondary
+    </Button>
+
+    <Button pill variant='ghost' color='purple'>
+      Ghost
+    </Button>
+  </>
+)
+```
