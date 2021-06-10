@@ -13,7 +13,7 @@
 ---
 
 <div align="center">
-  <a href="https://www.npmjs.com/package/camara"><img src="https://img.shields.io/npm/v/camara.svg?logo=npm" alt="NPM" /></a> <a href="https://www.npmjs.com/package/camara"><img src="https://img.shields.io/npm/dt/camara.svg?logo=npm" alt="npm" /></a> <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide" /></a> <a href="https://app.netlify.com/sites/camaradotspace/deploys"><img src="https://api.netlify.com/api/v1/badges/6419e49e-e3d9-40fd-ba00-032ab4d09e80/deploy-status" alt="Netlify Status" /></a> <a href=""><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release" /></a> <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?logo=producthunt" alt="code style: prettier" /></a> <a href=""><img src="" alt="" /></a>
+  <a href="https://www.npmjs.com/package/camara"><img src="https://img.shields.io/npm/v/camara.svg?logo=npm" alt="NPM" /></a> <a href="https://www.npmjs.com/package/camara"><img src="https://img.shields.io/npm/dt/camara.svg?logo=npm" alt="npm" /></a> <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide" /></a> <a href="https://app.netlify.com/sites/camaradotspace/deploys"><img src="https://api.netlify.com/api/v1/badges/6419e49e-e3d9-40fd-ba00-032ab4d09e80/deploy-status" alt="Netlify Status" /></a> <a href="https://storybook.camara.space"><img src="https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg" alt="Storybook" /></a> <a href=""><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release" /></a> <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?logo=producthunt" alt="code style: prettier" /></a> 
 </div>
 
 <br />
@@ -49,6 +49,10 @@ const App = () => {
 export default App
 ```
 
+## Docs
+Docs - https://camara.space/docs/installation/
+
+Storybook - https://storybook.camara.space
 ## What's next
 
 - [x] Add support for mobile with React Native
