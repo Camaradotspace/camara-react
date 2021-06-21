@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/button/
 ---
 
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Button }` -->
 
 <LiveConfig
   modules={{
-    camara: { Button, CamaraTheme },
+    camara: { Button, BrowserWindow },
   }}
 />
 
@@ -45,38 +45,38 @@ Button properties
 ### Variant
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button variant="primary">Primary</Button>
     <Button variant="secondary">Secondary</Button>
     <Button variant="ghost">Ghost</Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button size="large">Large</Button>
     <Button size="medium">Medium</Button>
     <Button size="small">Small</Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Disabled
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button disabled variant="primary">
       Primary
     </Button>
@@ -88,17 +88,17 @@ render(
     <Button disabled variant="ghost">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Danger
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button danger variant="primary">
       Primary
     </Button>
@@ -110,17 +110,17 @@ render(
     <Button danger variant="ghost">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Pill
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button pill variant="primary">
       Primary
     </Button>
@@ -132,17 +132,17 @@ render(
     <Button pill variant="ghost">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Block
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button block variant="primary">
       Primary
     </Button>
@@ -154,17 +154,17 @@ render(
     <Button block variant="ghost">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Background color
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button pill variant="primary" backgroundColor="green">
       Primary
     </Button>
@@ -176,17 +176,17 @@ render(
     <Button pill variant="ghost" backgroundColor="green">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Color
 
 ```jsx live noInline
-import { Button, CamaraTheme } from 'camara';
+import { Button, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Button pill variant="primary" backgroundColor="#fff" color="purple">
       Primary
     </Button>
@@ -198,6 +198,6 @@ render(
     <Button pill variant="ghost" color="purple">
       Ghost
     </Button>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

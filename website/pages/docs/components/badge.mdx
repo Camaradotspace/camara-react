@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/badge/
 ---
 
-import { Badge, Box, CamaraTheme } from 'camara';
+import { Badge, Box, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Badge }` -->
 
 <LiveConfig
   modules={{
-    camara: { Badge, Box, CamaraTheme },
+    camara: { Badge, Box, BrowserWindow },
   }}
 />
 
@@ -41,24 +41,24 @@ Badge properties
 ### Size
 
 ```jsx live noInline
-import { Badge, CamaraTheme } from 'camara';
+import { Badge, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Badge size="large" text="Preview" />
     <Badge size="medium" text="Preview" />
     <Badge size="small" text="Preview" />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Shape
 
 ```jsx live noInline
-import { Badge, Box, CamaraTheme } from 'camara';
+import { Badge, Box, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Badge shape="square" size="large" text="Preview" />
       <Badge shape="square" size="medium" text="Preview" />
@@ -74,17 +74,17 @@ render(
       <Badge shape="circle" size="medium" text="M" />
       <Badge shape="circle" size="small" text="M" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Background Color
 
 ```jsx live noInline
-import { Badge, Box, CamaraTheme } from 'camara';
+import { Badge, Box, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Badge
         shape="square"
@@ -132,6 +132,6 @@ render(
       <Badge shape="circle" size="medium" text="M" backgroundColor="purple" />
       <Badge shape="circle" size="small" text="M" backgroundColor="purple" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

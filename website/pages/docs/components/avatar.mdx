@@ -4,7 +4,7 @@ section: Components
 slug: /docs/components/avatar/
 ---
 
-import { Avatar, Box, Flex, CamaraTheme } from 'camara';
+import { Avatar, Box, Flex, BrowserWindow } from 'camara';
 import { User } from 'react-feather';
 import { LiveConfig } from 'smooth-doc/components';
 
@@ -12,7 +12,7 @@ import { LiveConfig } from 'smooth-doc/components';
 
 <LiveConfig
   modules={{
-    camara: { Avatar, Box, CamaraTheme },
+    camara: { Avatar, Box, BrowserWindow, Flex },
     'react-feather': { User },
   }}
 />
@@ -50,10 +50,10 @@ Unless where using an icon always provide the `imageSrc` and `imageAlt` props
 ### Size
 
 ```jsx live noInline
-import { Avatar, CamaraTheme } from 'camara';
+import { Avatar, Box, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme theme="dark">
+  <BrowserWindow>
     <Avatar
       imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
       imageAlt="short-coated white and tan dog photo"
@@ -74,112 +74,114 @@ render(
       imageAlt="short-coated white and tan dog photo"
       size="tiny"
     />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Shape
 
 ```jsx live noInline
-import { Avatar, Box, CamaraTheme } from 'camara';
+import { Avatar, Box, BrowserWindow, Flex } from 'camara';
 
 render(
-  <CamaraTheme>
-    <Box>
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="circle"
-        size="large"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="circle"
-        size="medium"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="circle"
-        size="small"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="circle"
-        size="tiny"
-      />
-    </Box>
-    <Box>
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="square"
-        size="large"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="square"
-        size="medium"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="square"
-        size="small"
-      />
-      <Avatar
-        imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
-        imageAlt="short-coated white and tan dog photo"
-        shape="square"
-        size="tiny"
-      />
-    </Box>
-  </CamaraTheme>
+  <BrowserWindow>
+    <Flex>
+      <Box>
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="circle"
+          size="large"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="circle"
+          size="medium"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="circle"
+          size="small"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="circle"
+          size="tiny"
+        />
+      </Box>
+      <Box>
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="square"
+          size="large"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="square"
+          size="medium"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="square"
+          size="small"
+        />
+        <Avatar
+          imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+          imageAlt="short-coated white and tan dog photo"
+          shape="square"
+          size="tiny"
+        />
+      </Box>
+    </Flex>
+  </BrowserWindow>
 );
 ```
 
 ### Icon
 
 ```jsx live noInline
-import { Avatar, CamaraTheme } from 'camara';
+import { Avatar, BrowserWindow } from 'camara';
 import { User } from 'react-feather';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Avatar size="large" icon={<User color="#777" size={64} />} />
     <Avatar size="medium" icon={<User color="#777" size={48} />} />
     <Avatar size="small" icon={<User color="#777" size={32} />} />
     <Avatar size="tiny" icon={<User color="#777" size={24} />} />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Initial
 
 ```jsx live noInline
-import { Avatar, CamaraTheme } from 'camara';
+import { Avatar, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Avatar size={120} initialsSize={80} username="Sam" />
     <Avatar size="large" username="Sam" />
     <Avatar size="medium" username="Sam" />
     <Avatar size="small" username="Sam" />
     <Avatar size="tiny" username="Sam" />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Stories
 
 ```jsx live noInline
-import { Avatar, CamaraTheme } from 'camara';
+import { Avatar, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Avatar
       stories
       size="large"
@@ -204,6 +206,6 @@ render(
       imageSrc="https://source.unsplash.com/8TQUF6UbpAk/400x400"
       imageAlt="woman in black and white crew neck long sleeve shirt wearing purple knit cap"
     />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

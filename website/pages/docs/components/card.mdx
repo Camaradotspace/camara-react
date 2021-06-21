@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/card/
 ---
 
-import { Box, Button, Card, Image, Text, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Card, Image, Text, Spacer, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Card }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Button, Card, Image, Text, Spacer, CamaraTheme },
+    camara: { Box, Button, Card, Image, Text, Spacer, BrowserWindow },
   }}
 />
 
@@ -39,60 +39,45 @@ Card properties
 ### Elevate
 
 ```jsx live noInline
-import { Button, Card, Image, Text, CamaraTheme } from 'camara';
+import { Button, Card, Image, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Card elevate>
       <Image
-        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/400x300"
-        imageAlt="woman in orange knit cap and blue jacket"
+        src="https://source.unsplash.com/V_WBdOLOgJU/400x300"
+        alt="woman in orange knit cap and blue jacket"
       />
       <Text>John Doe</Text>
-      <Button block pill size="large">
+      <Button variant="secondary" block pill>
         Follow
       </Button>
     </Card>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Bordered
 
 ```jsx live noInline
-import { Box, Button, Card, Image, Text, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Card, Image, Text, Spacer, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Box>
         <Card>
           <Image
-            imageUrl="https://source.unsplash.com/V_WBdOLOgJU/400x300"
-            imageAlt="woman in orange knit cap and blue jacket"
+            src="https://source.unsplash.com/V_WBdOLOgJU/400x300"
+            alt="woman in orange knit cap and blue jacket"
           />
           <Text>John Doe</Text>
-          <Button block pill size="large">
+          <Button variant="secondary" block pill>
             Follow
           </Button>
         </Card>
       </Box>
-
-      <Spacer top>
-        <Box>
-          <Card bordered={false}>
-            <Image
-              imageUrl="https://source.unsplash.com/V_WBdOLOgJU/400x300"
-              imageAlt="woman in orange knit cap and blue jacket"
-            />
-            <Text>John Doe</Text>
-            <Button block pill size="large">
-              Follow
-            </Button>
-          </Card>
-        </Box>
-      </Spacer>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

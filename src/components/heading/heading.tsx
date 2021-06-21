@@ -10,16 +10,16 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   textAlign?: 'initial' | 'left' | 'right' | 'center' | 'justify';
 }
 
-const StyledH1: any = styled('h1', {
+const StyledH1 = styled('h1', {
   color: '$text_primary',
 });
-const StyledH2: any = styled('h2', {
+const StyledH2 = styled('h2', {
   color: '$text_primary',
 });
-const StyledH3: any = styled('h3', {
+const StyledH3 = styled('h3', {
   color: '$text_primary',
 });
-const StyledH4: any = styled('h4', {
+const StyledH4 = styled('h4', {
   color: '$text_primary',
 });
 
@@ -70,6 +70,8 @@ export const Heading: React.FC<HeadingProps> = ({
 
 Heading.defaultProps = {
   level: 1,
+  fontWeight: 'bold',
+  textAlign: 'left',
 };
 
 Heading.displayName = 'Heading';

@@ -25,9 +25,6 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const StyledBox: any = styled('div', {
-  boxSizing: 'border-box',
-  minWidth: 0,
-  display: 'block',
   variants: {
     center: {
       true: {

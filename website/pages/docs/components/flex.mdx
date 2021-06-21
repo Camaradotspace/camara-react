@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/flex/
 ---
 
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Flex }` -->
 
 <LiveConfig
   modules={{
-    camara: { Flex, Image, CamaraTheme },
+    camara: { Flex, Image, BrowserWindow },
   }}
 />
 
@@ -41,10 +41,10 @@ Flex properties
 ### Basic Flex
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex>
       <Image
         width="25%"
@@ -70,17 +70,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Direction - Column
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="column">
       <Image
         width={100}
@@ -100,17 +100,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Direction - Row
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row">
       <Image
         width={100}
@@ -130,7 +130,7 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
@@ -139,10 +139,10 @@ render(
 #### Space Between
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="space-between">
       <Image
         width={100}
@@ -162,17 +162,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Space Around
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="space-around">
       <Image
         width={100}
@@ -192,17 +192,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Space Evenly
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="space-evenly">
       <Image
         width={100}
@@ -222,17 +222,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Center
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="center">
       <Image
         width={100}
@@ -252,17 +252,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Flex Start
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="flex-start">
       <Image
         width={100}
@@ -282,17 +282,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Flex End
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex direction="row" justify="flex-end">
       <Image
         width={100}
@@ -312,17 +312,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Wrap
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex wrap direction="row" justify="space-between">
       <Image
         width={170}
@@ -372,17 +372,17 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Align Content
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex
       wrap
       direction="row"
@@ -437,6 +437,6 @@ render(
         imageAlt="woman in orange knit cap and blue jacket"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

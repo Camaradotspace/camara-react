@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/spacer/
 ---
 
-import { Box, Button, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Spacer, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Spacer }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Button, Spacer, CamaraTheme },
+    camara: { Box, Button, Spacer, BrowserWindow },
   }}
 />
 
@@ -38,44 +38,44 @@ Spacer properties
 ### Top
 
 ```jsx live noInline
-import { Box, Button, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Spacer, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={300}>
       <Button block>No Spacing</Button>
       <Spacer top>
         <Button block>Spacing Top</Button>
       </Spacer>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Bottom
 
 ```jsx live noInline
-import { Box, Button, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Spacer, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={300}>
       <Spacer bottom>
         <Button block>Spacing Bottom</Button>
       </Spacer>
       <Button block>No Spacing</Button>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Both
 
 ```jsx live noInline
-import { Box, Button, Spacer, CamaraTheme } from 'camara';
+import { Box, Button, Spacer, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={300}>
       <Button block>No Spacing</Button>
       <Spacer both>
@@ -83,6 +83,6 @@ render(
       </Spacer>
       <Button block>No Spacing</Button>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

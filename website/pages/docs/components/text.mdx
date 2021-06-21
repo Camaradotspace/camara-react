@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/text/
 ---
 
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Text }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Text, CamaraTheme },
+    camara: { Box, Flex, Text, BrowserWindow },
   }}
 />
 
@@ -45,22 +45,22 @@ Text properties
 ### Basic Text
 
 ```jsx live noInline
-import { Text, CamaraTheme } from 'camara';
+import { Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Text>This is a text component</Text>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Variant
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text variant="body">Live Text translation</Text>
       <Text variant="sub-heading">Live Text translation</Text>
@@ -78,17 +78,17 @@ render(
       <Text variant="overline">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
       <Text variant="strong">ライブテキスト翻訳 Raibu tekisuto hon'yaku</Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Weight
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text weight="bold">
         There is so much rich information in your photos, from memorable places
@@ -126,17 +126,17 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Italic
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text italic>
         There is so much rich information in your photos, from memorable places
@@ -155,17 +155,17 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Inline
 
 ```jsx live noInline
-import { Text, CamaraTheme } from 'camara';
+import { Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Text inline weight="bold">
       There is so much rich information in your photos, from memorable places
       you’ve visited to handwritten family recipes. iOS 15 uses secure on-device
@@ -176,17 +176,17 @@ render(
       すべての神々、すべての天、すべての地獄はあなたの中にあります Subete no
       kami 々, Subete no ten, subete no jigoku wa anata no naka ni arimasu
     </Text>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Align
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text align="left">
         There is so much rich information in your photos, from memorable places
@@ -256,17 +256,17 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Underline
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text underline>
         There is so much rich information in your photos, from memorable places
@@ -285,17 +285,17 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text size="large">
         There is so much rich information in your photos, from memorable places
@@ -349,17 +349,17 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Strike
 
 ```jsx live noInline
-import { Box, Text, CamaraTheme } from 'camara';
+import { Box, Text, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Text strike>
         There is so much rich information in your photos, from memorable places
@@ -378,6 +378,6 @@ render(
         o saigen suru no ni yakudachimasu.
       </Text>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

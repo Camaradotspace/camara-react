@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import React, { ButtonHTMLAttributes } from 'react';
 import { styled } from '../../stitches.config';
 
@@ -15,8 +16,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const StyledButton = styled('button', {
   position: 'relative',
   fontFamily: '$body',
-  fontSize: '$3',
-  fontWeight: '$copy',
+  fontSize: '$4',
+  fontWeight: '$medium',
   borderRadius: '$2',
   borderWidth: '$1',
   borderStyle: 'solid',
@@ -26,7 +27,7 @@ const StyledButton = styled('button', {
   variants: {
     variant: {
       primary: {
-        backgroundColor: '$button_background',
+        backgroundColor: '$button_primary',
         color: '$button_text',
         borderColor: 'transparent',
         '&:hover': {
@@ -44,15 +45,17 @@ const StyledButton = styled('button', {
       },
       secondary: {
         backgroundColor: 'transparent',
-        color: '$button_background',
-        borderColor: '$button_background',
+        color: '$button_primary',
+        border: '1px solid $button_primary',
         '&:hover': {
-          color: '$button_hover',
+          // color: '$button_hover',
           borderColor: '$button_hover',
+          backgroundColor: '$button_secondary',
         },
         '&:active, &:focus': {
-          color: '$button_focus',
+          color: '$button_text',
           borderColor: '$button_focus',
+          backgroundColor: '$button_focus',
         },
         '&:disabled': {
           color: '$text_disabled',
@@ -62,7 +65,7 @@ const StyledButton = styled('button', {
       },
       ghost: {
         backgroundColor: 'transparent',
-        color: '$button_background',
+        color: '$button_primary',
         borderColor: 'transparent',
         '&:hover': {
           color: '$button_hover',
@@ -79,9 +82,9 @@ const StyledButton = styled('button', {
       },
     },
     size: {
-      large: { px: '$4', py: '$2' },
-      medium: { px: '$3', py: '$1' },
-      small: { px: '$2', py: '$1', fontSize: '$2' },
+      large: { px: '$5', py: '$3' },
+      medium: { px: '$4', py: '$2' },
+      small: { px: '$3', py: '$1', fontSize: '$2' },
     },
     danger: {
       true: {},
@@ -126,11 +129,13 @@ const StyledButton = styled('button', {
         borderColor: '$button_danger',
         '&:hover': {
           color: '$button_dangerHover',
-          borderColor: '$button_dangerHover',
+          borderColor: '$button_danger_hover',
+          backgroundColor: '$button_danger_sec_hover',
         },
         '&:active, &:focus': {
-          color: '$button_dangerFocus',
+          color: '$button_text',
           borderColor: '$button_dangerFocus',
+          backgroundColor: '$button_danger',
         },
         '&:disabled': {
           color: '$text_disabled',
@@ -157,6 +162,7 @@ const StyledButton = styled('button', {
       },
     },
   ],
+  defaultVariants: { size: 'medium', variant: 'primary' },
 });
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -169,7 +175,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         size={size}
         block={block}
         {...props}
-        css={{ backgroundColor: bg, color: color }}
+        css={{
+          backgroundColor: bg,
+          color: color,
+          '&:hover': {
+            backgroundColor: bg ? darken(0.05, `${bg}`) : '',
+          },
+        }}
       >
         {children}
       </StyledButton>

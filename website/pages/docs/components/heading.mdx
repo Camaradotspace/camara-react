@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/heading/
 ---
 
-import { Box, Heading, CamaraTheme } from 'camara';
+import { Box, Heading, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Heading }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Heading, CamaraTheme },
+    camara: { Box, Flex, Heading, BrowserWindow },
   }}
 />
 
@@ -39,20 +39,26 @@ Heading properties
 ### Level
 
 ```jsx live noInline
-import { Box, Heading, CamaraTheme } from 'camara';
+import { Box, Heading, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Heading level={1}>Intelligence designed to be helpful.</Heading>
       <Heading level={2}>Intelligence designed to be helpful.</Heading>
       <Heading level={3}>Intelligence designed to be helpful.</Heading>
       <Heading level={4}>Intelligence designed to be helpful.</Heading>
-      <Heading level={5}>Intelligence designed to be helpful.</Heading>
-      <Heading level={6}>Intelligence designed to be helpful.</Heading>
     </Box>
+  </BrowserWindow>
+);
+```
 
-    <Box mt={64}>
+```jsx live noInline
+import { Box, Heading, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow>
+    <Box>
       <Heading level={1}>
         役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
         interijensu.
@@ -69,26 +75,18 @@ render(
         役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
         interijensu.
       </Heading>
-      <Heading level={5}>
-        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
-        interijensu.
-      </Heading>
-      <Heading level={6}>
-        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
-        interijensu.
-      </Heading>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Thin
 
 ```jsx live noInline
-import { Box, Heading, CamaraTheme } from 'camara';
+import { Box, Heading, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Heading thin level={1}>
         Intelligence designed to be helpful.
@@ -100,12 +98,6 @@ render(
         Intelligence designed to be helpful.
       </Heading>
       <Heading thin level={4}>
-        Intelligence designed to be helpful.
-      </Heading>
-      <Heading thin level={5}>
-        Intelligence designed to be helpful.
-      </Heading>
-      <Heading thin level={6}>
         Intelligence designed to be helpful.
       </Heading>
     </Box>
@@ -127,26 +119,18 @@ render(
         役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
         interijensu.
       </Heading>
-      <Heading thin level={5}>
-        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
-        interijensu.
-      </Heading>
-      <Heading thin level={6}>
-        役立つように設計されたインテリジェンス。Yakudatsu yō ni sekkei sa reta
-        interijensu.
-      </Heading>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Align
 
 ```jsx live noInline
-import { Box, Heading, CamaraTheme } from 'camara';
+import { Box, Heading, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Heading align="left" level={1}>
         Intelligence designed to be helpful.
@@ -161,17 +145,17 @@ render(
         Intelligence designed to be helpful.
       </Heading>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Color
 
 ```jsx live noInline
-import { Box, Heading, CamaraTheme } from 'camara';
+import { Box, Heading, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       <Heading color="tomato" level={1}>
         Intelligence designed to be helpful.
@@ -185,13 +169,7 @@ render(
       <Heading color="purple" level={4}>
         Intelligence designed to be helpful.
       </Heading>
-      <Heading color="orange" level={5}>
-        Intelligence designed to be helpful.
-      </Heading>
-      <Heading color="black" level={6}>
-        Intelligence designed to be helpful.
-      </Heading>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

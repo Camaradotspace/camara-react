@@ -21,8 +21,8 @@ Base.args = {
 
 // level
 export const Level = (args: HeadingProps) => (
-  <Box>
-    <Box>
+  <>
+    <>
       <Heading {...args} level={1}>
         The design and the making are inseparable...
       </Heading>
@@ -35,14 +35,8 @@ export const Level = (args: HeadingProps) => (
       <Heading {...args} level={4}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} level={5}>
-        The design and the making are inseparable...
-      </Heading>
-      <Heading {...args} level={6}>
-        The design and the making are inseparable...
-      </Heading>
-    </Box>
-    <Box>
+    </>
+    <>
       <Heading {...args} level={1}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
@@ -55,14 +49,8 @@ export const Level = (args: HeadingProps) => (
       <Heading {...args} level={4}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} level={5}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Heading>
-      <Heading {...args} level={6}>
-        私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
-      </Heading>
-    </Box>
-  </Box>
+    </>
+  </>
 );
 
 // thin

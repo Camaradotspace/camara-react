@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/anchor/
 ---
 
-import { Anchor, CamaraTheme } from 'camara';
+import { Anchor, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
-<!-- Define `camara` module as `{ Anchor, CamaraTheme }` -->
+<!-- Define `camara` module as `{ Anchor, BrowserWindow }` -->
 
 <LiveConfig
   modules={{
-    camara: { Anchor, CamaraTheme },
+    camara: { Anchor, BrowserWindow },
   }}
 />
 
@@ -38,39 +38,39 @@ Anchor properties
 ### Basic Anchor
 
 ```jsx live noInline
-import { Anchor, CamaraTheme } from 'camara';
+import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Anchor href="https://unsplash.com/photos/V_WBdOLOgJU">See photo</Anchor>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### As Button
 
 ```jsx live noInline
-import { Anchor, CamaraTheme } from 'camara';
+import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Anchor asButton href="https://unsplash.com/photos/V_WBdOLOgJU">
       See photo
     </Anchor>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Open In New
 
 ```jsx live noInline
-import { Anchor, CamaraTheme } from 'camara';
+import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Anchor asNew href="https://unsplash.com/photos/V_WBdOLOgJU">
       See photo
     </Anchor>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

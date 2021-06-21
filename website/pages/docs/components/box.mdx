@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/box/
 ---
 
-import { Box, Flex, Image, CamaraTheme } from 'camara';
+import { Box, Flex, Image, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Box }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Image, CamaraTheme },
+    camara: { Box, Flex, Image, BrowserWindow },
   }}
 />
 
@@ -62,10 +62,10 @@ Box properties
 ### Basic Box
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -75,17 +75,17 @@ render(
       </Flex>
       <Box height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Border
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -95,17 +95,17 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Center
 
 ```jsx live noInline
-import { Box, Flex, Image, CamaraTheme } from 'camara';
+import { Box, Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -123,17 +123,17 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Debug
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -143,7 +143,7 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
@@ -152,10 +152,10 @@ render(
 #### Top, Bottom, Left and Right Padding
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -173,17 +173,17 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Horizontal and Vertical Padding
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -193,7 +193,7 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
@@ -202,10 +202,10 @@ render(
 #### Top, Bottom, Left and Right Margin
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -223,17 +223,17 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 #### Horizontal and Vertical Margin
 
 ```jsx live noInline
-import { Box, Flex, CamaraTheme } from 'camara';
+import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box width={700}>
       <Box border height={100} color="#82CAFF" />
       <Flex justify="space-between">
@@ -243,6 +243,6 @@ render(
       </Flex>
       <Box border height={100} color="#82CAFF" />
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

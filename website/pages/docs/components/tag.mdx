@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/tag/
 ---
 
-import { Box, Flex, Tag, CamaraTheme } from 'camara';
+import { Box, Flex, Tag, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Tag }` -->
 
 <LiveConfig
   modules={{
-    camara: { Box, Flex, Tag, CamaraTheme },
+    camara: { Box, Flex, Tag, BrowserWindow },
   }}
 />
 
@@ -37,22 +37,22 @@ Tag properties
 ### Basic Tag
 
 ```jsx live noInline
-import { Tag, CamaraTheme } from 'camara';
+import { Tag, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Tag>Tag</Tag>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Example
 
 ```jsx live noInline
-import { Flex, Tag, CamaraTheme } from 'camara';
+import { Flex, Tag, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex>
       <Tag color="#e61b1b">red</Tag>
       <Tag color="#0099FF">blue</Tag>
@@ -60,17 +60,17 @@ render(
       <Tag color="#ff6347">tomato</Tag>
       <Tag color="#068d6b">teal</Tag>
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Size
 
 ```jsx live noInline
-import { Box, Flex, Tag, CamaraTheme } from 'camara';
+import { Box, Flex, Tag, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Box>
       {/* large */}
       <Flex>
@@ -129,6 +129,6 @@ render(
         </Tag>
       </Flex>
     </Box>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

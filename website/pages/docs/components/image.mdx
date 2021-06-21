@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/image/
 ---
 
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Image }` -->
 
 <LiveConfig
   modules={{
-    camara: { Flex, Image, CamaraTheme },
+    camara: { Flex, Image, BrowserWindow },
   }}
 />
 
@@ -27,8 +27,8 @@ Image properties
 
 | Property | Description                                                             | Type                                         | Default | Version |
 | -------- | ----------------------------------------------------------------------- | -------------------------------------------- | ------- | ------- |
-| imageUrl | Link to image source                                                    | `string`                                     | -       |         |
-| imageAlt | Description of the image                                                | `string`                                     | -       |         |
+| src      | Link to image source                                                    | `string`                                     | -       |         |
+| alt      | Description of the image                                                | `string`                                     | -       |         |
 | loading  | Control if loading the image should be deferred when its off the screen | `eager` `lazy`                               | -       |         |
 | fit      | Object-fit property of the image                                        | `fill` `contain` `cover` `none` `scale-down` | `cover` |         |
 
@@ -39,40 +39,40 @@ Image properties
 ### Basic Image
 
 ```jsx live noInline
-import { Image, CamaraTheme } from 'camara';
+import { Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Image
-      imageUrl="https://source.unsplash.com/V_WBdOLOgJU/600x500"
-      imageAlt="woman in orange knit cap and blue jacket"
+      src="https://source.unsplash.com/V_WBdOLOgJU/600x500"
+      alt="woman in orange knit cap and blue jacket"
     />
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```
 
 ### Loading
 
 ```jsx live noInline
-import { Flex, Image, CamaraTheme } from 'camara';
+import { Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <CamaraTheme>
+  <BrowserWindow>
     <Flex justify="space-between">
       <Image
         width="49%"
-        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/400x300"
-        imageAlt="woman in orange knit cap and blue jacket"
+        src="https://source.unsplash.com/V_WBdOLOgJU/400x300"
+        alt="woman in orange knit cap and blue jacket"
         loading="eager"
       />
 
       <Image
         width="49%"
-        imageUrl="https://source.unsplash.com/V_WBdOLOgJU/400x300"
-        imageAlt="woman in orange knit cap and blue jacket"
+        src="https://source.unsplash.com/V_WBdOLOgJU/400x300"
+        alt="woman in orange knit cap and blue jacket"
         loading="lazy"
       />
     </Flex>
-  </CamaraTheme>
+  </BrowserWindow>
 );
 ```

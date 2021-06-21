@@ -1,6 +1,7 @@
 export * from './anchor';
 export * from './avatar';
 export * from './badge';
+export * from './browserWindow';
 export * from './box';
 export * from './button';
 export * from './camaraTheme';
@@ -11,6 +12,7 @@ export * from './heading';
 export * from './image';
 export * from './input';
 export * from './spacer';
+export * from './switch';
 export * from './tag';
 export * from './text';
 export * from './textarea';
