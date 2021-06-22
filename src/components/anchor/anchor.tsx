@@ -78,7 +78,9 @@ export const Anchor: React.FC<AnchorProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         variant={variant}
-        css={{ textDecoration: underline ? 'underline' : 'inherit' }}
+        css={{
+          textDecoration: underline === false ? 'none !important' : 'underline',
+        }}
       >
         {children}
         <ExternalLink size={14} color="#bbb" />
@@ -89,7 +91,9 @@ export const Anchor: React.FC<AnchorProps> = ({
       <StyledAnchor
         href={href}
         variant={variant}
-        css={{ textDecoration: underline === false ? 'none' : 'underline' }}
+        css={{
+          textDecoration: underline === false ? 'none !important' : 'underline',
+        }}
       >
         {children}
       </StyledAnchor>
