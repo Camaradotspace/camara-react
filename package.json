@@ -1,6 +1,6 @@
 {
   "name": "camara",
-  "version": "1.0.0-beta.84",
+  "version": "1.0.0-beta.87",
   "description": "A design system that helps you build your ideas quickly",
   "author": {
     "name": "Presh Onyee",
@@ -88,13 +88,12 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@stitches/react": "^0.1.9",
+    "@stitches/react": "^0.2.2",
     "react-feather": "^2.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.5",
-    "@stitches/react": "^0.1.9",
     "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",

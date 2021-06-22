@@ -1,60 +1,102 @@
 import React, { AnchorHTMLAttributes } from 'react';
+import { ExternalLink } from 'react-feather';
 import { styled } from '../../stitches.config';
-import { Button } from '../button';
 
 export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /* link content */
   children: React.ReactNode;
   /* Link URL */
   href: string;
-  /* Use Anchor as a Button? */
-  asBtn?: boolean;
   /* Open link in new tab? */
   external?: boolean;
+  /* What variant of link should be rendered? */
+  variant?: 'primary' | 'secondary';
+  /* Should links be underlined */
+  underline?: boolean;
 }
 
 const StyledAnchor = styled('a', {
-  textDecoration: 'none',
-  color: '$button_background',
+  color: '$link_text !important',
   cursor: 'pointer',
+  textDecoration: 'underline !important',
+  '& > *': {
+    color: '$link_text !important',
+    '&:visited': {
+      color: '$link_text !important',
+    },
+    '&:hover': {
+      color: '$link_hover !important',
+      textDecoration: 'none !important',
+    },
+    '&:active': {
+      color: '$link_hover !important',
+    },
+  },
   '&:visited': {
-    color: 'purple',
+    color: '$link_text !important',
   },
   '&:hover': {
-    color: '$button_hover',
+    color: '$link_hover !important',
+    textDecoration: 'none !important',
   },
   '&:active': {
-    color: '$button_focus',
+    color: '$link_hover !important',
   },
+  '& svg': {
+    marginLeft: '$1',
+  },
+  variants: {
+    variant: {
+      primary: {},
+      secondary: {
+        color: '$link_secondary !important',
+        textDecoration: 'none !important',
+        '&:hover': {
+          color: '$link_hover !important',
+          textDecoration: 'underline !important',
+        },
+        '&:active': {
+          color: '$link_hover !important',
+        },
+      },
+    },
+  },
+  defaultVariants: { variant: 'primary' },
 });
-
-const LinkButton = styled(Button, {});
 
 export const Anchor: React.FC<AnchorProps> = ({
   href,
   children,
   external,
-  asBtn,
+  variant,
+  underline,
 }) => {
   if (external) {
     return (
-      <StyledAnchor href={href} target="_blank" rel="noopener noreferrer">
+      <StyledAnchor
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant={variant}
+        css={{ textDecoration: underline ? 'underline' : 'inherit' }}
+      >
         {children}
-      </StyledAnchor>
-    );
-  } else if (asBtn) {
-    return (
-      <StyledAnchor href={href}>
-        <LinkButton>{children}</LinkButton>
+        <ExternalLink size={14} color="#bbb" />
       </StyledAnchor>
     );
   } else {
-    return <StyledAnchor href={href}>{children}</StyledAnchor>;
+    return (
+      <StyledAnchor
+        href={href}
+        variant={variant}
+        css={{ textDecoration: underline === false ? 'none' : 'underline' }}
+      >
+        {children}
+      </StyledAnchor>
+    );
   }
 };
 
-Anchor.defaultProps = {
-  external: false,
-};
+Anchor.defaultProps = { variant: 'primary' };
 
 Anchor.displayName = 'Anchor';

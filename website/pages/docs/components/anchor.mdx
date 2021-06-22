@@ -4,14 +4,23 @@ section: Components
 slug: /docs/components/anchor/
 ---
 
-import { Anchor, BrowserWindow } from 'camara';
+import {
+  Anchor,
+  BrowserWindow,
+  Box,
+  Card,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ Anchor, BrowserWindow }` -->
 
 <LiveConfig
   modules={{
-    camara: { Anchor, BrowserWindow },
+    camara: { Anchor, BrowserWindow, Box, Card, Flex, Heading, Image, Text },
   }}
 />
 
@@ -25,11 +34,12 @@ Anchor description.
 
 Anchor properties
 
-| Property | Description           | Type      | Default | Version |
-| -------- | --------------------- | --------- | ------- | ------- |
-| href     | Link URL              | `string`  | -       |         |
-| asButton | Use anchor as button? | `boolean` | false   |         |
-| asNew    | Open link in new tab? | `boolean` | false   |         |
+| Property  | Description                              | Type                   | Default   | Version |
+| --------- | ---------------------------------------- | ---------------------- | --------- | ------- |
+| href      | Link URL                                 | `string`               | -         |         |
+| external  | Open link in new tab?                    | `boolean`              | false     |         |
+| underline | Should links be underlined?              | `boolean`              | true      |         |
+| variant   | What variant of link should be rendered? | `primary`, `secondary` | `primary` |         |
 
 <br></br>
 
@@ -42,35 +52,172 @@ import { Anchor, BrowserWindow } from 'camara';
 
 render(
   <BrowserWindow>
-    <Anchor href="https://unsplash.com/photos/V_WBdOLOgJU">See photo</Anchor>
+    <Anchor href="#">Camara Link</Anchor>
   </BrowserWindow>
 );
 ```
 
-### As Button
+### Variant
 
 ```jsx live noInline
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
   <BrowserWindow>
-    <Anchor asButton href="https://unsplash.com/photos/V_WBdOLOgJU">
-      See photo
+    <Anchor href="#" variant="primary">
+      Camara Link
+    </Anchor>{' '}
+    <Anchor href="#" variant="secondary">
+      Camara Link
     </Anchor>
   </BrowserWindow>
 );
 ```
 
-### Open In New
+### No Underline
+
+Links are underlined by default, but underlines can be removed where necessary
 
 ```jsx live noInline
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
   <BrowserWindow>
-    <Anchor asNew href="https://unsplash.com/photos/V_WBdOLOgJU">
-      See photo
+    <Anchor href="#" underline={false} external>
+      Camara Link
     </Anchor>
+  </BrowserWindow>
+);
+```
+
+### External Link
+
+Adding the `external` prop opens links in a new tab
+
+```jsx live noInline
+import { Anchor, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow>
+    <Anchor href="#" external>
+      Camara Link
+    </Anchor>
+  </BrowserWindow>
+);
+```
+
+### Multiple Lines
+
+Links can span multiple lines too
+
+```jsx live noInline
+import { Anchor, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow>
+    <Anchor href="#">
+      Buttons are user interface elements that initiates actions. This is their
+      primary function and it is this function that makes them very different
+      from links particularly on the web.
+    </Anchor>
+  </BrowserWindow>
+);
+```
+
+### Security
+
+For an external link we add `rel='noopener noreferrer'`
+
+```jsx live noInline
+import { Anchor, Box, BrowserWindow, Heading, Text } from 'camara';
+
+render(
+  <BrowserWindow>
+    <Box>
+      <Heading>Security</Heading>
+      <Text>For an external link we add `rel='noopener noreferrer'`</Text>
+      <Text>
+        This{' '}
+        <Anchor href="#" external>
+          external link
+        </Anchor>{' '}
+        has added security related tags in it
+      </Text>
+    </Box>
+  </BrowserWindow>
+);
+```
+
+### Examples
+
+```jsx live noInline
+import { Anchor, Box, BrowserWindow, Heading, Text } from 'camara';
+
+render(
+  <BrowserWindow>
+    <Box>
+      <Anchor underline={false} href="#">
+        <Heading level={2}>Omakase - Wikipedia</Heading>
+      </Anchor>
+      <Text>
+        Omakase (Japanese: お任せ, Hepburn: o-makase) is a Japanese phrase, used
+        when ordering sushi in restaurants, that means 'I'll leave it up to you'
+        (from Japanese 'to entrust' (任せる, makaseru)).
+      </Text>
+
+      <Text>
+        <Anchor underline={false} href="#">
+          Usage
+        </Anchor>{' '}
+        ·{' '}
+        <Anchor underline={false} href="#">
+          Characteristics
+        </Anchor>
+      </Text>
+    </Box>
+  </BrowserWindow>
+);
+```
+
+```jsx live noInline
+import {
+  Anchor,
+  Box,
+  BrowserWindow,
+  Card,
+  Flex,
+  Heading,
+  Image,
+  Text,
+} from 'camara';
+
+render(
+  <BrowserWindow>
+    <Box css={{ width: '75%' }}>
+      <Card round elevate>
+        <Anchor href="#" underline={false}>
+          <Heading level={3}>Lemons: Health Benefits & Nutrition Facts</Heading>
+        </Anchor>
+        <Flex justifyContent="space-between">
+          <Box css={{ width: '72%' }}>
+            <Text size="small">
+              Lemons contain a high amount of vitamin C, soluble fiber, and
+              plant compounds that give them a number of health bene...
+            </Text>
+          </Box>
+          <Box css={{ width: '22%' }}>
+            <Image
+              src="https://res.cloudinary.com/beaniegram/image/upload/v1624339059/lemon.jpg"
+              alt="sliced lemon fruit with squeezed juice in glass cup"
+              fit="cover"
+              width="100%"
+              height="100%"
+              style={{ borderRadius: '0.5rem' }}
+            />
+          </Box>
+        </Flex>
+      </Card>
+    </Box>
   </BrowserWindow>
 );
 ```

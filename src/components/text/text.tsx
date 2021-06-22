@@ -17,7 +17,6 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
 }
 
 const StyledText: any = styled('p', {
-  fontFamily: '$body',
   fontWeight: '$regular',
   lineHeight: '$copy',
   color: '$text_primary',
@@ -47,13 +46,13 @@ const StyledText: any = styled('p', {
     },
     size: {
       large: {
-        fontSize: '$4',
+        fontSize: '$5',
       },
       medium: {
-        fontSize: '$3',
+        fontSize: '$4',
       },
       small: {
-        fontSize: '$2',
+        fontSize: '$3',
       },
     },
     inline: {

@@ -10,6 +10,8 @@ export interface CardProps {
   children: React.ReactNode;
   width?: number;
   height?: number;
+  round?: boolean;
+  bg?: string;
 }
 
 const StyledCard = styled('div', {
@@ -27,6 +29,11 @@ const StyledCard = styled('div', {
         border: '1.5px solid $ui_border',
       },
     },
+    round: {
+      true: {
+        borderRadius: '$3',
+      },
+    },
   },
 });
 
@@ -36,12 +43,21 @@ export const Card: React.FC<CardProps> = ({
   bordered,
   width,
   height,
+  round,
+  bg,
+  ...rest
 }) => {
   return (
     <StyledCard
+      css={{
+        height: height && height,
+        width: width && width,
+        bg: bg && bg,
+      }}
       elevate={elevate}
       bordered={bordered}
-      css={{ height: height, width: width }}
+      round={round}
+      {...rest}
     >
       {children}
     </StyledCard>

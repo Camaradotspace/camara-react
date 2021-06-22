@@ -27,8 +27,10 @@ export const {
       ui_success: '#28A745',
       ui_unknown: '#757575',
       bg_primary: '#FFFFFF',
-      bg_secondary: '#F5F5F5',
-      bg_shadow: '2px 4px 8px #DADCE0',
+      bg_secondary: '#F8F8F8',
+      link_text: '#088845',
+      link_secondary: '#707070',
+      link_hover: lighten(0.1, '#088845'),
       text_primary: '#000000',
       text_secondary: '#444444',
       text_tertiary: '#E0E0E0',
@@ -64,7 +66,7 @@ export const {
     fontSizes: {
       1: '0.625rem', // 10px
       2: '0.75rem', // 12px
-      3: '0.875', // 14px
+      3: '0.875rem', // 14px
       4: '1rem', // 16px
       5: '1.125rem', // 18px
       6: '1.25rem', // 20px
@@ -115,7 +117,7 @@ export const {
     },
     borderWidths: { 1: '1px' },
     borderStyles: {},
-    shadows: { bg_shadow: '2px 4px 8px #DADCE0' },
+    shadows: { bg_shadow: '1px 2px 4px 2px #DADCE0' },
     zIndices: {},
     transitions: {},
   },
@@ -205,7 +207,7 @@ export const {
 });
 
 export const DARK_THEME = theme('dark-theme', {
-  shadows: { bg_shadow: '2px 4px 8px #333333' },
+  shadows: { bg_shadow: '1px 1.5px 3px #000' },
   colors: {
     brand_primary: '#37DAAA',
     brand_secondary: '#E65F5C',
@@ -220,9 +222,11 @@ export const DARK_THEME = theme('dark-theme', {
     ui_warning: '#FF9A04',
     ui_success: '#28A745',
     ui_unknown: '#757575',
-    bg_primary: '#111111',
-    bg_secondary: '#262626',
-    bg_shadow: '#333333',
+    bg_primary: '#121212',
+    bg_secondary: '#272727',
+    link_text: '#37DAAA',
+    link_secondary: '#DADCE0',
+    link_hover: lighten(0.1, '#37DAAA'),
     text_primary: '#FFFFFF',
     text_secondary: '#F5F5F5',
     text_tertiary: '#555555',
