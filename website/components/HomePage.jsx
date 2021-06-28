@@ -171,9 +171,9 @@ const HomePage = () => {
           {/* Statement */}
           <div className="statement">
             <p>
-              <span>&lt;h2&gt;</span>UI foundations for accessible, beautiful,
+              <span>&lt;h1&gt;</span>UI foundations for accessible, beautiful,
               and responsive interfaces.
-              <span>&lt;/h2&gt;</span>
+              <span>&lt;/h1&gt;</span>
             </p>
           </div>
 
