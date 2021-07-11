@@ -1,10 +1,3 @@
----
-title: Code of Conduct
-section: Open Source
-slug: /docs/code-of-conduct/
-order: 4
----
-
 # Code of Conduct
 
 ## Our Pledge

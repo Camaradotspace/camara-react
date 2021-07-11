@@ -1,10 +1,3 @@
----
-title: Contributing
-section: Open Source
-slug: /docs/contributing/
-order: 5
----
-
 # Contributing
 
 This project will be open for contributions at version 1.0, right now, my only goal is to show off my work(what I am building) while still working on it publicly. The focus is on getting it to where I feel would be a solid start to my vision - helping you build your ideas quickly and with less code.
