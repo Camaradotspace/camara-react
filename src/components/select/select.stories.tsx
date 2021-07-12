@@ -51,6 +51,7 @@ export default {
   args: {
     title: 'Select Hero',
     extended: false,
+    multiple: false,
     options: options,
   },
 } as Meta;
@@ -93,13 +94,19 @@ const HandleChangeTemplate: Story<SelectProps> = args => {
         placeholder="Select"
         options={options}
         extended={true}
-        handleChange={(option: Option) => setSelection(option.value)}
+        onSelect={(option: Option) => setSelection(option.value)}
       />
       <Button type="submit" size="small">
         submit
       </Button>
     </form>
   );
+};
+
+export const MultipleSelect = Template.bind({});
+MultipleSelect.args = {
+  multiple: true,
+  extended: false,
 };
 
 export const HandleChange = HandleChangeTemplate.bind({});

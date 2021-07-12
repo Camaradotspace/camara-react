@@ -14,7 +14,8 @@ export interface SelectProps {
   placeholder: string;
   options: Option[];
   extended?: boolean;
-  handleChange?: (selection: Option) => void;
+  onSelect?: (selection: Option) => void;
+  multiple?: boolean;
 }
 
 const SelectWrapper = styled('div', {
@@ -54,9 +55,10 @@ const SelectBox = styled('div', {
 
 const SelectOption = styled('button', {
   fontFamily: '$body',
+  border: 'none',
+  borderBottom: '0.5px solid $ui_border',
   backgroundColor: '$bg_primary',
   color: '$text_primary',
-  border: 'none',
   textAlign: 'left',
   width: '100%',
   display: 'flex',
@@ -100,7 +102,8 @@ export const Select = ({
   placeholder = 'Choose from...',
   options,
   extended,
-  handleChange,
+  onSelect,
+  multiple,
 }: SelectProps) => {
   const [open, setOpen] = useState(false);
 
@@ -119,8 +122,12 @@ export const Select = ({
 
   const handleOnClick = (option: Option) => {
     if (!selection.some(current => current.id === option.id)) {
-      setSelection([option]);
-      toggle(!open);
+      if (!multiple) {
+        setSelection([option]);
+        toggle(!open);
+      } else if (multiple) {
+        setSelection([...selection, option]);
+      }
     } else {
       let selectionAfterRemoval = selection;
       selectionAfterRemoval = selectionAfterRemoval.filter(
@@ -129,8 +136,8 @@ export const Select = ({
       setSelection([...selectionAfterRemoval]);
       toggle(!open);
     }
-    if (handleChange) {
-      handleChange(option);
+    if (onSelect) {
+      onSelect(option);
     }
   };
 
