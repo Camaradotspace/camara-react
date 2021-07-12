@@ -52,7 +52,7 @@ export default App
 ## Docs
 Docs - https://camara.space/docs/installation/
 
-<a href="https://storybook.camara.space"><img src="https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg" alt="Storybook" /></a> - https://www.storybook.camara.space/ 
+<a href="https://www.storybook.camara.space/"><img src="https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg" alt="Storybook" /></a> - https://www.storybook.camara.space/ 
 ## What's next
 
 - [x] Add support for mobile with React Native
