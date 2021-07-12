@@ -43,7 +43,7 @@ const options = [
 ];
 
 export default {
-  title: 'Components/Select_Unstable',
+  title: 'Components/Select',
   component: Select,
   argTypes: {
     color: { control: 'color' },

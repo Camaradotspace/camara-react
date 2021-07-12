@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
 
-const Wrapper: any = styled('div', {
+const StyledSwitch: any = styled('div', {
   '.react-switch-checkbox': {
     height: 0,
     width: 0,
@@ -90,26 +90,27 @@ const Wrapper: any = styled('div', {
   },
 });
 
-interface SwitchProps {
+export type SwitchProps = {
   id?: string;
   isOn?: boolean;
   handleToggle?: () => void;
   onColor?: string;
   size?: 'small' | 'large';
   css?: React.CSSProperties;
-}
+};
 
 export const Switch: React.FC<SwitchProps> = ({
-  id,
+  id = Math.random()
+    .toString(36)
+    .substr(2, 9),
   isOn,
   handleToggle,
   onColor = '#088845',
   size = 'small',
-  css,
   ...rest
 }) => {
   return (
-    <Wrapper size={size} {...rest} css={css}>
+    <StyledSwitch size={size} {...rest}>
       <input
         checked={isOn}
         onChange={handleToggle}
@@ -124,6 +125,17 @@ export const Switch: React.FC<SwitchProps> = ({
       >
         <span className={`react-switch-button`} />
       </label>
-    </Wrapper>
+    </StyledSwitch>
   );
 };
+
+Switch.defaultProps = {
+  id: Math.random()
+    .toString(36)
+    .substr(2, 9),
+  isOn: true,
+  onColor: '#088845',
+  size: 'small',
+};
+
+Switch.displayName = 'Switch';

@@ -1,7 +1,13 @@
-interface SvgrComponent
-  extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
-
-declare module '*.svg' {
-  const value: SvgrComponent;
-  export default value;
+import { CSSProperties } from 'react';
+declare module 'react' {
+  interface DOMAttributes<T> {
+    css?: CSSProperties;
+  }
+}
+declare global {
+  namespace JSX {
+    interface IntrinsicAttributes {
+      css?: CSSProperties;
+    }
+  }
 }
