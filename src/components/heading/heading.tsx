@@ -6,7 +6,14 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
   /* What level should heading be? h1, h2, h3, h4, etc */
   level?: number;
-  fontWeight?: string | number;
+  fontWeight?:
+    | 'normal'
+    | 'bold'
+    | 'bolder'
+    | 'lighter'
+    | number
+    | 'initial'
+    | 'inherit';
   textAlign?: 'initial' | 'left' | 'right' | 'center' | 'justify';
 }
 
@@ -15,6 +22,7 @@ const baseStyles = {
   margin: 0,
   padding: 0,
   my: '$2',
+  fontWeight: '$bold',
 };
 
 const StyledH1 = styled('h1', {
@@ -33,8 +41,8 @@ const StyledH4 = styled('h4', {
 export const Heading: React.FC<HeadingProps> = ({
   children,
   level,
-  fontWeight,
   textAlign,
+  fontWeight,
 }) => {
   switch (level) {
     // for large heading H1
@@ -77,8 +85,8 @@ export const Heading: React.FC<HeadingProps> = ({
 
 Heading.defaultProps = {
   level: 1,
-  fontWeight: 'bold',
   textAlign: 'left',
+  fontWeight: 'bold',
 };
 
 Heading.displayName = 'Heading';
