@@ -11,6 +11,7 @@ export * from './flex';
 export * from './heading';
 export * from './image';
 export * from './input';
+export * from './select';
 export * from './spacer';
 export * from './switch';
 export * from './tag';
