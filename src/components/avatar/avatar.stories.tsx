@@ -28,82 +28,76 @@ Base.args = {
 
 // types
 export const Types = (args: AvatarProps) => (
-  <BrowserWindow>
-    <Box>
-      <Flex>
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          size="large"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          size="medium"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          size="small"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          size="tiny"
-        />
-      </Flex>
-      <Flex>
-        <Avatar {...args} size="large" icon={<User color="#777" size={64} />} />
-        <Avatar
-          {...args}
-          size="medium"
-          icon={<User color="#777" size={48} />}
-        />
-        <Avatar {...args} size="small" icon={<User color="#777" size={32} />} />
-        <Avatar {...args} size="tiny" icon={<User color="#777" size={24} />} />
-      </Flex>
-      <Flex>
-        <Avatar {...args} size="large" username="Sam" />
-        <Avatar {...args} size="medium" username="Sam" />
-        <Avatar {...args} size="small" username="Sam" />
-        <Avatar {...args} size="tiny" username="Sam" />
-      </Flex>
-      <Flex>
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          stories
-          size="large"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          stories
-          size="medium"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          stories
-          size="small"
-        />
-        <Avatar
-          {...args}
-          imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
-          imageAlt="portrait of Shiba Inu"
-          stories
-          size="tiny"
-        />
-      </Flex>
-    </Box>
-  </BrowserWindow>
+  <Box>
+    <Flex>
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="large"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="medium"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="small"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="tiny"
+      />
+    </Flex>
+    <Flex>
+      <Avatar {...args} size="large" icon={<User color="#777" size={64} />} />
+      <Avatar {...args} size="medium" icon={<User color="#777" size={48} />} />
+      <Avatar {...args} size="small" icon={<User color="#777" size={32} />} />
+      <Avatar {...args} size="tiny" icon={<User color="#777" size={24} />} />
+    </Flex>
+    <Flex>
+      <Avatar {...args} size="large" username="Sam" />
+      <Avatar {...args} size="medium" username="Sam" />
+      <Avatar {...args} size="small" username="Sam" />
+      <Avatar {...args} size="tiny" username="Sam" />
+    </Flex>
+    <Flex>
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="large"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="medium"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="small"
+      />
+      <Avatar
+        {...args}
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="tiny"
+      />
+    </Flex>
+  </Box>
 );
 
 // sizes

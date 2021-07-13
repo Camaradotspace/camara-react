@@ -3,9 +3,26 @@ import { ChevronRight } from 'react-feather';
 import { styled } from '../../stitches.config';
 
 export interface AccordionProps {
+  /**
+   * Title of the accordion
+   */
   title: string;
+  /**
+   * Visual cue to prefix the accordion title
+   */
   prefix?: React.ReactNode;
+  /**
+   * Content of the accordion
+   */
   children?: React.ReactNode;
+  /**
+   * Customize the right icon
+   */
+  icon?: React.ReactNode;
+  /**
+   * Should accordion be expanded by default?
+   */
+  expanded?: boolean;
 }
 
 const StyledAccordionWrapper = styled('section', {
@@ -25,7 +42,13 @@ const StyledAccordionWrapper = styled('section', {
   },
 
   '& .accordion-title': {
+    fontSize: '$4',
     fontWeight: '$bold',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  '& .accordion-title span': {
+    marginRight: '$1',
   },
 
   '& .accordion-icon': {
@@ -67,16 +90,36 @@ export const Accordion: React.FunctionComponent<AccordionProps> = ({
   title,
   children,
   prefix,
+  expanded = false,
+  icon,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [height, setHeight] = React.useState('0px');
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [expandedClass, setExpandedClass] = React.useState('');
+  const [expandedHeight, setExpandedHeight] = React.useState('0px');
 
   const content = React.useRef() as MutableRefObject<HTMLDivElement>;
+
+  React.useEffect(() => {
+    if (expanded) {
+      setIsExpanded(true);
+      setExpandedClass('accordion-icon rotate');
+      setExpandedHeight('500px');
+    }
+  }, []);
 
   const handleVisibilityToggle = () => {
     setIsOpen(!isOpen);
     setHeight(isOpen ? '0px' : `${content.current.scrollHeight}px`);
   };
+
+  const handleOff = () => {
+    setIsExpanded(false);
+    setExpandedClass('');
+    setExpandedHeight('0px');
+  };
+
   return (
     <StyledAccordionWrapper>
       {/* opener */}
@@ -87,19 +130,29 @@ export const Accordion: React.FunctionComponent<AccordionProps> = ({
             className={`accordion ${!isOpen ? 'active' : ''}`}
             aria-controls="accordion-content"
             aria-expanded={isOpen}
-            onClick={handleVisibilityToggle}
+            onClick={isExpanded ? handleOff : handleVisibilityToggle}
           >
             <p className="accordion-title">
               {prefix && <span>{prefix}</span>}
               {title}
             </p>
-            <ChevronRight
-              className={`accordion-icon ${
-                isOpen ? 'accordion-icon rotate' : ''
-              }`}
-              color="#777"
-              size={16}
-            />
+            {icon ? (
+              <span
+                className={`accordion-icon ${
+                  isOpen ? 'accordion-icon rotate' : ''
+                } ${expandedClass}`}
+              >
+                {icon}
+              </span>
+            ) : (
+              <ChevronRight
+                className={`accordion-icon ${
+                  isOpen ? 'accordion-icon rotate' : ''
+                } ${expandedClass}`}
+                color="#777"
+                size={16}
+              />
+            )}
           </button>
         </h2>
       </div>
@@ -111,7 +164,7 @@ export const Accordion: React.FunctionComponent<AccordionProps> = ({
         role="region"
         // hidden={!isOpen}
         className="accordion-content"
-        style={{ maxHeight: `${height}` }}
+        style={{ maxHeight: isExpanded ? `${expandedHeight}` : `${height}` }}
       >
         <p className="accordion-text">{children}</p>
       </div>
