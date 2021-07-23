@@ -1,3 +1,4 @@
+export * from './accordion';
 export * from './anchor';
 export * from './avatar';
 export * from './badge';
@@ -14,6 +15,7 @@ export * from './input';
 export * from './select';
 export * from './spacer';
 export * from './switch';
+export * from './tab';
 export * from './tag';
 export * from './text';
 export * from './textarea';
