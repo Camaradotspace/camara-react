@@ -22,7 +22,10 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   textAlign?: 'center' | 'left' | 'right' | 'justify';
   /* What color should the text be */
   color?: string;
+  /* Horizontal padding of text */
   mx?: string | number;
+  /* What size should the font be */
+  fontSize?: string | number;
 }
 
 const StyledText: any = styled('p', {
@@ -83,7 +86,21 @@ const StyledText: any = styled('p', {
 });
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  ({ variant, children, inline, underline, size, strike, color, mx }, ref) => (
+  (
+    {
+      variant,
+      children,
+      inline,
+      underline,
+      size,
+      strike,
+      color,
+      mx,
+      fontSize,
+      fontWeight,
+    },
+    ref
+  ) => (
     <StyledText
       ref={ref}
       variant={variant}
@@ -91,7 +108,7 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
       size={size}
       strike={strike}
       underline={underline}
-      css={{ color: color, mx: mx }}
+      css={{ color: color, mx: mx, fontSize: fontSize, fontWeight: fontWeight }}
     >
       {children}
     </StyledText>

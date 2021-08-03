@@ -16,7 +16,6 @@ import {
 const Container = styled('div', {
   display: 'flex',
   padding: '$2',
-  flex: 1,
   borderTopLeftRadius: '$3',
   borderTopRightRadius: '$3',
 });

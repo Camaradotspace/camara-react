@@ -67,30 +67,30 @@ const StyledAvatar: any = styled('div', {
       tiny: {
         height: `${sizes.tiny}px`,
         width: `${sizes.tiny}px`,
-        '& p.initials': {
-          fontSize: `${sizes.tiny}px`,
-        },
+        // '& p.initials': {
+        //   fontSize: `${sizes.tiny}px`,
+        // },
       },
       small: {
         height: `${sizes.small}px`,
         width: `${sizes.small}px`,
-        '& p.initials': {
-          fontSize: `${sizes.small}px`,
-        },
+        // '& p.initials': {
+        //   fontSize: `${sizes.small}px`,
+        // },
       },
       medium: {
         height: `${sizes.medium}px`,
         width: `${sizes.medium}px`,
-        '& p.initials': {
-          fontSize: `${sizes.medium}px`,
-        },
+        // '& p.initials': {
+        //   fontSize: `${sizes.medium}px`,
+        // },
       },
       large: {
         height: `${sizes.large}px`,
         width: `${sizes.large}px`,
-        '& p.initials': {
-          fontSize: `${sizes.large}px`,
-        },
+        // '& p.initials': {
+        //   fontSize: `${sizes.large}px`,
+        // },
       },
     },
     shape: {
@@ -148,12 +148,13 @@ export const Avatar: React.FC<AvatarProps> = ({
         aria-hidden="true"
         className="initials"
         css={{
-          color: '$text_primary' || color,
+          color: color ? color : '$text_primary',
+          opacity: 0.8,
           fontSize: `${initialsSize}px`,
           lineHeight: `${initialsSize}px`,
         }}
       >
-        {username && username !== undefined ? username.substring(0, 1) : null}
+        {username && username !== undefined ? username : null}
       </StyledInitials>
     );
   }
@@ -164,7 +165,7 @@ export const Avatar: React.FC<AvatarProps> = ({
       size={size}
       shape={shape}
       stories={stories}
-      css={{ backgroundColor: '$bg_secondary' || bg, objectFit: fit }}
+      css={{ backgroundColor: bg ? bg : '$bg_secondary', objectFit: fit }}
     >
       {avatarChildren}
     </StyledAvatar>

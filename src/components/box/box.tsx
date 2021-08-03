@@ -8,6 +8,10 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   debug?: boolean;
   /* Content of the box */
   children: React.ReactNode;
+  /* Width of the box */
+  width?: string;
+  /* Additional CSS properties */
+  css?: React.CSSProperties;
   /* Set box ARIA role */
   role?:
     | 'article'
@@ -44,10 +48,16 @@ export const Box: React.FC<BoxProps> = ({
   center,
   debug,
   role,
-  ...rest
+  width,
+  css,
 }) => {
   return (
-    <StyledBox role={role} center={center} debug={debug} {...rest}>
+    <StyledBox
+      role={role}
+      center={center}
+      debug={debug}
+      css={{ width: width, ...css }}
+    >
       {children}
     </StyledBox>
   );

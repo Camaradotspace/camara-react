@@ -19,13 +19,14 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   textAlign?: 'initial' | 'left' | 'right' | 'center' | 'justify';
   /* What color should the heading text be? */
   color?: string;
+  /* Remove vertical spacing on heading */
+  noWhiteSpace?: boolean;
 }
 
 const baseStyles = {
   color: '$text_primary',
   margin: 0,
   padding: 0,
-  my: '$2',
   fontWeight: '$bold',
 };
 
@@ -48,11 +49,13 @@ export const Heading: React.FC<HeadingProps> = ({
   textAlign,
   fontWeight,
   color,
+  noWhiteSpace,
 }) => {
   const ADDITIONAL_PROPS = {
     fontWeight: fontWeight,
     textAlign: textAlign,
     color: color,
+    my: noWhiteSpace ? 0 : '$2',
   };
 
   switch (level) {

@@ -2,7 +2,9 @@ import React, { HTMLAttributes } from 'react';
 import { styled } from '../../stitches.config';
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
+  /* Content of the flex */
   children: React.ReactNode;
+  /* Justify content */
   justifyContent?:
     | 'space-between'
     | 'center'
@@ -10,15 +12,31 @@ export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
     | 'space-evenly'
     | 'flex-start'
     | 'flex-end';
+  /* Align items */
   alignItems?: 'stretch' | 'center' | 'flex-start' | 'flex-end';
+  /* Align content */
   alignContent?: 'stretch' | 'center' | 'flex-start' | 'flex-end';
+  /* Align Self */
   alignSelf?: 'stretch' | 'center' | 'flex-start' | 'flex-end';
+  /* Flex direction */
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+  /* Flex wrap */
   wrap?: 'wrap' | 'nowrap';
+  /* Show a red border around flex */
+  debug?: boolean;
+  /* Width of the flex */
+  width?: string;
 }
 
-const StyledFlex = styled('div', {
+const StyledFlex: any = styled('div', {
   display: 'flex',
+  variants: {
+    debug: {
+      true: {
+        border: '1px solid red',
+      },
+    },
+  },
 });
 
 export const Flex: React.FC<FlexProps> = ({
@@ -29,9 +47,12 @@ export const Flex: React.FC<FlexProps> = ({
   alignSelf,
   wrap,
   direction,
+  debug,
+  width,
 }) => {
   return (
     <StyledFlex
+      debug={debug}
       css={{
         justifyContent: justifyContent,
         flexDirection: direction,
@@ -39,6 +60,7 @@ export const Flex: React.FC<FlexProps> = ({
         alignItems: alignItems,
         alignSelf: alignSelf,
         wrap: wrap,
+        width: width,
       }}
     >
       {children}

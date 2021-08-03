@@ -8,8 +8,8 @@ const Wrapper = styled('div', {
   backgroundRepeat: 'no-repeat',
   backgroundSize: '100%',
   width: '100%',
-  height: '100%',
   display: 'flex',
+  flex: 1,
   flexDirection: 'column',
   alignItems: 'center',
 });
@@ -32,12 +32,14 @@ const Container = styled('div', {
   },
 });
 
-const BrowserWrapper = styled('div', {});
+const BrowserWrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  flex: 1,
+});
 
 const BrowserBody = styled('div', {
-  height: '100%',
-  minHeight: '320px',
-  maxHeight: '640px',
+  height: '100vh',
   backgroundColor: '$bg_primary',
   borderBottomLeftRadius: '$3',
   borderBottomRightRadius: '$3',
