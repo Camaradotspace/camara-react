@@ -2,8 +2,11 @@ import React, { forwardRef, HTMLAttributes } from 'react';
 import { styled } from '../../stitches.config';
 
 export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
+  /* What variant of text to render */
   variant?: 'hint' | 'label' | 'body' | 'caption' | 'overline';
+  /* What size of text to render */
   size?: 'small' | 'medium' | 'large';
+  /* Text content */
   children: React.ReactNode;
   /* Should text be inline */
   inline?: boolean;
@@ -11,9 +14,15 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   underline?: boolean;
   /* Should text be strike-through? */
   strike?: boolean;
+  /* What weight should the text be */
   fontWeight?: 'normal' | 'bold' | 'medium' | number;
+  /* What font style of text to render */
   fontStyle?: 'italic' | 'normal';
+  /* How should text be aligned? */
   textAlign?: 'center' | 'left' | 'right' | 'justify';
+  /* What color should the text be */
+  color?: string;
+  mx?: string | number;
 }
 
 const StyledText: any = styled('p', {
@@ -74,7 +83,7 @@ const StyledText: any = styled('p', {
 });
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  ({ variant, children, inline, underline, size, strike, ...rest }, ref) => (
+  ({ variant, children, inline, underline, size, strike, color, mx }, ref) => (
     <StyledText
       ref={ref}
       variant={variant}
@@ -82,7 +91,7 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
       size={size}
       strike={strike}
       underline={underline}
-      {...rest}
+      css={{ color: color, mx: mx }}
     >
       {children}
     </StyledText>
