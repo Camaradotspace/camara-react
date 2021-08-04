@@ -63,14 +63,16 @@ const BrowserBody = styled('div', {
 
 interface Props {
   children: React.ReactNode;
+  docs?: boolean;
 }
 
-export const BrowserWindow = ({ children }: Props) => {
+export const BrowserWindow = ({ children, docs }: Props) => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
   return (
     <Wrapper
       className={useDarkTheme ? DARK_THEME : 'light'}
       css={{
+        height: docs ? '100%' : 'auto',
         backgroundImage: useDarkTheme
           ? 'url("https://res.cloudinary.com/beaniegram/image/upload/c_scale,h_1000,w_1000/v1623835103/Personal%20Site/macOS-Big-Sur-Vector-Wave-Dark-Wallpaper-iDownloadBlog_lauxpt.jpg")'
           : 'url("https://res.cloudinary.com/beaniegram/image/upload/c_scale,h_1000,w_1000/v1623835298/Personal%20Site/macOS-Big-Sur-Vector-Wave-Wallpaper-iDownloadBlog_gfmhsj.jpg")',
@@ -108,9 +110,17 @@ export const BrowserWindow = ({ children }: Props) => {
             />
           </span>
         </span>
-        <BrowserWrapper>
+        <BrowserWrapper css={{ display: docs ? 'block' : 'flex' }}>
           <BrowserChrome theme={useDarkTheme ? 'dark' : 'light'} />
-          <BrowserBody>{children}</BrowserBody>
+          <BrowserBody
+            css={{
+              height: docs ? '100%' : '100vh',
+              minHeight: docs ? '320px' : 'auto',
+              maxHeight: docs ? '640px' : 'auto',
+            }}
+          >
+            {children}
+          </BrowserBody>
         </BrowserWrapper>
       </Container>
     </Wrapper>
