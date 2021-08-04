@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { ChevronDown, Check } from 'react-feather';
 import { styled } from '../../stitches.config';
 import useOnClickOutside from '../../../src/hooks/useOnClickOutside';
+import { Flex } from '..';
 
 export type Option = {
   id: string | number;
@@ -42,10 +43,10 @@ const SelectBox = styled('div', {
   alignItems: 'center',
   minWidth: '100px',
   height: '$3',
-  padding: '$2 0',
+  padding: '$3 0',
   fontWeight: '$regular',
   '& div > p': {
-    padding: '0 12px',
+    paddingLeft: '12px',
     fontSize: '$3',
   },
   '& svg': {
@@ -187,11 +188,14 @@ export const Select = ({
           {selection?.length === 0 ? (
             <p className="selected-text">{placeholder}</p>
           ) : (
-            selection?.map(selected => (
-              <p key={selected.id} className="selected-text">
-                {selected.title}
-              </p>
-            ))
+            <Flex>
+              {selection?.map(selected => (
+                <p key={selected.id} className="selected-text">
+                  {selected.title}
+                  {multiple && `,`}
+                </p>
+              ))}
+            </Flex>
           )}
         </div>
         <ChevronDown color="#555" size={16} />

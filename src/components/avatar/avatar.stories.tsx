@@ -4,7 +4,6 @@ import { User } from 'react-feather';
 import { Avatar, AvatarProps } from '.';
 import { Box } from '../box';
 import { Flex } from '../flex';
-import { BrowserWindow } from '../browserWindow';
 
 export default {
   title: 'Components/Avatar',
@@ -209,11 +208,11 @@ export const Icon = (args: AvatarProps) => (
 // initials
 export const Initial = (args: AvatarProps) => (
   <Flex>
-    <Avatar {...args} size="tiny" username="Sam" />
-    <Avatar {...args} size="small" username="Sam" />
-    <Avatar {...args} size="medium" username="Sam" />
-    <Avatar {...args} size="large" username="Sam" />
-    <Avatar {...args} initialsSize={80} username="Sam" />
+    <Avatar {...args} size="tiny" username="SM" />
+    <Avatar {...args} size="small" username="SM" />
+    <Avatar {...args} size="medium" username="SM" />
+    <Avatar {...args} size="large" username="SM" />
+    <Avatar {...args} initialsSize={20} username="SM" />
   </Flex>
 );
 

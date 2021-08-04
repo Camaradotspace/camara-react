@@ -1,5 +1,6 @@
 import React, { HTMLAttributes } from 'react';
 import { styled } from '../../stitches.config';
+import { SpacingProps } from '../../system';
 
 export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   /* Should children of the box be centered? */
@@ -12,6 +13,7 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   width?: string;
   /* Additional CSS properties */
   css?: React.CSSProperties;
+
   /* Set box ARIA role */
   role?:
     | 'article'
@@ -43,20 +45,24 @@ const StyledBox: any = styled('div', {
   },
 });
 
-export const Box: React.FC<BoxProps> = ({
+export const Box: React.FC<BoxProps & SpacingProps> = ({
   children,
   center,
   debug,
   role,
   width,
   css,
+  my,
+  mx,
+  py,
+  px,
 }) => {
   return (
     <StyledBox
       role={role}
       center={center}
       debug={debug}
-      css={{ width: width, ...css }}
+      css={{ width: width, my, mx, py, px, ...css }}
     >
       {children}
     </StyledBox>

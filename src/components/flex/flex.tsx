@@ -1,4 +1,5 @@
 import React, { HTMLAttributes } from 'react';
+import { SpacingProps } from '../../system';
 import { styled } from '../../stitches.config';
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
@@ -39,7 +40,7 @@ const StyledFlex: any = styled('div', {
   },
 });
 
-export const Flex: React.FC<FlexProps> = ({
+export const Flex: React.FC<FlexProps & SpacingProps> = ({
   children,
   justifyContent,
   alignContent,
@@ -49,6 +50,10 @@ export const Flex: React.FC<FlexProps> = ({
   direction,
   debug,
   width,
+  mx,
+  my,
+  py,
+  px,
 }) => {
   return (
     <StyledFlex
@@ -61,6 +66,10 @@ export const Flex: React.FC<FlexProps> = ({
         alignSelf: alignSelf,
         wrap: wrap,
         width: width,
+        my,
+        mx,
+        py,
+        px,
       }}
     >
       {children}

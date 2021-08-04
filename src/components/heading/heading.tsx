@@ -6,6 +6,8 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
   /* What level should heading be? h1, h2, h3, h4, etc */
   level?: number;
+  /* Should weight be thin? */
+  thin?: boolean;
   /* What font weight should heading be? */
   fontWeight?:
     | 'normal'
@@ -50,9 +52,10 @@ export const Heading: React.FC<HeadingProps> = ({
   fontWeight,
   color,
   noWhiteSpace,
+  thin,
 }) => {
   const ADDITIONAL_PROPS = {
-    fontWeight: fontWeight,
+    fontWeight: thin ? 300 : fontWeight,
     textAlign: textAlign,
     color: color,
     my: noWhiteSpace ? 0 : '$2',

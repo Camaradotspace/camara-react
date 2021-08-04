@@ -25,6 +25,7 @@ export interface InputProps extends HTMLAttributes<HTMLDivElement> {
 const InputFieldWrapper = styled('div', {
   '& .requiredText': {
     color: 'red',
+    display: 'inline',
   },
   '& .helperText': {
     display: 'block',

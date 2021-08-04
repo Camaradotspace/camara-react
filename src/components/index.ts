@@ -14,6 +14,7 @@ export * from './image';
 export * from './input';
 export * from './list';
 export * from './navbar';
+export * from './navigation-pane';
 export * from './notification-dot';
 export * from './select';
 export * from './spacer';

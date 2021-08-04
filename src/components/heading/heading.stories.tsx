@@ -57,42 +57,42 @@ export const Level = (args: HeadingProps) => (
 export const Thin = (args: HeadingProps) => (
   <Box>
     <Box>
-      <Heading {...args} fontWeight={200} level={1}>
+      <Heading {...args} thin level={1}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} fontWeight={200} level={2}>
+      <Heading {...args} thin level={2}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} fontWeight={200} level={3}>
+      <Heading {...args} thin level={3}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} fontWeight={200} level={4}>
+      <Heading {...args} thin level={4}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} fontWeight={200} level={5}>
+      <Heading {...args} thin level={5}>
         The design and the making are inseparable...
       </Heading>
-      <Heading {...args} fontWeight={200} level={6}>
+      <Heading {...args} thin level={6}>
         The design and the making are inseparable...
       </Heading>
     </Box>
     <Box>
-      <Heading {...args} fontWeight={200} level={1}>
+      <Heading {...args} thin level={1}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} fontWeight={200} level={2}>
+      <Heading {...args} thin level={2}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} fontWeight={200} level={3}>
+      <Heading {...args} thin level={3}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} fontWeight={200} level={4}>
+      <Heading {...args} thin level={4}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} fontWeight={200} level={5}>
+      <Heading {...args} thin level={5}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
-      <Heading {...args} fontWeight={200} level={6}>
+      <Heading {...args} thin level={6}>
         私の夢の仕事は、Microsoft❤でソフトウェアエンジニアとして働くことです。
       </Heading>
     </Box>

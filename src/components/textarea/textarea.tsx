@@ -28,6 +28,7 @@ export interface TextAreaProps
 const TextAreaWrapper = styled('div', {
   '& .requiredText': {
     color: 'red',
+    display: 'inline',
   },
   '& .helperText': {
     display: 'block',

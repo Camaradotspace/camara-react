@@ -1,5 +1,6 @@
 import React from 'react';
 import { styled } from '../../stitches.config';
+import { NavBar } from '..';
 
 export interface ThreePaneWindowProps {
   firstPaneChildren: React.ReactNode;
@@ -9,13 +10,12 @@ export interface ThreePaneWindowProps {
 
 const WindowContainer = styled('div', {
   display: 'flex',
-  height: '300px',
+  height: '100%',
   overflowY: 'auto',
 });
 const FirstPane = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  flex: 1,
   backgroundColor: '$bg_secondary',
   borderRight: '2px solid $ui_border',
 });
@@ -34,10 +34,13 @@ export const ThreePaneWindow: React.FC<ThreePaneWindowProps> = ({
   thirdPaneChildren,
 }) => {
   return (
-    <WindowContainer>
-      <FirstPane>{firstPaneChildren}</FirstPane>
-      <SecondPane>{secondPaneChildren}</SecondPane>
-      <ThirdPane>{thirdPaneChildren}</ThirdPane>
-    </WindowContainer>
+    <>
+      <NavBar />
+      <WindowContainer>
+        <FirstPane>{firstPaneChildren}</FirstPane>
+        <SecondPane>{secondPaneChildren}</SecondPane>
+        <ThirdPane>{thirdPaneChildren}</ThirdPane>
+      </WindowContainer>
+    </>
   );
 };

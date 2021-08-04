@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Divider, DividerProps } from '.';
-import { Box } from '../box';
+import { Flex, Box } from '..';
 
 export default {
   title: 'Components/Divider',
@@ -15,9 +15,15 @@ export const Base = Template.bind({});
 
 // types
 export const Types = (args: DividerProps) => (
-  <Box>
-    <Divider {...args} type="dashed" />
-    <Divider {...args} type="dotted" />
-    <Divider {...args} type="normal" />
-  </Box>
+  <>
+    <Box my={16}>
+      <Divider {...args} type="dashed" />
+    </Box>
+    <Box my={16}>
+      <Divider {...args} type="dotted" />
+    </Box>
+    <Box my={16}>
+      <Divider {...args} type="normal" />
+    </Box>
+  </>
 );

@@ -33,7 +33,6 @@ export default {
       .toString(36)
       .substr(2, 9),
     isOn: false,
-    onColor: '#EF476F',
     size: 'small',
   },
 } as Meta;

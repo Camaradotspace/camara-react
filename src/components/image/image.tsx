@@ -43,7 +43,7 @@ export const Image: React.FC<ImageProps> = ({
 };
 
 Image.defaultProps = {
-  src: 'https://source.unsplash.com/8TQUF6UbpAk/1600x900',
+  src: 'https://source.unsplash.com/V_WBdOLOgJU/900x800',
   width: '100%',
   alt:
     'woman in black and white crew neck long sleeve shirt wearing purple knit cap',

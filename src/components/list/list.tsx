@@ -22,7 +22,7 @@ export interface ListProps {
 
 const ListContainer = styled('div', {
   'a > div:hover': {
-    backgroundColor: '$button_secondary_bg_hover',
+    backgroundColor: '$btn_sec_hover',
   },
 });
 

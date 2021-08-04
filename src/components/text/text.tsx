@@ -1,4 +1,5 @@
 import React, { forwardRef, HTMLAttributes } from 'react';
+import { SpacingProps } from '../../system';
 import { styled } from '../../stitches.config';
 
 export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
@@ -22,8 +23,6 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   textAlign?: 'center' | 'left' | 'right' | 'justify';
   /* What color should the text be */
   color?: string;
-  /* Horizontal padding of text */
-  mx?: string | number;
   /* What size should the font be */
   fontSize?: string | number;
 }
@@ -85,7 +84,7 @@ const StyledText: any = styled('p', {
   },
 });
 
-export const Text = forwardRef<HTMLParagraphElement, TextProps>(
+export const Text = forwardRef<HTMLParagraphElement, TextProps & SpacingProps>(
   (
     {
       variant,
@@ -96,8 +95,13 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
       strike,
       color,
       mx,
+      my,
+      px,
+      py,
       fontSize,
       fontWeight,
+      fontStyle,
+      textAlign,
     },
     ref
   ) => (
@@ -108,7 +112,17 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
       size={size}
       strike={strike}
       underline={underline}
-      css={{ color: color, mx: mx, fontSize: fontSize, fontWeight: fontWeight }}
+      css={{
+        color: color,
+        my,
+        mx,
+        py,
+        px,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        fontStyle: fontStyle,
+        textAlign: textAlign,
+      }}
     >
       {children}
     </StyledText>
