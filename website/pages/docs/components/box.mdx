@@ -25,35 +25,30 @@ Box description.
 
 Box properties
 
-| Property  | Description                                            | Type                                                                      | Default | Version |
-| --------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | ------- | ------- |
-| border    | Set box border                                         | `boolean`                                                                 | false   |         |
-| center    | Should the children of the box be centered?            | `boolean`                                                                 | false   |         |
-| color     | Set box background color                               | `string`                                                                  |         |         |
-| debug     | Highlight box on the screen, useful for debug purposes | `boolean`                                                                 | false   |         |
-| width     | What width should the box be?                          | `number`                                                                  |         |         |
-| height    | Set the box height                                     | `number`                                                                  |         |         |
-| minWidth  | Set the box minimum width                              | `number`                                                                  |         |         |
-| minHeight | Set the box minimum height                             | `number`                                                                  |         |         |
-| maxWidth  | Set the box maximum width                              | `number`                                                                  |         |         |
-| maxHeight | Set the box maximum height                             | `number`                                                                  |         |         |
-| pt        | Set box top padding                                    | `number`                                                                  |         |         |
-| pb        | Set box bottom padding                                 | `number`                                                                  |         |         |
-| pl        | Set box left padding                                   | `number`                                                                  |         |         |
-| pr        | Set box right padding                                  | `number`                                                                  |         |         |
-| px        | Set box padding on the horizontal axis                 | `number`                                                                  |         |         |
-| py        | Set box padding on the vertical axis                   | `number`                                                                  |         |         |
-| pd        | Set box padding on the both axis                       | `number`                                                                  |         |         |
-| mt        | Set box top margin                                     | `number`                                                                  |         |         |
-| mb        | Set box bottom margin                                  | `number`                                                                  |         |         |
-| ml        | Set box left margin                                    | `number`                                                                  |         |         |
-| mr        | Set box right margin                                   | `number`                                                                  |         |         |
-| mx        | Set box margin on the horizontal axis                  | `number`                                                                  |         |         |
-| my        | Set box margin on the vertical axis                    | `number`                                                                  |         |         |
-| mg        | Set box margin on the both axis                        | `number`                                                                  |         |         |
-| overflow  | Set the box overflow                                   | `visible` `hidden` `scroll` `scrollX` `scrollY` `auto`                    | auto    |         |
-| position  | Set box position                                       | `static` `absolute` `relative` `fixed`                                    | -       |         |
-| role      | Set the box ARIA role                                  | `article` `aside` `details` `div` `figcaption` `figure` `footer` and more | auto    |         |
+| Property | Description                                            | Type                                                                      | Default | Version |
+| -------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | ------- | ------- |
+| center   | Should the children of the box be centered?            | `boolean`                                                                 | false   |         |
+| bg       | Set box background color                               | `string`                                                                  |         |         |
+| debug    | Highlight box on the screen, useful for debug purposes | `boolean`                                                                 | false   |         |
+| width    | What width should the box be?                          | `string`, `number`                                                        |         |         |
+| height   | Set the box height                                     | `string`, `number`                                                        |         |         |
+| pt       | Set box top padding                                    | `number`                                                                  |         |         |
+| pb       | Set box bottom padding                                 | `number`                                                                  |         |         |
+| pl       | Set box left padding                                   | `number`                                                                  |         |         |
+| pr       | Set box right padding                                  | `number`                                                                  |         |         |
+| px       | Set box padding on the horizontal axis                 | `number`                                                                  |         |         |
+| py       | Set box padding on the vertical axis                   | `number`                                                                  |         |         |
+| pd       | Set box padding on the both axis                       | `number`                                                                  |         |         |
+| mt       | Set box top margin                                     | `number`                                                                  |         |         |
+| mb       | Set box bottom margin                                  | `number`                                                                  |         |         |
+| ml       | Set box left margin                                    | `number`                                                                  |         |         |
+| mr       | Set box right margin                                   | `number`                                                                  |         |         |
+| mx       | Set box margin on the horizontal axis                  | `number`                                                                  |         |         |
+| my       | Set box margin on the vertical axis                    | `number`                                                                  |         |         |
+| mg       | Set box margin on the both axis                        | `number`                                                                  |         |         |
+| overflow | Set the box overflow                                   | `visible` `hidden` `scroll` `scrollX` `scrollY` `auto`                    | auto    |         |
+| position | Set box position                                       | `static` `absolute` `relative` `fixed`                                    | -       |         |
+| role     | Set the box ARIA role                                  | `article` `aside` `details` `div` `figcaption` `figure` `footer` and more | auto    |         |
 
 <br></br>
 
@@ -65,39 +60,39 @@ Box properties
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
-    <Box width={700}>
-      <Box height={100} color="#82CAFF" />
-      <Flex justify="space-between">
-        <Box height={100} width={200} color="#82CAFF" />
-        <Box height={100} width={300} color="#1589FF" />
-        <Box height={100} width={200} color="#82CAFF" />
+  <BrowserWindow docs>
+    <Box width={700} center>
+      <Box height={100} bg="#82CAFF" />
+      <Flex justifyContent="space-between">
+        <Box height={100} width={200} bg="#82CAFF" />
+        <Box height={100} width={300} bg="#1589FF" />
+        <Box height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box height={100} color="#82CAFF" />
+      <Box height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
 ```
 
-### Border
+<!-- ### Border
 
 ```jsx live noInline
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
       <Flex justify="space-between">
-        <Box border height={100} width={200} color="#82CAFF" />
-        <Box height={100} width={300} color="#1589FF" />
-        <Box border height={100} width={200} color="#82CAFF" />
+        <Box border height={100} width={200} bg="#82CAFF" />
+        <Box height={100} width={300} bg="#1589FF" />
+        <Box border height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
-```
+``` -->
 
 ### Center
 
@@ -105,23 +100,15 @@ render(
 import { Box, Flex, Image, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
-    <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
-      <Flex justify="space-between">
-        <Box border height={100} width={200} color="#82CAFF" />
-        <Box height={100} width={300} color="#1589FF">
-          <Box center my={10} width={100} height={80}>
-            <Image
-              width="100%"
-              imageUrl="https://source.unsplash.com/V_WBdOLOgJU/200x100"
-              imageAlt="woman in orange knit cap and blue jacket"
-            />
-          </Box>
-        </Box>
-        <Box border height={100} width={200} color="#82CAFF" />
-      </Flex>
-      <Box border height={100} color="#82CAFF" />
+  <BrowserWindow docs>
+    <Box center width="40%" bg="#1589FF">
+      <Box center py={32} px={32}>
+        <Image
+          width="100%"
+          src="https://source.unsplash.com/V_WBdOLOgJU/300x300"
+          alt="woman in orange knit cap and blue jacket"
+        />
+      </Box>
     </Box>
   </BrowserWindow>
 );
@@ -133,15 +120,15 @@ render(
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
-    <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
-      <Flex justify="space-between">
-        <Box border height={100} width={200} color="#82CAFF" />
-        <Box debug height={100} width={300} color="#1589FF" />
-        <Box height={100} width={200} color="#82CAFF" />
+  <BrowserWindow docs>
+    <Box debug p={16} center width={700}>
+      <Box debug m={8} border height={100} bg="#82CAFF" />
+      <Flex justifyContent="space-between">
+        <Box debug m={8} border height={100} width={200} bg="#82CAFF" />
+        <Box debug m={8} height={100} width={300} bg="#1589FF" />
+        <Box debug m={8} height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box debug m={8} border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
@@ -155,11 +142,11 @@ render(
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
-      <Flex justify="space-between">
-        <Box border height={100} width={200} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
+      <Flex justifyContent="space-between">
+        <Box border height={100} width={200} bg="#82CAFF" />
         <Box
           pt={16}
           pb={16}
@@ -167,11 +154,11 @@ render(
           pr={16}
           height={100}
           width={300}
-          color="#1589FF"
+          bg="#1589FF"
         />
-        <Box height={100} width={200} color="#82CAFF" />
+        <Box height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
@@ -183,15 +170,15 @@ render(
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
       <Flex justify="space-between">
-        <Box border height={100} width={200} color="#82CAFF" />
-        <Box px={16} py={40} height={100} width={300} color="#1589FF" />
-        <Box height={100} width={200} color="#82CAFF" />
+        <Box border height={100} width={200} bg="#82CAFF" />
+        <Box px={16} py={40} height={100} width={300} bg="#1589FF" />
+        <Box height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
@@ -205,11 +192,11 @@ render(
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
       <Flex justify="space-between">
-        <Box py={16} border height={100} width={200} color="#82CAFF" />
+        <Box py={16} border height={100} width={200} bg="#82CAFF" />
         <Box
           mt={16}
           mb={16}
@@ -217,11 +204,11 @@ render(
           mr={16}
           height={100}
           width={300}
-          color="#1589FF"
+          bg="#1589FF"
         />
-        <Box py={16} height={100} width={200} color="#82CAFF" />
+        <Box py={16} height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );
@@ -233,15 +220,15 @@ render(
 import { Box, Flex, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box width={700}>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
       <Flex justify="space-between">
-        <Box py={16} border height={100} width={200} color="#82CAFF" />
-        <Box mx={32} my={16} height={100} width={300} color="#1589FF" />
-        <Box py={16} height={100} width={200} color="#82CAFF" />
+        <Box py={16} border height={100} width={200} bg="#82CAFF" />
+        <Box mx={32} my={16} height={100} width={300} bg="#1589FF" />
+        <Box py={16} height={100} width={200} bg="#82CAFF" />
       </Flex>
-      <Box border height={100} color="#82CAFF" />
+      <Box border height={100} bg="#82CAFF" />
     </Box>
   </BrowserWindow>
 );

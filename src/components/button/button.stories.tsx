@@ -8,9 +8,9 @@ export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    bg: { control: 'color' },
-    color: { control: 'color' },
-    children: { control: 'text' },
+    bg: { control: { type: 'color' } },
+    color: { control: { type: 'color' } },
+    children: { control: { type: 'text' } },
   },
 } as Meta;
 

@@ -27,19 +27,19 @@ Avatars are UI elements that stand as a graphical representation of a person thr
 
 Avatar properties
 
-| Property        | Description                               | Type                                         | Default  | Version |
-| --------------- | ----------------------------------------- | -------------------------------------------- | -------- | ------- |
-| backgroundColor | Fallback color incase image fails to load | `string`                                     | -        |         |
-| color           | Sets the color of the initials            | `string`                                     | -        |         |
-| fit             | Object-fit property of the image          | `fill` `contain` `cover` `none` `scale-down` | `cover`  |         |
-| icon            | Custom icon type                          | `ReactNode`                                  | null     |         |
-| imageSrc        | Link to image source                      | `string`                                     | -        |         |
-| imageAlt        | Description of the image                  | `string`                                     | -        |         |
-| initialsSize    | Set font size of initials                 | `number`                                     | 16       |         |
-| shape           | Shape of the avatar                       | `circle` `square`                            | `circle` |         |
-| size            | How large should the avatar be?           | `large` `medium` `small` `tiny` `number`     | `small`  |         |
-| stories         | Make avatar look like stories             | `boolean`                                    | false    |         |
-| username        | Username for setting avatar initials      | `string`                                     | -        |         |
+| Property     | Description                               | Type                                         | Default  | Version |
+| ------------ | ----------------------------------------- | -------------------------------------------- | -------- | ------- |
+| bg           | Fallback color incase image fails to load | `string`                                     | -        |         |
+| color        | Sets the color of the initials            | `string`                                     | -        |         |
+| fit          | Object-fit property of the image          | `fill` `contain` `cover` `none` `scale-down` | `cover`  |         |
+| icon         | Custom icon type                          | `ReactNode`                                  | `null`   |         |
+| imageSrc     | Link to image source                      | `string`                                     | -        |         |
+| imageAlt     | Description of the image                  | `string`                                     | -        |         |
+| initialsSize | Set font size of initials                 | `number`                                     | 16       |         |
+| shape        | Shape of the avatar                       | `circle` `square`                            | `circle` |         |
+| size         | How large should the avatar be?           | `large` `medium` `small` `tiny` `number`     | `small`  |         |
+| stories      | Make avatar look like stories             | `boolean`                                    | `false`  |         |
+| username     | Username for setting avatar initials      | `string`                                     | -        |         |
 
 <br></br>
 
@@ -47,13 +47,102 @@ Avatar properties
 
 Unless where using an icon always provide the `imageSrc` and `imageAlt` props
 
-### Size
+### Base
 
 ```jsx live noInline
-import { Avatar, Box, BrowserWindow } from 'camara';
+import { Avatar, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
+    <Avatar
+      imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
+      imageAlt="short-coated white and tan dog photo"
+      size="large"
+      shape="circle"
+    />
+  </BrowserWindow>
+);
+```
+
+### Types
+
+```jsx live noInline
+import { Avatar, BrowserWindow, Flex } from 'camara';
+import { User } from 'react-feather';
+
+render(
+  <BrowserWindow docs>
+    <Flex>
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="large"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="medium"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="small"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        size="tiny"
+      />
+    </Flex>
+    <Flex>
+      <Avatar size="large" icon={<User color="#777" size={64} />} />
+      <Avatar size="medium" icon={<User color="#777" size={48} />} />
+      <Avatar size="small" icon={<User color="#777" size={32} />} />
+      <Avatar size="tiny" icon={<User color="#777" size={24} />} />
+    </Flex>
+    <Flex>
+      <Avatar size="large" username="SM" />
+      <Avatar size="medium" username="SM" />
+      <Avatar size="small" username="SM" />
+      <Avatar size="tiny" username="SM" />
+    </Flex>
+    <Flex>
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="large"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="medium"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="small"
+      />
+      <Avatar
+        imageSrc="https://source.unsplash.com/200x200/?shiba-inu"
+        imageAlt="portrait of Shiba Inu"
+        stories
+        size="tiny"
+      />
+    </Flex>
+  </BrowserWindow>
+);
+```
+
+### Sizes
+
+```jsx live noInline
+import { Avatar, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow docs>
     <Avatar
       imageSrc="https://source.unsplash.com/Qi1BfZO8h2s/400x400"
       imageAlt="short-coated white and tan dog photo"
@@ -78,13 +167,13 @@ render(
 );
 ```
 
-### Shape
+### Shapes
 
 ```jsx live noInline
 import { Avatar, Box, BrowserWindow, Flex } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Flex>
       <Box>
         <Avatar
@@ -150,7 +239,7 @@ import { Avatar, BrowserWindow } from 'camara';
 import { User } from 'react-feather';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Avatar size="large" icon={<User color="#777" size={64} />} />
     <Avatar size="medium" icon={<User color="#777" size={48} />} />
     <Avatar size="small" icon={<User color="#777" size={32} />} />
@@ -165,23 +254,25 @@ render(
 import { Avatar, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
-    <Avatar size={120} initialsSize={80} username="Sam" />
-    <Avatar size="large" username="Sam" />
-    <Avatar size="medium" username="Sam" />
-    <Avatar size="small" username="Sam" />
-    <Avatar size="tiny" username="Sam" />
+  <BrowserWindow docs>
+    <Avatar size="large" username="SM" />
+    <Avatar size="medium" username="SM" />
+    <Avatar size="small" username="SM" />
+    <Avatar size="tiny" username="SM" />
+    <Avatar initialsSize={20} username="SM" />
   </BrowserWindow>
 );
 ```
 
 ### Stories
 
+Instragram stories style Avatars
+
 ```jsx live noInline
 import { Avatar, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Avatar
       stories
       size="large"

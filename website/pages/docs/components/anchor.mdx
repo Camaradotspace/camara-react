@@ -37,8 +37,8 @@ Anchor properties
 | Property  | Description                              | Type                   | Default   | Version |
 | --------- | ---------------------------------------- | ---------------------- | --------- | ------- |
 | href      | Link URL                                 | `string`               | -         |         |
-| external  | Open link in new tab?                    | `boolean`              | false     |         |
-| underline | Should links be underlined?              | `boolean`              | true      |         |
+| external  | Open link in new tab?                    | `boolean`              | `false`   |         |
+| underline | Should links be underlined?              | `boolean`              | `true`    |         |
 | variant   | What variant of link should be rendered? | `primary`, `secondary` | `primary` |         |
 
 <br></br>
@@ -51,7 +51,7 @@ Anchor properties
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Anchor href="#">Camara Link</Anchor>
   </BrowserWindow>
 );
@@ -63,7 +63,7 @@ render(
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Anchor href="#" variant="primary">
       Camara Link
     </Anchor>{' '}
@@ -82,7 +82,7 @@ Links are underlined by default, but underlines can be removed where necessary
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Anchor href="#" underline={false} external>
       Camara Link
     </Anchor>
@@ -98,7 +98,7 @@ Adding the `external` prop opens links in a new tab
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Anchor href="#" external>
       Camara Link
     </Anchor>
@@ -114,7 +114,7 @@ Links can span multiple lines too
 import { Anchor, BrowserWindow } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Anchor href="#">
       Buttons are user interface elements that initiates actions. This is their
       primary function and it is this function that makes them very different
@@ -132,7 +132,7 @@ For an external link we add `rel='noopener noreferrer'`
 import { Anchor, Box, BrowserWindow, Heading, Text } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box>
       <Heading>Security</Heading>
       <Text>For an external link we add `rel='noopener noreferrer'`</Text>
@@ -154,7 +154,7 @@ render(
 import { Anchor, Box, BrowserWindow, Heading, Text } from 'camara';
 
 render(
-  <BrowserWindow>
+  <BrowserWindow docs>
     <Box>
       <Anchor underline={false} href="#">
         <Heading level={2}>Omakase - Wikipedia</Heading>
@@ -192,20 +192,20 @@ import {
 } from 'camara';
 
 render(
-  <BrowserWindow>
-    <Box css={{ width: '75%' }}>
+  <BrowserWindow docs>
+    <Box width="75%">
       <Card round elevate>
         <Anchor href="#" underline={false}>
           <Heading level={3}>Lemons: Health Benefits & Nutrition Facts</Heading>
         </Anchor>
         <Flex justifyContent="space-between">
-          <Box css={{ width: '72%' }}>
+          <Box width="72%">
             <Text size="small">
               Lemons contain a high amount of vitamin C, soluble fiber, and
               plant compounds that give them a number of health bene...
             </Text>
           </Box>
-          <Box css={{ width: '22%' }}>
+          <Box width="22%">
             <Image
               src="https://res.cloudinary.com/beaniegram/image/upload/v1624339059/lemon.jpg"
               alt="sliced lemon fruit with squeezed juice in glass cup"

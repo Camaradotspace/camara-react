@@ -1,0 +1,120 @@
+---
+title: Accordion
+section: Components
+slug: /docs/components/accordion/
+---
+
+import { Accordion, Badge, BrowserWindow } from 'camara';
+import { ChevronsRight } from 'react-feather';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ Anchor, BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { Accordion, Badge, BrowserWindow },
+    'react-feather': { ChevronsRight },
+  }}
+/>
+
+# Accordion
+
+Accordion description.
+
+<br></br>
+
+## Props
+
+Accordion properties
+
+| Property | Description                              | Type        | Default | Version |
+| -------- | ---------------------------------------- | ----------- | ------- | ------- |
+| title    | Title of the accordion                   | `string`    | -       |         |
+| prefix   | Visual cue to prefix the accordion title | `ReactNode` | -       |         |
+| icon     | Customize the icon on the far right      | `ReactNode` | -       |         |
+| expanded | Should accordion be expanded by default? | `boolean`   | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Basic Accordion
+
+```jsx live noInline
+import { Accordion, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Accordion title="Default Accordion">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </Accordion>
+  </BrowserWindow>
+);
+```
+
+### Expanded
+
+Accordions are collapsed by default but can be expanded where necessary
+
+```jsx live noInline
+import { Accordion, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Accordion title="Accordion is Expanded" expanded>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </Accordion>
+  </BrowserWindow>
+);
+```
+
+### Prefixed
+
+Accordions can be prefixed with any React component where necessary
+
+```jsx live noInline
+import { Accordion, Badge, BrowserWindow } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Accordion
+      title="With Prefix"
+      prefix={<Badge text="C" color="orange" size="large" shape="circle" />}
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </Accordion>
+  </BrowserWindow>
+);
+```
+
+### Custom Icon
+
+The default arrow icon can be easily replaced with any custom icon you prefer
+
+```jsx live noInline
+import { Accordion, BrowserWindow } from 'camara';
+import { ChevronsRight } from 'react-feather';
+
+render(
+  <BrowserWindow docs>
+    <Accordion
+      title="Custom Icon"
+      icon={<ChevronsRight color="#777" size={16} />}
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </Accordion>
+  </BrowserWindow>
+);
+```

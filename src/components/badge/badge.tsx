@@ -100,7 +100,12 @@ export const Badge: React.FC<BadgeProps> = ({
     <StyledBadge
       size={size}
       shape={shape}
-      css={{ backgroundColor: bg, color: color }}
+      css={{
+        backgroundColor: bg,
+        '& p': {
+          color: color,
+        },
+      }}
     >
       <p>{text}</p>
     </StyledBadge>

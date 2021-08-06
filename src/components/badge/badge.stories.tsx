@@ -7,13 +7,18 @@ import { Box } from '../box';
 export default {
   title: 'Components/Badge',
   component: Badge,
+  args: {} as BadgeProps,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    color: { control: 'color' },
+    bg: { control: { type: 'color' } },
+    color: { control: { type: 'color' } },
   },
 } as Meta;
 
-const Template: Story<BadgeProps> = args => <Badge {...args} />;
+const Template: Story<BadgeProps> = args => (
+  <Box width="10%">
+    <Badge {...args} />
+  </Box>
+);
 
 // Base default button
 export const Base = Template.bind({});
@@ -50,3 +55,28 @@ export const Shape = (args: BadgeProps) => (
     </Flex>
   </Box>
 );
+
+// Background color
+export const BackgroundColor = (args: BadgeProps) => (
+  <Box>
+    <Flex>
+      <Badge {...args} shape="square" size="large" text="Preview" />
+      <Badge {...args} shape="square" size="medium" text="Preview" />
+      <Badge {...args} shape="square" size="small" text="Preview" />
+    </Flex>
+    <Flex>
+      <Badge {...args} shape="pill" size="large" text="Preview" />
+      <Badge {...args} shape="pill" size="medium" text="Preview" />
+      <Badge {...args} shape="pill" size="small" text="Preview" />
+    </Flex>
+    <Flex>
+      <Badge {...args} shape="circle" size="large" text="M" />
+      <Badge {...args} shape="circle" size="medium" text="M" />
+      <Badge {...args} shape="circle" size="small" text="M" />
+    </Flex>
+  </Box>
+);
+BackgroundColor.args = {
+  bg: 'purple',
+  color: '#fff',
+} as BadgeProps;

@@ -1,6 +1,7 @@
 module.exports = {
   typescript: {
-    reactDocgen: 'none',
+    // also valid 'react-docgen-typescript' | false
+    reactDocgen: 'react-docgen-typescript',
   },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [

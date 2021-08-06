@@ -15,6 +15,8 @@ export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   underline?: boolean;
 }
 
+// NOTE: `!important` is used as a temporary workaround for conflicting links styling on the documentation site. They will be removed in a future update
+
 const StyledAnchor = styled('a', {
   color: '$link_text !important',
   cursor: 'pointer',

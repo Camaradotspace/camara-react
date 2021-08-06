@@ -8,9 +8,34 @@ import { Flex } from '../flex';
 export default {
   title: 'Components/Avatar',
   component: Avatar,
+  args: {
+    color: '',
+    bg: '',
+    shape: 'circle',
+    size: 'large',
+    imageSrc: 'https://source.unsplash.com/200x200/?shiba-inu',
+    imageAlt: 'portrait of Shiba Inu',
+    fit: 'cover',
+    initialsSize: 16,
+    stories: false,
+    username: 'SM',
+    icon: null,
+  } as AvatarProps,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    color: { control: 'color' },
+    bg: { control: { type: 'color' } },
+    color: { control: { type: 'color' } },
+    shape: {
+      options: ['circle', 'square'],
+      control: { type: 'radio' },
+    },
+    size: {
+      options: ['tiny', 'small', 'medium', 'large'],
+      control: { type: 'radio' },
+    },
+    fit: {
+      options: ['fill', 'contain', 'cover', 'none', 'scale-down'],
+      control: { type: 'radio' },
+    },
   },
 } as Meta;
 
@@ -23,7 +48,7 @@ Base.args = {
   size: 'large',
   imageSrc: 'https://source.unsplash.com/200x200/?shiba-inu',
   imageAlt: 'portrait of Shiba Inu',
-};
+} as AvatarProps;
 
 // types
 export const Types = (args: AvatarProps) => (
@@ -61,10 +86,10 @@ export const Types = (args: AvatarProps) => (
       <Avatar {...args} size="tiny" icon={<User color="#777" size={24} />} />
     </Flex>
     <Flex>
-      <Avatar {...args} size="large" username="Sam" />
-      <Avatar {...args} size="medium" username="Sam" />
-      <Avatar {...args} size="small" username="Sam" />
-      <Avatar {...args} size="tiny" username="Sam" />
+      <Avatar {...args} size="large" username="SM" />
+      <Avatar {...args} size="medium" username="SM" />
+      <Avatar {...args} size="small" username="SM" />
+      <Avatar {...args} size="tiny" username="SM" />
     </Flex>
     <Flex>
       <Avatar
