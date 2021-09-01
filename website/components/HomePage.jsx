@@ -152,7 +152,7 @@ const HomePage = () => {
             <meta property="twitter:title" content="Camara Design System" />
             <meta
               property="twitter:description"
-              content="UI foundations for building accessible, beautiful, and responsive web and mobile interfaces - with support for React and React Native."
+              content="Design System for building accessible, beautiful, and responsive web and mobile interfaces - with support for React and React Native."
             />
             <meta
               property="twitter:image"
@@ -171,8 +171,8 @@ const HomePage = () => {
           {/* Statement */}
           <div className="statement">
             <p>
-              <span>&lt;h1&gt;</span>UI foundations for accessible, beautiful,
-              and responsive interfaces.
+              <span>&lt;h1&gt;</span>A design system for building accessible,
+              beautiful, and responsive interfaces.
               <span>&lt;/h1&gt;</span>
             </p>
           </div>
