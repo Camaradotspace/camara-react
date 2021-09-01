@@ -58,9 +58,21 @@ export const Box: React.FC<BoxProps & SpacingProps> = ({
   role,
   width,
   height,
-  css,
   bg,
-  ...others
+  mx,
+  my,
+  m,
+  mb,
+  ml,
+  mr,
+  mt,
+  p,
+  pb,
+  pl,
+  pr,
+  pt,
+  px,
+  py,
 }) => {
   return (
     <StyledBox
@@ -71,8 +83,20 @@ export const Box: React.FC<BoxProps & SpacingProps> = ({
         width: width,
         height: height,
         backgroundColor: bg,
-        ...others,
-        ...css,
+        m,
+        mx,
+        my,
+        mb,
+        ml,
+        mr,
+        mt,
+        p,
+        pb,
+        pl,
+        pr,
+        pt,
+        px,
+        py,
       }}
     >
       {children}
