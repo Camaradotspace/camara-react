@@ -1,12 +1,9 @@
-import * as React from 'react';
+import React from 'react';
+import { SpacingProps } from 'system';
 import { styled } from '../../stitches.config';
-
-export interface SpacerProps {}
 
 const StyledSpacer = styled('div', {});
 
-export const Spacer: React.FC<SpacerProps> = ({ children }) => {
-  return <StyledSpacer>{children}</StyledSpacer>;
+export const Spacer = ({ ...rest }: SpacingProps) => {
+  return <StyledSpacer css={{ ...rest }}></StyledSpacer>;
 };
-
-Spacer.displayName = 'Spacer';

@@ -28,35 +28,3 @@ export interface SpacingProps {
   /* All round padding of the element */
   p?: string | number;
 }
-
-// let mx: SpacingProps['mx'];
-// let my: SpacingProps['my'];
-// let ml: SpacingProps['ml'];
-// let mr: SpacingProps['mr'];
-// let mt: SpacingProps['mt'];
-// let mb: SpacingProps['mb'];
-// let m: SpacingProps['m'];
-// let px: SpacingProps['px'];
-// let py: SpacingProps['py'];
-// let pl: SpacingProps['pl'];
-// let pr: SpacingProps['pr'];
-// let pt: SpacingProps['pt'];
-// let pb: SpacingProps['pb'];
-// let p: SpacingProps['p'];
-
-// export const Spacing = {
-//   mx,
-//   my,
-//   ml,
-//   mr,
-//   mt,
-//   mb,
-//   m,
-//   px,
-//   py,
-//   pl,
-//   pr,
-//   pt,
-//   pb,
-//   p,
-// };

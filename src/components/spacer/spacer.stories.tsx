@@ -1,44 +1,17 @@
 import React from 'react';
-import { Meta } from '@storybook/react';
-import { Spacer, SpacerProps } from '.';
-import { Button } from '../button';
-import { Box } from '../box';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Spacer } from './spacer';
+import { SpacingProps } from '../../system';
 
 export default {
   title: 'Components/Spacer',
   component: Spacer,
-} as Meta;
+} as ComponentMeta<typeof Spacer>;
 
-// // spacing top
-// export const Top = (args: SpacerProps) => (
-//   <Box>
-//     <Button block>No Spacing</Button>
-//     <Spacer {...args}>
-//       <Button block>Spacing Top</Button>
-//     </Spacer>
-//   </Box>
-// );
-// Top.args = { top: true };
+const Template: ComponentStory<typeof Spacer> = (args: SpacingProps) => (
+  <Spacer {...args} />
+);
 
-// // spacing bottom
-// export const Bottom = (args: SpacerProps) => (
-//   <Box>
-//     <Spacer {...args}>
-//       <Button block>Spacing Bottom</Button>
-//     </Spacer>
-//     <Button block>No Spacing</Button>
-//   </Box>
-// );
-// Bottom.args = { bottom: true };
-
-// // spacing both
-// export const Both = (args: SpacerProps) => (
-//   <Box>
-//     <Button block>No Spacing</Button>
-//     <Spacer {...args}>
-//       <Button block>Spacing Both</Button>
-//     </Spacer>
-//     <Button block>No Spacing</Button>
-//   </Box>
-// );
-// Both.args = { both: true };
+export const Primary = Template.bind({});
+Primary.args = {};
