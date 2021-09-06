@@ -8,18 +8,18 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@stitches/react": "^0.2.2",
-    "@xstyled/styled-components": "^2.4.1",
+    "@stitches/react": "latest",
+    "@xstyled/styled-components": "^3.0.3",
     "camara": "^1.0.0-beta.94",
-    "gatsby": "^2.15.18",
+    "gatsby": "^3.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^4.2.0",
     "gatsby-source-filesystem": "^3.2.0",
     "polished": "^4.1.1",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
     "react-helmet": "^6.1.0",
-    "smooth-doc": "^5.0.4"
+    "smooth-doc": "^8.0.1"
   }
 }

@@ -1,15 +1,16 @@
 // stitches.config.ts
-import { createCss } from '@stitches/react';
+import { createStitches } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
 import { lighten, darken } from 'polished';
 
 export const {
   styled,
   css,
-  global,
+  globalCss,
   keyframes,
-  getCssString,
-  theme,
-} = createCss({
+  getCssText,
+  createTheme,
+} = createStitches({
   prefix: 'camara',
   theme: {
     colors: {
@@ -128,85 +129,79 @@ export const {
   },
   utils: {
     // Abbreviated margin properties
-    m: () => (
-      value
-      // :
-      // | `$${Extract<keyof typeof config.theme['space'], string | number>}`
-      // | string
-      // | number
-    ) => ({
+    m: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value,
       marginLeft: value,
       marginRight: value,
     }),
-    mt: () => value => ({
+    mt: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: value,
     }),
-    mr: () => value => ({
+    mr: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginRight: value,
     }),
-    mb: () => value => ({
+    mb: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginBottom: value,
     }),
-    ml: () => value => ({
+    ml: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginLeft: value,
     }),
-    mx: () => value => ({
+    mx: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    my: () => value => ({
+    my: () => (value: Stitches.ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value,
     }),
 
     // Abbreviated padding properties
-    p: () => value => ({
+    p: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value,
       paddingLeft: value,
       paddingRight: value,
     }),
-    pt: () => value => ({
+    pt: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingTop: value,
     }),
-    pr: () => value => ({
+    pr: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingRight: value,
     }),
-    pb: () => value => ({
+    pb: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingBottom: value,
     }),
-    pl: () => value => ({
+    pl: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingLeft: value,
     }),
-    px: () => value => ({
+    px: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    py: () => value => ({
+    py: () => (value: Stitches.ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
 
     // A property for applying width/height together
-    size: () => value => ({
+    size: () => (value: Stitches.ScaleValue<'size'>) => ({
       width: value,
       height: value,
     }),
 
     // An abbreviated property for border-radius
-    br: () => value => ({
+    br: () => (value: Stitches.ScaleValue<'radii'>) => ({
       borderRadius: value,
     }),
     // An abbreviated property for background color
-    bg: () => value => ({
+    bg: () => (value: Stitches.ScaleValue<'color'>) => ({
       backgroundColor: value,
     }),
   },
 });
 
-export const DARK_THEME = theme('dark-theme', {
+export const DARK_THEME = createTheme('dark-theme', {
   shadows: { bg_shadow: '1px 1.5px 3px #000' },
   colors: {
     brand_primary: '#37DAAA',
