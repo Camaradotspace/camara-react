@@ -1,5 +1,6 @@
 import React, { AnchorHTMLAttributes } from 'react';
 import { ExternalLink } from 'react-feather';
+import { SpacingProps } from 'system';
 import { styled } from '../../stitches.config';
 
 export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -17,7 +18,7 @@ export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 // NOTE: `!important` is used as a temporary workaround for conflicting links styling on the documentation site. They will be removed in a future update
 
-const StyledAnchor = styled('a', {
+const StyledAnchor: any = styled('a', {
   color: '$link_text !important',
   cursor: 'pointer',
   textDecoration: 'underline !important',
@@ -66,12 +67,14 @@ const StyledAnchor = styled('a', {
   defaultVariants: { variant: 'primary' },
 });
 
-export const Anchor: React.FC<AnchorProps> = ({
+export const Anchor: React.FC<AnchorProps & SpacingProps> = ({
   href,
   children,
   external,
   variant,
   underline,
+  css,
+  ...rest
 }) => {
   if (external) {
     return (
@@ -82,6 +85,8 @@ export const Anchor: React.FC<AnchorProps> = ({
         variant={variant}
         css={{
           textDecoration: underline === false ? 'none !important' : 'underline',
+          ...rest,
+          ...css,
         }}
       >
         {children}
@@ -95,6 +100,8 @@ export const Anchor: React.FC<AnchorProps> = ({
         variant={variant}
         css={{
           textDecoration: underline === false ? 'none !important' : 'underline',
+          ...rest,
+          ...css,
         }}
       >
         {children}

@@ -94,14 +94,12 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps & SpacingProps>(
       size,
       strike,
       color,
-      mx,
-      my,
-      px,
-      py,
       fontSize,
       fontWeight,
       fontStyle,
       textAlign,
+      css,
+      ...rest
     },
     ref
   ) => (
@@ -114,14 +112,12 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps & SpacingProps>(
       underline={underline}
       css={{
         color: color,
-        my,
-        mx,
-        py,
-        px,
         fontSize: fontSize,
         fontWeight: fontWeight,
         fontStyle: fontStyle,
         textAlign: textAlign,
+        ...css,
+        ...rest,
       }}
     >
       {children}

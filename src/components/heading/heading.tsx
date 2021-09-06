@@ -32,16 +32,16 @@ const baseStyles = {
   fontWeight: '$bold',
 };
 
-const StyledH1 = styled('h1', {
+const StyledH1: any = styled('h1', {
   ...baseStyles,
 });
-const StyledH2 = styled('h2', {
+const StyledH2: any = styled('h2', {
   ...baseStyles,
 });
-const StyledH3 = styled('h3', {
+const StyledH3: any = styled('h3', {
   ...baseStyles,
 });
-const StyledH4 = styled('h4', {
+const StyledH4: any = styled('h4', {
   ...baseStyles,
 });
 
@@ -53,6 +53,7 @@ export const Heading: React.FC<HeadingProps> = ({
   color,
   noWhiteSpace,
   thin,
+  css,
 }) => {
   const ADDITIONAL_PROPS = {
     fontWeight: thin ? 300 : fontWeight,
@@ -64,19 +65,29 @@ export const Heading: React.FC<HeadingProps> = ({
   switch (level) {
     // for large heading H1
     case 1:
-      return <StyledH1 css={{ ...ADDITIONAL_PROPS }}>{children}</StyledH1>;
+      return (
+        <StyledH1 css={{ ...ADDITIONAL_PROPS, ...css }}>{children}</StyledH1>
+      );
     // for large heading H2
     case 2:
-      return <StyledH2 css={{ ...ADDITIONAL_PROPS }}>{children}</StyledH2>;
+      return (
+        <StyledH2 css={{ ...ADDITIONAL_PROPS, ...css }}>{children}</StyledH2>
+      );
     // for large heading H3
     case 3:
-      return <StyledH3 css={{ ...ADDITIONAL_PROPS }}>{children}</StyledH3>;
+      return (
+        <StyledH3 css={{ ...ADDITIONAL_PROPS, ...css }}>{children}</StyledH3>
+      );
     // for large heading H4
     case 4:
-      return <StyledH4 css={{ ...ADDITIONAL_PROPS }}>{children}</StyledH4>;
+      return (
+        <StyledH4 css={{ ...ADDITIONAL_PROPS, ...css }}>{children}</StyledH4>
+      );
     // every other case else
     default:
-      return <StyledH1 css={{ ...ADDITIONAL_PROPS }}>{children}</StyledH1>;
+      return (
+        <StyledH1 css={{ ...ADDITIONAL_PROPS, ...css }}>{children}</StyledH1>
+      );
   }
 };
 

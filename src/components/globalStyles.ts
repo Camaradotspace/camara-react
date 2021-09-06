@@ -1,7 +1,7 @@
-import { globalCss } from '../stitches.config';
+import { global } from '../stitches.config';
 // import { normalize } from 'polished'
 
-export const globalStyles = globalCss({
+export const globalStyles = global({
   '*, *:before, *:after ': {
     boxSizing: 'border-box',
     margin: 0,
