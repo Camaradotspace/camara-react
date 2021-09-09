@@ -4,14 +4,14 @@ section: Components
 slug: /docs/components/tabs/
 ---
 
-import { BrowserWindow, Tabs } from 'camara';
+import { BrowserWindow } from 'camara';
 import { LiveConfig } from 'smooth-doc/components';
 
 <!-- Define `camara` module as `{ BrowserWindow }` -->
 
 <LiveConfig
   modules={{
-    camara: { BrowserWindow, Tabs },
+    camara: { BrowserWindow },
   }}
 />
 
@@ -25,22 +25,17 @@ Tab description.
 
 Tab properties
 
-| Property | Description                                                              | Type      | Default | Version |
-| -------- | ------------------------------------------------------------------------ | --------- | ------- | ------- |
-| docs     | Used to render the browser window on the docs differently from Storybook | `boolean` | `false` |         |
+| Property | Description | Type | Default | Version |
+| -------- | ----------- | ---- | ------- | ------- |
 
 <br></br>
 
 ## Usage
 
-### Base
-
-```jsx live noInline
-import { BrowserWindow, Tabs } from 'camara';
-
-render(
-  <BrowserWindow docs>
-    <Tabs />
-  </BrowserWindow>
-);
-```
+<iframe
+  src="https://codesandbox.io/embed/focused-water-hspg4?fontsize=14&module=%2Fsrc%2FTabs.tsx&theme=dark"
+  style="width:800px; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="focused-water-hspg4"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
