@@ -1,0 +1,46 @@
+---
+title: Navigation Pane
+section: Components
+slug: /docs/components/navigation-pane/
+---
+
+import { BrowserWindow, NavigationPane } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, NavigationPane },
+  }}
+/>
+
+# NavigationPane
+
+NavigationPane description.
+
+<br></br>
+
+## Props
+
+NavigationPane properties
+
+| Property | Description                                                              | Type      | Default | Version |
+| -------- | ------------------------------------------------------------------------ | --------- | ------- | ------- |
+| docs     | Used to render the browser window on the docs differently from Storybook | `boolean` | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, NavigationPane } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <NavigationPane />
+  </BrowserWindow>
+);
+```

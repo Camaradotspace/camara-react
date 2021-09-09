@@ -1,0 +1,46 @@
+---
+title: Browser Window
+section: Components
+slug: /docs/components/browser-window/
+---
+
+import { BrowserWindow, Text } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, Text },
+  }}
+/>
+
+# BrowserWindow
+
+BrowserWindow description.
+
+<br></br>
+
+## Props
+
+BrowserWindow properties
+
+| Property | Description                                                              | Type      | Default | Version |
+| -------- | ------------------------------------------------------------------------ | --------- | ------- | ------- |
+| docs     | Used to render the browser window on the docs differently from Storybook | `boolean` | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, Text } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Text>I am a browser window, use me to demo the other components</Text>
+  </BrowserWindow>
+);
+```

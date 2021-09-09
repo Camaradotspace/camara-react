@@ -1,0 +1,46 @@
+---
+title: Tabs ⚠️
+section: Components
+slug: /docs/components/tabs/
+---
+
+import { BrowserWindow, Tabs } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, Tabs },
+  }}
+/>
+
+# Tab
+
+Tab description.
+
+<br></br>
+
+## Props
+
+Tab properties
+
+| Property | Description                                                              | Type      | Default | Version |
+| -------- | ------------------------------------------------------------------------ | --------- | ------- | ------- |
+| docs     | Used to render the browser window on the docs differently from Storybook | `boolean` | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, Tabs } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Tabs />
+  </BrowserWindow>
+);
+```

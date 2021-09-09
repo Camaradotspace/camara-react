@@ -1,0 +1,60 @@
+---
+title: Camara Theme
+section: Components
+slug: /docs/components/camara-theme/
+---
+
+import { BrowserWindow, Text } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, Text },
+  }}
+/>
+
+# Camara Theme
+
+Camara Theme description.
+
+<br></br>
+
+## Props
+
+Camara Theme properties
+
+| Property | Description                       | Type            | Default | Version |
+| -------- | --------------------------------- | --------------- | ------- | ------- |
+| theme    | What should be the default theme? | `light`, `dark` | `light` |         |
+
+<br></br>
+
+## Usage
+
+The BrowserWindow already wraps the `CamaraTheme` around other components. Use the toggle to switch between `light` and `dark` themes
+
+### Light
+
+```jsx live noInline
+import { BrowserWindow, Text } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Text>I am a browser window, use me to demo the other components</Text>
+  </BrowserWindow>
+);
+```
+
+### Dark
+
+```jsx live noInline
+import { BrowserWindow, Text } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Text>I am a browser window, use me to demo the other components</Text>
+  </BrowserWindow>
+);
+```

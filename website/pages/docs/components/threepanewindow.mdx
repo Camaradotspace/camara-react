@@ -1,0 +1,113 @@
+---
+title: Three Pane Window ⚠️
+section: Components
+slug: /docs/components/three-pane-window/
+---
+
+import { BrowserWindow, ThreePaneWindow, NavigationPane, List } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, ThreePaneWindow, NavigationPane, List },
+  }}
+/>
+
+# ThreePaneWindow
+
+ThreePaneWindow description.
+
+<br></br>
+
+## Props
+
+ThreePaneWindow properties
+
+| Property | Description                                                              | Type      | Default | Version |
+| -------- | ------------------------------------------------------------------------ | --------- | ------- | ------- |
+| docs     | Used to render the browser window on the docs differently from Storybook | `boolean` | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, ThreePaneWindow, NavigationPane, List } from 'camara';
+
+const listData = [
+  {
+    id: 1,
+    subject: 'Design is never neutral',
+    message:
+      'The choices we make as designers have very real consequences. Of course not. But that’s...',
+    sender: 'Anthonia Robert',
+    tag: [{ id: 1, color: 'red', name: 'design' }],
+    initials: 'AR',
+    color: 'tomato',
+    date: '18.01.01',
+    unread: true,
+  },
+  {
+    id: 2,
+    subject: 'One tool for all the team communication',
+    message:
+      'Was constantly responding to group chat messages the best use of our time? Of...',
+    sender: 'Roxanne Joan',
+    tag: [{ id: 1, color: 'orange', name: 'rebrand' }],
+    initials: 'RJ',
+    color: 'purple',
+    date: '18.04.13',
+    unread: false,
+  },
+  {
+    id: 3,
+    subject: 'Please add support for adding direct messages',
+    message:
+      'Two years into product development, our team switched entirely from working w....',
+    sender: 'Presh Onyee',
+    tag: [{ id: 1, color: 'blue', name: 'messaging' }],
+    initials: 'PO',
+    color: 'green',
+    date: '21.08.03',
+    unread: true,
+  },
+  {
+    id: 4,
+    subject: 'Design is never neutral',
+    message:
+      'The choices we make as designers have very real consequences. Of course not. But that’s...',
+    sender: 'Anthonia Robert',
+    tag: [{ id: 1, color: 'red', name: 'design' }],
+    initials: 'AR',
+    color: 'tomato',
+    date: '18.01.01',
+    unread: true,
+  },
+  {
+    id: 5,
+    subject: 'One tool for all the team communication',
+    message:
+      'Was constantly responding to group chat messages the best use of our time? Of...',
+    sender: 'Roxanne Joan',
+    tag: [{ id: 1, color: 'orange', name: 'rebrand' }],
+    initials: 'RJ',
+    color: 'purple',
+    date: '18.04.13',
+    unread: false,
+  },
+];
+
+render(
+  <BrowserWindow docs>
+    <ThreePaneWindow
+      firstPaneChildren={<NavigationPane />}
+      secondPaneChildren={<List listData={listData} />}
+      thirdPaneChildren={null}
+    />
+  </BrowserWindow>
+);
+```

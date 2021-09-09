@@ -1,0 +1,54 @@
+---
+title: Switch
+section: Components
+slug: /docs/components/switch/
+---
+
+import { BrowserWindow, Switch } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, Switch },
+  }}
+/>
+
+# Switch
+
+Switch description.
+
+<br></br>
+
+## Props
+
+Switch properties
+
+| Property     | Description                                                                                          | Type                  | Default      | Version |
+| ------------ | ---------------------------------------------------------------------------------------------------- | --------------------- | ------------ | ------- |
+| id           | Unique ID for each Switch this is important for the handleToggle to identify each switch differently | `string`              |              |         |
+| isOn         | Should the switch be on by default                                                                   | `boolean`             | `false`      |         |
+| handleToggle | Function to control the Switch state                                                                 | `Function`            | `() => void` |         |
+| onColor      | What color should the switch be in the when it is toggled on?                                        | `string`              | `false`      |         |
+| size         | What size should the Switch be?                                                                      | `small`, `large`      | `small`      |         |
+| css          | Addition CSS styling options                                                                         | `React.CSSProperties` |              |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, Switch } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <Switch isOn={false} />
+    <Switch isOn={true} />
+    <Switch isOn={true} onColor="blue" />
+    <Switch isOn={true} onColor="blue" size="large" />
+  </BrowserWindow>
+);
+```

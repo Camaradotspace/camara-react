@@ -1,0 +1,188 @@
+---
+title: Select ⚠️
+section: Components
+slug: /docs/components/select/
+---
+
+import { BrowserWindow, Select } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, Select },
+  }}
+/>
+
+# Select
+
+Select description.
+
+<br></br>
+
+## Props
+
+Select properties
+
+| Property    | Description                               | Type       | Default                       | Version |
+| ----------- | ----------------------------------------- | ---------- | ----------------------------- | ------- |
+| extended    | Should select show the extra information? | `boolean`  | `false`                       |         |
+| multiple    | Allow multiple options to be selected?    | `boolean`  | `false`                       |         |
+| onSelect    | Function to track select changes          | `Function` | `(selection: Option) => void` |         |
+| options     | Select option to render                   | `Array`    | `Option[]`                    |         |
+| placeholder | Placeholder of the select field           | `string`   | `Placeholder`                 |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, Select } from 'camara';
+
+const options = [
+  {
+    id: 1,
+    title: 'Hopper',
+    value: 'hopper',
+    extra:
+      'Grace Hopper was an American computer scientist and US Navy rear admiral.',
+  },
+  {
+    id: 2,
+    title: 'Teitelbaum',
+    value: 'teitelbaum',
+    extra:
+      'Ruth Teitelbaum was one of the first computer programmers in the world.',
+  },
+  {
+    id: 3,
+    title: 'Holberton',
+    value: 'holberton',
+    extra:
+      'Frances Elizabeth Holberton was one of the first programmers of the first computer.',
+  },
+  {
+    id: 4,
+    title: 'Antonelli',
+    value: 'antonelli',
+    extra:
+      'Kathleen McNulty Antonelli was an Irish computer scientist, and part of a team of six programmers which in 1946 developed ENIAC.',
+  },
+  {
+    id: 5,
+    title: 'Bartik',
+    value: 'bartik',
+    extra:
+      'Jean Jennings Bartik was one of the original programmers for the ENIAC computer.',
+  },
+];
+
+render(
+  <BrowserWindow docs>
+    <Select placeholder="Select Hero" options={options} />
+  </BrowserWindow>
+);
+```
+
+### Extended
+
+```jsx live noInline
+import { BrowserWindow, Select } from 'camara';
+
+const options = [
+  {
+    id: 1,
+    title: 'Hopper',
+    value: 'hopper',
+    extra:
+      'Grace Hopper was an American computer scientist and US Navy rear admiral.',
+  },
+  {
+    id: 2,
+    title: 'Teitelbaum',
+    value: 'teitelbaum',
+    extra:
+      'Ruth Teitelbaum was one of the first computer programmers in the world.',
+  },
+  {
+    id: 3,
+    title: 'Holberton',
+    value: 'holberton',
+    extra:
+      'Frances Elizabeth Holberton was one of the first programmers of the first computer.',
+  },
+  {
+    id: 4,
+    title: 'Antonelli',
+    value: 'antonelli',
+    extra:
+      'Kathleen McNulty Antonelli was an Irish computer scientist, and part of a team of six programmers which in 1946 developed ENIAC.',
+  },
+  {
+    id: 5,
+    title: 'Bartik',
+    value: 'bartik',
+    extra:
+      'Jean Jennings Bartik was one of the original programmers for the ENIAC computer.',
+  },
+];
+
+render(
+  <BrowserWindow docs>
+    <Select extended placeholder="Select Hero" options={options} />
+  </BrowserWindow>
+);
+```
+
+### Multiple Select
+
+```jsx live noInline
+import { BrowserWindow, Select } from 'camara';
+
+const options = [
+  {
+    id: 1,
+    title: 'Hopper',
+    value: 'hopper',
+    extra:
+      'Grace Hopper was an American computer scientist and US Navy rear admiral.',
+  },
+  {
+    id: 2,
+    title: 'Teitelbaum',
+    value: 'teitelbaum',
+    extra:
+      'Ruth Teitelbaum was one of the first computer programmers in the world.',
+  },
+  {
+    id: 3,
+    title: 'Holberton',
+    value: 'holberton',
+    extra:
+      'Frances Elizabeth Holberton was one of the first programmers of the first computer.',
+  },
+  {
+    id: 4,
+    title: 'Antonelli',
+    value: 'antonelli',
+    extra:
+      'Kathleen McNulty Antonelli was an Irish computer scientist, and part of a team of six programmers which in 1946 developed ENIAC.',
+  },
+  {
+    id: 5,
+    title: 'Bartik',
+    value: 'bartik',
+    extra:
+      'Jean Jennings Bartik was one of the original programmers for the ENIAC computer.',
+  },
+];
+
+render(
+  <BrowserWindow docs>
+    <Select multiple placeholder="Select Hero" options={options} />
+  </BrowserWindow>
+);
+```

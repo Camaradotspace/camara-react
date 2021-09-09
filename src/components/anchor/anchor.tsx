@@ -5,7 +5,7 @@ import { styled } from '../../stitches.config';
 
 export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /* link content */
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactNode[];
   /* Link URL */
   href: string;
   /* Open link in new tab? */
@@ -18,7 +18,7 @@ export interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 // NOTE: `!important` is used as a temporary workaround for conflicting links styling on the documentation site. They will be removed in a future update
 
-const StyledAnchor: any = styled('a', {
+const StyledAnchor = styled('a', {
   color: '$link_text !important',
   cursor: 'pointer',
   textDecoration: 'underline !important',
@@ -73,8 +73,21 @@ export const Anchor: React.FC<AnchorProps & SpacingProps> = ({
   external,
   variant,
   underline,
-  css,
-  ...rest
+  color,
+  m,
+  mb,
+  ml,
+  mt,
+  mr,
+  mx,
+  my,
+  p,
+  pb,
+  pl,
+  pt,
+  pr,
+  px,
+  py,
 }) => {
   if (external) {
     return (
@@ -85,8 +98,21 @@ export const Anchor: React.FC<AnchorProps & SpacingProps> = ({
         variant={variant}
         css={{
           textDecoration: underline === false ? 'none !important' : 'underline',
-          ...rest,
-          ...css,
+          color: color,
+          m,
+          mb,
+          ml,
+          mt,
+          mr,
+          mx,
+          my,
+          p,
+          pb,
+          pl,
+          pt,
+          pr,
+          px,
+          py,
         }}
       >
         {children}
@@ -100,8 +126,21 @@ export const Anchor: React.FC<AnchorProps & SpacingProps> = ({
         variant={variant}
         css={{
           textDecoration: underline === false ? 'none !important' : 'underline',
-          ...rest,
-          ...css,
+          color: color,
+          m,
+          mb,
+          ml,
+          mt,
+          mr,
+          mx,
+          my,
+          p,
+          pb,
+          pl,
+          pt,
+          pr,
+          px,
+          py,
         }}
       >
         {children}

@@ -1,0 +1,46 @@
+---
+title: Notification Dot
+section: Components
+slug: /docs/components/notification-dot/
+---
+
+import { BrowserWindow, NotificationDot } from 'camara';
+import { LiveConfig } from 'smooth-doc/components';
+
+<!-- Define `camara` module as `{ BrowserWindow }` -->
+
+<LiveConfig
+  modules={{
+    camara: { BrowserWindow, NotificationDot },
+  }}
+/>
+
+# Notification Dot
+
+Notification Dot description.
+
+<br></br>
+
+## Props
+
+Notification Dot properties
+
+| Property | Description                         | Type      | Default | Version |
+| -------- | ----------------------------------- | --------- | ------- | ------- |
+| hidden   | Should notification dots be hidden? | `boolean` | `false` |         |
+
+<br></br>
+
+## Usage
+
+### Base
+
+```jsx live noInline
+import { BrowserWindow, NotificationDot } from 'camara';
+
+render(
+  <BrowserWindow docs>
+    <NotificationDot />
+  </BrowserWindow>
+);
+```
